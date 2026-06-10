@@ -51,7 +51,7 @@ function SectionHeader({
         </Badge>
       )}
       <div className="space-y-4">
-        <h2 className="font-heading text-heading-2 font-semibold text-balance text-foreground">
+        <h2 className="font-heading text-heading-2 font-medium text-balance text-foreground">
           {title}
         </h2>
         {description && (

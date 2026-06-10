@@ -33,7 +33,7 @@ export function FeaturedProject() {
           {galleryImages.map((image) => (
             <div
               key={image.src}
-              className="aspect-[3/4] min-w-[72vw] overflow-hidden rounded-xl bg-muted sm:min-w-[38vw] lg:min-w-[18.75vw] lg:rounded-[1.2rem]"
+              className="aspect-[3/4] min-w-[72vw] overflow-hidden rounded-md bg-muted sm:min-w-[38vw] lg:min-w-[18.75vw] lg:rounded-[0.54rem]"
             >
               <img
                 src={image.src}

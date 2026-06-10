@@ -21,8 +21,8 @@ export default function Home() {
       <main className="min-h-screen bg-background">
         <Hero />
         <FeaturedProject />
-        <LogoMarquee />
         <TrustMetrics />
+        <LogoMarquee />
         <Portfolio />
         <Services />
         <WhyChooseMe />

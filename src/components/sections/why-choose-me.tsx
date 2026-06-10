@@ -20,7 +20,7 @@ export function WhyChooseMe() {
                   {index + 1}
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-heading text-xl font-semibold">{item}</h3>
+                  <h3 className="font-heading text-xl font-medium">{item}</h3>
                   <p className="text-body-sm text-muted-foreground">
                     Placeholder text for this reason.
                   </p>

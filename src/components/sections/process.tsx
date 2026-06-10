@@ -25,7 +25,7 @@ export function Process() {
                   0{index + 1}
                 </span>
                 <div className="space-y-2">
-                  <h3 className="font-heading text-xl font-semibold">{step}</h3>
+                  <h3 className="font-heading text-xl font-medium">{step}</h3>
                   <p className="text-body-sm text-muted-foreground">
                     Placeholder text for this process step.
                   </p>

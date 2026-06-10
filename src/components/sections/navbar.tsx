@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md">
       <Container className="flex h-20 items-center justify-between">
-        <Link href="/" className="font-heading text-xl font-semibold tracking-[-0.05em]">
+        <Link href="/" className="font-heading text-xl font-medium tracking-[-0.05em]">
           Brand
         </Link>
 

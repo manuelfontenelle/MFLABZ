@@ -105,7 +105,7 @@ function ModalTitle({
   return (
     <DialogPrimitive.Title
       data-slot="modal-title"
-      className={cn("font-heading text-heading-3 font-semibold tracking-[-0.05em]", className)}
+      className={cn("font-heading text-heading-3 font-medium tracking-[-0.05em]", className)}
       {...props}
     />
   );

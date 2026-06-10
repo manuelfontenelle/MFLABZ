@@ -46,7 +46,7 @@ export function Hero() {
 						transition={{ duration: 0.5, ease: "easeOut" }}
 						className="space-y-7"
 					>
-						<h1 className="max-w-[980px] font-heading text-[clamp(2.6rem,5.9vw,5rem)] leading-[0.95] font-semibold tracking-[-0.075em] text-balance text-foreground">
+            <h1 className="max-w-[980px] font-heading text-[clamp(2.6rem,5.9vw,5rem)] leading-[1.09] font-medium tracking-[-0.075em] text-balance text-foreground">
 							Graphic Designer Trusted By Businesses Worldwide
 						</h1>
 

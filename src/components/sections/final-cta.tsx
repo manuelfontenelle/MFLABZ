@@ -6,7 +6,7 @@ export function FinalCTA() {
       <Container>
         <div className="rounded-3xl bg-primary p-8 text-primary-foreground md:p-12">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-            <h2 className="font-heading text-heading-2 font-semibold">
+            <h2 className="font-heading text-heading-2 font-medium">
               Final CTA placeholder.
             </h2>
             <p className="text-body text-primary-foreground/70">

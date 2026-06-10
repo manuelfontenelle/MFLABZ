@@ -1,31 +1,28 @@
-import { Card, CardContent, Container, SectionHeader } from "@/components/ui";
+import { Star } from "lucide-react";
 
-const metrics = [
-  { value: "00", label: "Metric placeholder" },
-  { value: "00", label: "Metric placeholder" },
-  { value: "00", label: "Metric placeholder" }
-];
+import { Container } from "@/components/ui";
 
 export function TrustMetrics() {
   return (
-    <section className="py-section-sm">
-      <Container className="space-y-10">
-        <SectionHeader
-          eyebrow="Metrics placeholder"
-          title="Trust metrics placeholder."
-          description="Reserved layout for future credibility indicators."
-        />
-
-        <div className="grid gap-4 md:grid-cols-3">
-          {metrics.map((metric, index) => (
-            <Card key={`${metric.label}-${index}`}>
-              <CardContent className="space-y-3">
-                <div className="font-heading text-heading-2 font-semibold">{metric.value}</div>
-                <p className="text-body-sm text-muted-foreground">{metric.label}</p>
-              </CardContent>
-            </Card>
-          ))}
+    <section className="bg-background pt-[0.54rem] pb-16 sm:pt-[0.9rem] sm:pb-20 lg:pt-[1.08rem] lg:pb-24">
+      <Container className="flex flex-col items-center text-center">
+        <div className="mb-7 inline-flex items-center gap-2 text-[16px] font-semibold text-foreground sm:mb-8">
+          <span
+            className="flex items-center gap-0.5 text-secondary"
+            aria-hidden="true"
+          >
+            {Array.from({ length: 5 }).map((_, index) => (
+              <Star key={index} className="size-5 fill-current" />
+            ))}
+          </span>
+          <span>+4,000 – 5 star reviews</span>
         </div>
+
+        <h2 className="max-w-[900px] font-heading text-[clamp(1.65rem,3.3vw,2.8rem)] leading-[1.13] font-medium tracking-[-0.065em] text-balance text-foreground">
+          Trusted by 4000+ Clients Worldwide
+          <br className="hidden sm:block" />
+          {" "}for Professional Graphic Design Services
+        </h2>
       </Container>
     </section>
   );
