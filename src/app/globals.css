@@ -140,8 +140,8 @@
   --text-caption--letter-spacing: 0.08em;
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
-  --animate-dialog-in: dialog-in 0.22s ease-out;
-  --animate-dialog-out: dialog-out 0.18s ease-in;
+  --animate-dialog-in: dialog-in 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-dialog-out: dialog-out 0.22s cubic-bezier(0.7, 0, 0.84, 0);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -168,22 +168,22 @@
 @keyframes dialog-in {
   from {
     opacity: 0;
-    transform: translate(-50%, -48%) scale(0.96);
+    scale: 0.985;
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    scale: 1;
   }
 }
 
 @keyframes dialog-out {
   from {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    scale: 1;
   }
   to {
     opacity: 0;
-    transform: translate(-50%, -48%) scale(0.96);
+    scale: 0.985;
   }
 }
 

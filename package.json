@@ -10,12 +10,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@hookform/resolvers": "latest",
     "@radix-ui/react-accordion": "latest",
     "@radix-ui/react-dialog": "latest",
     "@radix-ui/react-separator": "latest",
     "@radix-ui/react-slot": "latest",
     "@radix-ui/react-tabs": "latest",
-    "@hookform/resolvers": "latest",
     "class-variance-authority": "latest",
     "clsx": "latest",
     "framer-motion": "latest",
@@ -25,6 +25,7 @@
     "react-country-flag": "^3.1.0",
     "react-dom": "latest",
     "react-hook-form": "latest",
+    "resend": "^6.12.4",
     "sonner": "latest",
     "tailwind-merge": "latest",
     "zod": "latest"

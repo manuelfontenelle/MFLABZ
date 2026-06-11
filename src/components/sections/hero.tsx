@@ -15,7 +15,7 @@ export function Hero() {
 		<section className="overflow-hidden bg-background pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24">
 			<Container>
 				<motion.div
-					className="max-w-[1160px]"
+					className="mx-auto max-w-[1160px] text-center"
 					initial="hidden"
 					animate="visible"
 					transition={{ staggerChildren: 0.08 }}
@@ -23,7 +23,7 @@ export function Hero() {
 					<motion.div
 						variants={fadeUp}
 						transition={{ duration: 0.45, ease: "easeOut" }}
-						className="mb-7 flex flex-col items-start gap-3 sm:mb-8 sm:flex-row sm:items-center sm:gap-4"
+						className="mb-7 flex flex-col items-center gap-3 sm:mb-8 sm:flex-row sm:justify-center sm:gap-4"
 					>
 						<div className="inline-flex items-center gap-2 rounded-button bg-secondary/10 px-3 py-1.5 text-[13px] font-semibold text-foreground shadow-xs">
 							<span
@@ -46,11 +46,11 @@ export function Hero() {
 						transition={{ duration: 0.5, ease: "easeOut" }}
 						className="space-y-7"
 					>
-            <h1 className="max-w-[980px] font-heading text-[clamp(2.6rem,5.9vw,5rem)] leading-[1.09] font-medium tracking-[-0.075em] text-balance text-foreground">
+            <h1 className="mx-auto max-w-[980px] font-heading text-[clamp(2.6rem,5.9vw,5rem)] leading-[1.09] font-medium tracking-[-0.075em] text-balance text-foreground">
 							Graphic Designer Trusted By Businesses Worldwide
 						</h1>
 
-						<p className="max-w-[760px] text-[clamp(0.95rem,1.4vw,1.16rem)] leading-[1.55] font-medium text-muted-foreground">
+						<p className="mx-auto max-w-[760px] text-[clamp(0.95rem,1.4vw,1.16rem)] leading-[1.55] font-medium text-muted-foreground">
 							Professional logo design, branding, social media graphics and
 							marketing materials crafted to help businesses stand out and grow
 							with confidence.
@@ -60,13 +60,13 @@ export function Hero() {
 					<motion.div
 						variants={fadeUp}
 						transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 }}
-						className="mt-9 flex flex-col gap-4 lg:flex-row lg:items-center"
+						className="mt-9 flex flex-col items-center gap-4 lg:flex-row lg:justify-center"
 					>
 						<div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-							<Button variant="premium" size="xl" className="w-full sm:w-auto">
+							<Button variant="premium" size="xl" className="w-full pr-3 sm:w-auto">
 								Start a Project
-								<span className="ml-1 inline-flex size-8 items-center justify-center rounded-button bg-white/15">
-									<ArrowRight className="size-4" />
+								<span className="ml-1 inline-flex size-10 items-center justify-center rounded-button bg-white/15">
+									<ArrowRight className="size-5" />
 								</span>
 							</Button>
 							<Button
@@ -78,7 +78,7 @@ export function Hero() {
 							</Button>
 						</div>
 
-						<p className="flex flex-wrap items-center text-sm font-medium text-muted-foreground lg:pl-3">
+						<p className="flex flex-wrap items-center justify-center text-sm font-medium text-muted-foreground lg:pl-3">
 							<span>4.9/5 Rating</span>
 							<span className="mx-3" aria-hidden="true">
 								|
