@@ -65,7 +65,7 @@ export function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="bg-black py-section text-white">
+    <section id="testimonials" className="bg-[#161616] py-section text-white">
       <Container>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14">
           <motion.div
@@ -101,7 +101,7 @@ export function Testimonials() {
               <div className="overflow-hidden rounded-md border border-white/10 bg-white/[0.04] p-5 lg:rounded-[0.54rem]">
                 <div className="grid gap-4 sm:grid-cols-[1fr_auto_1fr_auto_1fr] sm:items-center">
                   <div>
-                    <p className="font-heading text-[1.45rem] leading-none font-medium tracking-[-0.05em] text-white">
+                    <p className="font-heading text-[1.45rem] leading-none font-normal tracking-[-0.05em] text-white">
                       2500+
                     </p>
                     <p className="mt-2 text-xs font-medium text-white/60">
@@ -112,8 +112,8 @@ export function Testimonials() {
                   <span className="hidden h-10 w-px bg-white/15 sm:block" aria-hidden="true" />
 
                   <div>
-                    <p className="font-heading text-[1.45rem] leading-none font-medium tracking-[-0.05em] text-white">
-                      5000+
+                    <p className="font-heading text-[1.45rem] leading-none font-normal tracking-[-0.05em] text-white">
+                      4000+
                     </p>
                     <p className="mt-2 text-xs font-medium text-white/60">
                       Projects Delivered
@@ -123,7 +123,7 @@ export function Testimonials() {
                   <span className="hidden h-10 w-px bg-white/15 sm:block" aria-hidden="true" />
 
                   <div>
-                    <p className="font-heading text-[1.45rem] leading-none font-medium tracking-[-0.05em] text-white">
+                    <p className="font-heading text-[1.45rem] leading-none font-normal tracking-[-0.05em] text-white">
                       50+
                     </p>
                     <p className="mt-2 text-xs font-medium text-white/60">
@@ -150,7 +150,7 @@ export function Testimonials() {
 
                 <a
                   href="#"
-                  className="inline-flex items-center gap-3 text-sm font-semibold tracking-[-0.01em] text-white/75 transition-colors duration-300 hover:text-secondary"
+                  className="mt-2 inline-flex items-center gap-3 rounded-full border border-solid !border-[#1bc16f] px-4 py-2 text-sm font-semibold tracking-[-0.01em] text-[#1bc16f] transition-colors duration-300 hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#1bc16f]"
                 >
                   <span>View My Fiverr Profile</span>
                   <span aria-hidden="true">→</span>
@@ -195,7 +195,7 @@ export function Testimonials() {
                               </div>
 
                               <div>
-                                <h3 className="font-heading text-[1.05rem] leading-tight font-medium tracking-[-0.035em]">
+                                <h3 className="font-heading text-[1.05rem] leading-tight font-normal tracking-[-0.035em]">
                                   {testimonial.name}
                                 </h3>
                                 <div className="mt-2 flex items-center gap-1.5 text-[0.55rem] font-medium text-zinc-500">

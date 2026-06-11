@@ -1,134 +1,134 @@
-export type TestimonialGender = "male" | "female";
+export type TestimonialGender = "male" | "female"
 export type TestimonialCountryFlag =
-  | "US"
-  | "CA"
-  | "AU"
-  | "GB"
-  | "IT"
-  | "DE"
-  | "FR"
-  | "ES"
-  | "NL"
-  | "SE"
-  | "JP"
-  | "BR";
+	| "US"
+	| "CA"
+	| "AU"
+	| "GB"
+	| "IT"
+	| "DE"
+	| "FR"
+	| "ES"
+	| "NL"
+	| "SE"
+	| "JP"
+	| "BR"
 
 export type TestimonialItem = {
-  name: string;
-  country: string;
-  countryFlag: TestimonialCountryFlag;
-  gender: TestimonialGender;
-  rating: 5;
-  review: string;
-};
+	name: string
+	country: string
+	countryFlag: TestimonialCountryFlag
+	gender: TestimonialGender
+	rating: 5
+	review: string
+}
 
 export const testimonialsData: TestimonialItem[] = [
-  {
-    name: "John D.",
-    country: "United States",
-    countryFlag: "US",
-    gender: "male",
-    rating: 5,
-    review:
-      "The logo design felt premium from the first concept. Communication was clear, delivery was fast, and the final files were perfectly organized."
-  },
-  {
-    name: "Sarah M.",
-    country: "Canada",
-    countryFlag: "CA",
-    gender: "female",
-    rating: 5,
-    review:
-      "Very professional experience. The brand visuals were clean, modern, and exactly aligned with the direction I wanted for my business."
-  },
-  {
-    name: "David K.",
-    country: "Australia",
-    countryFlag: "AU",
-    gender: "male",
-    rating: 5,
-    review:
-      "Fast turnaround without sacrificing quality. The design looked polished, thoughtful, and ready to use across our marketing materials."
-  },
-  {
-    name: "Emma L.",
-    country: "United Kingdom",
-    countryFlag: "GB",
-    gender: "female",
-    rating: 5,
-    review:
-      "Excellent communication and a sharp eye for detail. The final brand assets made our presentation look much more credible and refined."
-  },
-  {
-    name: "Marco R.",
-    country: "Italy",
-    countryFlag: "IT",
-    gender: "male",
-    rating: 5,
-    review:
-      "A smooth Fiverr experience from brief to delivery. The design quality was high-end, and revisions were handled quickly and professionally."
-  },
-  {
-    name: "Nora S.",
-    country: "Germany",
-    countryFlag: "DE",
-    gender: "female",
-    rating: 5,
-    review:
-      "The work was minimal, elegant, and very well executed. It captured the personality of the brand while still feeling clean and premium."
-  },
-  {
-    name: "Lucas B.",
-    country: "France",
-    countryFlag: "FR",
-    gender: "male",
-    rating: 5,
-    review:
-      "The design direction was refined and professional. Every update was quick, clear, and focused on making the brand feel stronger."
-  },
-  {
-    name: "Sofia G.",
-    country: "Spain",
-    countryFlag: "ES",
-    gender: "female",
-    rating: 5,
-    review:
-      "Beautiful visual work with excellent communication. The final delivery felt premium and matched the brief better than expected."
-  },
-  {
-    name: "Mila V.",
-    country: "Netherlands",
-    countryFlag: "NL",
-    gender: "female",
-    rating: 5,
-    review:
-      "The brand identity looked clean, confident, and ready for launch. Communication was easy and every detail was handled professionally."
-  },
-  {
-    name: "Erik N.",
-    country: "Sweden",
-    countryFlag: "SE",
-    gender: "male",
-    rating: 5,
-    review:
-      "Very efficient process with a polished final result. The designs were modern, consistent, and delivered faster than expected."
-  },
-  {
-    name: "Aiko T.",
-    country: "Japan",
-    countryFlag: "JP",
-    gender: "female",
-    rating: 5,
-    review:
-      "The final artwork was elegant and precise. It gave our visual identity a much more premium and professional appearance."
-  },
-  {
-    name: "Rafael P.",
-    country: "Brazil",
-    countryFlag: "BR",
-    gender: "male",
-    rating: 5,
-    review:
-      "Great creative direction and quick revisions. The finished graphics looked high-quality and worked perfectly for our campaign."
-  }
-];
+	{
+		name: "ema_alsh",
+		country: "Canada",
+		countryFlag: "CA",
+		gender: "male",
+		rating: 5,
+		review:
+			"Great experience overall. Communication was smooth, very responsive, and easy to work with. Open to feedback and made adjustments quickly without issues. Delivery was on time and the quality of work was solid. Professional and reliable, would definitely work together again 👍",
+	},
+	{
+		name: "hypnokacee",
+		country: "United States",
+		countryFlag: "US",
+		gender: "female",
+		rating: 5,
+		review:
+			"Manuel is awesome! He designed my brochures and they turned out gorgeous! The turnaround was fast, and he asked thoughtful questions to make sure everything was correct in the design. He also explained things in a clear, easy-to-understand way, which I really appreciate, as I'm technologically challenged. Highly recommend! 5 stars!",
+	},
+	{
+		name: "jrm_lr",
+		country: "France",
+		countryFlag: "FR",
+		gender: "male",
+		rating: 5,
+		review:
+			"Très satisfait du logo conçu par Manuel ! Professionnel et réactif, les délais de livraison sont respectés et il a su répondre à toutes les questions que je me posais. La communication pour les retouches à été très efficace. Je recommande sans hésiter si vous avez besoin d'un logo pour votre entreprise !",
+	},
+	{
+		name: "charliecates",
+		country: "united states",
+		countryFlag: "US",
+		gender: "male",
+		rating: 5,
+		review:
+			"Thank you so much for creating such a beautiful trifold for my business! My wife and I are absolutely thrilled with the final result. The attention to detail you showed during every step of the process helped us get exactly what we were looking for from this project. A fast turnaround, responsive, and extremely easy to work with. Highly recommend!",
+	},
+	{
+		name: "aleksja2024",
+		country: "Canada",
+		countryFlag: "CA",
+		gender: "female",
+		rating: 5,
+		review:
+			"wow! Manuel was amazing to say the least, very friendly, professional, kind, quick to respond, always delivered and paid attention to details, very flexible and kind with his time, he went above and beyond in my experience, was very patient, i highly recommend Manuel if you care about a smooth pleasant process and great results, i will definitely be working with Manuel again for near future project!",
+	},
+	{
+		name: "peptidesyringes",
+		country: "United States",
+		countryFlag: "US",
+		gender: "female",
+		rating: 5,
+		review:
+			"Manuel was great! I needed a printable logo at the last minute. We messaged back and forth for about 30 min until we were both comfortable that the expectations of the project were well defined. I needed something clean, modern, and simple enough to be printed on gloss finish, 1 color, boxes He told me that he'd have my 1st revs within 24 hours. The next morning I logged in and there was my new logo. I loved the first rev so no further work was needed.",
+	},
+	{
+		name: "brunopiccolo07",
+		country: "Spain",
+		countryFlag: "ES",
+		gender: "male",
+		rating: 5,
+		review:
+			"Manuel has delivered an excellent design. Delivery was on time and with many iterative sessions. When working with Manuel, he had an excellent answer time, creativity and profesionalism. Also, he is able to suggest when the client look for suggestion and able to work in a cooperation interaction with the client. I would repeat as a client. Thanks Manuel",
+	},
+	{
+		name: "zedek1",
+		country: "Israel",
+		countryFlag: "IL",
+		gender: "female",
+		rating: 5,
+		review:
+			"Excellent experience. The work was delivered quickly and at a very high level. The designer was patient, attentive, and understood exactly what I needed. Communication was smooth, and the final result exceeded my expectations. Highly recommended.",
+	},
+	{
+		name: "reflectionsbym",
+		country: "Australia",
+		countryFlag: "AU",
+		gender: "female",
+		rating: 5,
+		review:
+			"Manuel was great to work with — responsive, professional, and easy to communicate with throughout the process. He quickly understood the brief and delivered a strong initial concept, and was very open to feedback and revisions. His turnaround time was fast, and the final design was high quality and print-ready. Would definitely recommend Manuel for banner and marketing design work.",
+	},
+	{
+		name: "nena_sainz",
+		country: "France",
+		countryFlag: "FR",
+		gender: "male",
+		rating: 5,
+		review:
+			"Un énième projet avec Manuel et je le conseille (encore une fois) : il comprend vite mes besoins, ses design sont tops, il est réactif et le rapport qualité prix est excellent. Ne cherchez pas plus loin, c’est lui qu’il vous faut pour vos projets ! ",
+	},
+	{
+		name: "fcxcdjodv",
+		country: "Guadeloupe",
+		countryFlag: "GP",
+		gender: "female",
+		rating: 5,
+		review:
+			"Manuel est un infographiste talentueux et polyvalent. Il a su s'adapter à nos besoins changeants et a toujours livré des résultats impeccables. Sa passion pour son métier transparaît dans chacune de ses créations. Nous le recommandons vivement à tous ceux qui recherchent un travail de qualité",
+	},
+	{
+		name: "thomasrsd",
+		country: "Netherlands",
+		countryFlag: "NL",
+		gender: "male",
+		rating: 5,
+		review:
+			"Working with Manuel is a pleasure every single time. He delivered exactly as planned, and everything was perfect on the first try. I’m already looking forward to the next project together. It's smooth, effortless, and worry-free.",
+	},
+]

@@ -86,7 +86,7 @@ export function Services() {
                         <Badge
                           key={badge}
                           variant="outline"
-                          className="border-border/70 bg-muted/45 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.07em] text-muted-foreground transition-colors duration-300 hover:border-secondary/20 hover:bg-secondary/5 hover:text-foreground"
+                          className="border-secondary/15 bg-secondary/5 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.07em] text-secondary transition-colors duration-300 hover:border-secondary/30 hover:bg-secondary/10"
                         >
                           {badge}
                         </Badge>

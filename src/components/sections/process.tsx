@@ -124,7 +124,7 @@ export function Process() {
                 <p className="text-caption font-semibold tracking-[0.16em] text-secondary uppercase">
                   Collaboration Workflow
                 </p>
-                <h2 className="font-heading text-heading-2 leading-none font-medium tracking-[-0.06em] text-foreground">
+                <h2 className="font-heading text-heading-2 leading-none font-normal tracking-[-0.06em] text-foreground">
                   My Design Process
                 </h2>
               </div>
@@ -157,7 +157,7 @@ export function Process() {
                 variants={stepReveal}
               >
                 <motion.div
-                  className="font-heading text-[clamp(3rem,7vw,5.25rem)] leading-none font-medium tracking-[-0.08em] text-secondary"
+                  className="font-heading text-[clamp(3rem,7vw,5.25rem)] leading-none font-normal tracking-[-0.08em] text-secondary"
                   variants={numberReveal}
                 >
                   {step.number}
@@ -165,7 +165,7 @@ export function Process() {
 
                 <div className="space-y-6">
                   <div className="space-y-3">
-                    <h3 className="font-heading text-[clamp(1.55rem,2.8vw,2.25rem)] leading-[1.02] font-medium tracking-[-0.055em] text-foreground">
+                    <h3 className="font-heading text-[clamp(1.55rem,2.8vw,2.25rem)] leading-[1.02] font-normal tracking-[-0.055em] text-foreground">
                       {step.title}
                     </h3>
                     <p className="max-w-2xl text-[0.98rem] leading-7 text-muted-foreground">

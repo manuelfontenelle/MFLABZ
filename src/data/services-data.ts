@@ -40,7 +40,7 @@ export const servicesData: ServiceItem[] = [
     title: "Social Media Design",
     description:
       "Creative social media graphics designed to improve consistency and engagement.",
-    badges: ["Posts", "Stories", "Carousels", "Feed Design", "Banners", "Ads", "LinkedIn", "Instagram"]
+    badges: ["Posts", "Stories", "Carousels", "Feed Design", "Banners", "Ads", "LinkedIn", "Instagram", "Facebook"]
   },
   {
     id: "marketing-materials",

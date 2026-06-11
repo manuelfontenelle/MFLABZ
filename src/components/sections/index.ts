@@ -1,5 +1,4 @@
 export * from "./faq";
-export * from "./featured-project";
 export * from "./final-cta";
 export * from "./footer";
 export * from "./hero";

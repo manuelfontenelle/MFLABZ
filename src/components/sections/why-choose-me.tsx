@@ -80,6 +80,7 @@ export function WhyChooseMe() {
         >
           <SectionHeader
             align="center"
+            className="[&_p]:max-w-none md:[&_p]:whitespace-nowrap"
             title="Why Clients Choose Me"
             description="Trusted by thousands of businesses for professional graphic design and branding services."
           />
@@ -100,7 +101,7 @@ export function WhyChooseMe() {
                     <Icon className="size-5" strokeWidth={1.7} />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="font-heading text-[1.35rem] leading-tight font-medium tracking-[-0.04em] text-foreground">
+                    <h3 className="font-heading text-[1.35rem] leading-tight font-normal tracking-[-0.04em] text-foreground">
                       {title}
                     </h3>
                     <p className="max-w-xl text-[0.98rem] leading-7 text-muted-foreground">

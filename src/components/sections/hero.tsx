@@ -1,9 +1,40 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Star } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 
 import { Button, Container } from "@/components/ui"
+import { siteConfig } from "@/config/site"
+import { ContactDialog } from "./contact-dialog"
+
+const galleryImages = [
+	{
+		src: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=900&q=85",
+		alt: "Branding mockup with printed identity pieces",
+	},
+	{
+		src: "https://images.unsplash.com/photo-1613909207039-6b173b755cc1?auto=format&fit=crop&w=900&q=85",
+		alt: "Graphic design mockup with bold visual system",
+	},
+	{
+		src: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=900&q=85",
+		alt: "Abstract logo and brand identity mockup",
+	},
+	{
+		src: "https://images.unsplash.com/photo-1635405050339-b0824eb1bf26?auto=format&fit=crop&w=900&q=85",
+		alt: "Brand identity mockup on premium stationery",
+	},
+	{
+		src: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=900&q=85",
+		alt: "Editorial design and printed brand collateral",
+	},
+	{
+		src: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=85",
+		alt: "Packaging design mockup for a modern brand",
+	},
+]
+
+const repeatedGalleryImages = [...galleryImages, ...galleryImages]
 
 const fadeUp = {
 	hidden: { opacity: 0, y: 16 },
@@ -12,86 +43,92 @@ const fadeUp = {
 
 export function Hero() {
 	return (
-		<section className="overflow-hidden bg-background pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24">
-			<Container>
+		<section className="flex min-h-[85vh] flex-col justify-between overflow-hidden bg-background pt-10 pb-0 sm:min-h-[90vh] sm:pt-14 sm:pb-0 lg:min-h-[calc(100svh-3.3rem)] lg:pt-20 lg:pb-0">
+			<Container className="flex flex-1 items-center">
 				<motion.div
-					className="mx-auto max-w-[1160px] text-center"
+					className="w-full"
 					initial="hidden"
 					animate="visible"
 					transition={{ staggerChildren: 0.08 }}
 				>
-					<motion.div
-						variants={fadeUp}
-						transition={{ duration: 0.45, ease: "easeOut" }}
-						className="mb-7 flex flex-col items-center gap-3 sm:mb-8 sm:flex-row sm:justify-center sm:gap-4"
-					>
-						<div className="inline-flex items-center gap-2 rounded-button bg-secondary/10 px-3 py-1.5 text-[13px] font-semibold text-foreground shadow-xs">
-							<span
-								className="flex items-center gap-0.5 text-secondary"
-								aria-hidden="true"
-							>
-								{Array.from({ length: 5 }).map((_, index) => (
-									<Star key={index} className="size-4 fill-current" />
-								))}
-							</span>
-							<span className="text-muted-foreground">
-								<span className="text-foreground">Rated 4.9/5</span> from{" "}
-								<span className="text-foreground">2500+ reviews</span>
-							</span>
-						</div>
-					</motion.div>
+					<div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_470px] lg:items-end lg:gap-16">
+						<motion.div
+							variants={fadeUp}
+							transition={{ duration: 0.5, ease: "easeOut" }}
+						>
+							<h1 className="max-w-[620px] font-heading text-[clamp(2.05rem,4.75vw,4.4rem)] leading-[1.09] font-normal tracking-[-0.075em] text-balance text-foreground">
+								Graphic Design for Modern Brands
+							</h1>
+						</motion.div>
 
-					<motion.div
-						variants={fadeUp}
-						transition={{ duration: 0.5, ease: "easeOut" }}
-						className="space-y-7"
-					>
-            <h1 className="mx-auto max-w-[980px] font-heading text-[clamp(2.6rem,5.9vw,5rem)] leading-[1.09] font-medium tracking-[-0.075em] text-balance text-foreground">
-							Graphic Designer Trusted By Businesses Worldwide
-						</h1>
-
-						<p className="mx-auto max-w-[760px] text-[clamp(0.95rem,1.4vw,1.16rem)] leading-[1.55] font-medium text-muted-foreground">
-							Professional logo design, branding, social media graphics and
-							marketing materials crafted to help businesses stand out and grow
-							with confidence.
-						</p>
-					</motion.div>
-
-					<motion.div
-						variants={fadeUp}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 }}
-						className="mt-9 flex flex-col items-center gap-4 lg:flex-row lg:justify-center"
-					>
-						<div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-							<Button variant="premium" size="xl" className="w-full pr-3 sm:w-auto">
-								Start a Project
-								<span className="ml-1 inline-flex size-10 items-center justify-center rounded-button bg-white/15">
-									<ArrowRight className="size-5" />
-								</span>
-							</Button>
-							<Button
-								variant="ghost"
-								size="xl"
-								className="w-full bg-muted text-foreground hover:bg-muted/80 sm:w-auto"
-							>
-								View Portfolio
-							</Button>
-						</div>
-
-						<p className="flex flex-wrap items-center justify-center text-sm font-medium text-muted-foreground lg:pl-3">
-							<span>4.9/5 Rating</span>
-							<span className="mx-3" aria-hidden="true">
-								|
-							</span>
-							<span>4000+ customers</span>
-							<span className="mx-3" aria-hidden="true">
-								|
-							</span>
-							<span>Worldwide Clients</span>
-						</p>
-					</motion.div>
+						<motion.div
+							variants={fadeUp}
+							transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 }}
+							className="w-full max-w-[470px] space-y-[1.4rem] lg:justify-self-end"
+						>
+							<p className="text-[clamp(0.8rem,1.1vw,0.97rem)] leading-[1.6] font-medium text-muted-foreground">
+								Logo design, branding and visual communication crafted to help
+								businesses stand out with clarity and confidence.
+							</p>
+							<div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+								<ContactDialog
+									trigger={
+										<Button
+											type="button"
+											variant="premium"
+											size="lg"
+											className="w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
+										>
+											Start Project
+											<ChevronRight className="ml-0 size-4" />
+										</Button>
+									}
+								/>
+								<Button
+									asChild
+									variant="ghost"
+									size="lg"
+									className="w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#1bc16f] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#1bc16f] sm:w-auto"
+								>
+									<a
+										href={siteConfig.links.fiverr}
+										target="_blank"
+										rel="noreferrer"
+									>
+										Visit Fiverr
+										<ChevronRight className="ml-0 size-4" />
+									</a>
+								</Button>
+							</div>
+						</motion.div>
+					</div>
 				</motion.div>
 			</Container>
+
+			<motion.div
+				className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16"
+				initial={{ opacity: 0, y: 18 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.7, ease: "easeOut", delay: 0.18 }}
+			>
+				<div className="flex w-max transform-gpu will-change-transform [animation:logo-marquee_60s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none">
+					{repeatedGalleryImages.map((image, index) => (
+						<div
+							key={`${image.src}-${index}`}
+							className="h-[47vh] min-h-[328px] w-[76.8vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
+						>
+							<img
+								src={image.src}
+								alt={image.alt}
+								className="size-full select-none object-cover"
+								decoding="async"
+								loading={index < galleryImages.length ? "eager" : "lazy"}
+								draggable={false}
+							/>
+						</div>
+					))}
+				</div>
+			</motion.div>
 		</section>
 	)
 }

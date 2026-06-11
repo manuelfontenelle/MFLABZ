@@ -1,6 +1,5 @@
 import {
   FAQ,
-  FeaturedProject,
   FinalCTA,
   Footer,
   Hero,
@@ -20,7 +19,6 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen bg-background">
         <Hero />
-        <FeaturedProject />
         <TrustMetrics />
         <LogoMarquee />
         <Portfolio />
