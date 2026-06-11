@@ -4,7 +4,7 @@ import { Container } from "@/components/ui";
 
 export function TrustMetrics() {
   return (
-    <section className="bg-background pt-[0.54rem] pb-16 sm:pt-[0.9rem] sm:pb-20 lg:pt-[1.08rem] lg:pb-24">
+    <section className="bg-background pt-[0.54rem] pb-[2.8rem] sm:pt-[0.9rem] sm:pb-[3.5rem] lg:pt-[1.08rem] lg:pb-[4.2rem]">
       <Container className="flex flex-col items-center text-center">
         <div className="mb-7 inline-flex items-center gap-2 text-[16px] font-semibold text-foreground sm:mb-8">
           <span

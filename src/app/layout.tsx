@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import type { ReactNode } from "react";
+import { Toaster } from "sonner";
 
 import { siteConfig } from "@/config/site";
 import "./globals.css";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${inter.variable} ${geistMono.variable}`}>
         {children}
+        <Toaster richColors position="bottom-right" />
       </body>
     </html>
   );

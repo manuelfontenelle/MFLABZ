@@ -25,8 +25,8 @@ export default function Home() {
         <LogoMarquee />
         <Portfolio />
         <Services />
-        <WhyChooseMe />
         <Testimonials />
+        <WhyChooseMe />
         <Process />
         <FAQ />
         <FinalCTA />

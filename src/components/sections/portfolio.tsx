@@ -16,14 +16,16 @@ export function Portfolio() {
         />
 
         <Tabs defaultValue="Featured" className="items-center">
-          <TabsList className="h-auto w-full max-w-full flex-wrap rounded-md border-border/70 bg-background p-[0.2875rem] shadow-xs lg:rounded-[0.54rem]">
+          <TabsList className="h-auto w-full max-w-full flex-wrap rounded-md border-border/70 bg-background p-0 shadow-xs lg:rounded-[0.54rem]">
             {portfolioTabs.map((tab) => (
               <TabsTrigger
                 key={tab}
                 value={tab}
-                className="h-[2.875rem] flex-1 rounded-md px-[1.15rem] text-[1.05rem] font-medium text-muted-foreground data-[state=active]:bg-foreground data-[state=active]:text-background sm:px-[1.725rem] lg:rounded-[0.54rem]"
+                className="group relative h-auto flex-1 cursor-pointer rounded-md px-[0.39rem] py-[0.8775rem] text-[1.05rem] font-medium text-muted-foreground after:absolute after:bottom-0 after:left-0 after:h-[3.6px] after:w-full after:bg-[#2150dc] after:opacity-0 after:transition-opacity after:duration-300 data-[state=active]:bg-transparent data-[state=active]:text-[#2150dc] data-[state=active]:shadow-none data-[state=active]:after:opacity-100 sm:px-[1.035rem] lg:rounded-[0.54rem]"
               >
-                {tab}
+                <span className="inline-block p-0 transition-transform duration-300 ease-out group-data-[state=active]:-translate-y-0.5">
+                  {tab}
+                </span>
               </TabsTrigger>
             ))}
           </TabsList>

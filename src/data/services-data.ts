@@ -1,38 +1,61 @@
+export type ServiceId =
+  | "logo-design"
+  | "brand-identity"
+  | "social-media-design"
+  | "marketing-materials";
+
 export type ServiceItem = {
-  id: string;
+  id: ServiceId;
   title: string;
   description: string;
+  badges: string[];
 };
 
 export const servicesData: ServiceItem[] = [
   {
-    id: "service-01",
-    title: "Service placeholder 01",
-    description: "Short placeholder description for the service card."
+    id: "logo-design",
+    title: "Logo Design",
+    description:
+      "Custom logos designed to help businesses stand out and create memorable first impressions.",
+    badges: ["Minimalist", "Luxury", "Real Estate", "Corporate", "Modern", "Monogram", "Wordmark", "Startup"]
   },
   {
-    id: "service-02",
-    title: "Service placeholder 02",
-    description: "Short placeholder description for the service card."
+    id: "brand-identity",
+    title: "Brand Identity",
+    description:
+      "Complete visual identity systems including logo usage, colors, typography and brand assets.",
+    badges: [
+      "Brand Guidelines",
+      "Stationery",
+      "Color Palette",
+      "Typography",
+      "Packaging",
+      "Visual Identity",
+      "Brand Assets",
+      "Rebranding"
+    ]
   },
   {
-    id: "service-03",
-    title: "Service placeholder 03",
-    description: "Short placeholder description for the service card."
+    id: "social-media-design",
+    title: "Social Media Design",
+    description:
+      "Creative social media graphics designed to improve consistency and engagement.",
+    badges: ["Posts", "Stories", "Carousels", "Feed Design", "Banners", "Ads", "LinkedIn", "Instagram"]
   },
   {
-    id: "service-04",
-    title: "Service placeholder 04",
-    description: "Short placeholder description for the service card."
-  },
-  {
-    id: "service-05",
-    title: "Service placeholder 05",
-    description: "Short placeholder description for the service card."
-  },
-  {
-    id: "service-06",
-    title: "Service placeholder 06",
-    description: "Short placeholder description for the service card."
+    id: "marketing-materials",
+    title: "Marketing Materials",
+    description:
+      "Flyers, brochures, business cards, roll-ups, billboards and promotional assets.",
+    badges: [
+      "Business Cards",
+      "Flyers",
+      "Brochures",
+      "Roll-Ups",
+      "Billboards",
+      "Posters",
+      "Menus",
+      "Catalogs"
+    ]
   }
 ];

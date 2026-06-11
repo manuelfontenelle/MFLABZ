@@ -1,0 +1,19 @@
+---
+description: Keep section block corner radii consistent with the featured project gallery
+alwaysApply: true
+---
+
+# Section Block Radius
+
+- For visible content blocks inside sections, use the same corner radius as the `FeaturedProject` image cards.
+- Default pattern: `rounded-md lg:rounded-[0.54rem]`.
+- Apply this to section cards, panels, image wrappers, portfolio items, trust blocks, metric blocks, and similar premium content containers.
+- Do not introduce larger radii such as `rounded-2xl`, `rounded-3xl`, or custom panel radii for section blocks unless the design system is intentionally updated.
+- Small UI controls, badges, pills, buttons, and icon containers may keep their existing component-specific radius.
+
+```tsx
+// Preferred for section blocks
+<div className="overflow-hidden rounded-md lg:rounded-[0.54rem]">
+  ...
+</div>
+```

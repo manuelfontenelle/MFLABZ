@@ -3,6 +3,7 @@ export * from "./badge";
 export * from "./button";
 export * from "./card";
 export * from "./container";
+export * from "./dialog";
 export * from "./modal";
 export * from "./section-header";
 export * from "./separator";

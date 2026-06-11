@@ -18,7 +18,7 @@ export function LogoMarquee() {
                 {clientLogos.map((logo) => (
                   <div
                     key={`${logo.name}-${group}`}
-                    className="flex h-16 min-w-36 items-center justify-center rounded-2xl border border-border/60 bg-muted/35 px-7 text-center font-heading text-sm font-semibold tracking-[-0.03em] whitespace-nowrap text-foreground/45 sm:h-[4.5rem] sm:min-w-44 sm:px-9 sm:text-base lg:min-w-52"
+                    className="flex h-16 min-w-36 items-center justify-center rounded-md border border-border/60 bg-muted/35 px-7 text-center font-heading text-sm font-semibold tracking-[-0.03em] whitespace-nowrap text-foreground/45 sm:h-[4.5rem] sm:min-w-44 sm:px-9 sm:text-base lg:min-w-52 lg:rounded-[0.54rem]"
                   >
                     {logo.wordmark}
                   </div>

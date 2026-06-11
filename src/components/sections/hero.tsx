@@ -78,8 +78,16 @@ export function Hero() {
 							</Button>
 						</div>
 
-						<p className="text-sm font-medium text-muted-foreground lg:pl-3">
-							4.9/5 Rating • 4000+ customers • Worldwide Clients
+						<p className="flex flex-wrap items-center text-sm font-medium text-muted-foreground lg:pl-3">
+							<span>4.9/5 Rating</span>
+							<span className="mx-3" aria-hidden="true">
+								|
+							</span>
+							<span>4000+ customers</span>
+							<span className="mx-3" aria-hidden="true">
+								|
+							</span>
+							<span>Worldwide Clients</span>
 						</p>
 					</motion.div>
 				</motion.div>
