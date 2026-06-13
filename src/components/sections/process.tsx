@@ -130,16 +130,14 @@ export function Process() {
               </div>
 
               <p className="text-[1.08rem] leading-8 text-muted-foreground text-pretty">
-                A streamlined workflow designed to deliver high-quality design
-                solutions while keeping communication simple, transparent and
-                efficient.
+                A collaborative design process focused on clarity, creativity
+                and attention to detail.
+                <br />
+                <br />
+                From concept to delivery, every step is handled with care and
+                professionalism.
               </p>
 
-              <div className="overflow-hidden rounded-md border border-border/70 bg-muted/45 p-5 lg:rounded-[0.54rem]">
-                <p className="text-sm font-semibold tracking-[-0.02em] text-foreground">
-                  Trusted by 2500+ clients worldwide.
-                </p>
-              </div>
             </div>
           </motion.div>
 

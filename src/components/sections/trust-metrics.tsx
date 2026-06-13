@@ -15,7 +15,11 @@ export function TrustMetrics() {
               <Star key={index} className="size-[20.7px] fill-current" />
             ))}
           </span>
-          <span>Rated 4.9/5 from 2500+ Client Reviews</span>
+          <span>
+            <span className="font-bold">Rated 4.9/5</span>
+            {" from "}
+            <span className="font-bold">2500+ Client Reviews</span>
+          </span>
         </div>
 
         <h2 className="max-w-[900px] font-heading text-[clamp(1.65rem,3.3vw,2.8rem)] leading-[1.13] font-normal tracking-[-0.065em] text-balance text-foreground">

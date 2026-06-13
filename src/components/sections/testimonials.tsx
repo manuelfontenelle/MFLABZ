@@ -245,8 +245,8 @@ export function Testimonials() {
                   <button
                     key={index}
                     type="button"
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      activeSlide === index ? "w-7 bg-secondary" : "w-2 bg-white/25"
+                    className={`cursor-pointer h-1.5 rounded-full transition-all duration-300 ${
+                      activeSlide === index ? "w-7 bg-white" : "w-2 bg-white/25"
                     }`}
                     aria-label={`Show testimonial slide ${index + 1}`}
                     onClick={() => showSlide(index)}
@@ -257,7 +257,7 @@ export function Testimonials() {
               <div className="flex items-center gap-2">
                 <button
                   type="button"
-                  className="flex size-10 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white transition-colors duration-300 hover:border-secondary/40 hover:text-secondary"
+                  className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white transition-colors duration-300 hover:border-white/25 hover:bg-white/[0.09] active:bg-white/[0.14]"
                   aria-label="Show previous testimonials"
                   onClick={showPreviousSlide}
                 >
@@ -265,7 +265,7 @@ export function Testimonials() {
                 </button>
                 <button
                   type="button"
-                  className="flex size-10 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white transition-colors duration-300 hover:border-secondary/40 hover:text-secondary"
+                  className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white transition-colors duration-300 hover:border-white/25 hover:bg-white/[0.09] active:bg-white/[0.14]"
                   aria-label="Show next testimonials"
                   onClick={showNextSlide}
                 >

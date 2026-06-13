@@ -42,13 +42,13 @@ export const testimonialsData: TestimonialItem[] = [
 			"Manuel is awesome! He designed my brochures and they turned out gorgeous! The turnaround was fast, and he asked thoughtful questions to make sure everything was correct in the design. He also explained things in a clear, easy-to-understand way, which I really appreciate, as I'm technologically challenged. Highly recommend! 5 stars!",
 	},
 	{
-		name: "jrm_lr",
-		country: "France",
-		countryFlag: "FR",
+		name: "reflectionsbym",
+		country: "Australia",
+		countryFlag: "AU",
 		gender: "male",
 		rating: 5,
 		review:
-			"Très satisfait du logo conçu par Manuel ! Professionnel et réactif, les délais de livraison sont respectés et il a su répondre à toutes les questions que je me posais. La communication pour les retouches à été très efficace. Je recommande sans hésiter si vous avez besoin d'un logo pour votre entreprise !",
+			"Manuel was great to work with — responsive, professional, and easy to communicate with throughout the process. He quickly understood the brief and delivered a strong initial concept, and was very open to feedback and revisions. His turnaround time was fast, and the final design was high quality and print-ready. Would definitely recommend Manuel for banner and marketing design work",
 	},
 	{
 		name: "charliecates",

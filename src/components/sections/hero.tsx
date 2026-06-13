@@ -21,7 +21,7 @@ const galleryImages = [
 		alt: "Abstract logo and brand identity mockup",
 	},
 	{
-		src: "https://images.unsplash.com/photo-1635405050339-b0824eb1bf26?auto=format&fit=crop&w=900&q=85",
+		src: "https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=900&q=85",
 		alt: "Brand identity mockup on premium stationery",
 	},
 	{
@@ -64,11 +64,11 @@ export function Hero() {
 						<motion.div
 							variants={fadeUp}
 							transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 }}
-							className="w-full max-w-[470px] space-y-[1.4rem] lg:justify-self-end"
+							className="w-full max-w-[342px] space-y-[1.4rem] lg:justify-self-end"
 						>
-							<p className="text-[clamp(0.8rem,1.1vw,0.97rem)] leading-[1.6] font-medium text-muted-foreground">
-								Logo design, branding and visual communication crafted to help
-								businesses stand out with clarity and confidence.
+							<p className="text-[clamp(0.8rem,1.1vw,0.97rem)] leading-[1.6] font-medium text-foreground">
+								Thoughtful branding and graphic design that turn ideas into
+								memorable, modern identities.
 							</p>
 							<div className="flex flex-col gap-3 sm:flex-row sm:items-center">
 								<ContactDialog

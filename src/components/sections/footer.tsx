@@ -15,10 +15,39 @@ const navigationLinks = [
 ];
 
 const socialLinks = [
-  { label: "Fiverr", href: "#" },
-  { label: "Behance", href: "#" },
-  { label: "Instagram", href: "#" }
+  { label: "Fiverr", href: "#", icon: "fiverr" },
+  { label: "Behance", href: "#", icon: "behance" },
+  { label: "Instagram", href: "#", icon: "instagram" }
 ];
+
+type SocialIconName = (typeof socialLinks)[number]["icon"];
+
+function SocialIcon({ icon }: { icon: SocialIconName }) {
+  if (icon === "instagram") {
+    return (
+      <svg
+        className="size-4"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <rect width="16" height="16" x="4" y="4" rx="4" />
+        <circle cx="12" cy="12" r="3.2" />
+        <path d="M16.7 7.3h.01" />
+      </svg>
+    );
+  }
+
+  return (
+    <span className="font-heading text-[0.78rem] leading-none font-semibold tracking-[-0.04em]">
+      {icon === "behance" ? "Be" : "fi"}
+    </span>
+  );
+}
 
 function handleSmoothScroll(
   event: React.MouseEvent<HTMLAnchorElement>,
@@ -124,8 +153,14 @@ export function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
+                  <span
+                    className="inline-flex size-5 items-center justify-center text-current"
+                    aria-hidden="true"
+                  >
+                    <SocialIcon icon={link.icon} />
+                  </span>
                   {link.label}
                 </Link>
               ))}
