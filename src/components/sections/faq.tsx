@@ -75,7 +75,7 @@ export function FAQ() {
                     value={item.id}
                     className="border-b-0 px-6 sm:px-8 lg:px-10"
                   >
-                    <AccordionTrigger className="py-6 font-heading text-[1.15rem] leading-tight font-normal tracking-[-0.035em] text-foreground transition-colors duration-300 hover:text-secondary hover:no-underline sm:text-[1.3rem] [&>svg]:mt-0.5 [&>svg]:size-4 [&>svg]:text-foreground/45 [&>svg]:transition-all [&>svg]:duration-300">
+                    <AccordionTrigger className="cursor-pointer py-6 font-heading text-[1.15rem] leading-tight font-normal tracking-[-0.035em] text-foreground transition-colors duration-300 hover:text-secondary hover:no-underline sm:text-[1.3rem] [&>svg]:mt-0.5 [&>svg]:size-4 [&>svg]:text-foreground/45 [&>svg]:transition-all [&>svg]:duration-300">
                       {item.question}
                     </AccordionTrigger>
                     <AccordionContent className="max-w-2xl pb-7 text-[0.98rem] leading-7 text-muted-foreground sm:pr-12">

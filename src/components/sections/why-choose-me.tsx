@@ -16,32 +16,32 @@ type Reason = {
 const reasons: Reason[] = [
   {
     title: "2500+ Verified Reviews",
-    description: "Built through thousands of successful projects and long-term client satisfaction.",
+    description: "A 4.9/5 average rating earned across thousands of completed client projects.",
     icon: Star
   },
   {
     title: "Fast Turnaround",
-    description: "Efficient workflow and clear communication throughout every project.",
+    description: "Quick delivery without cutting corners, backed by a clear and reliable workflow.",
     icon: Clock3
   },
   {
     title: "Custom Design Approach",
-    description: "Every design is created specifically for the client's brand and goals.",
+    description: "Every project is designed from scratch around your brand, audience and goals.",
     icon: Palette
   },
   {
     title: "Direct Collaboration",
-    description: "Work directly with the designer from concept to final delivery.",
+    description: "You work directly with the designer at every step, from first concept to final files.",
     icon: Handshake
   },
   {
     title: "Worldwide Experience",
-    description: "Experience working with startups, entrepreneurs and businesses around the world.",
+    description: "Trusted by startups, entrepreneurs and established brands across the globe.",
     icon: Globe2
   },
   {
     title: "Professional Quality",
-    description: "Design solutions focused on credibility, consistency and business growth.",
+    description: "Polished, consistent design built to strengthen credibility and support real growth.",
     icon: BadgeCheck
   }
 ];

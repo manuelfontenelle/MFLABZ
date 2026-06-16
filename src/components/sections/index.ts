@@ -1,4 +1,5 @@
 export * from "./faq";
+export * from "./fiverr-identity";
 export * from "./final-cta";
 export * from "./footer";
 export * from "./hero";

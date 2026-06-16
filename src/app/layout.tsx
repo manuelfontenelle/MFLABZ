@@ -1,23 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import type { ReactNode } from "react";
 import { Toaster } from "sonner";
 
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"]
 });
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin"]
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"]
 });
 
@@ -31,6 +26,10 @@ export const metadata: Metadata = {
   keywords: [...siteConfig.keywords],
   authors: [{ name: siteConfig.creator }],
   creator: siteConfig.creator,
+  icons: {
+    icon: [{ url: "/images/mflabz-logo.svg", type: "image/svg+xml" }],
+    shortcut: "/images/mflabz-logo.svg"
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${inter.variable} ${geistMono.variable}`}>
+      <body className={`${manrope.variable} ${inter.variable}`}>
         {children}
         <Toaster richColors position="bottom-right" />
       </body>

@@ -3,7 +3,6 @@
 import { ChevronRight } from "lucide-react";
 
 import { Button, Container } from "@/components/ui";
-import { siteConfig } from "@/config/site";
 import { ContactDialog } from "./contact-dialog";
 
 export function FinalCTA() {
@@ -12,7 +11,7 @@ export function FinalCTA() {
       <Container size="lg">
         <div className="overflow-hidden rounded-md border border-border bg-muted/60 px-6 py-16 shadow-sm sm:px-10 sm:py-20 lg:rounded-[0.54rem] lg:px-16">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-7 text-center">
-            <span className="text-caption font-semibold uppercase text-muted-foreground">
+            <span className="text-caption font-semibold uppercase text-secondary">
               Let&apos;s create something memorable
             </span>
             <h2 className="max-w-2xl font-heading text-heading-2 font-normal">
@@ -45,7 +44,7 @@ export function FinalCTA() {
                 className="w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#1bc16f] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#1bc16f] sm:w-auto"
               >
                 <a
-                  href={siteConfig.links.fiverr}
+                  href="https://www.fiverr.com/mflabz"
                   target="_blank"
                   rel="noreferrer"
                 >

@@ -16,21 +16,21 @@ export const servicesData: ServiceItem[] = [
     id: "logo-design",
     title: "Logo Design",
     description:
-      "Custom logos designed to help businesses stand out and create memorable first impressions.",
-    badges: ["Minimalist", "Luxury", "Real Estate", "Corporate", "Modern", "Monogram", "Wordmark", "Startup"]
+      "Distinctive, memorable logos that capture your brand's personality and make a strong first impression.",
+    badges: ["Minimalist", "Luxury", "Modern", "Vintage", "Monogram", "Wordmark", "Lettermark", "Emblem"]
   },
   {
     id: "brand-identity",
     title: "Brand Identity",
     description:
-      "Complete visual identity systems including logo usage, colors, typography and brand assets.",
+      "Cohesive identity systems that keep every touchpoint consistent, recognizable and unmistakably yours.",
     badges: [
       "Brand Guidelines",
       "Stationery",
       "Color Palette",
       "Typography",
       "Packaging",
-      "Visual Identity",
+      "Iconography",
       "Brand Assets",
       "Rebranding"
     ]
@@ -39,14 +39,14 @@ export const servicesData: ServiceItem[] = [
     id: "social-media-design",
     title: "Social Media Design",
     description:
-      "Creative social media graphics designed to improve consistency and engagement.",
-    badges: ["Posts", "Stories", "Carousels", "Feed Design", "Banners", "Ads", "LinkedIn", "Instagram", "Facebook"]
+      "Scroll-stopping visuals that strengthen your presence and keep your feed consistent and engaging.",
+    badges: ["Posts", "Stories", "Carousels", "Feed Design", "Ads", "LinkedIn", "Instagram", "Facebook"]
   },
   {
     id: "marketing-materials",
     title: "Marketing Materials",
     description:
-      "Flyers, brochures, business cards, roll-ups, billboards and promotional assets.",
+      "Print and promotional assets crafted to communicate clearly and leave a lasting impression.",
     badges: [
       "Business Cards",
       "Flyers",

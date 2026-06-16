@@ -11,11 +11,17 @@ import {
 } from "@/components/ui"
 
 const portfolioTabs = [
-	"Featured",
-	"Logos",
-	"Branding",
-	"Digital",
-	"Print",
+	"Logo",
+	"Business Cards",
+	"Trifold",
+	"Bifold",
+	"Brochure",
+	"Flyer",
+	"Roll Up",
+	"Billboard",
+	"Yard Sign",
+	"Packaging",
+	"Social Media",
 ] as const
 
 export function Portfolio() {
@@ -29,7 +35,7 @@ export function Portfolio() {
 					description="Explore a selection of branding and graphic design projects created for businesses worldwide."
 				/>
 
-				<Tabs defaultValue="Featured" className="items-center">
+				<Tabs defaultValue="Logo" className="items-center">
 					<TabsList className="h-auto w-full max-w-full flex-wrap rounded-md border-border/70 bg-background p-0 shadow-xs lg:rounded-[0.54rem]">
 						{portfolioTabs.map((tab) => (
 							<TabsTrigger
@@ -45,11 +51,9 @@ export function Portfolio() {
 					</TabsList>
 
 					{portfolioTabs.map((tab) => {
-						const projects = (
-							tab === "Featured"
-								? portfolioData
-								: portfolioData.filter((project) => project.category === tab)
-						).slice(0, 4)
+						const projects = portfolioData
+							.filter((project) => project.category === tab)
+							.slice(0, 4)
 
 						return (
 							<TabsContent
@@ -61,7 +65,7 @@ export function Portfolio() {
 									{projects.map((project, index) => (
 										<figure
 											key={project.id}
-											className="group rounded-md border border-border/70 bg-background p-1.5 shadow-xs transition-all duration-500 hover:-translate-y-1 hover:shadow-md lg:rounded-[0.54rem]"
+											className="group overflow-hidden rounded-md border border-border/70 bg-background p-0 shadow-xs transition-all duration-500 hover:-translate-y-1 hover:shadow-md lg:rounded-[0.54rem]"
 										>
 											<Image
 												src={project.imageUrl}
@@ -69,7 +73,7 @@ export function Portfolio() {
 												width={1200}
 												height={900}
 												sizes="(min-width: 640px) 50vw, 100vw"
-												className="aspect-[5/3] h-full w-full rounded-[calc(0.375rem-0.125rem)] object-cover lg:rounded-[calc(0.54rem-0.125rem)]"
+												className="aspect-[25/18] h-full w-full rounded-[calc(0.375rem-0.125rem)] object-cover lg:rounded-[calc(0.54rem-0.125rem)]"
 												loading="lazy"
 											/>
 										</figure>

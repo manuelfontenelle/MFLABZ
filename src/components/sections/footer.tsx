@@ -15,9 +15,9 @@ const navigationLinks = [
 ];
 
 const socialLinks = [
-  { label: "Fiverr", href: "#", icon: "fiverr" },
-  { label: "Behance", href: "#", icon: "behance" },
-  { label: "Instagram", href: "#", icon: "instagram" }
+  { label: "Fiverr", href: "https://www.fiverr.com/mflabz", icon: "fiverr" },
+  { label: "Behance", href: "https://www.behance.net/mflabz", icon: "behance" },
+  { label: "Instagram", href: "https://www.instagram.com/mflabzdesign/", icon: "instagram" }
 ];
 
 type SocialIconName = (typeof socialLinks)[number]["icon"];
@@ -72,9 +72,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-muted/45 pt-[3.2rem] pb-10 sm:pt-16 lg:pt-[4.8rem]">
+    <footer className="border-t border-border bg-muted/45 pt-[3.2rem] pb-16 sm:pt-16 lg:pt-[4.8rem]">
       <Container>
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.35fr_0.75fr_0.75fr_1fr] lg:gap-14">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.45fr_0.8fr_0.8fr] lg:gap-14">
           <div className="flex flex-col">
             <Link
               href="/"
@@ -95,7 +95,7 @@ export function Footer() {
             </p>
 
             <div className="space-y-4">
-              <div className="inline-flex w-fit items-center gap-[0.45rem] rounded-button bg-secondary/10 px-[0.675rem] py-[0.3375rem] text-[11.7px] font-semibold text-foreground shadow-xs">
+              <div className="inline-flex max-w-full flex-nowrap items-center gap-1.5 whitespace-nowrap rounded-button border border-border px-2.5 py-[0.3375rem] text-[10.5px] font-semibold text-foreground shadow-xs sm:w-fit sm:gap-[0.45rem] sm:px-[0.85rem] sm:text-[11.7px]">
                 <span
                   className="flex items-center gap-0.5 text-secondary"
                   aria-hidden="true"
@@ -103,26 +103,20 @@ export function Footer() {
                   {Array.from({ length: 5 }).map((_, index) => (
                     <Star
                       key={index}
-                      className="size-[0.995rem] fill-current"
+                      className="size-3 fill-current sm:size-[0.895rem]"
                     />
                   ))}
                 </span>
-                <span className="text-[12.1px] text-foreground">
+                <span className="text-[10.5px] text-foreground sm:text-[12.1px]">
                   Rated 4.9/5
                 </span>
-                <span className="text-[12.1px] text-muted-foreground">
+                <span className="text-[10.5px] text-muted-foreground sm:text-[12.1px]">
                   from
                 </span>
-                <span className="text-[12.1px] text-foreground">
+                <span className="text-[10.5px] text-foreground sm:text-[12.1px]">
                   2500+ Client Reviews
                 </span>
               </div>
-
-              <p className="text-sm font-medium text-muted-foreground">
-                © {currentYear}{" "}
-                <span className="text-foreground">MFlabz</span>. All Rights
-                Reserved.
-              </p>
             </div>
           </div>
 
@@ -145,9 +139,6 @@ export function Footer() {
           </nav>
 
           <div className="space-y-4">
-            <h2 className="text-[1.05rem] font-semibold text-foreground">
-              Social Links
-            </h2>
             <div className="flex flex-col items-start gap-3">
               {socialLinks.map((link) => (
                 <Link
@@ -165,18 +156,10 @@ export function Footer() {
                 </Link>
               ))}
             </div>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="text-[1.05rem] font-semibold text-foreground">
-              Contact
-            </h2>
-            <Link
-              href="mailto:contact@email.com"
-              className="inline-flex text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              contact@email.com
-            </Link>
+            <p className="pt-8 text-xs font-medium text-muted-foreground">
+              © {currentYear} <span className="text-foreground">MFlabz</span>. All
+              Rights Reserved.
+            </p>
           </div>
         </div>
       </Container>

@@ -18,8 +18,8 @@ const processSteps: ProcessStep[] = [
     number: "01",
     title: "Discovery & Brief",
     description:
-      "We start by discussing your business, goals, target audience and project requirements. This helps establish a clear creative direction before any design work begins.",
-    label: "Key Points",
+      "We begin by exploring your business, goals, audience and requirements together, establishing a clear creative direction before any design begins.",
+    label: "What We Cover",
     items: [
       "Business Understanding",
       "Project Goals",
@@ -31,8 +31,8 @@ const processSteps: ProcessStep[] = [
     number: "02",
     title: "Research & Design",
     description:
-      "Based on the brief, I explore creative directions and develop professional concepts tailored to your brand and objectives.",
-    label: "Key Points",
+      "From the brief, I research creative directions and craft refined concepts tailored to your brand and objectives.",
+    label: "What We Cover",
     items: [
       "Creative Research",
       "Concept Development",
@@ -44,8 +44,8 @@ const processSteps: ProcessStep[] = [
     number: "03",
     title: "Revisions & Refinement",
     description:
-      "We review the proposed designs together and refine every detail until the final result perfectly matches your vision and business needs.",
-    label: "Key Points",
+      "We review the concepts together and refine every detail until the result aligns perfectly with your vision and business needs.",
+    label: "What We Cover",
     items: [
       "Client Feedback",
       "Design Adjustments",
@@ -57,17 +57,13 @@ const processSteps: ProcessStep[] = [
     number: "04",
     title: "Final Delivery",
     description:
-      "Once approved, you receive all final files professionally organized and ready for immediate use across digital and print platforms.",
+      "Once approved, I deliver all final files, fully organized and ready to use across digital and print.",
     label: "Deliverables",
     items: [
-      "Source Files (AI, EPS, PSD or editable formats)",
-      "High Resolution Files",
-      "PNG Files",
-      "JPG Files",
-      "PDF Files",
-      "Print Ready Files",
-      "Social Media Assets (if applicable)",
-      "Brand Assets (if applicable)"
+      "Editable Source Files (AI, EPS, PSD)",
+      "High-Resolution Exports (PNG, JPG, PDF)",
+      "Print-Ready Files",
+      "Social Media & Brand Assets (if applicable)"
     ]
   }
 ];
@@ -125,17 +121,14 @@ export function Process() {
                   Collaboration Workflow
                 </p>
                 <h2 className="font-heading text-heading-2 leading-none font-normal tracking-[-0.06em] text-foreground">
-                  My Design Process
+                  A Thoughtful Creative Process
                 </h2>
               </div>
 
               <p className="text-[1.08rem] leading-8 text-muted-foreground text-pretty">
-                A collaborative design process focused on clarity, creativity
-                and attention to detail.
-                <br />
-                <br />
-                From concept to delivery, every step is handled with care and
-                professionalism.
+                A structured and collaborative approach designed to keep your
+                project clear, focused and creatively aligned from start to
+                finish.
               </p>
 
             </div>

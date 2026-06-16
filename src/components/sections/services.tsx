@@ -52,7 +52,7 @@ export function Services() {
             align="center"
             className="[&_p]:max-w-none md:[&_p]:whitespace-nowrap"
             title="Design Services"
-            description="Professional design solutions tailored to help businesses build stronger brands."
+            description="Premium design solutions tailored to help your brand stand out and grow with confidence."
           />
         </motion.div>
 

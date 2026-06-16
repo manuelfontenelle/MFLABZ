@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "MFLABZ",
+  name: "MFLABZ | Creative Web Studio",
   creator: "MFLABZ",
   url: "https://mflabz.com",
   description:
@@ -16,7 +16,7 @@ export const siteConfig = {
     "Fiverr designer"
   ],
   links: {
-    fiverr: "https://www.fiverr.com/",
+    fiverr: "https://www.fiverr.com/mflabz",
     email: "hello@mflabz.com"
   }
 } as const;

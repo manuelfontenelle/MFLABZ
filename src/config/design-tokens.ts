@@ -9,7 +9,7 @@ export const designTokens = {
     muted: "#636873"
   },
   typography: {
-    heading: "var(--font-geist-sans)",
+    heading: "var(--font-manrope)",
     body: "var(--font-inter)",
     scale: {
       display2xl: "clamp(4.5rem, 10vw, 9rem)",

@@ -1,5 +1,6 @@
 import {
   FAQ,
+  FiverrIdentity,
   FinalCTA,
   Footer,
   Hero,
@@ -25,6 +26,7 @@ export default function Home() {
         <Services />
         <Testimonials />
         <WhyChooseMe />
+        <FiverrIdentity />
         <Process />
         <FAQ />
         <FinalCTA />

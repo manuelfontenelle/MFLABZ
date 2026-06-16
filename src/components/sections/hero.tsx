@@ -43,7 +43,11 @@ const fadeUp = {
 
 export function Hero() {
 	return (
-		<section className="flex min-h-[85vh] flex-col justify-between overflow-hidden bg-background pt-10 pb-0 sm:min-h-[90vh] sm:pt-14 sm:pb-0 lg:min-h-[calc(100svh-3.3rem)] lg:pt-20 lg:pb-0">
+		<section
+			className="flex min-h-[85vh] flex-col justify-between overflow-hidden bg-background pt-10 pb-0 sm:min-h-[90vh] sm:pt-14 sm:pb-0 lg:min-h-[calc(100svh-3.3rem)] lg:pt-20 lg:pb-0"
+			itemScope
+			itemType="https://schema.org/Organization"
+		>
 			<Container className="flex flex-1 items-center">
 				<motion.div
 					className="w-full"
@@ -55,7 +59,14 @@ export function Hero() {
 						<motion.div
 							variants={fadeUp}
 							transition={{ duration: 0.5, ease: "easeOut" }}
+							className="space-y-5"
 						>
+							<p
+								className="text-[0.975rem] leading-[1.35] font-semibold tracking-[0.16em] text-secondary uppercase"
+								itemProp="name"
+							>
+								MFLABZ STUDIO
+							</p>
 							<h1 className="max-w-[620px] font-heading text-[clamp(2.05rem,4.75vw,4.4rem)] leading-[1.09] font-normal tracking-[-0.075em] text-balance text-foreground">
 								Graphic Design for Modern Brands
 							</h1>

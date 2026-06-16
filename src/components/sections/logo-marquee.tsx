@@ -69,6 +69,8 @@ export function LogoMarquee() {
                         alt={logo.logoAlt ?? `${logo.name} logo`}
                         width={160}
                         height={48}
+                        loading="eager"
+                        decoding="async"
                         className="max-h-9 w-auto max-w-32 object-contain opacity-90 transition-opacity duration-300 hover:opacity-100 sm:max-h-10 sm:max-w-36"
                       />
                     ) : (

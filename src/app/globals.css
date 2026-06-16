@@ -143,8 +143,8 @@
   --animate-dialog-in: dialog-in 0.34s cubic-bezier(0.16, 1, 0.3, 1);
   --animate-dialog-out: dialog-out 0.22s cubic-bezier(0.7, 0, 0.84, 0);
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-manrope);
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 @keyframes accordion-down {
