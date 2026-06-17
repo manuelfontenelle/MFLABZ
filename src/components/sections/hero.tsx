@@ -89,6 +89,7 @@ export function Hero() {
 								sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 26vw, (min-width: 640px) 42vw, 77vw"
 								priority={index === 0}
 								quality={90}
+								unoptimized
 								className="size-full select-none object-cover"
 								decoding="async"
 								loading={index === 0 ? undefined : "lazy"}
