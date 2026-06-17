@@ -244,6 +244,7 @@ html {
 
 body {
   @apply bg-background font-sans text-body text-foreground antialiased;
+  overflow-x: clip;
   font-feature-settings:
     "rlig" 1,
     "calt" 1;
