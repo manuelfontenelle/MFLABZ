@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { ChevronRight } from "lucide-react"
 
 import { Button, Container } from "@/components/ui"
@@ -11,11 +10,6 @@ import { ContactDialog } from "./contact-dialog"
 
 const repeatedGalleryImages = [...heroGalleryData, ...heroGalleryData]
 
-const fadeUp = {
-	hidden: { opacity: 0, y: 16 },
-	visible: { opacity: 1, y: 0 },
-}
-
 export function Hero() {
 	return (
 		<section
@@ -24,18 +18,9 @@ export function Hero() {
 			itemType="https://schema.org/Organization"
 		>
 			<Container className="flex flex-1 items-center">
-				<motion.div
-					className="w-full"
-					initial="hidden"
-					animate="visible"
-					transition={{ staggerChildren: 0.08 }}
-				>
+				<div className="w-full">
 					<div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_470px] lg:items-end lg:gap-16">
-						<motion.div
-							variants={fadeUp}
-							transition={{ duration: 0.5, ease: "easeOut" }}
-							className="space-y-5"
-						>
+						<div className="hero-fade space-y-5">
 							<p
 								className="text-[0.88rem] leading-[1.35] font-semibold tracking-[0.16em] text-secondary uppercase sm:text-[0.975rem]"
 								itemProp="name"
@@ -45,13 +30,9 @@ export function Hero() {
 							<h1 className="max-w-[620px] font-heading text-[clamp(1.75rem,3.9vw,3.6rem)] leading-[1.22] font-normal tracking-[-0.075em] text-balance text-foreground sm:leading-[1.08]">
 								Freelance Graphic Design for Modern Brands
 							</h1>
-						</motion.div>
+						</div>
 
-						<motion.div
-							variants={fadeUp}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 }}
-							className="w-full max-w-[342px] space-y-[1.4rem] lg:justify-self-end"
-						>
+						<div className="hero-fade hero-fade-delay w-full max-w-[342px] space-y-[1.4rem] lg:justify-self-end">
 							<p className="inline-flex w-fit whitespace-nowrap rounded-button border border-border/70 px-2.5 py-1.5 text-[0.56rem] leading-none font-semibold tracking-[0.08em] text-muted-foreground uppercase sm:text-[0.62rem]">
 								Graphic design services in Paris and worldwide
 							</p>
@@ -89,17 +70,12 @@ export function Hero() {
 									</a>
 								</Button>
 							</div>
-						</motion.div>
+						</div>
 					</div>
-				</motion.div>
+				</div>
 			</Container>
 
-			<motion.div
-				className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16"
-				initial={{ opacity: 0, y: 18 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.7, ease: "easeOut", delay: 0.18 }}
-			>
+			<div className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
 				<div className="flex w-max transform-gpu will-change-transform [animation:logo-marquee_60s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none">
 					{repeatedGalleryImages.map((image, index) => (
 						<div
@@ -124,7 +100,7 @@ export function Hero() {
 						</div>
 					))}
 				</div>
-			</motion.div>
+			</div>
 		</section>
 	)
 }
