@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { useEffect, useState } from "react"
 import { ChevronRight } from "lucide-react"
 
 import { Button, Container } from "@/components/ui"
@@ -11,6 +12,22 @@ import { ContactDialog } from "./contact-dialog"
 const repeatedGalleryImages = [...heroGalleryData, ...heroGalleryData]
 
 export function Hero() {
+	const [shouldOptimizeHeroImages, setShouldOptimizeHeroImages] = useState(true)
+
+	useEffect(() => {
+		const mobileMediaQuery = window.matchMedia("(max-width: 639px)")
+		const updateImageOptimization = () => {
+			setShouldOptimizeHeroImages(mobileMediaQuery.matches)
+		}
+
+		updateImageOptimization()
+		mobileMediaQuery.addEventListener("change", updateImageOptimization)
+
+		return () => {
+			mobileMediaQuery.removeEventListener("change", updateImageOptimization)
+		}
+	}, [])
+
 	return (
 		<section
 			className="flex min-h-[85vh] flex-col justify-between overflow-hidden bg-background pt-10 pb-0 sm:min-h-[90vh] sm:pt-14 sm:pb-0 lg:min-h-[calc(100svh-3.3rem)] lg:pt-20 lg:pb-0"
@@ -86,12 +103,13 @@ export function Hero() {
 								src={image.imageUrl}
 								alt={image.imageAlt}
 								fill
-								sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 26vw, (min-width: 640px) 42vw, 77vw"
+								sizes="(min-width: 1280px) 28vw, (min-width: 1024px) 32vw, (min-width: 640px) 50vw, 92vw"
 								priority={index === 0}
 								quality={90}
+								unoptimized={!shouldOptimizeHeroImages}
 								className="size-full select-none object-cover"
 								decoding="async"
-								loading={index === 0 ? undefined : "lazy"}
+								loading={index === 0 ? undefined : index < 4 ? "eager" : "lazy"}
 								onError={(event) => {
 									event.currentTarget.src = image.fallbackImageUrl
 								}}
