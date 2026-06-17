@@ -73,7 +73,7 @@ export function Services() {
                     <div className="flex size-12 items-center justify-center rounded-2xl border border-border/70 bg-muted text-foreground transition-colors duration-300 group-hover:border-secondary/20 group-hover:bg-secondary/10 group-hover:text-secondary">
                       <Icon className="size-5" strokeWidth={1.8} />
                     </div>
-                    <CardTitle className="text-[1.55rem] leading-[1.05] tracking-[-0.045em]">
+                    <CardTitle as="h3" className="text-[1.55rem] leading-[1.05] tracking-[-0.045em]">
                       {service.title}
                     </CardTitle>
                   </CardHeader>

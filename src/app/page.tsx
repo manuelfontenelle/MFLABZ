@@ -13,10 +13,12 @@ import {
   TrustMetrics,
   WhyChooseMe
 } from "@/components/sections";
+import { StructuredData } from "@/components/seo/structured-data";
 
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <Navbar />
       <main className="min-h-screen bg-background">
         <Hero />

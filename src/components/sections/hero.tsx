@@ -42,8 +42,8 @@ export function Hero() {
 							>
 								MFLABZ STUDIO
 							</p>
-							<h1 className="max-w-[620px] font-heading text-[clamp(2.05rem,4.75vw,4.4rem)] leading-[1.31] font-normal tracking-[-0.075em] text-balance text-foreground sm:leading-[1.09]">
-								Graphic Design for Modern Brands
+							<h1 className="max-w-[620px] font-heading text-[clamp(1.75rem,3.9vw,3.6rem)] leading-[1.22] font-normal tracking-[-0.075em] text-balance text-foreground sm:leading-[1.08]">
+								Freelance Graphic Design for Modern Brands
 							</h1>
 						</motion.div>
 
@@ -110,9 +110,9 @@ export function Hero() {
 								src={image.imageUrl}
 								alt={image.imageAlt}
 								fill
-								sizes="(min-width: 1280px) 980px, (min-width: 1024px) 900px, (min-width: 640px) 720px, 580px"
+								sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 26vw, (min-width: 640px) 42vw, 77vw"
 								priority={index === 0}
-								quality={95}
+								quality={index === 0 ? 80 : 75}
 								className="size-full select-none object-cover"
 								decoding="async"
 								loading={index === 0 ? undefined : "lazy"}

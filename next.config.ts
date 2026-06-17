@@ -5,9 +5,9 @@ const isDevelopment = process.env.NODE_ENV === "development";
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    qualities: [75, 95],
+    qualities: [75, 80],
     unoptimized: isDevelopment,
-    minimumCacheTTL: isDevelopment ? 0 : 60,
+    minimumCacheTTL: isDevelopment ? 0 : 2592000,
     localPatterns: [
       {
         pathname: "/images/**"

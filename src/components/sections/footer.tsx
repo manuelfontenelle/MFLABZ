@@ -122,9 +122,9 @@ export function Footer() {
 
           <div className="grid grid-cols-2 gap-8 lg:contents">
             <nav className="space-y-4" aria-label="Footer navigation">
-              <h2 className="text-[1.05rem] font-semibold text-foreground">
+              <p className="text-[1.05rem] font-semibold text-foreground">
                 Navigation
-              </h2>
+              </p>
               <div className="flex flex-col items-start gap-3">
                 {navigationLinks.map((link) => (
                   <Link

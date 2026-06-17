@@ -16,6 +16,7 @@ export function PortfolioImage({ src, fallbackSrc, alt }: PortfolioImageProps) {
 		<Image
 			src={imageSrc}
 			alt={alt}
+			title={alt}
 			width={1600}
 			height={900}
 			sizes="(min-width: 640px) 50vw, 100vw"

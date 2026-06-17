@@ -24,17 +24,24 @@ const portfolioTabs = [
 
 export function Portfolio() {
 	return (
-		<section id="portfolio" className="py-section bg-background">
+		<section
+			id="portfolio"
+			className="py-section bg-background"
+			aria-label="Graphic design portfolio"
+		>
 			<Container className="space-y-12">
 				<SectionHeader
 					align="center"
 					className="[&_p]:max-w-none lg:[&_p]:whitespace-nowrap"
 					title="Selected Projects"
-					description="Explore a selection of branding and graphic design projects created for businesses worldwide."
+					description="Explore selected logo design, business card, flyer, brochure, signage and social media projects created for businesses worldwide."
 				/>
 
 				<Tabs defaultValue="Logo" className="items-center">
-					<TabsList className="h-auto w-full max-w-full flex-wrap rounded-md border-border/70 bg-background p-0 shadow-xs lg:rounded-[0.54rem]">
+					<TabsList
+						aria-label="Portfolio project categories"
+						className="h-auto w-full max-w-full flex-wrap rounded-md border-border/70 bg-background p-0 shadow-xs lg:rounded-[0.54rem]"
+					>
 						{portfolioTabs.map((tab) => (
 							<TabsTrigger
 								key={tab}
@@ -63,6 +70,8 @@ export function Portfolio() {
 									{projects.map((project) => (
 										<figure
 											key={project.id}
+											itemScope
+											itemType="https://schema.org/CreativeWork"
 											className="group overflow-hidden rounded-md border border-border/70 bg-background p-0 shadow-xs transition-all duration-500 hover:-translate-y-1 hover:shadow-md lg:rounded-[0.54rem]"
 										>
 											<PortfolioImage
@@ -70,6 +79,10 @@ export function Portfolio() {
 												fallbackSrc={project.fallbackImageUrl}
 												alt={project.imageAlt}
 											/>
+											<meta itemProp="genre" content={`${project.category} design`} />
+											<figcaption itemProp="name" className="sr-only">
+												{project.imageAlt}
+											</figcaption>
 										</figure>
 									))}
 								</div>
