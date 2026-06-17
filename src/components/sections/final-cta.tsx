@@ -7,7 +7,7 @@ import { ContactDialog } from "./contact-dialog";
 
 export function FinalCTA() {
   return (
-    <section id="contact" className="bg-background py-section">
+    <section id="contact" className="bg-background pt-[4.2rem] pb-section">
       <Container size="lg">
         <div className="overflow-hidden rounded-md border border-border bg-muted/60 px-6 py-16 shadow-sm sm:px-10 sm:py-20 lg:rounded-[0.54rem] lg:px-16">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-7 text-center">

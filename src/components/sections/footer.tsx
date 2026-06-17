@@ -74,7 +74,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-muted/45 pt-[3.2rem] pb-16 sm:pt-16 lg:pt-[4.8rem]">
       <Container>
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.45fr_0.8fr_0.8fr] lg:gap-14">
+        <div className="grid gap-10 lg:grid-cols-[1.45fr_0.8fr_0.8fr] lg:gap-14">
           <div className="flex flex-col">
             <Link
               href="/"
@@ -120,46 +120,48 @@ export function Footer() {
             </div>
           </div>
 
-          <nav className="space-y-4" aria-label="Footer navigation">
-            <h2 className="text-[1.05rem] font-semibold text-foreground">
-              Navigation
-            </h2>
-            <div className="flex flex-col items-start gap-3">
-              {navigationLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={(event) => handleSmoothScroll(event, link.href)}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </nav>
-
-          <div className="space-y-4">
-            <div className="flex flex-col items-start gap-3">
-              {socialLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  <span
-                    className="inline-flex size-5 items-center justify-center text-current"
-                    aria-hidden="true"
+          <div className="grid grid-cols-2 gap-8 lg:contents">
+            <nav className="space-y-4" aria-label="Footer navigation">
+              <h2 className="text-[1.05rem] font-semibold text-foreground">
+                Navigation
+              </h2>
+              <div className="flex flex-col items-start gap-3">
+                {navigationLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={(event) => handleSmoothScroll(event, link.href)}
+                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    <SocialIcon icon={link.icon} />
-                  </span>
-                  {link.label}
-                </Link>
-              ))}
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+
+            <div className="space-y-4">
+              <div className="flex flex-col items-start gap-3">
+                {socialLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    <span
+                      className="inline-flex size-5 items-center justify-center text-current"
+                      aria-hidden="true"
+                    >
+                      <SocialIcon icon={link.icon} />
+                    </span>
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+              <p className="pt-8 text-xs font-medium text-muted-foreground">
+                © {currentYear} <span className="text-foreground">MFlabz</span>. All
+                Rights Reserved.
+              </p>
             </div>
-            <p className="pt-8 text-xs font-medium text-muted-foreground">
-              © {currentYear} <span className="text-foreground">MFlabz</span>. All
-              Rights Reserved.
-            </p>
           </div>
         </div>
       </Container>
