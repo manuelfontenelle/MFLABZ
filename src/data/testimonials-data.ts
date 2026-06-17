@@ -1,24 +1,9 @@
 export type TestimonialGender = "male" | "female"
-export type TestimonialCountryFlag =
-	| "US"
-	| "CA"
-	| "AU"
-	| "GB"
-	| "IT"
-	| "DE"
-	| "FR"
-	| "ES"
-	| "IL"
-	| "GP"
-	| "NL"
-	| "SE"
-	| "JP"
-	| "BR"
 
 export type TestimonialItem = {
 	name: string
 	country: string
-	countryFlag: TestimonialCountryFlag
+	countryFlag: string
 	gender: TestimonialGender
 	rating: 5
 	review: string
