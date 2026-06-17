@@ -103,9 +103,9 @@ export function Hero() {
 								src={image.imageUrl}
 								alt={image.imageAlt}
 								fill
-								sizes="(min-width: 1280px) 28vw, (min-width: 1024px) 32vw, (min-width: 640px) 50vw, 92vw"
+								sizes="(min-width: 1280px) 28vw, (min-width: 1024px) 32vw, (min-width: 640px) 50vw, 80vw"
 								priority={index === 0}
-								quality={90}
+								quality={shouldOptimizeHeroImages ? 86 : 90}
 								unoptimized={!shouldOptimizeHeroImages}
 								className="size-full select-none object-cover"
 								decoding="async"
