@@ -178,7 +178,7 @@ export function Testimonials() {
 
                   <div>
                     <p className="font-heading text-[1.45rem] leading-none font-normal tracking-[-0.05em] text-white">
-                      50+
+                      25+
                     </p>
                     <p className="mt-2 text-xs font-medium text-white/60">
                       Industries Served
