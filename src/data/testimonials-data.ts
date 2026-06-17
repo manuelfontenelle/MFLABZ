@@ -8,6 +8,8 @@ export type TestimonialCountryFlag =
 	| "DE"
 	| "FR"
 	| "ES"
+	| "IL"
+	| "GP"
 	| "NL"
 	| "SE"
 	| "JP"
