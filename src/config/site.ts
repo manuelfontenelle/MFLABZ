@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "MFLABZ | Creative Web Studio",
+  name: "MFLABZ | Freelance Graphic Designer for Logos, Branding & Print Design",
   creator: "MFLABZ",
   url: "https://mflabz.com",
   description:

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { XIcon } from "lucide-react";
+import { X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -36,7 +36,7 @@ function DialogOverlay({
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       className={cn(
-        "fixed inset-0 z-50 bg-primary/70 backdrop-blur-md duration-300 data-[state=closed]:animate-out data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        "fixed inset-0 z-[120] bg-primary/70 backdrop-blur-md duration-300 data-[state=closed]:animate-out data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
         className
       )}
       {...props}
@@ -58,7 +58,7 @@ function DialogContent({
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "fixed top-1/2 left-1/2 z-50 grid max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-xl translate-x-[-50%] translate-y-[-50%] gap-6 overflow-y-auto rounded-md border border-border bg-background p-6 text-foreground shadow-lg will-change-[opacity,transform] data-[state=closed]:animate-dialog-out data-[state=open]:animate-dialog-in sm:p-8 lg:rounded-[0.54rem]",
+          "fixed top-1/2 left-1/2 z-[130] grid max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-xl translate-x-[-50%] translate-y-[-50%] gap-6 overflow-y-auto rounded-md border border-border bg-background p-6 text-foreground shadow-lg will-change-[opacity,transform] data-[state=closed]:animate-dialog-out data-[state=open]:animate-dialog-in sm:p-8 lg:rounded-[0.54rem]",
           className
         )}
         {...props}
@@ -67,9 +67,9 @@ function DialogContent({
         {showCloseButton && (
           <DialogPrimitive.Close
             data-slot="dialog-close"
-            className="absolute top-5 right-5 inline-flex size-9 items-center justify-center rounded-button border border-border bg-background text-muted-foreground shadow-xs transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground focus-visible:ring-ring/30 focus-visible:ring-[4px] focus-visible:outline-none disabled:pointer-events-none"
+            className="group absolute top-5 right-5 inline-flex size-10 cursor-pointer items-center justify-center rounded-md bg-background text-foreground transition-colors hover:bg-muted focus-visible:ring-ring/30 focus-visible:ring-[4px] focus-visible:outline-none disabled:pointer-events-none"
           >
-            <XIcon className="size-4" />
+            <X className="size-5" />
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
         )}

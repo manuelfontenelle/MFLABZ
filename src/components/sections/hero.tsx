@@ -1,40 +1,15 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { ChevronRight } from "lucide-react"
 
 import { Button, Container } from "@/components/ui"
 import { siteConfig } from "@/config/site"
+import { heroGalleryData } from "@/data/hero-gallery-data"
 import { ContactDialog } from "./contact-dialog"
 
-const galleryImages = [
-	{
-		src: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=900&q=85",
-		alt: "Branding mockup with printed identity pieces",
-	},
-	{
-		src: "https://images.unsplash.com/photo-1613909207039-6b173b755cc1?auto=format&fit=crop&w=900&q=85",
-		alt: "Graphic design mockup with bold visual system",
-	},
-	{
-		src: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=900&q=85",
-		alt: "Abstract logo and brand identity mockup",
-	},
-	{
-		src: "https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=900&q=85",
-		alt: "Brand identity mockup on premium stationery",
-	},
-	{
-		src: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=900&q=85",
-		alt: "Editorial design and printed brand collateral",
-	},
-	{
-		src: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=85",
-		alt: "Packaging design mockup for a modern brand",
-	},
-]
-
-const repeatedGalleryImages = [...galleryImages, ...galleryImages]
+const repeatedGalleryImages = [...heroGalleryData, ...heroGalleryData]
 
 const fadeUp = {
 	hidden: { opacity: 0, y: 16 },
@@ -77,6 +52,9 @@ export function Hero() {
 							transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 }}
 							className="w-full max-w-[342px] space-y-[1.4rem] lg:justify-self-end"
 						>
+							<p className="inline-flex w-fit whitespace-nowrap rounded-button border border-border/70 px-2.5 py-1.5 text-[0.56rem] leading-none font-semibold tracking-[0.08em] text-muted-foreground uppercase sm:text-[0.62rem]">
+								Graphic design services in Paris and worldwide
+							</p>
 							<p className="text-[clamp(0.8rem,1.1vw,0.97rem)] leading-[1.6] font-medium text-foreground">
 								Thoughtful branding and graphic design that turn ideas into
 								memorable, modern identities.
@@ -125,15 +103,22 @@ export function Hero() {
 				<div className="flex w-max transform-gpu will-change-transform [animation:logo-marquee_60s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none">
 					{repeatedGalleryImages.map((image, index) => (
 						<div
-							key={`${image.src}-${index}`}
-							className="h-[47vh] min-h-[328px] w-[76.8vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
+							key={`${image.id}-${index}`}
+							className="relative h-[47vh] min-h-[328px] w-[76.8vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
 						>
-							<img
-								src={image.src}
-								alt={image.alt}
+							<Image
+								src={image.imageUrl}
+								alt={image.imageAlt}
+								fill
+								sizes="(min-width: 1280px) 980px, (min-width: 1024px) 900px, (min-width: 640px) 720px, 580px"
+								priority={index === 0}
+								quality={95}
 								className="size-full select-none object-cover"
 								decoding="async"
-								loading={index < galleryImages.length ? "eager" : "lazy"}
+								loading={index === 0 ? undefined : "lazy"}
+								onError={(event) => {
+									event.currentTarget.src = image.fallbackImageUrl
+								}}
 								draggable={false}
 							/>
 						</div>

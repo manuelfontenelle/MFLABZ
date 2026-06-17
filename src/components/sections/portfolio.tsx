@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 import { portfolioData } from "@/data/portfolio-data"
 import {
 	Container,
@@ -9,18 +7,18 @@ import {
 	TabsList,
 	TabsTrigger,
 } from "@/components/ui"
+import { PortfolioImage } from "./portfolio-image"
 
 const portfolioTabs = [
 	"Logo",
 	"Business Cards",
+	"Flyer",
 	"Trifold",
 	"Bifold",
 	"Brochure",
-	"Flyer",
 	"Roll Up",
 	"Billboard",
 	"Yard Sign",
-	"Packaging",
 	"Social Media",
 ] as const
 
@@ -62,19 +60,15 @@ export function Portfolio() {
 								className="w-full data-[state=active]:animate-[portfolio-reveal_950ms_cubic-bezier(0.16,1,0.3,1)]"
 							>
 								<div className="grid gap-5 sm:grid-cols-2">
-									{projects.map((project, index) => (
+									{projects.map((project) => (
 										<figure
 											key={project.id}
 											className="group overflow-hidden rounded-md border border-border/70 bg-background p-0 shadow-xs transition-all duration-500 hover:-translate-y-1 hover:shadow-md lg:rounded-[0.54rem]"
 										>
-											<Image
+											<PortfolioImage
 												src={project.imageUrl}
+												fallbackSrc={project.fallbackImageUrl}
 												alt={project.imageAlt}
-												width={1200}
-												height={900}
-												sizes="(min-width: 640px) 50vw, 100vw"
-												className="aspect-[25/18] h-full w-full rounded-[calc(0.375rem-0.125rem)] object-cover lg:rounded-[calc(0.54rem-0.125rem)]"
-												loading="lazy"
 											/>
 										</figure>
 									))}
