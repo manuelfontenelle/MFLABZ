@@ -109,7 +109,7 @@ export function Hero() {
 								unoptimized={!shouldOptimizeHeroImages}
 								className="size-full select-none object-cover"
 								decoding="async"
-								loading={index === 0 ? undefined : index < 4 ? "eager" : "lazy"}
+								loading={index === 0 ? undefined : index < 2 ? "eager" : "lazy"}
 								onError={(event) => {
 									event.currentTarget.src = image.fallbackImageUrl
 								}}
