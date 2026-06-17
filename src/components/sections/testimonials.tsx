@@ -68,6 +68,7 @@ function TestimonialCard({ testimonial }: { testimonial: TestimonialItem }) {
 
           <div
             className="flex shrink-0 items-center gap-0.5 text-secondary"
+            role="img"
             aria-label={`${testimonial.rating} star rating`}
           >
             {Array.from({ length: testimonial.rating }).map((_, index) => (

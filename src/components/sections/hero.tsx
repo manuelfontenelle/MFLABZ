@@ -58,7 +58,7 @@ export function Hero() {
 									asChild
 									variant="ghost"
 									size="lg"
-									className="w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#1bc16f] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#1bc16f] sm:w-auto"
+									className="w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#0a8043] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#0a8043] sm:w-auto"
 								>
 									<a
 										href={siteConfig.links.fiverr}

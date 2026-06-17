@@ -40,7 +40,7 @@ export function FiverrIdentity() {
         </p>
 
         <div className="inline-flex max-w-full rounded-button border border-white/18 bg-white/[0.08] px-4 py-2.5 text-center shadow-xs sm:px-5">
-          <div className="flex items-center gap-2 text-white" aria-label="4.9 out of 5 average rating">
+          <div className="flex items-center gap-2 text-white" role="img" aria-label="4.9 out of 5 average rating">
             <span className="flex items-center gap-0.5" aria-hidden="true">
               {Array.from({ length: 5 }).map((_, index) => (
                 <Star key={index} className="size-3 fill-current sm:size-3.5" />
