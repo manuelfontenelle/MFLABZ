@@ -47,7 +47,7 @@ export function FAQ() {
             transition={{ duration: 0.58, ease: "easeOut" }}
           >
             <div className="max-w-xl space-y-6 lg:max-w-md">
-              <h2 className="font-heading text-heading-2 leading-none font-normal tracking-[-0.06em] text-foreground">
+              <h2 className="font-heading text-heading-2 leading-[1.2] font-normal tracking-[-0.06em] text-foreground sm:leading-none">
                 Frequently Asked Questions
               </h2>
 

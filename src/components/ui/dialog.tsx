@@ -69,7 +69,7 @@ function DialogContent({
             data-slot="dialog-close"
             className="group absolute top-5 right-5 inline-flex size-10 cursor-pointer items-center justify-center rounded-md bg-background text-foreground transition-colors hover:bg-muted focus-visible:ring-ring/30 focus-visible:ring-[4px] focus-visible:outline-none disabled:pointer-events-none"
           >
-            <X className="size-5" />
+            <X className="size-6" />
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
         )}

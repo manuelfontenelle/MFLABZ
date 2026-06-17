@@ -51,7 +51,7 @@ export function LogoMarquee() {
         <h2 className="sr-only">Trusted client and partner logos</h2>
 
         <div className="relative mx-auto flex w-full max-w-[1440px] items-center overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]">
-          <div className="flex min-w-max animate-[logo-marquee_42s_linear_infinite] items-center will-change-transform motion-reduce:animate-none">
+          <div className="flex w-max transform-gpu animate-[logo-marquee_42s_linear_infinite] items-center [backface-visibility:hidden] will-change-transform motion-reduce:animate-none">
             {[0, 1].map((group) => (
               <div
                 key={group}

@@ -69,7 +69,7 @@ export function Navbar() {
               exit={{ opacity: 0, rotate: 12, scale: 0.9 }}
               transition={{ duration: 0.18, ease: "easeOut" }}
             >
-              {isMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+              {isMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
             </motion.span>
           </AnimatePresence>
         </motion.button>
@@ -112,7 +112,7 @@ export function Navbar() {
                   aria-label="Close navigation menu"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <X className="size-5" />
+                  <X className="size-6" />
                 </button>
               </div>
 

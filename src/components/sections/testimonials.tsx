@@ -236,12 +236,12 @@ export function Testimonials() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.14 }}
           >
-            <div className="max-w-full overflow-hidden md:hidden">
-              <div className="flex max-w-full gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="max-w-full overflow-hidden bg-secondary md:hidden">
+              <div className="flex max-w-full snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {testimonialsData.map((testimonial, index) => (
                   <div
                     key={`${testimonial.name}-${testimonial.country}-${index}`}
-                    className="min-w-[min(82vw,22rem)] max-w-[82vw] shrink-0"
+                    className="min-w-[min(82vw,22rem)] max-w-[82vw] shrink-0 snap-start"
                   >
                     <TestimonialCard testimonial={testimonial} />
                   </div>
