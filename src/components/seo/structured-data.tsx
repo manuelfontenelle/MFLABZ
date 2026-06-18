@@ -31,7 +31,12 @@ function buildStructuredData() {
       { "@type": "Place", name: "Worldwide" }
     ],
     knowsAbout: [...siteConfig.keywords],
-    sameAs: [siteConfig.links.fiverr, siteConfig.links.behance, siteConfig.links.instagram],
+    sameAs: [
+      siteConfig.links.fiverr,
+      siteConfig.links.linkedin,
+      siteConfig.links.behance,
+      siteConfig.links.instagram
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
