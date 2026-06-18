@@ -13,9 +13,9 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#f8f6f0",
     icons: [
       {
-        src: "/images/mflabz-logo.svg",
-        type: "image/svg+xml",
-        sizes: "any",
+        src: "/favicon.ico",
+        sizes: "48x48",
+        type: "image/x-icon",
         purpose: "any"
       },
       {

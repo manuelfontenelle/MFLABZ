@@ -33,10 +33,6 @@ export const metadata: Metadata = {
   verification: {
     google: "ny7XZKq-xfYroMjabtSvbWA_UOeigRhfA3Du-7Mckkk"
   },
-  icons: {
-    icon: [{ url: "/images/mflabz-logo.svg", type: "image/svg+xml" }],
-    shortcut: "/images/mflabz-logo.svg"
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
