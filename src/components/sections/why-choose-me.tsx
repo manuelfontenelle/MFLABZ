@@ -103,7 +103,7 @@ export function WhyChooseMe() {
                   alt={`${siteConfig.founderName}, freelance graphic designer and founder of MFLABZ`}
                   fill
                   sizes="(min-width: 1024px) 360px, 100vw"
-                  className="object-cover"
+                  className="object-cover object-top"
                   loading="lazy"
                 />
               </div>
