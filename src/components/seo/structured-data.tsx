@@ -20,6 +20,12 @@ function buildStructuredData() {
       "@type": "ImageObject",
       url: `${baseUrl}/images/mflabz-logo.svg`
     },
+    founder: {
+      "@type": "Person",
+      name: siteConfig.founderName,
+      jobTitle: "Graphic Designer",
+      image: `${baseUrl}/images/profilPicture.jpg`
+    },
     areaServed: [
       { "@type": "City", name: "Paris" },
       { "@type": "Place", name: "Worldwide" }

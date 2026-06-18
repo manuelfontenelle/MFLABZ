@@ -1,3 +1,6 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+
 import { ImageResponse } from "next/og";
 
 export const alt = "MFLABZ freelance graphic design portfolio";
@@ -7,7 +10,12 @@ export const size = {
 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const logoData = await readFile(
+    join(process.cwd(), "public/images/mflabz-logo.svg")
+  );
+  const logoSrc = `data:image/svg+xml;base64,${logoData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -35,15 +43,22 @@ export default function OpenGraphImage() {
         >
           <div
             style={{
+              alignItems: "center",
               display: "flex",
-              fontSize: 28,
-              fontWeight: 700,
-              justifyContent: "space-between",
-              letterSpacing: "-0.02em"
+              justifyContent: "space-between"
             }}
           >
-            <span>MFLABZ</span>
-            <span>Paris + Worldwide</span>
+            { /* eslint-disable-next-line @next/next/no-img-element */ }
+            <img src={logoSrc} width={208} height={113} alt="MFLABZ logo" />
+            <span
+              style={{
+                fontSize: 26,
+                fontWeight: 700,
+                letterSpacing: "-0.02em"
+              }}
+            >
+              Paris + Worldwide
+            </span>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Star } from "lucide-react";
 
 import { Container } from "@/components/ui";
+import { siteConfig } from "@/config/site";
 
 const navigationLinks = [
   { label: "Portfolio", href: "#portfolio" },
@@ -89,6 +90,9 @@ export function Footer() {
                 className="h-[2.7rem] w-auto"
               />
             </Link>
+            <p className="mb-2 text-sm font-medium text-foreground">
+              {siteConfig.creator} - Studio by {siteConfig.founderName}
+            </p>
             <p className="mb-[1.0625rem] max-w-sm text-body-sm leading-6 text-muted-foreground">
               Graphic Designer specializing in branding, logo design and visual
               identities for businesses worldwide.
