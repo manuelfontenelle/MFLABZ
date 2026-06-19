@@ -92,7 +92,8 @@ export function Hero() {
 			<div className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
 				<div className="flex w-max transform-gpu will-change-transform [animation:logo-marquee_60s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none">
 					{repeatedGalleryImages.map((image, index) => {
-						const isMobileOptimized = shouldOptimizeHeroImages
+						const isMobileOptimized =
+							shouldOptimizeHeroImages && process.env.NODE_ENV === "production"
 						const isEagerHeroImage = isMobileOptimized ? index === 0 : index < 4
 
 						return (
