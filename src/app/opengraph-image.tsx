@@ -49,7 +49,7 @@ export default async function OpenGraphImage() {
             }}
           >
             { /* eslint-disable-next-line @next/next/no-img-element */ }
-            <img src={logoSrc} width={208} height={113} alt="MFLABZ logo" />
+            <img src={logoSrc} width={146} height={79} alt="MFLABZ logo" />
             <span
               style={{
                 fontSize: 26,
