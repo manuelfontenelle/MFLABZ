@@ -94,9 +94,8 @@ export function Hero() {
 					{repeatedGalleryImages.map((image, index) => {
 						const isMobileProd =
 							shouldOptimizeHeroImages && process.env.NODE_ENV === "production"
-						const isMobileLcpImage = index === 0 && isMobileProd
-						const isEagerHeroImage =
-							isMobileLcpImage || (!isMobileProd && index < 4)
+						const isAboveFoldImage =
+							(isMobileProd && index === 0) || (!isMobileProd && index < 4)
 
 						return (
 							<div
@@ -108,12 +107,9 @@ export function Hero() {
 									alt={image.imageAlt}
 									fill
 									sizes="(max-width: 639px) 77vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
-									priority={isMobileLcpImage}
-									quality={isMobileProd && !isMobileLcpImage ? 75 : 90}
 									unoptimized={!isMobileProd}
+									loading={isAboveFoldImage ? "eager" : undefined}
 									className="size-full select-none object-cover"
-									decoding={isMobileLcpImage ? "auto" : "async"}
-									loading={isEagerHeroImage ? "eager" : "lazy"}
 									onError={(event) => {
 										event.currentTarget.src = image.fallbackImageUrl
 									}}
