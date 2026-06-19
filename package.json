@@ -7,9 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
-    "optimize-hero": "node scripts/optimize-hero-images.mjs",
-    "prebuild": "npm run optimize-hero"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "latest",
@@ -40,7 +38,6 @@
     "@types/react-dom": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "sharp": "^0.35.1",
     "tailwindcss": "latest",
     "tw-animate-css": "latest",
     "typescript": "latest"

@@ -10,14 +10,12 @@ import "./globals.css";
 
 const manrope = Manrope({
   variable: "--font-manrope",
-  subsets: ["latin"],
-  display: "swap"
+  subsets: ["latin"]
 });
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap"
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
