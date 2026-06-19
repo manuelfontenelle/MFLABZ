@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import type { ReactNode } from "react";
 import { Toaster } from "sonner";
 
+import { HeroImagePreload } from "@/components/seo/hero-image-preload";
 import { MotionProvider } from "@/components/providers/motion-provider";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
@@ -69,6 +70,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <HeroImagePreload />
+      </head>
       <body className={`${manrope.variable} ${inter.variable}`}>
         <MotionProvider>{children}</MotionProvider>
         <Toaster richColors position="bottom-right" />
