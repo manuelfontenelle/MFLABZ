@@ -36,7 +36,7 @@ export default async function OpenGraphImage() {
             display: "flex",
             flexDirection: "column",
             height: "100%",
-            justifyContent: "space-between",
+            overflow: "hidden",
             padding: "56px",
             width: "100%"
           }}
@@ -45,7 +45,9 @@ export default async function OpenGraphImage() {
             style={{
               alignItems: "center",
               display: "flex",
-              justifyContent: "space-between"
+              flexShrink: 0,
+              justifyContent: "space-between",
+              marginBottom: 20
             }}
           >
             { /* eslint-disable-next-line @next/next/no-img-element */ }
@@ -61,15 +63,24 @@ export default async function OpenGraphImage() {
             </span>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+          <div
+            style={{
+              display: "flex",
+              flex: 1,
+              flexDirection: "column",
+              gap: 20,
+              justifyContent: "center",
+              minHeight: 0
+            }}
+          >
             <h1
               style={{
-                fontSize: 88,
+                fontSize: 80,
                 fontWeight: 700,
                 letterSpacing: "-0.075em",
                 lineHeight: 0.96,
                 margin: 0,
-                maxWidth: 860
+                maxWidth: 900
               }}
             >
               Freelance Graphic Designer for Modern Brands
@@ -77,10 +88,10 @@ export default async function OpenGraphImage() {
             <p
               style={{
                 color: "rgba(17, 17, 17, 0.68)",
-                fontSize: 30,
+                fontSize: 26,
                 lineHeight: 1.35,
                 margin: 0,
-                maxWidth: 760
+                whiteSpace: "nowrap"
               }}
             >
               Logo design, brand identity, print design and social media visuals.
@@ -91,9 +102,11 @@ export default async function OpenGraphImage() {
             style={{
               color: "#2150dc",
               display: "flex",
+              flexShrink: 0,
               fontSize: 26,
               fontWeight: 700,
-              letterSpacing: "-0.01em"
+              letterSpacing: "-0.01em",
+              marginTop: 24
             }}
           >
             mflabz.com
