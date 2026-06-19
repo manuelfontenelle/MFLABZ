@@ -92,9 +92,11 @@ export function Hero() {
 			<div className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
 				<div className="flex w-max transform-gpu will-change-transform [animation:logo-marquee_60s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none">
 					{repeatedGalleryImages.map((image, index) => {
-						const isMobileOptimized =
+						const isMobileProd =
 							shouldOptimizeHeroImages && process.env.NODE_ENV === "production"
-						const isEagerHeroImage = isMobileOptimized ? index === 0 : index < 4
+						const isMobileLcpImage = index === 0 && isMobileProd
+						const isEagerHeroImage =
+							isMobileLcpImage || (!isMobileProd && index < 4)
 
 						return (
 							<div
@@ -106,9 +108,9 @@ export function Hero() {
 									alt={image.imageAlt}
 									fill
 									sizes="(max-width: 639px) 77vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
-									priority={index === 0 && isMobileOptimized}
-									quality={isMobileOptimized ? 75 : 90}
-									unoptimized={!isMobileOptimized}
+									priority={isMobileLcpImage}
+									quality={isMobileProd && !isMobileLcpImage ? 75 : 90}
+									unoptimized={!isMobileProd || isMobileLcpImage}
 									className="size-full select-none object-cover"
 									decoding="async"
 									loading={isEagerHeroImage ? "eager" : "lazy"}
