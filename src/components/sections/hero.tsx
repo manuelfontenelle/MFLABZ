@@ -91,29 +91,35 @@ export function Hero() {
 
 			<div className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
 				<div className="flex w-max transform-gpu will-change-transform [animation:logo-marquee_60s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none">
-					{repeatedGalleryImages.map((image, index) => (
-						<div
-							key={`${image.id}-${index}`}
-							className="relative h-[47vh] min-h-[328px] w-[76.8vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
-						>
-							<Image
-								src={image.imageUrl}
-								alt={image.imageAlt}
-								fill
-								sizes="(min-width: 1280px) 28vw, (min-width: 1024px) 32vw, (min-width: 640px) 50vw, 80vw"
-								priority={index === 0}
-								quality={shouldOptimizeHeroImages ? 86 : 90}
-								unoptimized={!shouldOptimizeHeroImages}
-								className="size-full select-none object-cover"
-								decoding="async"
-								loading={index === 0 ? undefined : "lazy"}
-								onError={(event) => {
-									event.currentTarget.src = image.fallbackImageUrl
-								}}
-								draggable={false}
-							/>
-						</div>
-					))}
+					{repeatedGalleryImages.map((image, index) => {
+						const isMobileOptimized =
+							shouldOptimizeHeroImages && process.env.NODE_ENV === "production"
+						const isEagerHeroImage = isMobileOptimized ? index === 0 : index < 4
+
+						return (
+							<div
+								key={`${image.id}-${index}`}
+								className="relative h-[38vh] min-h-[280px] w-[76.8vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
+							>
+								<Image
+									src={image.imageUrl}
+									alt={image.imageAlt}
+									fill
+									sizes="(max-width: 639px) 77vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
+									priority={index === 0 && isMobileOptimized}
+									quality={isMobileOptimized ? 75 : 90}
+									unoptimized={!isMobileOptimized}
+									className="size-full select-none object-cover"
+									decoding="async"
+									loading={isEagerHeroImage ? "eager" : "lazy"}
+									onError={(event) => {
+										event.currentTarget.src = image.fallbackImageUrl
+									}}
+									draggable={false}
+								/>
+							</div>
+						)
+					})}
 				</div>
 			</div>
 		</section>
