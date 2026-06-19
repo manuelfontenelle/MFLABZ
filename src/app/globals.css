@@ -227,13 +227,6 @@
   animation-delay: 0.08s;
 }
 
-@media (max-width: 639px) {
-  .hero-fade {
-    opacity: 1;
-    animation: none;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .hero-fade {
     opacity: 1;
