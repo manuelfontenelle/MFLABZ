@@ -110,9 +110,9 @@ export function Hero() {
 									sizes="(max-width: 639px) 77vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
 									priority={isMobileLcpImage}
 									quality={isMobileProd && !isMobileLcpImage ? 75 : 90}
-									unoptimized={!isMobileProd || isMobileLcpImage}
+									unoptimized={!isMobileProd}
 									className="size-full select-none object-cover"
-									decoding="async"
+									decoding={isMobileLcpImage ? "auto" : "async"}
 									loading={isEagerHeroImage ? "eager" : "lazy"}
 									onError={(event) => {
 										event.currentTarget.src = image.fallbackImageUrl
