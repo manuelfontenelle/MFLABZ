@@ -99,11 +99,11 @@ export function WhyChooseMe() {
             <div className="overflow-hidden rounded-md border border-border/70 bg-card shadow-xs lg:rounded-[0.54rem]">
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-muted">
                 <Image
-                  src="/images/IMG_5930.JPEG"
+                  src="/images/profilPicture.jpg"
                   alt={`${siteConfig.founderName}, freelance graphic designer and founder of MFLABZ`}
                   fill
                   sizes="(min-width: 1024px) 360px, 100vw"
-                  className="object-cover object-bottom"
+                  className="object-cover object-top"
                   loading="lazy"
                 />
               </div>
