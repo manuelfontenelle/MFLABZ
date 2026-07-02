@@ -30,6 +30,6 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/manuel-fontenelle-b406b563",
     behance: "https://www.behance.net/mflabz",
     instagram: "https://www.instagram.com/mflabzdesign/",
-    email: "hello@mflabz.com"
+    email: "mflabz3@gmail.com"
   }
 } as const;

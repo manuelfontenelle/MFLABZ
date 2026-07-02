@@ -15,6 +15,12 @@ const navigationLinks = [
   { label: "FAQ", href: "#faq" }
 ];
 
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Legal Notice", href: "/legal" }
+];
+
 const socialLinks = [
   { label: "Fiverr", href: siteConfig.links.fiverr, icon: "fiverr" },
   { label: "LinkedIn", href: siteConfig.links.linkedin, icon: "linkedin" },
@@ -175,12 +181,29 @@ export function Footer() {
                   </Link>
                 ))}
               </div>
-              <p className="pt-8 text-xs font-medium text-muted-foreground">
-                © {currentYear} <span className="text-foreground">MFlabz</span>. All
-                Rights Reserved.
-              </p>
             </div>
           </div>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-4 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <nav
+            className="flex flex-wrap items-center gap-x-4 gap-y-2"
+            aria-label="Legal"
+          >
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <p className="text-xs font-medium text-muted-foreground sm:text-right">
+            © {currentYear} <span className="text-foreground">MFlabz</span>. All
+            Rights Reserved.
+          </p>
         </div>
       </Container>
     </footer>

@@ -26,91 +26,77 @@ export default async function OpenGraphImage() {
           display: "flex",
           height: "100%",
           justifyContent: "center",
-          padding: "72px",
           width: "100%"
         }}
       >
         <div
           style={{
-            border: "1px solid rgba(17, 17, 17, 0.14)",
+            alignItems: "center",
+            border: "1px solid rgba(17, 17, 17, 0.12)",
             display: "flex",
             flexDirection: "column",
-            height: "100%",
-            overflow: "hidden",
-            padding: "56px",
-            width: "100%"
+            height: 548,
+            justifyContent: "center",
+            padding: "48px 56px",
+            textAlign: "center",
+            width: 548
           }}
         >
-          <div
+          { /* eslint-disable-next-line @next/next/no-img-element */ }
+          <img
+            src={logoSrc}
+            width={168}
+            height={91}
+            alt="MFLABZ logo"
+            style={{ marginBottom: 36 }}
+          />
+
+          <p
             style={{
-              alignItems: "center",
-              display: "flex",
-              flexShrink: 0,
-              justifyContent: "space-between",
-              marginBottom: 20
+              fontSize: 52,
+              fontWeight: 700,
+              letterSpacing: "-0.05em",
+              lineHeight: 1.02,
+              margin: "0 0 18px"
             }}
           >
-            { /* eslint-disable-next-line @next/next/no-img-element */ }
-            <img src={logoSrc} width={146} height={79} alt="MFLABZ logo" />
-            <span
-              style={{
-                fontSize: 26,
-                fontWeight: 700,
-                letterSpacing: "-0.02em"
-              }}
-            >
-              Paris + Worldwide
-            </span>
-          </div>
+            Freelance Graphic Designer
+          </p>
 
-          <div
+          <p
             style={{
-              display: "flex",
-              flex: 1,
-              flexDirection: "column",
-              gap: 20,
-              justifyContent: "center",
-              minHeight: 0
-            }}
-          >
-            <h1
-              style={{
-                fontSize: 80,
-                fontWeight: 700,
-                letterSpacing: "-0.075em",
-                lineHeight: 0.96,
-                margin: 0,
-                maxWidth: 900
-              }}
-            >
-              Freelance Graphic Designer for Modern Brands
-            </h1>
-            <p
-              style={{
-                color: "rgba(17, 17, 17, 0.68)",
-                fontSize: 26,
-                lineHeight: 1.35,
-                margin: 0,
-                whiteSpace: "nowrap"
-              }}
-            >
-              Logo design, brand identity, print design and social media visuals.
-            </p>
-          </div>
-
-          <div
-            style={{
-              color: "#2150dc",
-              display: "flex",
-              flexShrink: 0,
-              fontSize: 26,
+              color: "#111111",
+              fontSize: 24,
               fontWeight: 700,
               letterSpacing: "-0.01em",
-              marginTop: 24
+              lineHeight: 1.3,
+              margin: "0 0 32px"
+            }}
+          >
+            Logo · Branding · Print & Social
+          </p>
+
+          <div
+            style={{
+              background: "#111111",
+              borderRadius: 999,
+              height: 4,
+              marginBottom: 28,
+              width: 48
+            }}
+          />
+
+          <p
+            style={{
+              color: "#111111",
+              fontSize: 28,
+              fontWeight: 700,
+              letterSpacing: "-0.02em",
+              margin: 0
             }}
           >
             mflabz.com
-          </div>
+          </p>
         </div>
       </div>
     ),
