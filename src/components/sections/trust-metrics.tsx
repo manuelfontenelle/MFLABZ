@@ -22,7 +22,7 @@ export function TrustMetrics() {
           </span>
         </div>
 
-        <h2 className="max-w-[900px] font-heading text-[clamp(1.65rem,3.3vw,2.8rem)] leading-[1.36] font-normal tracking-[-0.065em] text-balance text-foreground sm:leading-[1.13]">
+        <h2 className="max-w-[900px] font-heading text-[clamp(1.65rem,3.3vw,2.8rem)] leading-[1.36] font-medium tracking-[-0.065em] text-balance text-foreground sm:leading-[1.13]">
           Trusted by 4000+ Clients Worldwide
           <br className="hidden sm:block" />
           {" "}for Professional Graphic Design Services

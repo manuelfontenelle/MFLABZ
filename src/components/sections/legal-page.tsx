@@ -24,7 +24,7 @@ export function LegalPage({ content }: LegalPageProps) {
               >
                 ← Back to home
               </Link>
-              <h1 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <h1 className="font-heading text-3xl font-medium tracking-tight text-foreground sm:text-4xl">
                 {content.title}
               </h1>
               <p className="mt-3 max-w-2xl text-body-sm leading-6 text-muted-foreground">
@@ -38,7 +38,7 @@ export function LegalPage({ content }: LegalPageProps) {
             <div className="space-y-8">
               {content.sections.map((section) => (
                 <section key={section.title}>
-                  <h2 className="mb-3 text-lg font-semibold text-foreground">
+                  <h2 className="mb-3 text-lg font-medium text-foreground">
                     {section.title}
                   </h2>
                   <div className="space-y-3">
