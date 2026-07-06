@@ -222,7 +222,7 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
               type="submit"
               variant="premium"
               size="lg"
-              className="w-full bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none"
+              className="w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none active:bg-secondary/90"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Sending..." : "Send Inquiry"}
