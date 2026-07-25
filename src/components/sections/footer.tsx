@@ -1,19 +1,16 @@
 "use client";
 
-import type * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Star } from "lucide-react";
 
 import { Container } from "@/components/ui";
 import { siteConfig } from "@/config/site";
-
-const navigationLinks = [
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "FAQ", href: "#faq" }
-];
+import {
+  handleSectionNavClick,
+  sectionHref,
+  sectionNavItems
+} from "@/lib/section-nav";
 
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy" },
@@ -68,25 +65,6 @@ function SocialIcon({ icon }: { icon: SocialIconName }) {
       {icon === "behance" ? "Be" : "fi"}
     </span>
   );
-}
-
-function handleSmoothScroll(
-  event: React.MouseEvent<HTMLAnchorElement>,
-  href: string
-) {
-  const targetId = href.replace("#", "");
-  const target = document.getElementById(targetId);
-
-  if (!target) {
-    return;
-  }
-
-  event.preventDefault();
-  const offset = 88;
-  const top = target.getBoundingClientRect().top + window.scrollY - offset;
-
-  window.scrollTo({ top, behavior: "smooth" });
-  window.history.pushState(null, "", href);
 }
 
 export function Footer() {
@@ -150,11 +128,11 @@ export function Footer() {
                 Navigation
               </p>
               <div className="flex flex-col items-start gap-3">
-                {navigationLinks.map((link) => (
+                {sectionNavItems.map((link) => (
                   <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={(event) => handleSmoothScroll(event, link.href)}
+                    key={link.id}
+                    href={sectionHref(link.id)}
+                    onClick={(event) => handleSectionNavClick(event, link.id)}
                     className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}

@@ -7,13 +7,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 import { Container } from "@/components/ui";
-
-const navItems = [
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "FAQ", href: "#faq" }
-];
+import {
+  handleSectionNavClick,
+  sectionHref,
+  sectionNavItems
+} from "@/lib/section-nav";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,10 +39,11 @@ export function Navbar() {
           className="ml-auto hidden items-center justify-end gap-7 md:flex"
           aria-label="Main navigation"
         >
-          {navItems.map((item) => (
+          {sectionNavItems.map((item) => (
             <Link
-              key={item.href}
-              href={item.href}
+              key={item.id}
+              href={sectionHref(item.id)}
+              onClick={(event) => handleSectionNavClick(event, item.id)}
               className="relative font-heading text-[0.96rem] font-semibold uppercase leading-none tracking-[1px] text-foreground after:absolute after:left-0 after:top-[calc(100%+0.22rem)] after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-foreground after:transition-transform after:duration-700 after:ease-out hover:after:scale-x-100 sm:text-[1.03rem]"
             >
               {item.label}
@@ -117,9 +116,9 @@ export function Navbar() {
               </div>
 
               <nav className="mt-10 flex flex-col" aria-label="Mobile navigation links">
-                {navItems.map((item, index) => (
+                {sectionNavItems.map((item, index) => (
                   <motion.div
-                    key={item.href}
+                    key={item.id}
                     initial={{ opacity: 0, x: 18 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 12 }}
@@ -130,9 +129,12 @@ export function Navbar() {
                     }}
                   >
                     <Link
-                      href={item.href}
+                      href={sectionHref(item.id)}
                       className="group block border-b border-border/70 py-5 font-heading text-[1.05rem] font-semibold uppercase leading-none tracking-[1px] text-foreground transition-colors hover:text-secondary"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(event) => {
+                        handleSectionNavClick(event, item.id);
+                        setIsMenuOpen(false);
+                      }}
                     >
                       <span className="block transition-transform duration-300 ease-out group-hover:translate-x-1.5">
                         {item.label}
