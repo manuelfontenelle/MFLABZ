@@ -37,12 +37,6 @@ function buildStructuredData() {
       siteConfig.links.behance,
       siteConfig.links.instagram
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      bestRating: "5",
-      ratingCount: "2500"
-    },
     makesOffer: servicesData.map((service) => ({
       "@type": "Offer",
       itemOffered: {
