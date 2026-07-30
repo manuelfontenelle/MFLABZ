@@ -52,6 +52,11 @@ export const clientLogos: ClientLogo[] = [
 		logoSrc: "/images/logos_marquee/PureEyes_logo.png",
 	},
 	{
+		name: "Engage",
+		wordmark: "Engage",
+		logoSrc: "/images/logos_marquee/logo_engage.png",
+	},
+	{
 		name: "safti",
 		wordmark: "safti",
 		logoSrc: "/images/logos_marquee/safti.png",
