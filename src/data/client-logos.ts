@@ -22,9 +22,9 @@ export const clientLogos: ClientLogo[] = [
 		logoSrc: "/images/logos_marquee/lufa.png",
 	},
 	{
-		name: "Intersport",
-		wordmark: "Intersport",
-		logoSrc: "/images/logos_marquee/intersport_logo.jpg",
+		name: "Allshelf",
+		wordmark: "Allshelf",
+		logoSrc: "/images/logos_marquee/allshelf_logo.jpeg",
 	},
 	{
 		name: "Thomas Marine",
@@ -32,24 +32,29 @@ export const clientLogos: ClientLogo[] = [
 		logoSrc: "/images/logos_marquee/small_logo_thomas_marine.png",
 	},
 	{
-		name: "Allshelf",
-		wordmark: "Allshelf",
-		logoSrc: "/images/logos_marquee/allshelf_logo.jpeg",
-	},
-	{
 		name: "Parabox",
 		wordmark: "Parabox",
 		logoSrc: "/images/logos_marquee/parabox_logo.jpg",
 	},
 	{
-		name: "Fimaris",
-		wordmark: "Fimaris",
-		logoSrc: "/images/logos_marquee/fimaris_logo.png",
+		name: "Intersport",
+		wordmark: "Intersport",
+		logoSrc: "/images/logos_marquee/intersport_logo.jpg",
 	},
 	{
-		name: "NextMedia",
-		wordmark: "NextMedia",
-		logoSrc: "/images/logos_marquee/nextmedia.png",
+		name: "Premium Lawns",
+		wordmark: "Premium Lawns",
+		logoSrc: "/images/logos_marquee/premium-lawns_logo.jpg",
+	},
+	{
+		name: "PureEyes",
+		wordmark: "PureEyes",
+		logoSrc: "/images/logos_marquee/PureEyes_logo.png",
+	},
+	{
+		name: "safti",
+		wordmark: "safti",
+		logoSrc: "/images/logos_marquee/safti.png",
 	},
 	{
 		name: "friogaz",
@@ -62,6 +67,11 @@ export const clientLogos: ClientLogo[] = [
 		logoSrc: "/images/logos_marquee/virnika.svg",
 	},
 	{
+		name: "Fimaris",
+		wordmark: "Fimaris",
+		logoSrc: "/images/logos_marquee/fimaris_logo.png",
+	},
+	{
 		name: "PetHSA",
 		wordmark: "PetHSA",
 		logoSrc: "/images/logos_marquee/PetHSA.png",
@@ -72,9 +82,9 @@ export const clientLogos: ClientLogo[] = [
 		logoSrc: "/images/logos_marquee/National_Health_Service.png",
 	},
 	{
-		name: "safti",
-		wordmark: "safti",
-		logoSrc: "/images/logos_marquee/safti.png",
+		name: "NextMedia",
+		wordmark: "NextMedia",
+		logoSrc: "/images/logos_marquee/nextmedia.png",
 	},
 	{
 		name: "VERLYS",
