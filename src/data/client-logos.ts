@@ -97,9 +97,9 @@ export const clientLogos: ClientLogo[] = [
 		logoSrc: "/images/logos_marquee/logo-VERLYS-01.png",
 	},
 	{
-		name: "spherity",
-		wordmark: "spherity",
-		logoSrc: "/images/logos_marquee/spherity_logo_gradient.png",
+		name: "Quantifi",
+		wordmark: "Quantifi",
+		logoSrc: "/images/logos_marquee/quantifi_logo.png",
 	},
 	{
 		name: "IMG",
