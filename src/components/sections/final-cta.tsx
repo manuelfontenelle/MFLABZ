@@ -14,7 +14,7 @@ export function FinalCTA() {
             <span className="text-caption font-semibold uppercase text-secondary">
               Let&apos;s create something memorable
             </span>
-            <h2 className="max-w-2xl font-heading text-heading-2 leading-[1.2] font-medium sm:leading-[1]">
+            <h2 className="max-w-2xl font-heading text-heading-2 leading-[1.32] font-semibold sm:leading-[1.1]">
               Ready to Elevate Your Brand?
             </h2>
             <p className="max-w-2xl text-body-lg text-muted-foreground">

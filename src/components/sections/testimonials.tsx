@@ -44,7 +44,7 @@ function TestimonialCard({ testimonial }: { testimonial: TestimonialItem }) {
             </div>
 
             <div>
-              <h3 className="!font-sans text-[1.05rem] leading-tight !font-medium tracking-[-0.035em] text-zinc-950">
+              <h3 className="!font-sans text-[1.05rem] leading-[1.38] !font-semibold tracking-[-0.035em] text-zinc-950">
                 {testimonial.name}
               </h3>
               <div className="mt-2 flex items-center">

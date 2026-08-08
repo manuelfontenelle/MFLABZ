@@ -37,11 +37,11 @@ export function Hero() {
 			<Container className="flex flex-1 items-center">
 				<div className="w-full">
 					<div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_470px] lg:items-end lg:gap-16">
-						<div className="hero-fade space-y-5">
+						<div className="hero-fade space-y-[1.725rem]">
 							<p className="text-[0.88rem] leading-[1.35] font-semibold tracking-[0.16em] text-secondary uppercase sm:text-[0.975rem]">
 								{siteConfig.creator} STUDIO
 							</p>
-							<h1 className="max-w-[620px] font-heading text-[clamp(1.75rem,3.9vw,3.6rem)] leading-[1.22] font-medium tracking-[-0.075em] text-balance text-foreground sm:leading-[1.08]">
+							<h1 className="max-w-[620px] font-heading text-[clamp(1.75rem,3.9vw,3.5rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
 								Freelance Graphic Design for Modern Brands
 							</h1>
 						</div>

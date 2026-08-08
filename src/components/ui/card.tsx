@@ -36,7 +36,7 @@ function CardTitle({ className, as: Component = "div", ...props }: CardTitleProp
   return (
     <Component
       data-slot="card-title"
-      className={cn("font-heading text-xl leading-none font-medium tracking-[-0.04em]", className)}
+      className={cn("font-heading text-xl leading-[1.1] font-semibold tracking-[-0.04em]", className)}
       {...props}
     />
   );

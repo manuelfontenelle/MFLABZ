@@ -44,7 +44,7 @@ export function Navbar() {
               key={item.id}
               href={sectionHref(item.id)}
               onClick={(event) => handleSectionNavClick(event, item.id)}
-              className="relative font-heading text-[0.96rem] font-semibold uppercase leading-none tracking-[1px] text-foreground after:absolute after:left-0 after:top-[calc(100%+0.22rem)] after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-foreground after:transition-transform after:duration-700 after:ease-out hover:after:scale-x-100 sm:text-[1.03rem]"
+              className="relative font-heading text-[0.96rem] font-semibold uppercase leading-none tracking-[1px] text-foreground transition-colors after:absolute after:left-0 after:top-[calc(100%+0.22rem)] after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-secondary after:transition-transform after:duration-700 after:ease-out hover:text-secondary hover:after:scale-x-100 sm:text-[1.03rem]"
             >
               {item.label}
             </Link>

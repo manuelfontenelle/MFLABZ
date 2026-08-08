@@ -109,7 +109,7 @@ export function WhyChooseMe() {
               </div>
               <div className="space-y-4 p-6 sm:p-7">
                 <div className="space-y-1">
-                  <p className="font-heading text-[1.3rem] leading-tight font-medium tracking-[-0.04em] text-foreground">
+                  <p className="font-heading text-[1.3rem] leading-[1.38] font-semibold tracking-[-0.04em] text-foreground">
                     {siteConfig.founderName}
                   </p>
                   <p className="text-[0.82rem] font-medium tracking-[0.02em] text-muted-foreground">
@@ -151,7 +151,7 @@ export function WhyChooseMe() {
                       <Icon className="size-5" strokeWidth={1.7} />
                     </div>
                     <div className="space-y-3">
-                      <h3 className="font-heading text-[1.35rem] leading-tight font-medium tracking-[-0.04em] text-foreground">
+                      <h3 className="font-heading text-[1.35rem] leading-[1.38] font-semibold tracking-[-0.04em] text-foreground">
                         {title}
                       </h3>
                       <p className="max-w-xl text-[0.98rem] leading-7 text-muted-foreground">

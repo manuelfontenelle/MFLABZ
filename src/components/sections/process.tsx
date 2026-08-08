@@ -120,7 +120,7 @@ export function Process() {
                 <p className="text-caption font-semibold tracking-[0.16em] text-secondary uppercase">
                   Collaboration Workflow
                 </p>
-                <h2 className="font-heading text-heading-2 leading-[1.2] font-medium tracking-[-0.06em] text-foreground sm:leading-none">
+                <h2 className="font-heading text-heading-2 leading-[1.32] font-semibold tracking-[-0.06em] text-foreground sm:leading-[1.1]">
                   A Thoughtful Creative Process
                 </h2>
               </div>
@@ -156,7 +156,7 @@ export function Process() {
 
                 <div className="space-y-6">
                   <div className="space-y-3">
-                    <h3 className="font-heading text-[clamp(1.55rem,2.8vw,2.25rem)] leading-[1.02] font-medium tracking-[-0.055em] text-foreground">
+                    <h3 className="font-heading text-[clamp(1.55rem,2.8vw,2.25rem)] leading-[1.12] font-semibold tracking-[-0.055em] text-foreground">
                       {step.title}
                     </h3>
                     <p className="max-w-2xl text-[0.98rem] leading-7 text-muted-foreground">
