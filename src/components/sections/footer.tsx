@@ -97,7 +97,7 @@ export function Footer() {
             </p>
 
             <div className="space-y-4">
-              <div className="inline-flex max-w-full flex-nowrap items-center gap-1.5 whitespace-nowrap rounded-button border border-border px-2.5 py-[0.3375rem] text-[10.5px] font-semibold text-foreground shadow-xs sm:w-fit sm:gap-[0.45rem] sm:px-[0.85rem] sm:text-[11.7px]">
+              <div className="inline-flex max-w-full flex-nowrap items-center gap-1.5 whitespace-nowrap rounded-button border border-border px-2.5 py-[0.3375rem] text-[10.5px] font-medium text-foreground shadow-xs sm:w-fit sm:gap-[0.45rem] sm:px-[0.85rem] sm:text-[11.7px]">
                 <span
                   className="flex items-center gap-0.5 text-secondary"
                   aria-hidden="true"
@@ -110,13 +110,10 @@ export function Footer() {
                   ))}
                 </span>
                 <span className="text-[10.5px] text-foreground sm:text-[12.1px]">
-                  Rated 4.9/5
-                </span>
-                <span className="text-[10.5px] text-muted-foreground sm:text-[12.1px]">
-                  from
-                </span>
-                <span className="text-[10.5px] text-foreground sm:text-[12.1px]">
-                  2500+ Client Reviews
+                  <span className="font-semibold">Rated </span>
+                  <span className="font-semibold text-secondary">4.9/5</span>
+                  {" from "}
+                  <span className="font-semibold">2500+ Client Reviews</span>
                 </span>
               </div>
             </div>

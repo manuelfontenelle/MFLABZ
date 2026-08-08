@@ -17,7 +17,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="relative z-[80] bg-background/95 pt-4">
+    <header className="relative z-[80] bg-background/95 pt-4 md:pt-6">
       <Container className="flex h-10 items-center">
         <Link
           href="/"
