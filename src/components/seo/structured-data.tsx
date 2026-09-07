@@ -4,9 +4,29 @@ import { servicesData } from "@/data/services-data";
 
 const baseUrl = siteConfig.url.replace(/\/$/, "");
 const organizationId = `${baseUrl}/#organization`;
+const personId = `${baseUrl}/#person`;
 const websiteId = `${baseUrl}/#website`;
 
 function buildStructuredData() {
+  const person = {
+    "@type": "Person",
+    "@id": personId,
+    name: siteConfig.founderName,
+    url: `${baseUrl}/`,
+    image: `${baseUrl}/images/profilPicture.jpg`,
+    jobTitle: "Graphic Designer",
+    description:
+      "Freelance graphic designer and founder of MFLABZ, specializing in logo design, branding, and print design.",
+    worksFor: { "@id": organizationId },
+    sameAs: [
+      siteConfig.links.personal,
+      siteConfig.links.linkedin,
+      siteConfig.links.behance,
+      siteConfig.links.instagram,
+      siteConfig.links.fiverr
+    ]
+  };
+
   const organization = {
     "@type": ["ProfessionalService", "Organization"],
     "@id": organizationId,
@@ -20,12 +40,8 @@ function buildStructuredData() {
       "@type": "ImageObject",
       url: `${baseUrl}/images/mflabz-logo.svg`
     },
-    founder: {
-      "@type": "Person",
-      name: siteConfig.founderName,
-      jobTitle: "Graphic Designer",
-      image: `${baseUrl}/images/profilPicture.jpg`
-    },
+    founder: { "@id": personId },
+    employee: { "@id": personId },
     areaServed: [
       { "@type": "City", name: "Paris" },
       { "@type": "Place", name: "Worldwide" }
@@ -54,7 +70,8 @@ function buildStructuredData() {
     name: siteConfig.name,
     description: siteConfig.description,
     inLanguage: "en",
-    publisher: { "@id": organizationId }
+    publisher: { "@id": organizationId },
+    author: { "@id": personId }
   };
 
   const faqPage = {
@@ -73,7 +90,7 @@ function buildStructuredData() {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [organization, website, faqPage]
+    "@graph": [person, organization, website, faqPage]
   };
 }
 
