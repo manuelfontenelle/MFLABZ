@@ -36,7 +36,7 @@ const itemReveal: Variants = {
 
 export function FAQ() {
   return (
-    <section id="faq" className="bg-background py-section-lg">
+    <section id="faq" className="bg-background pt-20 pb-section-lg lg:py-section-lg">
       <Container>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] lg:gap-20">
           <motion.div

@@ -37,10 +37,19 @@ export const servicesData: ServiceItem[] = [
   },
   {
     id: "social-media-design",
-    title: "Social Media Design",
+    title: "Social & Ad Creative",
     description:
-      "Scroll-stopping visuals that strengthen your presence and keep your feed consistent and engaging.",
-    badges: ["Posts", "Stories", "Carousels", "Feed Design", "Ads", "LinkedIn", "Instagram", "Facebook"]
+      "Scroll-stopping social visuals, paid ad banners for Google and Amazon, and A+ Content that presents your products with clarity and impact.",
+    badges: [
+      "Posts",
+      "Stories",
+      "Carousels",
+      "Google Ads",
+      "Amazon Ads",
+      "A+ Content",
+      "Instagram",
+      "Facebook"
+    ]
   },
   {
     id: "marketing-materials",

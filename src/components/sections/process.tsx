@@ -61,7 +61,7 @@ const processSteps: ProcessStep[] = [
     label: "Deliverables",
     items: [
       "Editable Source Files (AI, EPS, PSD)",
-      "High-Resolution Exports (PNG, JPG, PDF)",
+      "High-Resolution Exports (PNG, JPG, PDF, SVG)",
       "Print-Ready Files",
       "Social Media & Brand Assets (if applicable)"
     ]
@@ -105,7 +105,7 @@ const numberReveal: Variants = {
 
 export function Process() {
   return (
-    <section id="process" className="bg-muted/45 py-section-lg">
+    <section id="process" className="bg-muted/45 py-section lg:py-section-lg">
       <Container>
         <div className="grid gap-14 lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] lg:gap-20">
           <motion.div

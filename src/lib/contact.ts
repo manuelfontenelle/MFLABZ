@@ -3,7 +3,7 @@ import { z } from "zod";
 export const contactServiceOptions = [
   "Logo Design",
   "Branding",
-  "Social Media Design",
+  "Social & Ad Creative",
   "Print Design",
   "Other"
 ] as const;
