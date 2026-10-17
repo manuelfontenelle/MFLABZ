@@ -100,13 +100,13 @@ export function Hero() {
 						return (
 							<div
 								key={`${image.id}-${index}`}
-								className="relative h-[38vh] min-h-[280px] w-[76.8vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
+								className="relative h-[38vh] min-h-[280px] w-[73vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
 							>
 								<Image
 									src={image.imageUrl}
 									alt={image.imageAlt}
 									fill
-									sizes="(max-width: 639px) 77vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
+									sizes="(max-width: 639px) 73vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
 									unoptimized={!isMobileProd}
 									loading={isAboveFoldImage ? "eager" : undefined}
 									className="size-full select-none object-cover"
