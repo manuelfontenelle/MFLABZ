@@ -90,7 +90,7 @@ export function Hero() {
 			</Container>
 
 			<div className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
-				<div className="flex w-max transform-gpu will-change-transform [animation:logo-marquee_30s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_40s_linear_infinite]">
+				<div className="flex w-max transform-gpu will-change-transform [animation:logo-marquee_22s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_40s_linear_infinite]">
 					{repeatedGalleryImages.map((image, index) => {
 						const isMobileProd =
 							shouldOptimizeHeroImages && process.env.NODE_ENV === "production"
@@ -100,13 +100,13 @@ export function Hero() {
 						return (
 							<div
 								key={`${image.id}-${index}`}
-								className="relative h-[38vh] min-h-[280px] w-[73vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
+								className="relative h-[38vh] min-h-[280px] w-[79vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
 							>
 								<Image
 									src={image.imageUrl}
 									alt={image.imageAlt}
 									fill
-									sizes="(max-width: 639px) 73vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
+									sizes="(max-width: 639px) 79vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
 									unoptimized={!isMobileProd}
 									loading={isAboveFoldImage ? "eager" : undefined}
 									className="size-full select-none object-cover"
