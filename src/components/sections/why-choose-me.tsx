@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { BadgeCheck, Clock3, Globe2, Handshake, Palette, Star } from "lucide-react";
+import { Clock3, Gem, Globe2, Handshake, Sparkles, Star } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
@@ -29,7 +29,7 @@ const reasons: Reason[] = [
   {
     title: "Custom Design Approach",
     description: "Every project is designed from scratch around your brand, audience and goals.",
-    icon: Palette
+    icon: Sparkles
   },
   {
     title: "Direct Collaboration",
@@ -44,7 +44,7 @@ const reasons: Reason[] = [
   {
     title: "Professional Quality",
     description: "Polished, consistent design built to strengthen credibility and support real growth.",
-    icon: BadgeCheck
+    icon: Gem
   }
 ];
 

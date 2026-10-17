@@ -23,14 +23,14 @@ export const servicesData: ServiceItem[] = [
     id: "brand-identity",
     title: "Brand Identity",
     description:
-      "Cohesive identity systems that keep every touchpoint consistent, recognizable and unmistakably yours.",
+      "Cohesive identity systems built around your logo, from brand guidelines and stationery to product packaging and labels.",
     badges: [
       "Brand Guidelines",
       "Stationery",
       "Color Palette",
       "Typography",
       "Packaging",
-      "Iconography",
+      "Product Labels",
       "Brand Assets",
       "Rebranding"
     ]
@@ -55,7 +55,7 @@ export const servicesData: ServiceItem[] = [
     id: "marketing-materials",
     title: "Marketing Materials",
     description:
-      "Print and promotional assets crafted to communicate clearly and leave a lasting impression.",
+      "Business cards, flyers, brochures, roll-ups, billboards and outdoor visuals designed to present your offer clearly and get noticed.",
     badges: [
       "Business Cards",
       "Flyers",
@@ -63,8 +63,8 @@ export const servicesData: ServiceItem[] = [
       "Roll-Ups",
       "Billboards",
       "Posters",
-      "Menus",
-      "Catalogs"
+      "Vehicle Wrap",
+      "Car Wrap"
     ]
   }
 ];

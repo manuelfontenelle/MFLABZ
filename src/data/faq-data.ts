@@ -9,7 +9,7 @@ export const faqData: FAQDataItem[] = [
     id: "faq-01",
     question: "What design services do you offer?",
     answer:
-      "I provide logo design, brand identity, social media design, business cards, flyers, roll-ups, billboards and other marketing materials for businesses of all sizes."
+      "I provide logo design, brand identity, product packaging and labels, social media design, business cards, flyers, roll-ups, billboards, vehicle wraps and other marketing materials for businesses of all sizes."
   },
   {
     id: "faq-02",

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { BadgeCheck, Megaphone, PenTool, Share2 } from "lucide-react";
+import { Images, Megaphone, Palette, PenTool } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 import { Badge, Card, CardContent, CardHeader, CardTitle, Container, SectionHeader } from "@/components/ui";
@@ -11,8 +11,8 @@ import { servicesData } from "@/data/services-data";
 
 const serviceIcons: Record<ServiceId, LucideIcon> = {
   "logo-design": PenTool,
-  "brand-identity": BadgeCheck,
-  "social-media-design": Share2,
+  "brand-identity": Palette,
+  "social-media-design": Images,
   "marketing-materials": Megaphone
 };
 
