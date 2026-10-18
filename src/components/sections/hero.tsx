@@ -94,8 +94,7 @@ export function Hero() {
 					{repeatedGalleryImages.map((image, index) => {
 						const isMobileProd =
 							shouldOptimizeHeroImages && process.env.NODE_ENV === "production"
-						const isAboveFoldImage =
-							(isMobileProd && index === 0) || (!isMobileProd && index < 4)
+						const isPriorityImage = index < 2
 
 						return (
 							<div
@@ -108,7 +107,9 @@ export function Hero() {
 									fill
 									sizes="(max-width: 639px) 79vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
 									unoptimized={!isMobileProd}
-									loading={isAboveFoldImage ? "eager" : undefined}
+									priority={isPriorityImage}
+									loading={isPriorityImage ? undefined : "eager"}
+									decoding="async"
 									className="size-full select-none object-cover"
 									onError={(event) => {
 										event.currentTarget.src = image.fallbackImageUrl
