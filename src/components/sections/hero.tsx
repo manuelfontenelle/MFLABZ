@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { useEffect, useState } from "react"
 import { ChevronRight } from "lucide-react"
 
@@ -11,20 +10,35 @@ import { ContactDialog } from "./contact-dialog"
 
 const repeatedGalleryImages = [...heroGalleryData, ...heroGalleryData]
 
+function preloadHeroImages(urls: string[]) {
+	return Promise.all(
+		urls.map(
+			(src) =>
+				new Promise<void>((resolve) => {
+					const image = new window.Image()
+					image.onload = () => resolve()
+					image.onerror = () => resolve()
+					image.src = src
+				}),
+		),
+	)
+}
+
 export function Hero() {
-	const [shouldOptimizeHeroImages, setShouldOptimizeHeroImages] = useState(true)
+	const [isMarqueeReady, setIsMarqueeReady] = useState(false)
 
 	useEffect(() => {
-		const mobileMediaQuery = window.matchMedia("(max-width: 639px)")
-		const updateImageOptimization = () => {
-			setShouldOptimizeHeroImages(mobileMediaQuery.matches)
-		}
+		let cancelled = false
+		const uniqueUrls = heroGalleryData.map((image) => image.imageUrl)
 
-		updateImageOptimization()
-		mobileMediaQuery.addEventListener("change", updateImageOptimization)
+		preloadHeroImages(uniqueUrls).then(() => {
+			if (!cancelled) {
+				setIsMarqueeReady(true)
+			}
+		})
 
 		return () => {
-			mobileMediaQuery.removeEventListener("change", updateImageOptimization)
+			cancelled = true
 		}
 	}, [])
 
@@ -90,35 +104,29 @@ export function Hero() {
 			</Container>
 
 			<div className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
-				<div className="flex w-max transform-gpu will-change-transform [animation:logo-marquee_22s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_40s_linear_infinite]">
-					{repeatedGalleryImages.map((image, index) => {
-						const isMobileProd =
-							shouldOptimizeHeroImages && process.env.NODE_ENV === "production"
-						const isPriorityImage = index < 2
-
-						return (
-							<div
-								key={`${image.id}-${index}`}
-								className="relative h-[38vh] min-h-[280px] w-[79vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
-							>
-								<Image
-									src={image.imageUrl}
-									alt={image.imageAlt}
-									fill
-									sizes="(max-width: 639px) 79vw, (min-width: 1280px) 28vw, (min-width: 1024px) 32vw, 50vw"
-									unoptimized={!isMobileProd}
-									priority={isPriorityImage}
-									loading={isPriorityImage ? undefined : "eager"}
-									decoding="async"
-									className="size-full select-none object-cover"
-									onError={(event) => {
-										event.currentTarget.src = image.fallbackImageUrl
-									}}
-									draggable={false}
-								/>
-							</div>
-						)
-					})}
+				<div
+					className={`flex w-max [animation:logo-marquee_22s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_40s_linear_infinite] ${
+						isMarqueeReady ? "" : "[animation-play-state:paused]"
+					}`}
+				>
+					{repeatedGalleryImages.map((image, index) => (
+						<div
+							key={`${image.id}-${index}`}
+							className="relative h-[38vh] min-h-[280px] w-[79vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
+						>
+							{/* eslint-disable-next-line @next/next/no-img-element -- native img avoids Next optimizer URL swaps that flicker on mobile marquee */}
+							<img
+								src={image.imageUrl}
+								alt={image.imageAlt}
+								decoding="async"
+								draggable={false}
+								className="pointer-events-none size-full select-none object-cover [backface-visibility:hidden] [transform:translateZ(0)]"
+								onError={(event) => {
+									event.currentTarget.src = image.fallbackImageUrl
+								}}
+							/>
+						</div>
+					))}
 				</div>
 			</div>
 		</section>
