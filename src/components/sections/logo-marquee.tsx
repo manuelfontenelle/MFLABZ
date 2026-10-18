@@ -1,6 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 import { Container } from "@/components/ui";
 import { clientLogos } from "@/data/client-logos";
-import Image from "next/image";
 
 function PlaceholderLogo({ name, wordmark }: { name: string; wordmark: string }) {
   return (
@@ -44,7 +47,40 @@ function PlaceholderLogo({ name, wordmark }: { name: string; wordmark: string })
   );
 }
 
+function preloadLogoImages(urls: string[]) {
+  return Promise.all(
+    urls.map(
+      (src) =>
+        new Promise<void>((resolve) => {
+          const image = new window.Image();
+          image.onload = () => resolve();
+          image.onerror = () => resolve();
+          image.src = src;
+        }),
+    ),
+  );
+}
+
 export function LogoMarquee() {
+  const [isMarqueeReady, setIsMarqueeReady] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    const uniqueUrls = clientLogos
+      .map((logo) => logo.logoSrc)
+      .filter((src): src is string => Boolean(src));
+
+    preloadLogoImages(uniqueUrls).then(() => {
+      if (!cancelled) {
+        setIsMarqueeReady(true);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <section className="overflow-hidden bg-background py-1.5 sm:py-2 lg:py-2">
       <Container size="full" className="px-0">
@@ -60,7 +96,11 @@ export function LogoMarquee() {
             className="pointer-events-none absolute inset-y-0 right-0 z-10 w-5 bg-gradient-to-l from-background to-transparent sm:w-10 lg:w-20"
           />
 
-          <div className="flex w-max animate-[logo-marquee_42s_linear_infinite] items-center motion-reduce:animate-none">
+          <div
+            className={`flex w-max animate-[logo-marquee_42s_linear_infinite] items-center [backface-visibility:hidden] motion-reduce:animate-none ${
+              isMarqueeReady ? "" : "[animation-play-state:paused]"
+            }`}
+          >
             {[0, 1].map((group) => (
               <div
                 key={group}
@@ -73,14 +113,15 @@ export function LogoMarquee() {
                     className="flex h-16 min-w-36 items-center justify-center rounded-md border border-border/60 bg-muted/35 px-7 text-center font-heading text-sm font-semibold tracking-[-0.03em] whitespace-nowrap text-foreground/45 sm:h-[4.5rem] sm:min-w-44 sm:px-9 sm:text-base lg:min-w-52 lg:rounded-[0.54rem]"
                   >
                     {logo.logoSrc ? (
-                      <Image
+                      // eslint-disable-next-line @next/next/no-img-element -- native img avoids Next optimizer URL swaps that flicker on mobile marquee
+                      <img
                         src={logo.logoSrc}
                         alt={logo.logoAlt ?? `${logo.name} logo`}
                         width={160}
                         height={48}
-                        loading="eager"
                         decoding="async"
-                        className="max-h-9 w-auto max-w-32 object-contain opacity-90 transition-opacity duration-300 hover:opacity-100 sm:max-h-10 sm:max-w-36"
+                        draggable={false}
+                        className="max-h-9 w-auto max-w-32 object-contain opacity-90 transition-opacity duration-300 [backface-visibility:hidden] [transform:translateZ(0)] hover:opacity-100 sm:max-h-10 sm:max-w-36"
                       />
                     ) : (
                       <PlaceholderLogo name={logo.name} wordmark={logo.wordmark} />
