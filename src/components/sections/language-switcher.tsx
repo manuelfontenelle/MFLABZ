@@ -31,33 +31,30 @@ export function LanguageSwitcher({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-1 font-heading text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-muted-foreground",
-        compact && "text-[0.9rem] tracking-[1px]",
+        "inline-flex items-center gap-0.5 rounded-button bg-muted p-0.5 font-heading text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-muted-foreground",
+        compact && "text-[0.82rem] tracking-[1px]",
         className
       )}
       role="group"
       aria-label={t("label")}
     >
-      {routing.locales.map((item, index) => (
-        <span key={item} className="inline-flex items-center gap-1">
-          {index > 0 && (
-            <span className="text-border" aria-hidden="true">
-              |
-            </span>
+      {routing.locales.map((item) => (
+        <button
+          key={item}
+          type="button"
+          onClick={() => switchLocale(item)}
+          className={cn(
+            "cursor-pointer rounded-button px-2.5 py-1 leading-none transition-colors focus-visible:outline-none focus-visible:ring-ring/30 focus-visible:ring-[3px]",
+            compact && "px-3 py-1.5",
+            locale === item
+              ? "bg-background text-foreground shadow-sm"
+              : "text-muted-foreground hover:text-foreground"
           )}
-          <button
-            type="button"
-            onClick={() => switchLocale(item)}
-            className={cn(
-              "cursor-pointer transition-colors hover:text-secondary focus-visible:outline-none focus-visible:ring-ring/30 focus-visible:ring-[3px]",
-              locale === item ? "text-foreground" : "text-muted-foreground"
-            )}
-            aria-label={t("switchTo", { locale: item.toUpperCase() })}
-            aria-pressed={locale === item}
-          >
-            {t(item)}
-          </button>
-        </span>
+          aria-label={t("switchTo", { locale: item.toUpperCase() })}
+          aria-pressed={locale === item}
+        >
+          {t(item)}
+        </button>
       ))}
     </div>
   );

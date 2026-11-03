@@ -51,9 +51,9 @@
     "switchTo": "Passer en {locale}"
   },
   "Hero": {
-    "title": "Designer graphique freelance pour votre marque",
-    "locationBadge": "Services de design graphique à Paris et dans le monde",
-    "subtitle": "Branding et design graphique soignés qui transforment vos idées en identités modernes et mémorables.",
+    "title": "Graphiste freelance pour votre marque",
+    "locationBadge": "Basé à Paris · Clients dans le monde entier",
+    "subtitle": "Démarquez-vous de vos concurrents avec un design qui vous ressemble. Logos, branding, print et réseaux sociaux pour une image cohérente et professionnelle.",
     "startProject": "Démarrer un projet",
     "visitFiverr": "Voir sur Fiverr"
   },
@@ -61,8 +61,8 @@
     "ratedPrefix": "Noté",
     "ratedFrom": "sur",
     "clientReviews": "2500+ avis clients",
-    "headingLine1": "La confiance de plus de 4000 clients dans le monde",
-    "headingLine2": "pour des services de design graphique professionnels"
+    "headingLine1": "Plus de 4000 clients dans le monde",
+    "headingLine2": "me font confiance pour leur image de marque"
   },
   "LogoMarquee": {
     "title": "Logos de clients et partenaires de confiance"

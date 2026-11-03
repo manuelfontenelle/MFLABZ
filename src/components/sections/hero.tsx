@@ -54,13 +54,13 @@ export function Hero() {
         <div className="w-full">
           <div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-end lg:gap-10 xl:gap-16">
             <div className="hero-fade min-w-0 space-y-[1.725rem]">
-              <h1 className="max-w-[720px] font-heading text-[clamp(1.75rem,3.9vw,3.5rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
+              <h1 className="max-w-[828px] font-heading text-[clamp(2.01rem,4.49vw,4.03rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
                 {t("title")}
               </h1>
             </div>
 
             <div className="hero-fade hero-fade-delay w-full min-w-0 max-w-[28rem] space-y-[1.4rem] lg:justify-self-end">
-              <p className="inline-flex w-fit max-w-full rounded-button border border-border/70 px-2.5 py-1.5 text-[0.56rem] leading-[1.25] font-semibold tracking-[0.08em] text-muted-foreground uppercase sm:text-[0.62rem]">
+              <p className="inline-flex w-fit max-w-full rounded-button border border-border/70 px-2.5 py-1.5 text-[0.62rem] leading-[1.25] font-semibold tracking-[0.08em] text-muted-foreground uppercase sm:text-[0.68rem]">
                 {t("locationBadge")}
               </p>
               <p className="text-[clamp(0.8rem,1.1vw,0.97rem)] leading-[1.6] font-medium text-foreground">
