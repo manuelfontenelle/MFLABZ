@@ -1,10 +1,8 @@
 export const siteConfig = {
-  name: "MFLABZ | Freelance Graphic Designer for Logos, Branding & Print Design",
+  name: "MFLABZ",
   creator: "MFLABZ",
   founderName: "Manuel Fontenelle",
   url: "https://www.mflabz.com",
-  description:
-    "Premium freelance graphic design by Manuel Fontenelle (MFLABZ) — logo design, business cards, flyers, brochures, social media graphics, roll up banners, billboards, and yard signs.",
   keywords: [
     "Manuel Fontenelle",
     "Manuel Fontenelle graphic designer",

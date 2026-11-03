@@ -1,16 +1,29 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
 import { Container } from "@/components/ui";
-import type { LegalPageContent } from "@/data/legal-pages";
+import { Link } from "@/i18n/navigation";
 
 import { Footer } from "./footer";
 import { Navbar } from "./navbar";
 
-type LegalPageProps = {
-  content: LegalPageContent;
+type LegalSection = {
+  title: string;
+  paragraphs: string[];
+  list?: string[];
 };
 
-export function LegalPage({ content }: LegalPageProps) {
+type LegalPageKey = "privacy" | "terms" | "notice";
+
+type LegalPageProps = {
+  pageKey: LegalPageKey;
+};
+
+export async function LegalPage({ pageKey }: LegalPageProps) {
+  const t = await getTranslations(`Legal.${pageKey}`);
+  const common = await getTranslations("Common");
+
+  const sections = t.raw("sections") as LegalSection[];
+
   return (
     <>
       <Navbar />
@@ -22,21 +35,21 @@ export function LegalPage({ content }: LegalPageProps) {
                 href="/"
                 className="mb-6 inline-flex text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                ← Back to home
+                {common("backToHome")}
               </Link>
               <h1 className="font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-                {content.title}
+                {t("title")}
               </h1>
               <p className="mt-3 max-w-2xl text-body-sm leading-6 text-muted-foreground">
-                {content.description}
+                {t("description")}
               </p>
               <p className="mt-3 text-xs font-medium text-muted-foreground">
-                Last updated: {content.lastUpdated}
+                {common("lastUpdated", { date: t("lastUpdated") })}
               </p>
             </header>
 
             <div className="space-y-8">
-              {content.sections.map((section) => (
+              {sections.map((section) => (
                 <section key={section.title}>
                   <h2 className="mb-3 text-lg font-semibold text-foreground">
                     {section.title}

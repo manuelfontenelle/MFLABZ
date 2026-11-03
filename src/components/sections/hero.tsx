@@ -1,134 +1,132 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { ChevronRight } from "lucide-react"
+import { useEffect, useState } from "react";
+import { ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-import { Button, Container } from "@/components/ui"
-import { siteConfig } from "@/config/site"
-import { heroGalleryData } from "@/data/hero-gallery-data"
-import { ContactDialog } from "./contact-dialog"
+import { Button, Container } from "@/components/ui";
+import { siteConfig } from "@/config/site";
+import { heroGalleryData } from "@/data/hero-gallery-data";
+import { ContactDialog } from "./contact-dialog";
 
-const repeatedGalleryImages = [...heroGalleryData, ...heroGalleryData]
+const repeatedGalleryImages = [...heroGalleryData, ...heroGalleryData];
 
 function preloadHeroImages(urls: string[]) {
-	return Promise.all(
-		urls.map(
-			(src) =>
-				new Promise<void>((resolve) => {
-					const image = new window.Image()
-					image.onload = () => resolve()
-					image.onerror = () => resolve()
-					image.src = src
-				}),
-		),
-	)
+  return Promise.all(
+    urls.map(
+      (src) =>
+        new Promise<void>((resolve) => {
+          const image = new window.Image();
+          image.onload = () => resolve();
+          image.onerror = () => resolve();
+          image.src = src;
+        })
+    )
+  );
 }
 
 export function Hero() {
-	const [isMarqueeReady, setIsMarqueeReady] = useState(false)
+  const t = useTranslations("Hero");
+  const [isMarqueeReady, setIsMarqueeReady] = useState(false);
 
-	useEffect(() => {
-		let cancelled = false
-		const uniqueUrls = heroGalleryData.map((image) => image.imageUrl)
+  useEffect(() => {
+    let cancelled = false;
+    const uniqueUrls = heroGalleryData.map((image) => image.imageUrl);
 
-		preloadHeroImages(uniqueUrls).then(() => {
-			if (!cancelled) {
-				setIsMarqueeReady(true)
-			}
-		})
+    preloadHeroImages(uniqueUrls).then(() => {
+      if (!cancelled) {
+        setIsMarqueeReady(true);
+      }
+    });
 
-		return () => {
-			cancelled = true
-		}
-	}, [])
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
-	return (
-		<section
-			className="flex min-h-[85vh] flex-col justify-between overflow-hidden bg-background pt-10 pb-0 sm:min-h-[90vh] sm:pt-14 sm:pb-0 lg:min-h-[calc(100svh-3.3rem)] lg:pt-20 lg:pb-0"
-			itemScope
-			itemType="https://schema.org/Organization"
-		>
-			<Container className="flex flex-1 items-center">
-				<div className="w-full">
-					<div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_470px] lg:items-end lg:gap-16">
-						<div className="hero-fade space-y-[1.725rem]">
-							{/* <p className="text-[0.88rem] leading-[1.35] font-semibold tracking-[0.16em] text-secondary uppercase sm:text-[0.975rem]">
-								{siteConfig.creator} STUDIO
-							</p> */}
-							<h1 className="max-w-[620px] font-heading text-[clamp(1.75rem,3.9vw,3.5rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
-								Freelance Graphic Design for Modern Brands
-							</h1>
-						</div>
+  return (
+    <section
+      className="flex min-h-[85vh] flex-col justify-between overflow-hidden bg-background pt-10 pb-0 sm:min-h-[90vh] sm:pt-14 sm:pb-0 lg:min-h-[calc(100svh-3.3rem)] lg:pt-20 lg:pb-0"
+      itemScope
+      itemType="https://schema.org/Organization"
+    >
+      <Container className="flex flex-1 items-center">
+        <div className="w-full">
+          <div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-end lg:gap-10 xl:gap-16">
+            <div className="hero-fade min-w-0 space-y-[1.725rem]">
+              <h1 className="max-w-[620px] font-heading text-[clamp(1.75rem,3.9vw,3.5rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
+                {t("title")}
+              </h1>
+            </div>
 
-						<div className="hero-fade hero-fade-delay w-full max-w-[342px] space-y-[1.4rem] lg:justify-self-end">
-							<p className="inline-flex w-fit whitespace-nowrap rounded-button border border-border/70 px-2.5 py-1.5 text-[0.56rem] leading-none font-semibold tracking-[0.08em] text-muted-foreground uppercase sm:text-[0.62rem]">
-								Graphic design services in Paris and worldwide
-							</p>
-							<p className="text-[clamp(0.8rem,1.1vw,0.97rem)] leading-[1.6] font-medium text-foreground">
-								Thoughtful branding and graphic design that turn ideas into
-								memorable, modern identities.
-							</p>
-							<div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-								<ContactDialog
-									trigger={
-										<Button
-											type="button"
-											variant="premium"
-											size="lg"
-											className="w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
-										>
-											Start Project
-											<ChevronRight className="ml-0 size-4" />
-										</Button>
-									}
-								/>
-								<Button
-									asChild
-									variant="ghost"
-									size="lg"
-									className="w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#0a8043] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#0a8043] sm:w-auto"
-								>
-									<a
-										href={siteConfig.links.fiverr}
-										target="_blank"
-										rel="noreferrer"
-									>
-										Visit Fiverr
-										<ChevronRight className="ml-0 size-4" />
-									</a>
-								</Button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</Container>
+            <div className="hero-fade hero-fade-delay w-full min-w-0 max-w-[28rem] space-y-[1.4rem] lg:justify-self-end">
+              <p className="inline-flex w-fit max-w-full rounded-button border border-border/70 px-2.5 py-1.5 text-[0.56rem] leading-[1.25] font-semibold tracking-[0.08em] text-muted-foreground uppercase sm:text-[0.62rem]">
+                {t("locationBadge")}
+              </p>
+              <p className="text-[clamp(0.8rem,1.1vw,0.97rem)] leading-[1.6] font-medium text-foreground">
+                {t("subtitle")}
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                <ContactDialog
+                  trigger={
+                    <Button
+                      type="button"
+                      variant="premium"
+                      size="lg"
+                      className="w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
+                    >
+                      {t("startProject")}
+                      <ChevronRight className="ml-0 size-4" />
+                    </Button>
+                  }
+                />
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="lg"
+                  className="w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#0a8043] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#0a8043] sm:w-auto"
+                >
+                  <a
+                    href={siteConfig.links.fiverr}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t("visitFiverr")}
+                    <ChevronRight className="ml-0 size-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
 
-			<div className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
-				<div
-					className={`flex w-max [animation:logo-marquee_22s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_40s_linear_infinite] ${
-						isMarqueeReady ? "" : "[animation-play-state:paused]"
-					}`}
-				>
-					{repeatedGalleryImages.map((image, index) => (
-						<div
-							key={`${image.id}-${index}`}
-							className="relative h-[38vh] min-h-[280px] w-[79vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
-						>
-							{/* eslint-disable-next-line @next/next/no-img-element -- native img avoids Next optimizer URL swaps that flicker on mobile marquee */}
-							<img
-								src={image.imageUrl}
-								alt={image.imageAlt}
-								decoding="async"
-								draggable={false}
-								className="pointer-events-none size-full select-none object-cover [backface-visibility:hidden] [transform:translateZ(0)]"
-								onError={(event) => {
-									event.currentTarget.src = image.fallbackImageUrl
-								}}
-							/>
-						</div>
-					))}
-				</div>
-			</div>
-		</section>
-	)
+      <div className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
+        <div
+          className={`flex w-max [animation:logo-marquee_22s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_40s_linear_infinite] ${
+            isMarqueeReady ? "" : "[animation-play-state:paused]"
+          }`}
+        >
+          {repeatedGalleryImages.map((image, index) => (
+            <div
+              key={`${image.id}-${index}`}
+              className="relative h-[38vh] min-h-[280px] w-[79vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element -- native img avoids Next optimizer URL swaps that flicker on mobile marquee */}
+              <img
+                src={image.imageUrl}
+                alt={image.imageAlt}
+                decoding="async"
+                draggable={false}
+                className="pointer-events-none size-full select-none object-cover [backface-visibility:hidden] [transform:translateZ(0)]"
+                onError={(event) => {
+                  event.currentTarget.src = image.fallbackImageUrl;
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

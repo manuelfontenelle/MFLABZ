@@ -4,8 +4,17 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Images, Megaphone, Palette, PenTool } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-import { Badge, Card, CardContent, CardHeader, CardTitle, Container, SectionHeader } from "@/components/ui";
+import {
+  Badge,
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  Container,
+  SectionHeader
+} from "@/components/ui";
 import type { ServiceId } from "@/data/services-data";
 import { servicesData } from "@/data/services-data";
 
@@ -39,6 +48,8 @@ const cardReveal: Variants = {
 };
 
 export function Services() {
+  const t = useTranslations("Services");
+
   return (
     <section id="services" className="bg-background pt-[2.56rem] pb-section-lg">
       <Container className="space-y-14">
@@ -51,8 +62,8 @@ export function Services() {
           <SectionHeader
             align="center"
             className="[&_p]:max-w-none md:[&_p]:whitespace-nowrap"
-            title="Design Services"
-            description="Premium design solutions tailored to help your brand stand out and grow with confidence."
+            title={t("title")}
+            description={t("description")}
           />
         </motion.div>
 
@@ -65,6 +76,7 @@ export function Services() {
         >
           {servicesData.map((service) => {
             const Icon = serviceIcons[service.id];
+            const badges = t.raw(`items.${service.id}.badges`) as string[];
 
             return (
               <motion.div key={service.id} variants={cardReveal}>
@@ -73,16 +85,19 @@ export function Services() {
                     <div className="flex size-12 items-center justify-center rounded-2xl border border-border/70 bg-muted text-foreground transition-colors duration-300 group-hover:border-secondary/20 group-hover:bg-secondary/10 group-hover:text-secondary">
                       <Icon className="size-5" strokeWidth={1.8} />
                     </div>
-                    <CardTitle as="h3" className="text-[1.55rem] leading-[1.16] tracking-[-0.045em]">
-                      {service.title}
+                    <CardTitle
+                      as="h3"
+                      className="text-[1.55rem] leading-[1.16] tracking-[-0.045em]"
+                    >
+                      {t(`items.${service.id}.title`)}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6 px-6">
                     <p className="text-[0.98rem] leading-7 text-muted-foreground">
-                      {service.description}
+                      {t(`items.${service.id}.description`)}
                     </p>
                     <div className="flex flex-wrap gap-2.5">
-                      {service.badges.map((badge) => (
+                      {badges.map((badge) => (
                         <Badge
                           key={badge}
                           variant="outline"

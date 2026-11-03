@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/ui";
 import { clientLogos } from "@/data/client-logos";
@@ -62,6 +63,7 @@ function preloadLogoImages(urls: string[]) {
 }
 
 export function LogoMarquee() {
+  const t = useTranslations("LogoMarquee");
   const [isMarqueeReady, setIsMarqueeReady] = useState(false);
 
   useEffect(() => {
@@ -84,7 +86,7 @@ export function LogoMarquee() {
   return (
     <section className="overflow-hidden bg-background py-1.5 sm:py-2 lg:py-2">
       <Container size="full" className="px-0">
-        <h2 className="sr-only">Trusted client and partner logos</h2>
+        <h2 className="sr-only">{t("title")}</h2>
 
         <div className="relative mx-auto flex w-full max-w-[1440px] items-center overflow-hidden">
           <div

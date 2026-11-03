@@ -1,5 +1,7 @@
+import { getTranslations } from "next-intl/server";
+
 import { siteConfig } from "@/config/site";
-import { faqData } from "@/data/faq-data";
+import type { FAQDataItem } from "@/data/faq-data";
 import { servicesData } from "@/data/services-data";
 
 const baseUrl = siteConfig.url.replace(/\/$/, "");
@@ -7,16 +9,27 @@ const organizationId = `${baseUrl}/#organization`;
 const personId = `${baseUrl}/#person`;
 const websiteId = `${baseUrl}/#website`;
 
-function buildStructuredData() {
+type StructuredDataProps = {
+  locale: string;
+};
+
+export async function StructuredData({ locale }: StructuredDataProps) {
+  const tMeta = await getTranslations({ locale, namespace: "Metadata" });
+  const tCommon = await getTranslations({ locale, namespace: "Common" });
+  const tServices = await getTranslations({ locale, namespace: "Services" });
+  const tFaq = await getTranslations({ locale, namespace: "FAQ" });
+
+  const faqItems = tFaq.raw("items") as FAQDataItem[];
+  const localePath = `${baseUrl}/${locale}`;
+
   const person = {
     "@type": "Person",
     "@id": personId,
     name: siteConfig.founderName,
-    url: `${baseUrl}/`,
+    url: `${localePath}/`,
     image: `${baseUrl}/images/profilPicture.jpg`,
-    jobTitle: "Graphic Designer",
-    description:
-      "Freelance graphic designer and founder of MFLABZ, specializing in logo design, branding, and print design.",
+    jobTitle: tCommon("jobTitle"),
+    description: tCommon("personDescription"),
     worksFor: { "@id": organizationId },
     sameAs: [
       siteConfig.links.personal,
@@ -32,9 +45,9 @@ function buildStructuredData() {
     "@id": organizationId,
     name: siteConfig.creator,
     legalName: siteConfig.creator,
-    url: `${baseUrl}/`,
+    url: `${localePath}/`,
     email: siteConfig.links.email,
-    description: siteConfig.description,
+    description: tMeta("description"),
     image: `${baseUrl}/opengraph-image`,
     logo: {
       "@type": "ImageObject",
@@ -46,7 +59,7 @@ function buildStructuredData() {
       { "@type": "City", name: "Paris" },
       { "@type": "Place", name: "Worldwide" }
     ],
-    knowsAbout: [...siteConfig.keywords],
+    knowsAbout: tMeta.raw("keywords") as string[],
     sameAs: [
       siteConfig.links.fiverr,
       siteConfig.links.linkedin,
@@ -57,8 +70,8 @@ function buildStructuredData() {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: service.title,
-        description: service.description
+        name: tServices(`items.${service.id}.title`),
+        description: tServices(`items.${service.id}.description`)
       }
     }))
   };
@@ -66,19 +79,19 @@ function buildStructuredData() {
   const website = {
     "@type": "WebSite",
     "@id": websiteId,
-    url: `${baseUrl}/`,
-    name: siteConfig.name,
-    description: siteConfig.description,
-    inLanguage: "en",
+    url: `${localePath}/`,
+    name: tMeta("title"),
+    description: tMeta("description"),
+    inLanguage: locale,
     publisher: { "@id": organizationId },
     author: { "@id": personId }
   };
 
   const faqPage = {
     "@type": "FAQPage",
-    "@id": `${baseUrl}/#faq`,
+    "@id": `${localePath}/#faq`,
     isPartOf: { "@id": websiteId },
-    mainEntity: faqData.map((item) => ({
+    mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {
@@ -88,19 +101,15 @@ function buildStructuredData() {
     }))
   };
 
-  return {
+  const data = {
     "@context": "https://schema.org",
     "@graph": [person, organization, website, faqPage]
   };
-}
-
-export function StructuredData() {
-  const data = buildStructuredData();
 
   return (
     <script
       type="application/ld+json"
-      // Structured data is static and built from trusted local config/data.
+      // Structured data is built from trusted local config/messages.
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );

@@ -1,11 +1,13 @@
 import type { MouseEvent } from "react";
 
 export const sectionNavItems = [
-  { label: "Portfolio", id: "portfolio" },
-  { label: "Services", id: "services" },
-  { label: "Process", id: "process" },
-  { label: "FAQ", id: "faq" }
+  { id: "portfolio", labelKey: "portfolio" },
+  { id: "services", labelKey: "services" },
+  { id: "process", labelKey: "process" },
+  { id: "faq", labelKey: "faq" }
 ] as const;
+
+export type SectionNavLabelKey = (typeof sectionNavItems)[number]["labelKey"];
 
 export const SECTION_SCROLL_OFFSET = 88;
 
@@ -31,16 +33,17 @@ export function scrollToSection(id: string) {
 
 export function handleSectionNavClick(
   event: MouseEvent<HTMLAnchorElement>,
-  id: string
+  id: string,
+  pathname: string
 ) {
-  if (window.location.pathname === "/") {
+  if (pathname === "/" || pathname === "") {
     if (scrollToSection(id)) {
       event.preventDefault();
     }
     return;
   }
 
-  // Full navigation so the hash is reliably applied from legal pages.
+  // Use the locale-prefixed href already rendered by next-intl Link.
   event.preventDefault();
-  window.location.assign(sectionHref(id));
+  window.location.assign(event.currentTarget.href);
 }

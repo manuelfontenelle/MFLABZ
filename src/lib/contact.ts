@@ -1,34 +1,53 @@
 import { z } from "zod";
 
-export const contactServiceOptions = [
-  "Logo Design",
-  "Branding",
-  "Social & Ad Creative",
-  "Print Design",
-  "Other"
+export const contactServiceValues = [
+  "logo-design",
+  "branding",
+  "social-ad",
+  "print",
+  "other"
 ] as const;
 
-export type ContactService = (typeof contactServiceOptions)[number];
+export type ContactService = (typeof contactServiceValues)[number];
 
-export const contactFormSchema = z.object({
-  name: z.string().trim().min(2, "Full name must be at least 2 characters."),
-  email: z
-    .string()
-    .trim()
-    .min(1, "Email address is required.")
-    .email("Enter a valid email address."),
-  service: z
-    .string()
-    .min(1, "Service is required.")
-    .refine(
-      (value): value is ContactService =>
-        contactServiceOptions.includes(value as ContactService),
-      "Service is required."
-    ),
-  message: z
-    .string()
-    .trim()
-    .min(20, "Project details must be at least 20 characters.")
+/** @deprecated Use contactServiceValues — kept alias for clarity in call sites */
+export const contactServiceOptions = contactServiceValues;
+
+type ContactErrorMessages = {
+  nameMin: string;
+  emailRequired: string;
+  emailInvalid: string;
+  serviceRequired: string;
+  messageMin: string;
+};
+
+export function createContactFormSchema(messages: ContactErrorMessages) {
+  return z.object({
+    name: z.string().trim().min(2, messages.nameMin),
+    email: z
+      .string()
+      .trim()
+      .min(1, messages.emailRequired)
+      .email(messages.emailInvalid),
+    service: z
+      .string()
+      .min(1, messages.serviceRequired)
+      .refine(
+        (value): value is ContactService =>
+          contactServiceValues.includes(value as ContactService),
+        messages.serviceRequired
+      ),
+    message: z.string().trim().min(20, messages.messageMin)
+  });
+}
+
+/** Server-side schema with English fallbacks (API validation). */
+export const contactFormSchema = createContactFormSchema({
+  nameMin: "Full name must be at least 2 characters.",
+  emailRequired: "Email address is required.",
+  emailInvalid: "Enter a valid email address.",
+  serviceRequired: "Service is required.",
+  messageMin: "Project details must be at least 20 characters."
 });
 
 export type ContactFormValues = z.input<typeof contactFormSchema>;

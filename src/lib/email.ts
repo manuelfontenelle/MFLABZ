@@ -1,6 +1,14 @@
 import { Resend } from "resend";
 
-import type { ContactPayload } from "@/lib/contact";
+import type { ContactPayload, ContactService } from "@/lib/contact";
+
+const serviceLabels: Record<ContactService, string> = {
+  "logo-design": "Logo Design",
+  branding: "Branding",
+  "social-ad": "Social & Ad Creative",
+  print: "Print Design",
+  other: "Other"
+};
 
 export type ContactEmailResult = {
   accepted: boolean;
@@ -30,8 +38,13 @@ export async function sendContactInquiry(
   return { accepted: Boolean(data?.id) && !error };
 }
 
+function serviceLabel(service: ContactService) {
+  return serviceLabels[service];
+}
+
 function renderContactInquiryEmail(payload: ContactPayload) {
-  const preview = `${payload.name} is interested in ${payload.service}.`;
+  const service = serviceLabel(payload.service);
+  const preview = `${payload.name} is interested in ${service}.`;
 
   return `<!doctype html>
 <html lang="en">
@@ -58,7 +71,7 @@ function renderContactInquiryEmail(payload: ContactPayload) {
               <td style="padding:28px 32px;">
                 ${renderDetailRow("Full Name", payload.name)}
                 ${renderDetailRow("Email Address", payload.email)}
-                ${renderDetailRow("Service Needed", payload.service)}
+                ${renderDetailRow("Service Needed", service)}
                 <div style="margin-top:24px;">
                   <p style="margin:0 0 8px;color:#636873;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;">Project Details</p>
                   <div style="border:1px solid #e7e8ee;border-radius:12px;background:#f6f7fb;padding:18px;color:#111111;font-size:15px;line-height:1.7;white-space:pre-wrap;">${escapeHtml(payload.message)}</div>
@@ -91,7 +104,7 @@ function renderContactInquiryText(payload: ContactPayload) {
     "",
     `Full Name: ${payload.name}`,
     `Email Address: ${payload.email}`,
-    `Service Needed: ${payload.service}`,
+    `Service Needed: ${serviceLabel(payload.service)}`,
     "",
     "Project Details:",
     payload.message

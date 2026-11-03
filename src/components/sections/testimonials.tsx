@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { useTranslations } from "next-intl";
 import ReactCountryFlag from "react-country-flag";
 
 import { Card, CardContent, Container, SectionHeader } from "@/components/ui";
@@ -33,7 +34,13 @@ function getClientInitials(name: string) {
     .toUpperCase();
 }
 
-function TestimonialCard({ testimonial }: { testimonial: TestimonialItem }) {
+function TestimonialCard({
+  testimonial,
+  ratingLabel
+}: {
+  testimonial: TestimonialItem;
+  ratingLabel: string;
+}) {
   return (
     <Card className="group h-full gap-0 border-white/80 bg-white p-0 text-zinc-950 shadow-[0_18px_50px_rgba(0,0,0,0.16)] hover:-translate-y-0.5 hover:border-secondary/35 hover:shadow-[0_22px_60px_rgba(0,0,0,0.22)]">
       <CardContent className="flex h-full flex-col p-6 sm:p-7">
@@ -69,7 +76,7 @@ function TestimonialCard({ testimonial }: { testimonial: TestimonialItem }) {
           <div
             className="flex shrink-0 items-center gap-0.5 text-secondary"
             role="img"
-            aria-label={`${testimonial.rating} star rating`}
+            aria-label={ratingLabel}
           >
             {Array.from({ length: testimonial.rating }).map((_, index) => (
               <Star key={index} className="size-4 fill-current" />
@@ -86,6 +93,7 @@ function TestimonialCard({ testimonial }: { testimonial: TestimonialItem }) {
 }
 
 export function Testimonials() {
+  const t = useTranslations("Testimonials");
   const [activeSlide, setActiveSlide] = useState(0);
   const testimonialSlides = useMemo(() => {
     const slides: TestimonialItem[][] = [];
@@ -130,8 +138,8 @@ export function Testimonials() {
             transition={{ duration: 0.55, ease: "easeOut" }}
           >
             <SectionHeader
-              title="What Clients Say"
-              description="Real feedback from entrepreneurs, startups and established companies."
+              title={t("title")}
+              description={t("description")}
               className="max-w-full [&_h2]:break-words [&_h2]:text-white [&_p]:text-white/70"
             />
 
@@ -147,7 +155,7 @@ export function Testimonials() {
                     ))}
                   </span>
                   <p className="text-sm font-semibold tracking-[-0.01em] text-white">
-                    4.9/5 Average Rating
+                    {t("averageRating")}
                   </p>
                 </div>
               </div>
@@ -159,7 +167,7 @@ export function Testimonials() {
                       2500+
                     </p>
                     <p className="mt-2 text-xs font-medium text-white/60">
-                      Verified Reviews
+                      {t("verifiedReviews")}
                     </p>
                   </div>
 
@@ -170,7 +178,7 @@ export function Testimonials() {
                       4000+
                     </p>
                     <p className="mt-2 text-xs font-medium text-white/60">
-                      Projects Delivered
+                      {t("projectsDelivered")}
                     </p>
                   </div>
 
@@ -181,7 +189,7 @@ export function Testimonials() {
                       25+
                     </p>
                     <p className="mt-2 text-xs font-medium text-white/60">
-                      Industries Served
+                      {t("industriesServed")}
                     </p>
                   </div>
                 </div>
@@ -209,7 +217,7 @@ export function Testimonials() {
                     ))}
                   </span>
                   <span className="hidden h-4 w-px bg-white/15 min-[390px]:block" aria-hidden="true" />
-                  <span className="text-sm leading-snug">Clients from 50+ countries.</span>
+                  <span className="text-sm leading-snug">{t("clientsFromCountries")}</span>
                 </div>
 
                 <a
@@ -218,7 +226,7 @@ export function Testimonials() {
                   rel="noreferrer"
                   className="group mt-2 inline-flex max-w-full flex-wrap items-center gap-3 rounded-full border border-solid !border-white px-4 py-2 text-sm font-semibold tracking-[-0.01em] text-white transition-colors duration-300 hover:!border-white hover:bg-white/10 hover:text-white"
                 >
-                  <span>View My Fiverr Profile</span>
+                  <span>{t("viewFiverrProfile")}</span>
                   <span
                     className="text-white transition-transform duration-300 ease-out group-hover:translate-x-1"
                     aria-hidden="true"
@@ -244,7 +252,10 @@ export function Testimonials() {
                     key={`${testimonial.name}-${testimonial.country}-${index}`}
                     className="min-w-[min(82vw,22rem)] max-w-[82vw] shrink-0 snap-start"
                   >
-                    <TestimonialCard testimonial={testimonial} />
+                    <TestimonialCard
+                      testimonial={testimonial}
+                      ratingLabel={t("starRating", { rating: testimonial.rating })}
+                    />
                   </div>
                 ))}
               </div>
@@ -270,6 +281,7 @@ export function Testimonials() {
                       <TestimonialCard
                         key={`${testimonial.name}-${testimonial.country}-${slideIndex}-${testimonialIndex}`}
                         testimonial={testimonial}
+                        ratingLabel={t("starRating", { rating: testimonial.rating })}
                       />
                     ))}
                   </div>
@@ -286,7 +298,7 @@ export function Testimonials() {
                     className={`cursor-pointer h-1.5 rounded-full transition-all duration-300 ${
                       activeSlide === index ? "w-7 bg-white" : "w-2 bg-white/25"
                     }`}
-                    aria-label={`Show testimonial slide ${index + 1}`}
+                    aria-label={t("showSlide", { index: index + 1 })}
                     onClick={() => showSlide(index)}
                   />
                 ))}
@@ -296,7 +308,7 @@ export function Testimonials() {
                 <button
                   type="button"
                   className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white transition-colors duration-300 hover:border-white/25 hover:bg-white/[0.09] active:bg-white/[0.14]"
-                  aria-label="Show previous testimonials"
+                  aria-label={t("previous")}
                   onClick={showPreviousSlide}
                 >
                   <ChevronLeft className="size-4" />
@@ -304,7 +316,7 @@ export function Testimonials() {
                 <button
                   type="button"
                   className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white transition-colors duration-300 hover:border-white/25 hover:bg-white/[0.09] active:bg-white/[0.14]"
-                  aria-label="Show next testimonials"
+                  aria-label={t("next")}
                   onClick={showNextSlide}
                 >
                   <ChevronRight className="size-4" />

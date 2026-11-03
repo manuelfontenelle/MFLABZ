@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useTranslations } from "next-intl";
 
-import { faqData } from "@/data/faq-data";
+import type { FAQDataItem } from "@/data/faq-data";
 import {
   Accordion,
   AccordionContent,
@@ -35,6 +36,9 @@ const itemReveal: Variants = {
 };
 
 export function FAQ() {
+  const t = useTranslations("FAQ");
+  const items = t.raw("items") as FAQDataItem[];
+
   return (
     <section id="faq" className="bg-background pt-20 pb-section-lg lg:py-section-lg">
       <Container>
@@ -48,11 +52,11 @@ export function FAQ() {
           >
             <div className="max-w-xl space-y-6 lg:max-w-md">
               <h2 className="font-heading text-heading-2 leading-[1.32] font-semibold tracking-[-0.06em] text-foreground sm:leading-[1.1]">
-                Frequently Asked Questions
+                {t("title")}
               </h2>
 
               <p className="max-w-sm text-[1.08rem] leading-8 text-muted-foreground text-pretty">
-                Everything you need to know before starting your project.
+                {t("description")}
               </p>
             </div>
           </motion.div>
@@ -65,7 +69,7 @@ export function FAQ() {
             viewport={{ once: true, amount: 0.14 }}
           >
             <Accordion type="single" collapsible defaultValue="faq-01">
-              {faqData.map((item) => (
+              {items.map((item) => (
                 <motion.div
                   key={item.id}
                   className="border-b border-border/70 last:border-b-0"

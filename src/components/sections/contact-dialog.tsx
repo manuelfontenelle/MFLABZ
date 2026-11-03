@@ -8,7 +8,8 @@ import {
   MessageSquareText,
   UserRound
 } from "lucide-react";
-import { type ReactNode, useState } from "react";
+import { useTranslations } from "next-intl";
+import { type ReactNode, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
@@ -23,8 +24,8 @@ import {
   DialogTrigger
 } from "@/components/ui";
 import {
-  contactFormSchema,
-  contactServiceOptions,
+  contactServiceValues,
+  createContactFormSchema,
   type ContactFormValues,
   type ContactPayload
 } from "@/lib/contact";
@@ -40,14 +41,28 @@ type ContactDialogProps = {
 };
 
 export function ContactDialog({ trigger }: ContactDialogProps) {
+  const t = useTranslations("Contact");
   const [open, setOpen] = useState(false);
+
+  const schema = useMemo(
+    () =>
+      createContactFormSchema({
+        nameMin: t("errors.nameMin"),
+        emailRequired: t("errors.emailRequired"),
+        emailInvalid: t("errors.emailInvalid"),
+        serviceRequired: t("errors.serviceRequired"),
+        messageMin: t("errors.messageMin")
+      }),
+    [t]
+  );
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting }
   } = useForm<ContactFormValues, unknown, ContactPayload>({
-    resolver: zodResolver(contactFormSchema),
+    resolver: zodResolver(schema),
     defaultValues: {
       name: "",
       email: "",
@@ -68,14 +83,14 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
       const result = (await response.json()) as ContactResponse;
 
       if (!response.ok || !result.success) {
-        throw new Error(result.error ?? "Unable to send inquiry.");
+        throw new Error(result.error ?? t("errorUnable"));
       }
 
-      toast.success("Thank you for your inquiry. I'll get back to you soon.");
+      toast.success(t("success"));
       reset();
       setOpen(false);
     } catch {
-      toast.error("Something went wrong. Please try again.");
+      toast.error(t("error"));
     }
   }
 
@@ -84,11 +99,8 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent>
         <DialogHeader className="pr-10">
-          <DialogTitle>Tell Me About Your Project</DialogTitle>
-          <DialogDescription>
-            Fill out the form below and I&apos;ll get back to you as soon as
-            possible.
-          </DialogDescription>
+          <DialogTitle>{t("title")}</DialogTitle>
+          <DialogDescription>{t("description")}</DialogDescription>
         </DialogHeader>
 
         <form className="grid gap-5" onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -97,7 +109,7 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
               htmlFor="contact-name"
               className="text-body-sm font-semibold text-foreground"
             >
-              Full Name *
+              {t("name")}
             </label>
             <div className="relative">
               <UserRound className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted-foreground/70" />
@@ -122,7 +134,7 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
               htmlFor="contact-email"
               className="text-body-sm font-semibold text-foreground"
             >
-              Email Address *
+              {t("email")}
             </label>
             <div className="relative">
               <Mail className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted-foreground/70" />
@@ -148,7 +160,7 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
               htmlFor="contact-service"
               className="text-body-sm font-semibold text-foreground"
             >
-              Service Needed *
+              {t("service")}
             </label>
             <div className="relative">
               <BriefcaseBusiness className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted-foreground/70" />
@@ -164,10 +176,10 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
                 )}
                 {...register("service")}
               >
-                <option value="">Select a service</option>
-                {contactServiceOptions.map((service) => (
+                <option value="">{t("selectService")}</option>
+                {contactServiceValues.map((service) => (
                   <option key={service} value={service}>
-                    {service}
+                    {t(`services.${service}`)}
                   </option>
                 ))}
               </select>
@@ -188,14 +200,14 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
               htmlFor="contact-message"
               className="text-body-sm font-semibold text-foreground"
             >
-              Project Details *
+              {t("message")}
             </label>
             <div className="relative">
               <MessageSquareText className="pointer-events-none absolute top-4 left-4 size-4 text-muted-foreground/70" />
               <textarea
                 id="contact-message"
                 rows={5}
-                placeholder="Tell me about your business, goals and design requirements..."
+                placeholder={t("messagePlaceholder")}
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={
                   errors.message ? "contact-message-error" : undefined
@@ -225,7 +237,7 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
               className="w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none active:bg-secondary/90"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Sending..." : "Send Inquiry"}
+              {isSubmitting ? t("sending") : t("submit")}
             </Button>
           </DialogFooter>
         </form>

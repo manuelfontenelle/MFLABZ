@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/ui";
 
@@ -9,64 +10,9 @@ type ProcessStep = {
   number: string;
   title: string;
   description: string;
-  label: string;
+  labelKey: "cover" | "deliverables";
   items: string[];
 };
-
-const processSteps: ProcessStep[] = [
-  {
-    number: "01",
-    title: "Discovery & Brief",
-    description:
-      "We begin by exploring your business, goals, audience and requirements together, establishing a clear creative direction before any design begins.",
-    label: "What We Cover",
-    items: [
-      "Business Understanding",
-      "Project Goals",
-      "Target Audience",
-      "Design Preferences"
-    ]
-  },
-  {
-    number: "02",
-    title: "Research & Design",
-    description:
-      "From the brief, I research creative directions and craft refined concepts tailored to your brand and objectives.",
-    label: "What We Cover",
-    items: [
-      "Creative Research",
-      "Concept Development",
-      "Brand Alignment",
-      "Professional Execution"
-    ]
-  },
-  {
-    number: "03",
-    title: "Revisions & Refinement",
-    description:
-      "We review the concepts together and refine every detail until the result aligns perfectly with your vision and business needs.",
-    label: "What We Cover",
-    items: [
-      "Client Feedback",
-      "Design Adjustments",
-      "Fine-Tuning",
-      "Final Approval"
-    ]
-  },
-  {
-    number: "04",
-    title: "Final Delivery",
-    description:
-      "Once approved, I deliver all final files, fully organized and ready to use across digital and print.",
-    label: "Deliverables",
-    items: [
-      "Editable Source Files (AI, EPS, PSD)",
-      "High-Resolution Exports (PNG, JPG, PDF, SVG)",
-      "Print-Ready Files",
-      "Social Media & Brand Assets (if applicable)"
-    ]
-  }
-];
 
 const sectionReveal: Variants = {
   hidden: { opacity: 0 },
@@ -104,6 +50,9 @@ const numberReveal: Variants = {
 };
 
 export function Process() {
+  const t = useTranslations("Process");
+  const processSteps = t.raw("steps") as ProcessStep[];
+
   return (
     <section id="process" className="bg-muted/45 py-section lg:py-section-lg">
       <Container>
@@ -118,19 +67,16 @@ export function Process() {
             <div className="max-w-xl space-y-8 lg:max-w-md">
               <div className="space-y-5">
                 <p className="text-caption font-semibold tracking-[0.16em] text-secondary uppercase">
-                  Collaboration Workflow
+                  {t("eyebrow")}
                 </p>
                 <h2 className="font-heading text-heading-2 leading-[1.32] font-semibold tracking-[-0.06em] text-foreground sm:leading-[1.1]">
-                  A Thoughtful Creative Process
+                  {t("title")}
                 </h2>
               </div>
 
               <p className="text-[1.08rem] leading-8 text-muted-foreground text-pretty">
-                A structured and collaborative approach designed to keep your
-                project clear, focused and creatively aligned from start to
-                finish.
+                {t("description")}
               </p>
-
             </div>
           </motion.div>
 
@@ -166,7 +112,9 @@ export function Process() {
 
                   <div className="space-y-3">
                     <p className="text-[0.68rem] font-semibold tracking-[0.14em] text-muted-foreground uppercase">
-                      {step.label}
+                      {step.labelKey === "deliverables"
+                        ? t("deliverablesLabel")
+                        : t("coverLabel")}
                     </p>
                     <ul className="grid gap-x-4 gap-y-2 sm:grid-cols-2">
                       {step.items.map((item) => (

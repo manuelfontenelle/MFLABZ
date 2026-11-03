@@ -1,13 +1,14 @@
 import type { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
+import en from "../../messages/en.json";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: siteConfig.name,
-    short_name: "MFLABZ",
-    description: siteConfig.description,
-    start_url: "/",
+    name: en.Metadata.title,
+    short_name: siteConfig.creator,
+    description: en.Metadata.description,
+    start_url: "/en",
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#ffffff",

@@ -15,11 +15,19 @@ import {
 } from "@/components/sections";
 import { HashScroll } from "@/components/hash-scroll";
 import { StructuredData } from "@/components/seo/structured-data";
+import { setRequestLocale } from "next-intl/server";
 
-export default function Home() {
+type HomePageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: HomePageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <StructuredData />
+      <StructuredData locale={locale} />
       <HashScroll />
       <Navbar />
       <main className="min-h-screen bg-background">

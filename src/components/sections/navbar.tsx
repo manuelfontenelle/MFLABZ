@@ -2,19 +2,24 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/ui";
+import { Link, usePathname } from "@/i18n/navigation";
 import {
   handleSectionNavClick,
   sectionHref,
   sectionNavItems
 } from "@/lib/section-nav";
 
+import { LanguageSwitcher } from "./language-switcher";
+
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations("Nav");
+  const pathname = usePathname();
 
   return (
     <header className="relative z-[80] bg-background/95 pt-4 md:pt-6">
@@ -23,7 +28,7 @@ export function Navbar() {
           href="/"
           className="inline-flex items-center"
           onClick={() => setIsMenuOpen(false)}
-          aria-label="MFLABZ Studio"
+          aria-label={t("ariaLogo")}
         >
           <Image
             src="/images/mflabz-logo.svg"
@@ -37,24 +42,25 @@ export function Navbar() {
 
         <nav
           className="ml-auto hidden items-center justify-end gap-7 md:flex"
-          aria-label="Main navigation"
+          aria-label={t("ariaMain")}
         >
           {sectionNavItems.map((item) => (
             <Link
               key={item.id}
               href={sectionHref(item.id)}
-              onClick={(event) => handleSectionNavClick(event, item.id)}
+              onClick={(event) => handleSectionNavClick(event, item.id, pathname)}
               className="relative font-heading text-[0.96rem] font-semibold uppercase leading-none tracking-[1px] text-foreground transition-colors after:absolute after:left-0 after:top-[calc(100%+0.22rem)] after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-secondary after:transition-transform after:duration-700 after:ease-out hover:text-secondary hover:after:scale-x-100 sm:text-[1.03rem]"
             >
-              {item.label}
+              {t(item.labelKey)}
             </Link>
           ))}
+          <LanguageSwitcher />
         </nav>
 
         <motion.button
           type="button"
           className="group ml-auto inline-flex size-10 cursor-pointer items-center justify-center rounded-md bg-background/90 text-foreground backdrop-blur transition-colors hover:bg-muted focus-visible:ring-ring/30 focus-visible:ring-[4px] focus-visible:outline-none md:hidden"
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={isMenuOpen ? t("closeMenu") : t("openMenu")}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setIsMenuOpen((open) => !open)}
@@ -79,7 +85,7 @@ export function Navbar() {
           <>
             <motion.button
               type="button"
-              aria-label="Close navigation menu"
+              aria-label={t("closeMenu")}
               className="fixed inset-0 z-[90] cursor-pointer bg-primary/35 backdrop-blur-sm md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -91,7 +97,7 @@ export function Navbar() {
             <motion.aside
               id="mobile-navigation"
               className="fixed top-0 right-0 z-[100] flex h-dvh w-[min(86vw,360px)] flex-col border-l border-border/80 bg-background p-6 shadow-lg backdrop-blur-xl md:hidden"
-              aria-label="Mobile navigation"
+              aria-label={t("ariaMobile")}
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -108,14 +114,14 @@ export function Navbar() {
                 <button
                   type="button"
                   className="group inline-flex size-10 cursor-pointer items-center justify-center rounded-md bg-background text-foreground transition-colors hover:bg-muted focus-visible:ring-ring/30 focus-visible:ring-[4px] focus-visible:outline-none"
-                  aria-label="Close navigation menu"
+                  aria-label={t("closeMenu")}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <X className="size-6" />
                 </button>
               </div>
 
-              <nav className="mt-10 flex flex-col" aria-label="Mobile navigation links">
+              <nav className="mt-10 flex flex-col" aria-label={t("ariaMobileLinks")}>
                 {sectionNavItems.map((item, index) => (
                   <motion.div
                     key={item.id}
@@ -132,17 +138,21 @@ export function Navbar() {
                       href={sectionHref(item.id)}
                       className="group block border-b border-border/70 py-5 font-heading text-[1.05rem] font-semibold uppercase leading-none tracking-[1px] text-foreground transition-colors hover:text-secondary"
                       onClick={(event) => {
-                        handleSectionNavClick(event, item.id);
+                        handleSectionNavClick(event, item.id, pathname);
                         setIsMenuOpen(false);
                       }}
                     >
                       <span className="block transition-transform duration-300 ease-out group-hover:translate-x-1.5">
-                        {item.label}
+                        {t(item.labelKey)}
                       </span>
                     </Link>
                   </motion.div>
                 ))}
               </nav>
+
+              <div className="mt-8">
+                <LanguageSwitcher compact />
+              </div>
             </motion.aside>
           </>
         )}

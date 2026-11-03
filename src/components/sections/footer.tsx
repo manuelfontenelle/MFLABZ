@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { Star } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/ui";
 import { siteConfig } from "@/config/site";
+import { Link, usePathname } from "@/i18n/navigation";
 import {
   handleSectionNavClick,
   sectionHref,
@@ -13,9 +14,9 @@ import {
 } from "@/lib/section-nav";
 
 const legalLinks = [
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
-  { label: "Legal Notice", href: "/legal" }
+  { labelKey: "privacy" as const, href: "/privacy" },
+  { labelKey: "terms" as const, href: "/terms" },
+  { labelKey: "legal" as const, href: "/legal" }
 ];
 
 const socialLinks = [
@@ -68,6 +69,9 @@ function SocialIcon({ icon }: { icon: SocialIconName }) {
 }
 
 export function Footer() {
+  const t = useTranslations("Footer");
+  const tNav = useTranslations("Nav");
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -78,7 +82,7 @@ export function Footer() {
             <Link
               href="/"
               className="mb-5 inline-flex items-center"
-              aria-label="MFLABZ Studio"
+              aria-label={t("ariaLogo")}
             >
               <Image
                 src="/images/mflabz-logo.svg"
@@ -89,11 +93,13 @@ export function Footer() {
               />
             </Link>
             <p className="mb-2 text-sm font-medium text-foreground">
-              {siteConfig.creator} - Studio by {siteConfig.founderName}
+              {t("studioBy", {
+                creator: siteConfig.creator,
+                founder: siteConfig.founderName
+              })}
             </p>
             <p className="mb-[1.0625rem] max-w-sm text-body-sm leading-6 text-muted-foreground">
-              Graphic Designer specializing in branding, logo design and visual
-              identities for businesses worldwide.
+              {t("tagline")}
             </p>
 
             <div className="space-y-4">
@@ -110,29 +116,32 @@ export function Footer() {
                   ))}
                 </span>
                 <span className="text-[10.5px] text-foreground sm:text-[12.1px]">
-                  <span className="font-semibold">Rated </span>
+                  <span className="font-semibold">{t("ratedPrefix")} </span>
                   <span className="font-semibold text-secondary">4.9/5</span>
-                  {" from "}
-                  <span className="font-semibold">2500+ Client Reviews</span>
+                  {" "}
+                  {t("ratedFrom")}{" "}
+                  <span className="font-semibold">{t("clientReviews")}</span>
                 </span>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-8 lg:contents">
-            <nav className="space-y-4" aria-label="Footer navigation">
+            <nav className="space-y-4" aria-label={t("ariaNav")}>
               <p className="text-[1.05rem] font-semibold text-foreground">
-                Navigation
+                {t("navigation")}
               </p>
               <div className="flex flex-col items-start gap-3">
                 {sectionNavItems.map((link) => (
                   <Link
                     key={link.id}
                     href={sectionHref(link.id)}
-                    onClick={(event) => handleSectionNavClick(event, link.id)}
+                    onClick={(event) =>
+                      handleSectionNavClick(event, link.id, pathname)
+                    }
                     className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    {link.label}
+                    {tNav(link.labelKey)}
                   </Link>
                 ))}
               </div>
@@ -141,9 +150,11 @@ export function Footer() {
             <div className="space-y-4">
               <div className="flex flex-col items-start gap-3">
                 {socialLinks.map((link) => (
-                  <Link
+                  <a
                     key={link.label}
                     href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                   >
                     <span
@@ -153,7 +164,7 @@ export function Footer() {
                       <SocialIcon icon={link.icon} />
                     </span>
                     {link.label}
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
@@ -163,7 +174,7 @@ export function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
           <nav
             className="flex flex-wrap items-center gap-x-4 gap-y-2"
-            aria-label="Legal"
+            aria-label={t("ariaLegal")}
           >
             {legalLinks.map((link) => (
               <Link
@@ -171,13 +182,12 @@ export function Footer() {
                 href={link.href}
                 className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                {link.label}
+                {t(link.labelKey)}
               </Link>
             ))}
           </nav>
           <p className="text-xs font-medium text-muted-foreground sm:text-right">
-            © {currentYear} <span className="text-foreground">MFlabz</span>. All
-            Rights Reserved.
+            {t("rights", { year: currentYear, brand: "MFlabz" })}
           </p>
         </div>
       </Container>
