@@ -54,7 +54,7 @@ export function Hero() {
         <div className="w-full">
           <div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-end lg:gap-10 xl:gap-16">
             <div className="hero-fade min-w-0 space-y-[1.725rem]">
-              <h1 className="max-w-[620px] font-heading text-[clamp(1.75rem,3.9vw,3.5rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
+              <h1 className="max-w-[720px] font-heading text-[clamp(1.75rem,3.9vw,3.5rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
                 {t("title")}
               </h1>
             </div>
