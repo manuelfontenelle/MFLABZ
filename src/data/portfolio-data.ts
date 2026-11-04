@@ -5,10 +5,14 @@ export type PortfolioCategory =
 	| "Bifold"
 	| "Brochure"
 	| "Flyer"
+	| "Double Sided Flyer"
 	| "Roll Up"
 	| "Billboard"
 	| "Yard Sign"
+	| "Event Stand"
 	| "Social Media"
+	| "Packaging"
+	| "Website"
 
 export type PortfolioItem = {
 	id: string
@@ -79,144 +83,176 @@ const portfolioItems: PortfolioItemSeed[] = [
 		imageAlt: "Red, black and white Justica business card design with QR code",
 	},
 	{
-		id: "restaurant-trifold",
+		id: "fimaris-trifold",
 		category: "Trifold",
 		imageUrl: "/images/portfolio/trifold/trifold1.jpg",
 		imageAlt:
-			"FIMARIS wealth management trifold brochure design mockup",
+			"FIMARIS conseil et patrimoine wealth management trifold brochure design",
 	},
 	{
-		id: "corporate-trifold",
+		id: "klean-trifold",
 		category: "Trifold",
 		imageUrl: "/images/portfolio/trifold/trifold2.jpg",
 		imageAlt:
 			"Klean vehicle cleaning trifold brochure design with green car visual",
 	},
 	{
-		id: "wellness-trifold",
+		id: "eb-informatique-trifold",
 		category: "Trifold",
 		imageUrl: "/images/portfolio/trifold/trifold3.jpg",
 		imageAlt:
-			"EB Informatique blue trifold brochure design for IT services",
+			"EB Informatique IT services trifold brochure design for businesses and individuals",
 	},
 	{
-		id: "event-trifold",
+		id: "atena-properties-trifold",
 		category: "Trifold",
 		imageUrl: "/images/portfolio/trifold/trifold4.jpg",
 		imageAlt:
-			"Alga Viva Mexico spirulina product trifold brochure design mockup",
+			"ATENA Properties Geneva real estate agency trifold brochure design",
 	},
 	{
-		id: "product-bifold",
+		id: "tech-cleaner-bifold",
 		category: "Bifold",
 		imageUrl: "/images/portfolio/bifold/bifold1.jpg",
 		imageAlt:
-			"Thermaltech property heating bifold brochure design with blue mountain imagery",
+			"Tech Cleaner gaming console and multimedia repair B2B bifold brochure design",
 	},
 	{
-		id: "service-bifold",
+		id: "la-part-a-pizza-bifold",
 		category: "Bifold",
 		imageUrl: "/images/portfolio/bifold/bifold2.jpg",
 		imageAlt:
-			"Dauphiblanc industrial laundry bifold brochure design with blue and green service sections",
+			"La Part à Pizza restaurant menu bifold design with pizzas, deals and Mandelieu contact details",
 	},
 	{
-		id: "agency-bifold",
+		id: "mysmartobject-bifold",
 		category: "Bifold",
 		imageUrl: "/images/portfolio/bifold/bifold3.jpg",
 		imageAlt:
-			"MySmartObject vehicle tracking bifold brochure design with security app features",
+			"MySmartObject vehicle tracking and security bifold brochure design with Track+ app features",
 	},
 	{
-		id: "premium-bifold",
+		id: "mjrooney-basement-bifold",
 		category: "Bifold",
 		imageUrl: "/images/portfolio/bifold/bifold4.jpg",
 		imageAlt:
-			"Oatopia oat bar bifold brochure design with product photos and brand story",
+			"MJ Rooney Construction basement extension bifold brochure design for London and Kent",
 	},
 	{
-		id: "brand-brochure",
+		id: "preventi-brochure",
 		category: "Brochure",
 		imageUrl: "/images/portfolio/brochure/brochure1.jpg",
 		imageAlt:
-			"Preventi cardio health brochure design spread with medical illustrations",
+			"Preventi Suivi Cardio on-site cardiovascular screening brochure design",
 	},
 	{
-		id: "sales-brochure",
+		id: "emotions-cuisines-brochure",
 		category: "Brochure",
 		imageUrl: "/images/portfolio/brochure/brochure2.jpg",
 		imageAlt:
-			"Maison Net+ cleaning service brochure design with blue layout and staff photos",
+			"Emotions Cuisines custom kitchen brochure design with team and project examples",
 	},
 	{
-		id: "company-brochure",
+		id: "veranda-confort-brochure",
 		category: "Brochure",
 		imageUrl: "/images/portfolio/brochure/brochure3.jpg",
 		imageAlt:
-			"Emotions Cuisines kitchen brochure design with black and red pages",
+			"Veranda Confort French veranda manufacturer brochure design with styles and benefits",
 	},
 	{
-		id: "catalog-brochure",
+		id: "maison-nett-brochure",
 		category: "Brochure",
 		imageUrl: "/images/portfolio/brochure/brochure4.jpg",
 		imageAlt:
-			"MakiZoku sushi takeaway menu brochure design with orange and cream layout",
+			"Maison Nett cleaning service brochure design for homes and tourism professionals",
 	},
 	{
-		id: "event-flyer",
+		id: "ts-exterior-cleaning-flyer",
 		category: "Flyer",
 		imageUrl: "/images/portfolio/flyer/flyer1.jpg",
 		imageAlt:
-			"France Drone Services exterior cleaning flyer design with roof and facade photos",
+			"TS Exterior Cleaning services flyer design for residential and commercial cleaning in Devon",
 	},
 	{
-		id: "restaurant-flyer",
+		id: "la-table-kreyol-flyer",
 		category: "Flyer",
 		imageUrl: "/images/portfolio/flyer/flyer2.jpg",
 		imageAlt:
-			"Home Elec 07 photovoltaic services flyer design with solar panel imagery",
+			"La Table Kreyol Caribbean restaurant flyer design with menu, opening offer and Paris contact details",
 	},
 	{
-		id: "sale-flyer",
+		id: "brotfix-flyer",
 		category: "Flyer",
 		imageUrl: "/images/portfolio/flyer/flyer3.jpg",
 		imageAlt:
-			"Vitasolar solar storage kit flyer design with battery and inverter products",
+			"BROTFiX Sunday bread roll delivery flyer design with WhatsApp interest form and discount offer",
 	},
 	{
-		id: "brand-flyer",
+		id: "bulles-et-delices-flyer",
 		category: "Flyer",
 		imageUrl: "/images/portfolio/flyer/flyer4.jpg",
 		imageAlt:
-			"Gleam Car premium auto detailing flyer design with black and purple pricing layout",
+			"Bulles et Délices bubble waffle food truck flyer design with sweet and savory creations",
 	},
 	{
-		id: "conference-roll-up",
+		id: "engage-learning-double-sided-flyer",
+		category: "Double Sided Flyer",
+		imageUrl:
+			"/images/portfolio/double-sided-flyer/double-sided-flyer1.jpg",
+		imageAlt:
+			"Engage WhatsApp learning platform double-sided flyer with stats, features and contact details",
+	},
+	{
+		id: "villa-hermosa-double-sided-flyer",
+		category: "Double Sided Flyer",
+		imageUrl:
+			"/images/portfolio/double-sided-flyer/double-sided-flyer2.jpg",
+		imageAlt:
+			"Villa Hermosa Spain vacation rental double-sided flyer design in Dutch",
+	},
+	{
+		id: "intersport-winter-double-sided-flyer",
+		category: "Double Sided Flyer",
+		imageUrl:
+			"/images/portfolio/double-sided-flyer/double-sided-flyer3.jpg",
+		imageAlt:
+			"Intersport Dent-Blanche and Vuignier Sports winter offer double-sided flyer designs",
+	},
+	{
+		id: "dls-facade-double-sided-flyer",
+		category: "Double Sided Flyer",
+		imageUrl:
+			"/images/portfolio/double-sided-flyer/double-sided-flyer4.jpg",
+		imageAlt:
+			"DLS Facade exterior insulation and renovation double-sided flyer design",
+	},
+	{
+		id: "altruistiq-roll-up",
 		category: "Roll Up",
 		imageUrl: "/images/portfolio/roll-up/roll-up1.jpg",
 		imageAlt:
-			"MXQ disc pumps roll up banner design for industrial pump products",
+			"Altruistiq food and beverage sustainability platform roll up banner designs",
 	},
 	{
-		id: "retail-roll-up",
+		id: "paybuddy-roll-up",
 		category: "Roll Up",
 		imageUrl: "/images/portfolio/roll-up/roll-up2.jpg",
 		imageAlt:
-			"Antonella Patitucci business coaching roll up banner design in orange and white",
+			"Paybuddy payments special offer roll up banner design with hardware and software packages",
 	},
 	{
-		id: "expo-roll-up",
+		id: "steffes-ets-roll-up",
 		category: "Roll Up",
 		imageUrl: "/images/portfolio/roll-up/roll-up3.jpg",
 		imageAlt:
-			"Clyde and Kensington sales training roll up banner design with yellow and blue layout",
+			"Steffes ETS heater upgrade incentive roll up banner designs",
 	},
 	{
-		id: "studio-roll-up",
+		id: "cabral-gold-roll-up",
 		category: "Roll Up",
 		imageUrl: "/images/portfolio/roll-up/roll-up4.jpg",
 		imageAlt:
-			"Retirement Income Life insurance roll up banner design for retirement protection services",
+			"Cabral Gold Cuiú Cuiú Brazil gold mine roll up banner design",
 	},
 	{
 		id: "city-billboard",
@@ -252,10 +288,11 @@ const portfolioItems: PortfolioItemSeed[] = [
 		imageAlt: "Tax loans yard sign design placed on a residential lawn",
 	},
 	{
-		id: "service-yard-sign",
+		id: "maisons-paj-yard-sign",
 		category: "Yard Sign",
 		imageUrl: "/images/portfolio/yard-sign/yard-sign2.jpg",
-		imageAlt: "OHMEGA electrical project yard sign design in black and orange",
+		imageAlt:
+			"Les maisons PAJ for-rent yard sign design for Shawville and Fort Coulonge rentals",
 	},
 	{
 		id: "campaign-yard-sign",
@@ -272,32 +309,116 @@ const portfolioItems: PortfolioItemSeed[] = [
 			"DLS Facade exterior insulation yard sign design installed in front of a house",
 	},
 	{
-		id: "instagram-post-set",
+		id: "af-tailleur-event-stand",
+		category: "Event Stand",
+		imageUrl: "/images/portfolio/event-stand/event-stand1.jpg",
+		imageAlt:
+			"AF Tailleur Eure-et-Loir custom suits exhibition booth and counter design",
+	},
+	{
+		id: "hubscans-event-stand",
+		category: "Event Stand",
+		imageUrl: "/images/portfolio/event-stand/event-stand2.jpg",
+		imageAlt:
+			"Hubscans virtual tour platform corner exhibition stand design",
+	},
+	{
+		id: "ops-pavilion-event-stand",
+		category: "Event Stand",
+		imageUrl: "/images/portfolio/event-stand/event-stand3.jpg",
+		imageAlt:
+			"OPS Pavilion shore power partners outdoor exhibition lightbox design",
+	},
+	{
+		id: "engage-learning-event-stand",
+		category: "Event Stand",
+		imageUrl: "/images/portfolio/event-stand/event-stand4.jpg",
+		imageAlt:
+			"Engage WhatsApp learning platform Learning Show exhibition totem design",
+	},
+	{
+		id: "autoluxe-eco-soley-social",
 		category: "Social Media",
 		imageUrl: "/images/portfolio/social-media/social-media1.jpg",
 		imageAlt:
-			"Social media ad designs for luxury vehicle rental and air conditioning promotion",
+			"Social media ads for AutoLuxe67 chauffeur rental and Eco Soley Martinique air conditioning offer",
 	},
 	{
-		id: "social-carousel",
+		id: "litestream-darty-solis-social",
 		category: "Social Media",
 		imageUrl: "/images/portfolio/social-media/social-media2.jpg",
 		imageAlt:
-			"Social media post designs for business event promotion, retail contest and tractor advertising",
+			"Social media creatives for Cannes Family Office Forum, Darty Deauville contest and Solis Guyane tractor",
 	},
 	{
-		id: "ad-creative-set",
+		id: "garmin-gwada-social",
 		category: "Social Media",
 		imageUrl: "/images/portfolio/social-media/social-media3.jpg",
 		imageAlt:
-			"Product promotion social media ad designs for Garmin marine electronics and spa financing offer",
+			"Social media ads for Garmin EchoMap marine electronics and Gwada Discount spa financing",
 	},
 	{
-		id: "brand-social-kit",
+		id: "ernestine-crazy-weekend-asia-social",
 		category: "Social Media",
 		imageUrl: "/images/portfolio/social-media/social-media4.jpg",
 		imageAlt:
-			"Social media banner design set for personalized gifts, weekend sale promotion and automotive services",
+			"Social media banners for Ernestine & Castagnou gifts, coin sale weekend and Asian trading cards import",
+	},
+	{
+		id: "ubelicious-pouch-packaging",
+		category: "Packaging",
+		imageUrl: "/images/portfolio/packaging/packaging1.jpg",
+		imageAlt:
+			"Ubelicious ube powder stand-up pouch packaging design, front and back mockup",
+	},
+	{
+		id: "apiconcept-propolis-box",
+		category: "Packaging",
+		imageUrl: "/images/portfolio/packaging/packaging2.jpg",
+		imageAlt:
+			"Apiconcept water-soluble propolis pipette bottle packaging box design",
+	},
+	{
+		id: "memora-photo-prints-box",
+		category: "Packaging",
+		imageUrl: "/images/portfolio/packaging/packaging3.jpg",
+		imageAlt:
+			"MEMORA premium photo prints box packaging design with camera illustration",
+	},
+	{
+		id: "vetyvert-pet-supplements",
+		category: "Packaging",
+		imageUrl: "/images/portfolio/packaging/packaging4.jpg",
+		imageAlt:
+			"VetyVert dog supplement packaging range with boxes and bottle mockup",
+	},
+	{
+		id: "domaine-aventurier-website",
+		category: "Website",
+		imageUrl: "/images/portfolio/website/website1.jpg",
+		imageAlt:
+			"Domaine Aventurier hunting and fishing outfitter website in the Hautes Laurentides, Canada",
+	},
+	{
+		id: "marc-fontenelle-sculptor-website",
+		category: "Website",
+		imageUrl: "/images/portfolio/website/website2.jpg",
+		imageAlt:
+			"Marc Fontenelle artist and sculptor portfolio website design",
+	},
+	{
+		id: "vinted-replica-website",
+		category: "Website",
+		imageUrl: "/images/portfolio/website/website3.jpg",
+		imageAlt:
+			"Vinted second-hand marketplace website replica with search, listings and sell flow",
+	},
+	{
+		id: "marvel-characters-comics-website",
+		category: "Website",
+		imageUrl: "/images/portfolio/website/website4.jpg",
+		imageAlt:
+			"Marvel characters and comics reference website with character grid and favorites",
 	},
 ]
 

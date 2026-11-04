@@ -7,6 +7,8 @@ export const siteConfig = {
   keywords: [
     "Manuel Fontenelle",
     "Manuel Fontenelle graphic designer",
+    "Manuel Fontenelle MFLABZ",
+    "Manuel Fontenelle designer",
     "MFLABZ",
     "graphic designer",
     "freelance graphic designer",

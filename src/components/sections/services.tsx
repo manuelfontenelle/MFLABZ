@@ -2,7 +2,14 @@
 
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Images, Megaphone, Palette, PenTool } from "lucide-react";
+import {
+  Images,
+  Megaphone,
+  Monitor,
+  Package,
+  Palette,
+  PenTool
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -21,8 +28,10 @@ import { servicesData } from "@/data/services-data";
 const serviceIcons: Record<ServiceId, LucideIcon> = {
   "logo-design": PenTool,
   "brand-identity": Palette,
+  packaging: Package,
   "social-media-design": Images,
-  "marketing-materials": Megaphone
+  "marketing-materials": Megaphone,
+  "web-design": Monitor
 };
 
 const sectionReveal: Variants = {

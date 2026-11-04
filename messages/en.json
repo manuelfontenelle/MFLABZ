@@ -1,15 +1,17 @@
 {
 	"Metadata": {
-		"title": "MFLABZ | Freelance Graphic Designer for Logos, Branding & Print Design",
-		"titleTemplate": "%s | MFLABZ",
-		"description": "Premium freelance graphic design by Manuel Fontenelle (MFLABZ) - logo design, business cards, flyers, brochures, social media graphics, roll up banners, billboards, and yard signs.",
-		"ogImageAlt": "MFLABZ freelance graphic design portfolio",
+		"title": "Manuel Fontenelle | MFLABZ - Freelance Graphic Designer in Paris",
+		"titleTemplate": "%s | Manuel Fontenelle · MFLABZ",
+		"description": "Manuel Fontenelle, freelance graphic designer in Paris and founder of MFLABZ. Logo design, brand identity, packaging, print and websites for businesses in France and worldwide.",
+		"ogImageAlt": "Manuel Fontenelle - MFLABZ freelance graphic design portfolio",
 		"privacyTitle": "Privacy Policy",
 		"termsTitle": "Terms of Service",
 		"legalTitle": "Legal Notice",
 		"keywords": [
 			"Manuel Fontenelle",
 			"Manuel Fontenelle graphic designer",
+			"Manuel Fontenelle MFLABZ",
+			"Manuel Fontenelle designer",
 			"MFLABZ",
 			"graphic designer",
 			"freelance graphic designer",
@@ -75,19 +77,27 @@
 			"Logo": "Logo",
 			"Business Cards": "Business Cards",
 			"Flyer": "Flyer",
+			"Double Sided Flyer": "Double Sided Flyer",
 			"Trifold": "Trifold",
 			"Bifold": "Bifold",
 			"Brochure": "Brochure",
 			"Roll Up": "Roll Up",
 			"Billboard": "Billboard",
 			"Yard Sign": "Yard Sign",
-			"Social Media": "Social Media"
+			"Event Stand": "Event Stand",
+			"Social Media": "Social Media",
+			"Packaging": "Packaging",
+			"Website": "Website"
 		},
-		"genreSuffix": "design"
+		"genreSuffix": "design",
+		"scrollTabsLeft": "Scroll categories left",
+		"scrollTabsRight": "Scroll categories right",
+		"comingSoonTitle": "Projects coming soon",
+		"comingSoonDescription": "This category is being updated. Get in touch to see examples of recent projects."
 	},
 	"Services": {
 		"title": "What I Do",
-		"description": "Four areas to create, extend and keep your visual identity alive, from logo to social media.",
+		"description": "Six areas to create, extend and keep your visual identity alive, from logo to website.",
 		"items": {
 			"logo-design": {
 				"title": "Logo Design",
@@ -105,16 +115,30 @@
 			},
 			"brand-identity": {
 				"title": "Brand Identity",
-				"description": "Cohesive identity systems built around your logo, from brand guidelines and stationery to product packaging and labels.",
+				"description": "Everything around your logo: brand guidelines, colors, typography and stationery, for a brand that stays consistent on every support.",
 				"badges": [
 					"Brand Guidelines",
 					"Stationery",
 					"Color Palette",
 					"Typography",
-					"Packaging",
-					"Product Labels",
+					"Icons",
+					"Patterns",
 					"Brand Assets",
 					"Rebranding"
+				]
+			},
+			"packaging": {
+				"title": "Packaging & Labels",
+				"description": "Product packaging and labels that stand out on the shelf and stay true to your brand, delivered print-ready.",
+				"badges": [
+					"Packaging",
+					"Product Labels",
+					"Boxes",
+					"Pouches",
+					"Bottles",
+					"Cosmetics",
+					"Food & Beverage",
+					"3D Mockups"
 				]
 			},
 			"social-media-design": {
@@ -144,6 +168,20 @@
 					"Yard Signs",
 					"Outdoor Signage",
 					"Vehicle Wrap"
+				]
+			},
+			"web-design": {
+				"title": "Websites",
+				"description": "I design and develop your showcase website from start to finish, as an extension of your identity, for a consistent look from logo to screen.",
+				"badges": [
+					"Showcase Website",
+					"Landing Page",
+					"Redesign",
+					"Figma Mockup",
+					"Front-end",
+					"Responsive",
+					"Basic SEO",
+					"Launch"
 				]
 			}
 		}
@@ -313,6 +351,11 @@
 			},
 			{
 				"id": "faq-10",
+				"question": "Do you also design websites?",
+				"answer": "Yes. I design and develop showcase websites from start to finish, from design to launch, as an extension of your visual identity. These projects are quoted individually through the contact form."
+			},
+			{
+				"id": "faq-11",
 				"question": "How can we start working together?",
 				"answer": "Simply fill out the contact form and tell me about your project. I will get back to you as soon as possible."
 			}
@@ -331,7 +374,7 @@
 		"ariaNav": "Footer navigation",
 		"ariaLegal": "Legal",
 		"studioBy": "{creator} · {founder}",
-		"tagline": "Freelance graphic designer based in Paris. Logos, brand identities, print and social media for businesses in France and worldwide.",
+		"tagline": "Studio of {founder}, freelance graphic designer in Paris. Logos, brand identities, print, packaging and websites for businesses in France and worldwide.",
 		"ratedPrefix": "Rated",
 		"ratedFrom": "from",
 		"clientReviews": "2500+ Client Reviews",
@@ -357,9 +400,11 @@
 		"errorUnable": "Unable to send inquiry.",
 		"services": {
 			"logo-design": "Logo Design",
-			"branding": "Branding",
+			"branding": "Brand Identity",
+			"packaging": "Packaging & Labels",
 			"social-ad": "Social & Ad Creative",
 			"print": "Print Design",
+			"website": "Website",
 			"other": "Other"
 		},
 		"errors": {
@@ -373,8 +418,8 @@
 	"Common": {
 		"backToHome": "← Back to home",
 		"lastUpdated": "Last updated: {date}",
-		"jobTitle": "Graphic Designer",
-		"personDescription": "Freelance graphic designer and founder of MFLABZ, specializing in logo design, branding, and print design."
+		"jobTitle": "Freelance Graphic Designer & Founder of MFLABZ",
+		"personDescription": "Manuel Fontenelle is a freelance graphic designer based in Paris and the founder of MFLABZ. He creates logos, brand identities, packaging, print materials and websites for businesses in France and worldwide."
 	},
 	"Legal": {
 		"privacy": {

@@ -26,6 +26,9 @@ export async function StructuredData({ locale }: StructuredDataProps) {
     "@type": "Person",
     "@id": personId,
     name: siteConfig.founderName,
+    givenName: "Manuel",
+    familyName: "Fontenelle",
+    alternateName: ["MFLABZ", "Manuel Fontenelle MFLABZ"],
     url: `${localePath}/`,
     image: `${baseUrl}/images/profilPicture.jpg`,
     jobTitle: tCommon("jobTitle"),
@@ -44,6 +47,7 @@ export async function StructuredData({ locale }: StructuredDataProps) {
     "@type": ["ProfessionalService", "Organization"],
     "@id": organizationId,
     name: siteConfig.creator,
+    alternateName: ["Manuel Fontenelle", "Manuel Fontenelle MFLABZ"],
     legalName: siteConfig.creator,
     identifier: {
       "@type": "PropertyValue",
@@ -86,10 +90,16 @@ export async function StructuredData({ locale }: StructuredDataProps) {
     "@id": websiteId,
     url: `${localePath}/`,
     name: tMeta("title"),
+    alternateName: [
+      siteConfig.founderName,
+      `${siteConfig.founderName} ${siteConfig.creator}`,
+      siteConfig.creator
+    ],
     description: tMeta("description"),
     inLanguage: locale,
     publisher: { "@id": organizationId },
-    author: { "@id": personId }
+    author: { "@id": personId },
+    mainEntity: { "@id": personId }
   };
 
   const faqPage = {

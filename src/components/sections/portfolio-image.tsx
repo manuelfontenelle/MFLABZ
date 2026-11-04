@@ -22,7 +22,7 @@ export function PortfolioImage({ src, fallbackSrc, alt }: PortfolioImageProps) {
 			sizes="(min-width: 640px) 50vw, 100vw"
 			quality={90}
 			// Add `aspect-video` back here if the portfolio needs fixed-height cards again.
-			className="h-full w-full rounded-[calc(0.375rem-0.125rem)] object-cover lg:rounded-[calc(0.54rem-0.125rem)]"
+			className="h-full w-full rounded-[calc(0.375rem-0.125rem)] object-cover transition-none [backface-visibility:hidden] lg:rounded-[calc(0.54rem-0.125rem)]"
 			loading="lazy"
 			draggable={false}
 			onDragStart={(event) => event.preventDefault()}

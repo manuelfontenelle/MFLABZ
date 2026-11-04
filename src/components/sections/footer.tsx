@@ -99,7 +99,7 @@ export function Footer() {
               })}
             </p>
             <p className="mb-[1.0625rem] max-w-sm text-body-sm leading-6 text-muted-foreground">
-              {t("tagline")}
+              {t("tagline", { founder: siteConfig.founderName })}
             </p>
 
             <div className="space-y-4">

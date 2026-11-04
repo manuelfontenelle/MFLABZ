@@ -15,5 +15,6 @@ export const faqIds = [
   "faq-07",
   "faq-08",
   "faq-09",
-  "faq-10"
+  "faq-10",
+  "faq-11"
 ] as const;

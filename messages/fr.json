@@ -1,15 +1,17 @@
 {
 	"Metadata": {
-		"title": "MFLABZ | Graphiste freelance - logos, branding & print",
-		"titleTemplate": "%s | MFLABZ",
-		"description": "Design graphique freelance premium par Manuel Fontenelle (MFLABZ) - création de logo, cartes de visite, flyers, brochures, visuels réseaux sociaux, roll-up, panneaux publicitaires et signalétique extérieure.",
-		"ogImageAlt": "Portfolio de design graphique freelance MFLABZ",
+		"title": "Manuel Fontenelle | MFLABZ - Graphiste freelance à Paris",
+		"titleTemplate": "%s | Manuel Fontenelle · MFLABZ",
+		"description": "Manuel Fontenelle, graphiste freelance à Paris et fondateur de MFLABZ. Création de logo, identité de marque, packaging, print et sites web pour des entreprises en France et dans le monde.",
+		"ogImageAlt": "Manuel Fontenelle - MFLABZ, portfolio de design graphique freelance",
 		"privacyTitle": "Politique de confidentialité",
 		"termsTitle": "Conditions d'utilisation",
 		"legalTitle": "Mentions légales",
 		"keywords": [
 			"Manuel Fontenelle",
 			"Manuel Fontenelle graphiste",
+			"Manuel Fontenelle MFLABZ",
+			"Manuel Fontenelle designer",
 			"MFLABZ",
 			"graphiste",
 			"graphiste freelance",
@@ -76,19 +78,27 @@
 			"Logo": "Logo",
 			"Business Cards": "Cartes de visite",
 			"Flyer": "Flyer",
+			"Double Sided Flyer": "Flyer recto verso",
 			"Trifold": "Trifold",
 			"Bifold": "Bifold",
 			"Brochure": "Brochure",
 			"Roll Up": "Roll-up",
 			"Billboard": "Panneau publicitaire",
 			"Yard Sign": "Panneau extérieur",
-			"Social Media": "Réseaux sociaux"
+			"Event Stand": "Stand d'événement",
+			"Social Media": "Réseaux sociaux",
+			"Packaging": "Packaging",
+			"Website": "Site web"
 		},
-		"genreSuffix": "design"
+		"genreSuffix": "design",
+		"scrollTabsLeft": "Faire défiler les catégories vers la gauche",
+		"scrollTabsRight": "Faire défiler les catégories vers la droite",
+		"comingSoonTitle": "Réalisations bientôt en ligne",
+		"comingSoonDescription": "Cette catégorie est en cours de mise à jour. Contactez-moi pour découvrir des exemples de projets récents."
 	},
 	"Services": {
 		"title": "Mes services",
-		"description": "Quatre domaines pour créer, décliner et faire vivre votre identité visuelle, du logo aux réseaux sociaux.",
+		"description": "Six domaines pour créer, décliner et faire vivre votre identité visuelle, du logo au site web.",
 		"items": {
 			"logo-design": {
 				"title": "Création de logo",
@@ -106,16 +116,30 @@
 			},
 			"brand-identity": {
 				"title": "Identité de marque",
-				"description": "Tout ce qui entoure votre logo : charte graphique, papeterie, packaging et étiquettes, pour une marque cohérente sur chaque support.",
+				"description": "Tout ce qui entoure votre logo : charte graphique, couleurs, typographies et papeterie, pour une marque cohérente sur chaque support.",
 				"badges": [
 					"Charte graphique",
 					"Papeterie",
 					"Palette de couleurs",
 					"Typographie",
+					"Pictogrammes",
+					"Motifs",
+					"Éléments de marque",
+					"Rebranding"
+				]
+			},
+			"packaging": {
+				"title": "Packaging & étiquettes",
+				"description": "Des packagings et étiquettes produits qui se remarquent en rayon et restent fidèles à votre marque, livrés prêts pour l'impression.",
+				"badges": [
 					"Packaging",
 					"Étiquettes produit",
-					"Pictogrammes",
-					"Rebranding"
+					"Boîtes",
+					"Sachets",
+					"Bouteilles",
+					"Cosmétique",
+					"Alimentaire",
+					"Mockups 3D"
 				]
 			},
 			"social-media-design": {
@@ -145,6 +169,20 @@
 					"Bâches publicitaires",
 					"Signalétique extérieure",
 					"Covering véhicule"
+				]
+			},
+			"web-design": {
+				"title": "Sites web",
+				"description": "Je conçois et développe votre site vitrine de A à Z, dans le prolongement de votre identité, pour une image cohérente du logo à l'écran.",
+				"badges": [
+					"Site vitrine",
+					"Landing page",
+					"Refonte",
+					"Maquette Figma",
+					"Intégration",
+					"Responsive",
+					"SEO de base",
+					"Mise en ligne"
 				]
 			}
 		}
@@ -314,6 +352,11 @@
 			},
 			{
 				"id": "faq-10",
+				"question": "Faites-vous aussi des sites web ?",
+				"answer": "Oui. Je conçois et développe des sites vitrines de A à Z, du design à la mise en ligne, dans le prolongement de votre identité visuelle. Ces projets se font sur devis, via le formulaire de contact."
+			},
+			{
+				"id": "faq-11",
 				"question": "Comment démarrer une collaboration ?",
 				"answer": "Remplissez le formulaire de contact et décrivez votre projet, ou commandez directement sur Fiverr. Je vous répondrai dans les meilleurs délais."
 			}
@@ -332,7 +375,7 @@
 		"ariaNav": "Navigation du pied de page",
 		"ariaLegal": "Mentions légales",
 		"studioBy": "{creator} · {founder}",
-		"tagline": "Graphiste freelance basé à Paris. Logos, identités visuelles, print et réseaux sociaux pour des entreprises en France et dans le monde.",
+		"tagline": "Studio de {founder}, graphiste freelance à Paris. Logos, identités visuelles, print, packaging et sites web pour des entreprises en France et dans le monde.",
 		"ratedPrefix": "Noté",
 		"ratedFrom": "sur",
 		"clientReviews": "2500+ avis clients",
@@ -358,9 +401,11 @@
 		"errorUnable": "Impossible d'envoyer la demande.",
 		"services": {
 			"logo-design": "Création de logo",
-			"branding": "Branding",
-			"social-ad": "Social & publicité",
-			"print": "Design print",
+			"branding": "Identité de marque",
+			"packaging": "Packaging & étiquettes",
+			"social-ad": "Réseaux sociaux & publicité",
+			"print": "Supports print",
+			"website": "Site web",
 			"other": "Autre"
 		},
 		"errors": {
@@ -374,8 +419,8 @@
 	"Common": {
 		"backToHome": "← Retour à l'accueil",
 		"lastUpdated": "Dernière mise à jour : {date}",
-		"jobTitle": "Graphiste",
-		"personDescription": "Graphiste freelance et fondateur de MFLABZ, spécialisé en création de logo, branding et design print."
+		"jobTitle": "Graphiste freelance & fondateur de MFLABZ",
+		"personDescription": "Manuel Fontenelle est graphiste freelance à Paris et fondateur de MFLABZ. Il crée des logos, identités de marque, packagings, supports print et sites web pour des entreprises en France et dans le monde."
 	},
 	"Legal": {
 		"privacy": {

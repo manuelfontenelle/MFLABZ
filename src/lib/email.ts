@@ -5,8 +5,10 @@ import type { ContactPayload, ContactService } from "@/lib/contact";
 const serviceLabels: Record<ContactService, string> = {
   "logo-design": "Logo Design",
   branding: "Branding",
+  packaging: "Packaging & Labels",
   "social-ad": "Social & Ad Creative",
   print: "Print Design",
+  website: "Website",
   other: "Other"
 };
 
