@@ -19,7 +19,8 @@ export function FinalCTA() {
               {t("eyebrow")}
             </span>
             <h2 className="max-w-2xl font-heading text-heading-2 leading-[1.32] font-semibold sm:leading-[1.1]">
-              {t("title")}
+              <span className="sm:whitespace-nowrap">{t("titleLine1")}</span>{" "}
+              <span className="sm:block">{t("titleLine2")}</span>
             </h2>
             <p className="max-w-2xl text-body-lg text-muted-foreground">
               {t("description")}

@@ -284,7 +284,8 @@
   },
   "FinalCTA": {
     "eyebrow": "Et maintenant ?",
-    "title": "Un\u00a0projet\u00a0en\u00a0tête\u00a0? Parlons-en.",
+    "titleLine1": "Un projet en tête ?",
+    "titleLine2": "Parlons-en.",
     "description": "Logo, identité complète, réseaux sociaux ou supports marketing : je serai ravi d'échanger avec vous sur votre projet.",
     "startProject": "Démarrer un projet",
     "visitFiverr": "Voir sur Fiverr"

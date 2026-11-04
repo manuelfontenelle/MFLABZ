@@ -283,7 +283,8 @@
   },
   "FinalCTA": {
     "eyebrow": "What's next?",
-    "title": "Have\u00a0a\u00a0project\u00a0in\u00a0mind? Let's talk.",
+    "titleLine1": "Have a project in mind?",
+    "titleLine2": "Let's talk.",
     "description": "Logo, full brand identity, social media or marketing materials: I'd love to hear about your project.",
     "startProject": "Start Project",
     "visitFiverr": "Visit Fiverr"
