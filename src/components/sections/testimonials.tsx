@@ -110,7 +110,7 @@ function TestimonialCard({
             aria-label={ratingLabel}
           >
             {Array.from({ length: testimonial.rating }).map((_, index) => (
-              <Star key={index} className="size-4 fill-current" />
+              <Star key={index} className="size-3 fill-current sm:size-4" />
             ))}
           </div>
         </div>
