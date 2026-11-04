@@ -10,7 +10,7 @@ export const contactServiceValues = [
 
 export type ContactService = (typeof contactServiceValues)[number];
 
-/** @deprecated Use contactServiceValues — kept alias for clarity in call sites */
+/** @deprecated Use contactServiceValues - kept alias for clarity in call sites */
 export const contactServiceOptions = contactServiceValues;
 
 type ContactErrorMessages = {

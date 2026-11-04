@@ -1,568 +1,605 @@
 {
-  "Metadata": {
-    "title": "MFLABZ | Freelance Graphic Designer for Logos, Branding & Print Design",
-    "titleTemplate": "%s | MFLABZ",
-    "description": "Premium freelance graphic design by Manuel Fontenelle (MFLABZ) — logo design, business cards, flyers, brochures, social media graphics, roll up banners, billboards, and yard signs.",
-    "ogImageAlt": "MFLABZ freelance graphic design portfolio",
-    "privacyTitle": "Privacy Policy",
-    "termsTitle": "Terms of Service",
-    "legalTitle": "Legal Notice",
-    "keywords": [
-      "Manuel Fontenelle",
-      "Manuel Fontenelle graphic designer",
-      "MFLABZ",
-      "graphic designer",
-      "freelance graphic designer",
-      "logo design",
-      "brand identity",
-      "business card design",
-      "social media design",
-      "social media ad design",
-      "Instagram post design",
-      "social media banner design",
-      "flyer design",
-      "brochure design",
-      "trifold brochure design",
-      "bifold brochure design",
-      "roll up banner design",
-      "billboard design",
-      "yard sign design",
-      "print design",
-      "Fiverr designer"
-    ]
-  },
-  "Nav": {
-    "ariaMain": "Main navigation",
-    "ariaMobile": "Mobile navigation",
-    "ariaMobileLinks": "Mobile navigation links",
-    "ariaLogo": "MFLABZ Studio",
-    "openMenu": "Open navigation menu",
-    "closeMenu": "Close navigation menu",
-    "portfolio": "Portfolio",
-    "services": "Services",
-    "process": "Process",
-    "faq": "FAQ"
-  },
-  "Language": {
-    "label": "Language",
-    "en": "EN",
-    "fr": "FR",
-    "switchTo": "Switch to {locale}"
-  },
-  "Hero": {
-    "title": "Freelance Graphic Designer for Your Brand",
-    "locationBadge": "Based in Paris · Working worldwide",
-    "subtitle": "Stand out from your competitors with design that fits your brand. Logos, branding, print and social media for a consistent, professional image.",
-    "startProject": "Start Project",
-    "visitFiverr": "Visit Fiverr"
-  },
-  "Trust": {
-    "ratedPrefix": "Rated",
-    "ratedFrom": "from",
-    "clientReviews": "2500+ Client Reviews",
-    "headingLine1": "4000+ Projects Delivered Worldwide",
-    "headingLine2": "for Brands That Trust Me"
-  },
-  "LogoMarquee": {
-    "title": "Trusted client and partner logos"
-  },
-  "Portfolio": {
-    "ariaLabel": "Graphic design portfolio",
-    "ariaTabs": "Portfolio project categories",
-    "title": "Selected Projects",
-    "description": "Explore selected logo design, business card, flyer, brochure, signage and social media projects created for businesses worldwide.",
-    "tabs": {
-      "Logo": "Logo",
-      "Business Cards": "Business Cards",
-      "Flyer": "Flyer",
-      "Trifold": "Trifold",
-      "Bifold": "Bifold",
-      "Brochure": "Brochure",
-      "Roll Up": "Roll Up",
-      "Billboard": "Billboard",
-      "Yard Sign": "Yard Sign",
-      "Social Media": "Social Media"
-    },
-    "genreSuffix": "design"
-  },
-  "Services": {
-    "title": "What I Do",
-    "description": "Four areas to create, extend and keep your visual identity alive, from logo to social media.",
-    "items": {
-      "logo-design": {
-        "title": "Logo Design",
-        "description": "Distinctive, memorable logos that capture your brand's personality and make a strong first impression.",
-        "badges": ["Minimalist", "Luxury", "Modern", "Vintage", "Monogram", "Wordmark", "Lettermark", "Emblem"]
-      },
-      "brand-identity": {
-        "title": "Brand Identity",
-        "description": "Cohesive identity systems built around your logo, from brand guidelines and stationery to product packaging and labels.",
-        "badges": ["Brand Guidelines", "Stationery", "Color Palette", "Typography", "Packaging", "Product Labels", "Brand Assets", "Rebranding"]
-      },
-      "social-media-design": {
-        "title": "Social & Ad Creative",
-        "description": "Scroll-stopping social visuals, paid ad banners for Google and Amazon, and A+ Content that presents your products with clarity and impact.",
-        "badges": ["Posts", "Stories", "Carousels", "Google Ads", "Amazon Ads", "A+ Content", "Instagram", "Facebook"]
-      },
-      "marketing-materials": {
-        "title": "Marketing Materials",
-        "description": "Business cards, flyers, brochures, roll-ups, billboards and outdoor visuals designed to present your offer clearly and get noticed.",
-        "badges": ["Business Cards", "Flyers", "Brochures", "Roll-Ups", "Billboards", "Posters", "Yard Signs", "Outdoor Signage", "Vehicle Wrap"]
-      }
-    }
-  },
-  "Testimonials": {
-    "title": "What Clients Say",
-    "description": "Real feedback from entrepreneurs, startups and established companies.",
-    "averageRating": "4.9/5 Average Rating",
-    "verifiedReviews": "Verified Reviews",
-    "projectsDelivered": "Projects Delivered",
-    "industriesServed": "Industries Served",
-    "clientsFromCountries": "Clients from 50+ countries.",
-    "viewFiverrProfile": "View My Fiverr Profile",
-    "starRating": "{rating} star rating",
-    "showSlide": "Show testimonial slide {index}",
-    "previous": "Show previous testimonials",
-    "next": "Show next testimonials"
-  },
-  "WhyChooseMe": {
-    "title": "Why Clients Choose Me",
-    "description": "Trusted by thousands of businesses for professional graphic design and branding services.",
-    "role": "Founder & Graphic Designer · MFLABZ",
-    "bio": "Hi, I'm Manuel - the designer behind MFLABZ. I help brands stand out with thoughtful, modern design built to last.",
-    "ratingBadge": "4.9/5 · 2500+ reviews",
-    "ratingAria": "4.9 out of 5 average rating from 2500+ reviews",
-    "photoAlt": "{name}, freelance graphic designer and founder of MFLABZ",
-    "reasons": {
-      "reviews": {
-        "title": "2500+ Verified Reviews",
-        "description": "A 4.9/5 average rating earned across thousands of completed client projects."
-      },
-      "turnaround": {
-        "title": "Fast Turnaround",
-        "description": "Quick delivery without cutting corners, backed by a clear and reliable workflow."
-      },
-      "custom": {
-        "title": "Custom Design Approach",
-        "description": "Every project is designed from scratch around your brand, audience and goals."
-      },
-      "collaboration": {
-        "title": "Direct Collaboration",
-        "description": "You work directly with the designer at every step, from first concept to final files."
-      },
-      "worldwide": {
-        "title": "Worldwide Experience",
-        "description": "Trusted by startups, entrepreneurs and established brands across the globe."
-      },
-      "quality": {
-        "title": "Professional Quality",
-        "description": "Polished, consistent design built to strengthen credibility and support real growth."
-      }
-    }
-  },
-  "Fiverr": {
-    "ariaLabel": "MFLABZ Fiverr profile",
-    "badge": "Available on Fiverr",
-    "subtitle": "All my reviews, gigs and pricing are on Fiverr. Order directly, with the platform's secure payment.",
-    "averageRating": "4.9/5 Average Rating",
-    "ratingAria": "4.9 out of 5 average rating",
-    "viewProfile": "View My Fiverr Profile"
-  },
-  "Process": {
-    "eyebrow": "Collaboration Workflow",
-    "title": "A Thoughtful Creative Process",
-    "description": "A structured and collaborative approach designed to keep your project clear, focused and creatively aligned from start to finish.",
-    "coverLabel": "What We Cover",
-    "deliverablesLabel": "Deliverables",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Discovery & Brief",
-        "description": "We begin by exploring your business, goals, audience and requirements together, establishing a clear creative direction before any design begins.",
-        "labelKey": "cover",
-        "items": [
-          "Business Understanding",
-          "Project Goals",
-          "Target Audience",
-          "Design Preferences"
-        ]
-      },
-      {
-        "number": "02",
-        "title": "Research & Design",
-        "description": "From the brief, I research creative directions and craft refined concepts tailored to your brand and objectives.",
-        "labelKey": "cover",
-        "items": [
-          "Creative Research",
-          "Concept Development",
-          "Brand Alignment",
-          "Professional Execution"
-        ]
-      },
-      {
-        "number": "03",
-        "title": "Revisions & Refinement",
-        "description": "We review the concepts together and refine every detail until the result aligns perfectly with your vision and business needs.",
-        "labelKey": "cover",
-        "items": [
-          "Client Feedback",
-          "Design Adjustments",
-          "Fine-Tuning",
-          "Final Approval"
-        ]
-      },
-      {
-        "number": "04",
-        "title": "Final Delivery",
-        "description": "Once approved, I deliver all final files, fully organized and ready to use across digital and print.",
-        "labelKey": "deliverables",
-        "items": [
-          "Editable Source Files (AI, EPS, PSD)",
-          "High-Resolution Exports (PNG, JPG, PDF, SVG)",
-          "Print-Ready Files",
-          "Social Media & Brand Assets (if applicable)"
-        ]
-      }
-    ]
-  },
-  "FAQ": {
-    "title": "Frequently Asked Questions",
-    "description": "Everything you need to know before starting your project.",
-    "items": [
-      {
-        "id": "faq-01",
-        "question": "What design services do you offer?",
-        "answer": "I provide logo design, brand identity, product packaging and labels, social media design, business cards, flyers, roll-ups, billboards, vehicle wraps and other marketing materials for businesses of all sizes."
-      },
-      {
-        "id": "faq-02",
-        "question": "How does the design process work?",
-        "answer": "Every project starts with a discussion about your business and goals. I then create concepts, collect feedback and refine the design before final delivery."
-      },
-      {
-        "id": "faq-03",
-        "question": "How long does a project take?",
-        "answer": "Timelines vary depending on the project scope. Most logo and branding projects are delivered within a few days, while larger projects may require additional time."
-      },
-      {
-        "id": "faq-04",
-        "question": "How much does a project cost?",
-        "answer": "Pricing depends on the project scope and requirements. After discussing your needs, I provide a clear quote upfront with no hidden fees."
-      },
-      {
-        "id": "faq-05",
-        "question": "Do I receive the source files?",
-        "answer": "Yes. Final deliverables can include editable source files such as AI, EPS, PSD and other formats depending on the project."
-      },
-      {
-        "id": "faq-06",
-        "question": "Who owns the rights to the final design?",
-        "answer": "You do. Once the project is completed and approved, you receive full ownership and commercial rights to the final design."
-      },
-      {
-        "id": "faq-07",
-        "question": "Can I request revisions?",
-        "answer": "Yes. Revisions are included to ensure the final design aligns with your expectations and business goals."
-      },
-      {
-        "id": "faq-08",
-        "question": "Do you only work in Paris?",
-        "answer": "No. I'm based in Paris but work remotely with clients across France and worldwide, in many industries."
-      },
-      {
-        "id": "faq-09",
-        "question": "What information do you need to get started?",
-        "answer": "A brief description of your business, your goals, design preferences and any references you would like to share."
-      },
-      {
-        "id": "faq-10",
-        "question": "How can we start working together?",
-        "answer": "Simply fill out the contact form and tell me about your project. I will get back to you as soon as possible."
-      }
-    ]
-  },
-  "FinalCTA": {
-    "eyebrow": "What's next?",
-    "titleLine1": "Have a project in mind?",
-    "titleLine2": "Let's talk.",
-    "description": "Logo, full brand identity, social media or marketing materials: I'd love to hear about your project.",
-    "startProject": "Start Project",
-    "visitFiverr": "Visit Fiverr"
-  },
-  "Footer": {
-    "ariaLogo": "MFLABZ Studio",
-    "ariaNav": "Footer navigation",
-    "ariaLegal": "Legal",
-    "studioBy": "{creator} · {founder}",
-    "tagline": "Freelance graphic designer based in Paris. Logos, brand identities, print and social media for businesses in France and worldwide.",
-    "ratedPrefix": "Rated",
-    "ratedFrom": "from",
-    "clientReviews": "2500+ Client Reviews",
-    "navigation": "Navigation",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "legal": "Legal Notice",
-    "rights": "© {year} {brand}. All Rights Reserved."
-  },
-  "Contact": {
-    "title": "Tell Me About Your Project",
-    "description": "Fill out the form below and I'll get back to you as soon as possible.",
-    "name": "Full Name *",
-    "email": "Email Address *",
-    "service": "Service Needed *",
-    "message": "Project Details *",
-    "selectService": "Select a service",
-    "messagePlaceholder": "Tell me about your business, goals and design requirements...",
-    "submit": "Send Inquiry",
-    "sending": "Sending...",
-    "success": "Thank you for your inquiry. I'll get back to you soon.",
-    "error": "Something went wrong. Please try again.",
-    "errorUnable": "Unable to send inquiry.",
-    "services": {
-      "logo-design": "Logo Design",
-      "branding": "Branding",
-      "social-ad": "Social & Ad Creative",
-      "print": "Print Design",
-      "other": "Other"
-    },
-    "errors": {
-      "nameMin": "Full name must be at least 2 characters.",
-      "emailRequired": "Email address is required.",
-      "emailInvalid": "Enter a valid email address.",
-      "serviceRequired": "Service is required.",
-      "messageMin": "Project details must be at least 20 characters."
-    }
-  },
-  "Common": {
-    "backToHome": "← Back to home",
-    "lastUpdated": "Last updated: {date}",
-    "jobTitle": "Graphic Designer",
-    "personDescription": "Freelance graphic designer and founder of MFLABZ, specializing in logo design, branding, and print design."
-  },
-  "Legal": {
-    "privacy": {
-      "title": "Privacy Policy",
-      "description": "How MFLABZ collects, uses, and protects personal information submitted through this website.",
-      "lastUpdated": "July 2, 2026",
-      "sections": [
-        {
-          "title": "1. Who we are",
-          "paragraphs": [
-            "This website is operated by MFLABZ, a freelance graphic design studio run by Manuel Fontenelle, based in Paris, France.",
-            "If you have questions about this policy or your personal data, contact us at mflabz3@gmail.com."
-          ]
-        },
-        {
-          "title": "2. Information we collect",
-          "paragraphs": [
-            "We collect personal information only when you choose to contact us through the website contact form. This may include:"
-          ],
-          "list": [
-            "Your full name",
-            "Your email address",
-            "The service you are interested in",
-            "Project details and any other information you include in your message"
-          ]
-        },
-        {
-          "title": "3. How we use your information",
-          "paragraphs": [
-            "We use the information you submit to respond to your inquiry, discuss your project, and provide design services if we work together.",
-            "We do not sell your personal information and we do not use it for unrelated marketing without your consent."
-          ]
-        },
-        {
-          "title": "4. Legal basis for processing",
-          "paragraphs": [
-            "If you are located in the European Economic Area or the United Kingdom, we process your personal data on the basis of your request to be contacted and our legitimate interest in responding to business inquiries.",
-            "If we enter into a client relationship with you, we may also process your data as necessary to perform a contract or prepare for one."
-          ]
-        },
-        {
-          "title": "5. How long we keep your information",
-          "paragraphs": [
-            "We retain contact form submissions for as long as needed to respond to your inquiry and manage any resulting business relationship.",
-            "If no project moves forward, we generally delete or anonymize inquiry data within a reasonable period, unless we are required to keep it for legal, accounting, or dispute-resolution purposes."
-          ]
-        },
-        {
-          "title": "6. Service providers",
-          "paragraphs": [
-            "We use trusted third-party providers to operate the website and deliver contact form messages by email. These providers process data only on our instructions and for the purposes described in this policy.",
-            "Our website is hosted on Vercel and contact inquiries may be delivered through Resend."
-          ]
-        },
-        {
-          "title": "7. Cookies and analytics",
-          "paragraphs": [
-            "This website does not currently use advertising cookies or third-party analytics trackers.",
-            "Essential technical data may still be processed by our hosting provider to deliver the site securely and reliably."
-          ]
-        },
-        {
-          "title": "8. Your rights",
-          "paragraphs": [
-            "Depending on your location, you may have the right to access, correct, delete, restrict, or object to certain processing of your personal data, and to request data portability.",
-            "If you are in the European Economic Area or the United Kingdom, you also have the right to lodge a complaint with your local data protection authority.",
-            "To exercise your rights, email mflabz3@gmail.com."
-          ]
-        },
-        {
-          "title": "9. International transfers",
-          "paragraphs": [
-            "Some of our service providers may process data outside your country of residence, including in the United States.",
-            "Where required, we rely on appropriate safeguards for international data transfers."
-          ]
-        },
-        {
-          "title": "10. Changes to this policy",
-          "paragraphs": [
-            "We may update this Privacy Policy from time to time. The latest version will always be published on this page with an updated date."
-          ]
-        }
-      ]
-    },
-    "terms": {
-      "title": "Terms of Service",
-      "description": "Terms governing your access to and use of the MFLABZ website.",
-      "lastUpdated": "July 2, 2026",
-      "sections": [
-        {
-          "title": "1. Agreement to these terms",
-          "paragraphs": [
-            "By accessing or using mflabz.com, you agree to these Terms of Service. If you do not agree, please do not use the website."
-          ]
-        },
-        {
-          "title": "2. About MFLABZ",
-          "paragraphs": [
-            "MFLABZ is a freelance graphic design studio operated by Manuel Fontenelle, offering branding, logo design, print design, and related creative services to clients worldwide.",
-            "Information on this website is provided for general presentation and inquiry purposes. It does not constitute a binding offer until confirmed separately in writing."
-          ]
-        },
-        {
-          "title": "3. Permitted use",
-          "paragraphs": [
-            "You agree to use this website only for lawful purposes and in a way that does not:"
-          ],
-          "list": [
-            "Interfere with the security or operation of the website",
-            "Attempt unauthorized access to systems or data",
-            "Submit false, misleading, or harmful information through the contact form",
-            "Copy, scrape, or misuse website content except as allowed by law"
-          ]
-        },
-        {
-          "title": "4. Intellectual property",
-          "paragraphs": [
-            "Unless otherwise stated, all content on this website — including text, layout, branding, logos, graphics, portfolio presentations, and visual assets created by MFLABZ — is owned by MFLABZ or used with permission.",
-            "You may not reproduce, distribute, modify, or exploit website content for commercial purposes without prior written consent."
-          ]
-        },
-        {
-          "title": "5. Portfolio and client work",
-          "paragraphs": [
-            "Portfolio items displayed on this website may include work created for clients. Rights in client projects belong to the respective rights holders under the applicable project agreement.",
-            "Display of client work on this site does not grant any license to reuse those materials."
-          ]
-        },
-        {
-          "title": "6. Contact inquiries and services",
-          "paragraphs": [
-            "Submitting the contact form does not create a client relationship or guarantee project availability, pricing, or delivery timelines.",
-            "Any design engagement is subject to separate agreement on scope, fees, revisions, deliverables, and usage rights."
-          ]
-        },
-        {
-          "title": "7. Third-party links",
-          "paragraphs": [
-            "This website may link to third-party platforms such as Fiverr, LinkedIn, Behance, or Instagram. Those sites are governed by their own terms and policies, and MFLABZ is not responsible for their content or practices."
-          ]
-        },
-        {
-          "title": "8. Disclaimer",
-          "paragraphs": [
-            "The website is provided on an \"as is\" and \"as available\" basis. We aim to keep information accurate and up to date, but we do not warrant that the site will be uninterrupted, error-free, or complete."
-          ]
-        },
-        {
-          "title": "9. Limitation of liability",
-          "paragraphs": [
-            "To the fullest extent permitted by applicable law, MFLABZ shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the website.",
-            "Nothing in these terms excludes liability that cannot be excluded under applicable law."
-          ]
-        },
-        {
-          "title": "10. Governing law",
-          "paragraphs": [
-            "These Terms of Service are governed by the laws of France, without regard to conflict-of-law rules.",
-            "If a dispute arises, the courts of Paris, France shall have jurisdiction, subject to mandatory consumer protections that may apply in your country of residence."
-          ]
-        },
-        {
-          "title": "11. Changes to these terms",
-          "paragraphs": [
-            "We may update these Terms of Service from time to time. Continued use of the website after changes are posted constitutes acceptance of the revised terms."
-          ]
-        },
-        {
-          "title": "12. Contact",
-          "paragraphs": [
-            "Questions about these terms can be sent to mflabz3@gmail.com."
-          ]
-        }
-      ]
-    },
-    "notice": {
-      "title": "Legal Notice",
-      "description": "Publisher and hosting information for the MFLABZ website.",
-      "lastUpdated": "July 2, 2026",
-      "sections": [
-        {
-          "title": "1. Website publisher",
-          "paragraphs": [
-            "Website: mflabz.com",
-            "Publisher: Manuel Fontenelle, operating as MFLABZ",
-            "Activity: Freelance graphic design services",
-            "SIRET (French business ID): 791 052 749 00045",
-            "Location: Paris, France",
-            "Contact: mflabz3@gmail.com"
-          ]
-        },
-        {
-          "title": "2. Hosting provider",
-          "paragraphs": [
-            "This website is hosted by Vercel Inc.",
-            "Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, United States — vercel.com"
-          ]
-        },
-        {
-          "title": "3. Intellectual property",
-          "paragraphs": [
-            "The structure, design, text, graphics, logos, and portfolio content on this website are protected by applicable intellectual property laws.",
-            "Any reproduction, representation, modification, or exploitation without prior written authorization is prohibited, except where permitted by law."
-          ]
-        },
-        {
-          "title": "4. Liability",
-          "paragraphs": [
-            "MFLABZ makes reasonable efforts to ensure that information published on this website is accurate. However, we cannot guarantee completeness or permanent availability of the site.",
-            "MFLABZ cannot be held responsible for temporary unavailability of the website, external links, or issues caused by third-party services outside our control."
-          ]
-        },
-        {
-          "title": "5. Personal data",
-          "paragraphs": [
-            "For information about how personal data is collected and processed, please see our Privacy Policy."
-          ]
-        },
-        {
-          "title": "6. Contact",
-          "paragraphs": [
-            "For any legal or administrative request relating to this website, contact mflabz3@gmail.com."
-          ]
-        }
-      ]
-    }
-  }
+	"Metadata": {
+		"title": "MFLABZ | Freelance Graphic Designer for Logos, Branding & Print Design",
+		"titleTemplate": "%s | MFLABZ",
+		"description": "Premium freelance graphic design by Manuel Fontenelle (MFLABZ) - logo design, business cards, flyers, brochures, social media graphics, roll up banners, billboards, and yard signs.",
+		"ogImageAlt": "MFLABZ freelance graphic design portfolio",
+		"privacyTitle": "Privacy Policy",
+		"termsTitle": "Terms of Service",
+		"legalTitle": "Legal Notice",
+		"keywords": [
+			"Manuel Fontenelle",
+			"Manuel Fontenelle graphic designer",
+			"MFLABZ",
+			"graphic designer",
+			"freelance graphic designer",
+			"logo design",
+			"brand identity",
+			"business card design",
+			"social media design",
+			"social media ad design",
+			"Instagram post design",
+			"social media banner design",
+			"flyer design",
+			"brochure design",
+			"trifold brochure design",
+			"bifold brochure design",
+			"roll up banner design",
+			"billboard design",
+			"yard sign design",
+			"print design",
+			"Fiverr designer"
+		]
+	},
+	"Nav": {
+		"ariaMain": "Main navigation",
+		"ariaMobile": "Mobile navigation",
+		"ariaMobileLinks": "Mobile navigation links",
+		"ariaLogo": "MFLABZ Studio",
+		"openMenu": "Open navigation menu",
+		"closeMenu": "Close navigation menu",
+		"portfolio": "Portfolio",
+		"services": "Services",
+		"process": "Process",
+		"faq": "FAQ"
+	},
+	"Language": {
+		"label": "Language",
+		"en": "EN",
+		"fr": "FR",
+		"switchTo": "Switch to {locale}"
+	},
+	"Hero": {
+		"title": "Freelance Graphic Designer for Your Brand",
+		"locationBadge": "Based in Paris · Working worldwide",
+		"subtitle": "Stand out from your competitors with design that fits your brand. Logos, branding, print and social media for a consistent, professional image.",
+		"startProject": "Start Project",
+		"visitFiverr": "Visit Fiverr"
+	},
+	"Trust": {
+		"ratedPrefix": "Rated",
+		"ratedFrom": "from",
+		"clientReviews": "2500+ Client Reviews",
+		"headingLine1": "4000+ Projects Delivered Worldwide",
+		"headingLine2": "for Brands That Trust Me"
+	},
+	"LogoMarquee": {
+		"title": "Trusted client and partner logos"
+	},
+	"Portfolio": {
+		"ariaLabel": "Graphic design portfolio",
+		"ariaTabs": "Portfolio project categories",
+		"title": "Selected Projects",
+		"description": "Explore selected logo design, business card, flyer, brochure, signage and social media projects created for businesses worldwide.",
+		"tabs": {
+			"Logo": "Logo",
+			"Business Cards": "Business Cards",
+			"Flyer": "Flyer",
+			"Trifold": "Trifold",
+			"Bifold": "Bifold",
+			"Brochure": "Brochure",
+			"Roll Up": "Roll Up",
+			"Billboard": "Billboard",
+			"Yard Sign": "Yard Sign",
+			"Social Media": "Social Media"
+		},
+		"genreSuffix": "design"
+	},
+	"Services": {
+		"title": "What I Do",
+		"description": "Four areas to create, extend and keep your visual identity alive, from logo to social media.",
+		"items": {
+			"logo-design": {
+				"title": "Logo Design",
+				"description": "Distinctive, memorable logos that capture your brand's personality and make a strong first impression.",
+				"badges": [
+					"Minimalist",
+					"Luxury",
+					"Modern",
+					"Vintage",
+					"Monogram",
+					"Wordmark",
+					"Lettermark",
+					"Emblem"
+				]
+			},
+			"brand-identity": {
+				"title": "Brand Identity",
+				"description": "Cohesive identity systems built around your logo, from brand guidelines and stationery to product packaging and labels.",
+				"badges": [
+					"Brand Guidelines",
+					"Stationery",
+					"Color Palette",
+					"Typography",
+					"Packaging",
+					"Product Labels",
+					"Brand Assets",
+					"Rebranding"
+				]
+			},
+			"social-media-design": {
+				"title": "Social & Ad Creative",
+				"description": "Scroll-stopping social visuals, paid ad banners for Google and Amazon, and A+ Content that presents your products with clarity and impact.",
+				"badges": [
+					"Posts",
+					"Stories",
+					"Carousels",
+					"Google Ads",
+					"Amazon Ads",
+					"A+ Content",
+					"Instagram",
+					"Facebook"
+				]
+			},
+			"marketing-materials": {
+				"title": "Marketing Materials",
+				"description": "Business cards, flyers, brochures, roll-ups, billboards and outdoor visuals designed to present your offer clearly and get noticed.",
+				"badges": [
+					"Business Cards",
+					"Flyers",
+					"Brochures",
+					"Roll-Ups",
+					"Billboards",
+					"Posters",
+					"Yard Signs",
+					"Outdoor Signage",
+					"Vehicle Wrap"
+				]
+			}
+		}
+	},
+	"Testimonials": {
+		"title": "What Clients Say",
+		"description": "Real feedback from entrepreneurs, startups and established companies.",
+		"averageRating": "4.9/5 Average Rating",
+		"verifiedReviews": "Verified Reviews",
+		"projectsDelivered": "Projects Delivered",
+		"industriesServed": "Industries Served",
+		"clientsFromCountries": "Clients from 50+ countries.",
+		"viewFiverrProfile": "View My Fiverr Profile",
+		"starRating": "{rating} star rating",
+		"showSlide": "Show testimonial slide {index}",
+		"previous": "Show previous testimonials",
+		"next": "Show next testimonials"
+	},
+	"WhyChooseMe": {
+		"title": "Why Clients Choose Me",
+		"description": "Trusted by thousands of businesses for professional graphic design and branding services.",
+		"role": "Founder & Graphic Designer · MFLABZ",
+		"bio": "Hi, I'm Manuel - the designer behind MFLABZ. I help brands stand out with thoughtful, modern design built to last.",
+		"ratingBadge": "4.9/5 · 2500+ reviews",
+		"ratingAria": "4.9 out of 5 average rating from 2500+ reviews",
+		"photoAlt": "{name}, freelance graphic designer and founder of MFLABZ",
+		"reasons": {
+			"reviews": {
+				"title": "2500+ Verified Reviews",
+				"description": "A 4.9/5 average rating earned across thousands of completed client projects."
+			},
+			"turnaround": {
+				"title": "Fast Turnaround",
+				"description": "Quick delivery without cutting corners, backed by a clear and reliable workflow."
+			},
+			"custom": {
+				"title": "Custom Design Approach",
+				"description": "Every project is designed from scratch around your brand, audience and goals."
+			},
+			"collaboration": {
+				"title": "Direct Collaboration",
+				"description": "You work directly with the designer at every step, from first concept to final files."
+			},
+			"worldwide": {
+				"title": "Worldwide Experience",
+				"description": "Trusted by startups, entrepreneurs and established brands across the globe."
+			},
+			"quality": {
+				"title": "Professional Quality",
+				"description": "Polished, consistent design built to strengthen credibility and support real growth."
+			}
+		}
+	},
+	"Fiverr": {
+		"ariaLabel": "MFLABZ Fiverr profile",
+		"badge": "Available on Fiverr",
+		"subtitle": "All my reviews, gigs and pricing are on Fiverr. Order directly, with the platform's secure payment.",
+		"averageRating": "4.9/5 Average Rating",
+		"ratingAria": "4.9 out of 5 average rating",
+		"viewProfile": "View My Fiverr Profile"
+	},
+	"Process": {
+		"eyebrow": "Collaboration Workflow",
+		"title": "A Thoughtful Creative Process",
+		"description": "A structured and collaborative approach designed to keep your project clear, focused and creatively aligned from start to finish.",
+		"coverLabel": "What We Cover",
+		"deliverablesLabel": "Deliverables",
+		"steps": [
+			{
+				"number": "01",
+				"title": "Discovery & Brief",
+				"description": "We begin by exploring your business, goals, audience and requirements together, establishing a clear creative direction before any design begins.",
+				"labelKey": "cover",
+				"items": [
+					"Business Understanding",
+					"Project Goals",
+					"Target Audience",
+					"Design Preferences"
+				]
+			},
+			{
+				"number": "02",
+				"title": "Research & Design",
+				"description": "From the brief, I research creative directions and craft refined concepts tailored to your brand and objectives.",
+				"labelKey": "cover",
+				"items": [
+					"Creative Research",
+					"Concept Development",
+					"Brand Alignment",
+					"Professional Execution"
+				]
+			},
+			{
+				"number": "03",
+				"title": "Revisions & Refinement",
+				"description": "We review the concepts together and refine every detail until the result aligns perfectly with your vision and business needs.",
+				"labelKey": "cover",
+				"items": [
+					"Client Feedback",
+					"Design Adjustments",
+					"Fine-Tuning",
+					"Final Approval"
+				]
+			},
+			{
+				"number": "04",
+				"title": "Final Delivery",
+				"description": "Once approved, I deliver all final files, fully organized and ready to use across digital and print.",
+				"labelKey": "deliverables",
+				"items": [
+					"Editable Source Files (AI, EPS, PSD)",
+					"High-Resolution Exports (PNG, JPG, PDF, SVG)",
+					"Print-Ready Files",
+					"Social Media & Brand Assets (if applicable)"
+				]
+			}
+		]
+	},
+	"FAQ": {
+		"title": "Frequently Asked Questions",
+		"description": "Everything you need to know before starting your project.",
+		"items": [
+			{
+				"id": "faq-01",
+				"question": "What design services do you offer?",
+				"answer": "I provide logo design, brand identity, product packaging and labels, social media design, business cards, flyers, roll-ups, billboards, vehicle wraps and other marketing materials for businesses of all sizes."
+			},
+			{
+				"id": "faq-02",
+				"question": "How does the design process work?",
+				"answer": "Every project starts with a discussion about your business and goals. I then create concepts, collect feedback and refine the design before final delivery."
+			},
+			{
+				"id": "faq-03",
+				"question": "How long does a project take?",
+				"answer": "Timelines vary depending on the project scope. Most logo and branding projects are delivered within a few days, while larger projects may require additional time."
+			},
+			{
+				"id": "faq-04",
+				"question": "How much does a project cost?",
+				"answer": "Pricing depends on the project scope and requirements. After discussing your needs, I provide a clear quote upfront with no hidden fees."
+			},
+			{
+				"id": "faq-05",
+				"question": "Do I receive the source files?",
+				"answer": "Yes. Final deliverables can include editable source files such as AI, EPS, PSD and other formats depending on the project."
+			},
+			{
+				"id": "faq-06",
+				"question": "Who owns the rights to the final design?",
+				"answer": "You do. Once the project is completed and approved, you receive full ownership and commercial rights to the final design."
+			},
+			{
+				"id": "faq-07",
+				"question": "Can I request revisions?",
+				"answer": "Yes. Revisions are included to ensure the final design aligns with your expectations and business goals."
+			},
+			{
+				"id": "faq-08",
+				"question": "Do you only work in Paris?",
+				"answer": "No. I'm based in Paris but work remotely with clients across France and worldwide, in many industries."
+			},
+			{
+				"id": "faq-09",
+				"question": "What information do you need to get started?",
+				"answer": "A brief description of your business, your goals, design preferences and any references you would like to share."
+			},
+			{
+				"id": "faq-10",
+				"question": "How can we start working together?",
+				"answer": "Simply fill out the contact form and tell me about your project. I will get back to you as soon as possible."
+			}
+		]
+	},
+	"FinalCTA": {
+		"eyebrow": "What's next?",
+		"titleLine1": "Have a project in mind?",
+		"titleLine2": "Let's talk.",
+		"description": "Logo, full brand identity, social media or marketing materials: I'd love to hear about your project.",
+		"startProject": "Start Project",
+		"visitFiverr": "Visit Fiverr"
+	},
+	"Footer": {
+		"ariaLogo": "MFLABZ Studio",
+		"ariaNav": "Footer navigation",
+		"ariaLegal": "Legal",
+		"studioBy": "{creator} · {founder}",
+		"tagline": "Freelance graphic designer based in Paris. Logos, brand identities, print and social media for businesses in France and worldwide.",
+		"ratedPrefix": "Rated",
+		"ratedFrom": "from",
+		"clientReviews": "2500+ Client Reviews",
+		"navigation": "Navigation",
+		"privacy": "Privacy Policy",
+		"terms": "Terms of Service",
+		"legal": "Legal Notice",
+		"rights": "© {year} {brand}. All Rights Reserved."
+	},
+	"Contact": {
+		"title": "Tell Me About Your Project",
+		"description": "Fill out the form below and I'll get back to you as soon as possible.",
+		"name": "Full Name *",
+		"email": "Email Address *",
+		"service": "Service Needed *",
+		"message": "Project Details *",
+		"selectService": "Select a service",
+		"messagePlaceholder": "Tell me about your business, goals and design requirements...",
+		"submit": "Send Inquiry",
+		"sending": "Sending...",
+		"success": "Thank you for your inquiry. I'll get back to you soon.",
+		"error": "Something went wrong. Please try again.",
+		"errorUnable": "Unable to send inquiry.",
+		"services": {
+			"logo-design": "Logo Design",
+			"branding": "Branding",
+			"social-ad": "Social & Ad Creative",
+			"print": "Print Design",
+			"other": "Other"
+		},
+		"errors": {
+			"nameMin": "Full name must be at least 2 characters.",
+			"emailRequired": "Email address is required.",
+			"emailInvalid": "Enter a valid email address.",
+			"serviceRequired": "Service is required.",
+			"messageMin": "Project details must be at least 20 characters."
+		}
+	},
+	"Common": {
+		"backToHome": "← Back to home",
+		"lastUpdated": "Last updated: {date}",
+		"jobTitle": "Graphic Designer",
+		"personDescription": "Freelance graphic designer and founder of MFLABZ, specializing in logo design, branding, and print design."
+	},
+	"Legal": {
+		"privacy": {
+			"title": "Privacy Policy",
+			"description": "How MFLABZ collects, uses, and protects personal information submitted through this website.",
+			"lastUpdated": "July 2, 2026",
+			"sections": [
+				{
+					"title": "1. Who we are",
+					"paragraphs": [
+						"This website is operated by MFLABZ, a freelance graphic design studio run by Manuel Fontenelle, based in Paris, France.",
+						"If you have questions about this policy or your personal data, contact us at mflabz3@gmail.com."
+					]
+				},
+				{
+					"title": "2. Information we collect",
+					"paragraphs": [
+						"We collect personal information only when you choose to contact us through the website contact form. This may include:"
+					],
+					"list": [
+						"Your full name",
+						"Your email address",
+						"The service you are interested in",
+						"Project details and any other information you include in your message"
+					]
+				},
+				{
+					"title": "3. How we use your information",
+					"paragraphs": [
+						"We use the information you submit to respond to your inquiry, discuss your project, and provide design services if we work together.",
+						"We do not sell your personal information and we do not use it for unrelated marketing without your consent."
+					]
+				},
+				{
+					"title": "4. Legal basis for processing",
+					"paragraphs": [
+						"If you are located in the European Economic Area or the United Kingdom, we process your personal data on the basis of your request to be contacted and our legitimate interest in responding to business inquiries.",
+						"If we enter into a client relationship with you, we may also process your data as necessary to perform a contract or prepare for one."
+					]
+				},
+				{
+					"title": "5. How long we keep your information",
+					"paragraphs": [
+						"We retain contact form submissions for as long as needed to respond to your inquiry and manage any resulting business relationship.",
+						"If no project moves forward, we generally delete or anonymize inquiry data within a reasonable period, unless we are required to keep it for legal, accounting, or dispute-resolution purposes."
+					]
+				},
+				{
+					"title": "6. Service providers",
+					"paragraphs": [
+						"We use trusted third-party providers to operate the website and deliver contact form messages by email. These providers process data only on our instructions and for the purposes described in this policy.",
+						"Our website is hosted on Vercel and contact inquiries may be delivered through Resend."
+					]
+				},
+				{
+					"title": "7. Cookies and analytics",
+					"paragraphs": [
+						"This website does not currently use advertising cookies or third-party analytics trackers.",
+						"Essential technical data may still be processed by our hosting provider to deliver the site securely and reliably."
+					]
+				},
+				{
+					"title": "8. Your rights",
+					"paragraphs": [
+						"Depending on your location, you may have the right to access, correct, delete, restrict, or object to certain processing of your personal data, and to request data portability.",
+						"If you are in the European Economic Area or the United Kingdom, you also have the right to lodge a complaint with your local data protection authority.",
+						"To exercise your rights, email mflabz3@gmail.com."
+					]
+				},
+				{
+					"title": "9. International transfers",
+					"paragraphs": [
+						"Some of our service providers may process data outside your country of residence, including in the United States.",
+						"Where required, we rely on appropriate safeguards for international data transfers."
+					]
+				},
+				{
+					"title": "10. Changes to this policy",
+					"paragraphs": [
+						"We may update this Privacy Policy from time to time. The latest version will always be published on this page with an updated date."
+					]
+				}
+			]
+		},
+		"terms": {
+			"title": "Terms of Service",
+			"description": "Terms governing your access to and use of the MFLABZ website.",
+			"lastUpdated": "July 2, 2026",
+			"sections": [
+				{
+					"title": "1. Agreement to these terms",
+					"paragraphs": [
+						"By accessing or using mflabz.com, you agree to these Terms of Service. If you do not agree, please do not use the website."
+					]
+				},
+				{
+					"title": "2. About MFLABZ",
+					"paragraphs": [
+						"MFLABZ is a freelance graphic design studio operated by Manuel Fontenelle, offering branding, logo design, print design, and related creative services to clients worldwide.",
+						"Information on this website is provided for general presentation and inquiry purposes. It does not constitute a binding offer until confirmed separately in writing."
+					]
+				},
+				{
+					"title": "3. Permitted use",
+					"paragraphs": [
+						"You agree to use this website only for lawful purposes and in a way that does not:"
+					],
+					"list": [
+						"Interfere with the security or operation of the website",
+						"Attempt unauthorized access to systems or data",
+						"Submit false, misleading, or harmful information through the contact form",
+						"Copy, scrape, or misuse website content except as allowed by law"
+					]
+				},
+				{
+					"title": "4. Intellectual property",
+					"paragraphs": [
+						"Unless otherwise stated, all content on this website - including text, layout, branding, logos, graphics, portfolio presentations, and visual assets created by MFLABZ - is owned by MFLABZ or used with permission.",
+						"You may not reproduce, distribute, modify, or exploit website content for commercial purposes without prior written consent."
+					]
+				},
+				{
+					"title": "5. Portfolio and client work",
+					"paragraphs": [
+						"Portfolio items displayed on this website may include work created for clients. Rights in client projects belong to the respective rights holders under the applicable project agreement.",
+						"Display of client work on this site does not grant any license to reuse those materials."
+					]
+				},
+				{
+					"title": "6. Contact inquiries and services",
+					"paragraphs": [
+						"Submitting the contact form does not create a client relationship or guarantee project availability, pricing, or delivery timelines.",
+						"Any design engagement is subject to separate agreement on scope, fees, revisions, deliverables, and usage rights."
+					]
+				},
+				{
+					"title": "7. Third-party links",
+					"paragraphs": [
+						"This website may link to third-party platforms such as Fiverr, LinkedIn, Behance, or Instagram. Those sites are governed by their own terms and policies, and MFLABZ is not responsible for their content or practices."
+					]
+				},
+				{
+					"title": "8. Disclaimer",
+					"paragraphs": [
+						"The website is provided on an \"as is\" and \"as available\" basis. We aim to keep information accurate and up to date, but we do not warrant that the site will be uninterrupted, error-free, or complete."
+					]
+				},
+				{
+					"title": "9. Limitation of liability",
+					"paragraphs": [
+						"To the fullest extent permitted by applicable law, MFLABZ shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the website.",
+						"Nothing in these terms excludes liability that cannot be excluded under applicable law."
+					]
+				},
+				{
+					"title": "10. Governing law",
+					"paragraphs": [
+						"These Terms of Service are governed by the laws of France, without regard to conflict-of-law rules.",
+						"If a dispute arises, the courts of Paris, France shall have jurisdiction, subject to mandatory consumer protections that may apply in your country of residence."
+					]
+				},
+				{
+					"title": "11. Changes to these terms",
+					"paragraphs": [
+						"We may update these Terms of Service from time to time. Continued use of the website after changes are posted constitutes acceptance of the revised terms."
+					]
+				},
+				{
+					"title": "12. Contact",
+					"paragraphs": [
+						"Questions about these terms can be sent to mflabz3@gmail.com."
+					]
+				}
+			]
+		},
+		"notice": {
+			"title": "Legal Notice",
+			"description": "Publisher and hosting information for the MFLABZ website.",
+			"lastUpdated": "July 2, 2026",
+			"sections": [
+				{
+					"title": "1. Website publisher",
+					"paragraphs": [
+						"Website: mflabz.com",
+						"Publisher: Manuel Fontenelle, operating as MFLABZ",
+						"Activity: Freelance graphic design services",
+						"SIRET (French business ID): 791 052 749 00045",
+						"Location: Paris, France",
+						"Contact: mflabz3@gmail.com"
+					]
+				},
+				{
+					"title": "2. Hosting provider",
+					"paragraphs": [
+						"This website is hosted by Vercel Inc.",
+						"Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, United States - vercel.com"
+					]
+				},
+				{
+					"title": "3. Intellectual property",
+					"paragraphs": [
+						"The structure, design, text, graphics, logos, and portfolio content on this website are protected by applicable intellectual property laws.",
+						"Any reproduction, representation, modification, or exploitation without prior written authorization is prohibited, except where permitted by law."
+					]
+				},
+				{
+					"title": "4. Liability",
+					"paragraphs": [
+						"MFLABZ makes reasonable efforts to ensure that information published on this website is accurate. However, we cannot guarantee completeness or permanent availability of the site.",
+						"MFLABZ cannot be held responsible for temporary unavailability of the website, external links, or issues caused by third-party services outside our control."
+					]
+				},
+				{
+					"title": "5. Personal data",
+					"paragraphs": [
+						"For information about how personal data is collected and processed, please see our Privacy Policy."
+					]
+				},
+				{
+					"title": "6. Contact",
+					"paragraphs": [
+						"For any legal or administrative request relating to this website, contact mflabz3@gmail.com."
+					]
+				}
+			]
+		}
+	}
 }

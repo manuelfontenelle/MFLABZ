@@ -60,7 +60,7 @@ export function Hero() {
               >
                 {siteConfig.founderName}
               </p>
-              <h1 className="max-w-[828px] font-heading text-[clamp(2.01rem,4.49vw,4.03rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
+              <h1 className="max-w-[828px] font-heading text-[clamp(2.01rem,4.49vw,4.03rem)] leading-[1.34] font-bold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
                 {t("title")}
               </h1>
             </div>

@@ -35,7 +35,7 @@ export const testimonialsData: TestimonialItem[] = [
 		gender: "male",
 		rating: 5,
 		review:
-			"Manuel was great to work with — responsive, professional, and easy to communicate with throughout the process. He quickly understood the brief and delivered a strong initial concept, and was very open to feedback and revisions. His turnaround time was fast, and the final design was high quality and print-ready. Would definitely recommend Manuel for banner and marketing design work",
+			"Manuel was great to work with - responsive, professional, and easy to communicate with throughout the process. He quickly understood the brief and delivered a strong initial concept, and was very open to feedback and revisions. His turnaround time was fast, and the final design was high quality and print-ready. Would definitely recommend Manuel for banner and marketing design work",
 	},
 	{
 		name: "charliecates",
