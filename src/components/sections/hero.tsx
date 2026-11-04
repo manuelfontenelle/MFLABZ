@@ -55,7 +55,7 @@ export function Hero() {
           <div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-end lg:gap-10 xl:gap-16">
             <div className="hero-fade min-w-0 space-y-[1.44rem] sm:space-y-[1.8rem]">
               <p
-                className="font-sans text-[0.94rem] font-semibold uppercase leading-none tracking-[0.12em] text-secondary sm:text-[1.03rem]"
+                className="font-sans text-[0.86rem] font-semibold uppercase leading-none tracking-[0.12em] text-secondary sm:text-[0.94rem]"
                 itemProp="founder"
               >
                 {siteConfig.founderName}
