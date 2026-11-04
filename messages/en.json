@@ -60,8 +60,8 @@
     "ratedPrefix": "Rated",
     "ratedFrom": "from",
     "clientReviews": "2500+ Client Reviews",
-    "headingLine1": "Trusted by 4000+ Clients Worldwide",
-    "headingLine2": "to Shape Their Brand Image"
+    "headingLine1": "4000+ Projects Delivered Worldwide",
+    "headingLine2": "for Brands That Trust Me"
   },
   "LogoMarquee": {
     "title": "Trusted client and partner logos"
@@ -86,8 +86,8 @@
     "genreSuffix": "design"
   },
   "Services": {
-    "title": "Design Services",
-    "description": "Premium design solutions tailored to help your brand stand out and grow with confidence.",
+    "title": "What I Do",
+    "description": "Four areas to create, extend and keep your visual identity alive, from logo to social media.",
     "items": {
       "logo-design": {
         "title": "Logo Design",
@@ -107,7 +107,7 @@
       "marketing-materials": {
         "title": "Marketing Materials",
         "description": "Business cards, flyers, brochures, roll-ups, billboards and outdoor visuals designed to present your offer clearly and get noticed.",
-        "badges": ["Business Cards", "Flyers", "Brochures", "Roll-Ups", "Billboards", "Posters", "Vehicle Wrap", "Car Wrap"]
+        "badges": ["Business Cards", "Flyers", "Brochures", "Roll-Ups", "Billboards", "Posters", "Yard Signs", "Outdoor Signage", "Vehicle Wrap"]
       }
     }
   },
@@ -163,10 +163,10 @@
   "Fiverr": {
     "ariaLabel": "MFLABZ Fiverr profile",
     "badge": "Available on Fiverr",
-    "subtitle": "2500+ verified reviews and thousands of completed design projects worldwide.",
+    "subtitle": "All my reviews, gigs and pricing are on Fiverr. Order directly, with the platform's secure payment.",
     "averageRating": "4.9/5 Average Rating",
     "ratingAria": "4.9 out of 5 average rating",
-    "viewProfile": "View Fiverr Profile"
+    "viewProfile": "View My Fiverr Profile"
   },
   "Process": {
     "eyebrow": "Collaboration Workflow",
@@ -266,8 +266,8 @@
       },
       {
         "id": "faq-08",
-        "question": "Do you work with international clients?",
-        "answer": "Yes. I work with clients worldwide and have successfully completed thousands of projects across multiple industries."
+        "question": "Do you only work in Paris?",
+        "answer": "No. I'm based in Paris but work remotely with clients across France and worldwide, in many industries."
       },
       {
         "id": "faq-09",
@@ -282,9 +282,9 @@
     ]
   },
   "FinalCTA": {
-    "eyebrow": "Let's create something memorable",
-    "title": "Ready to Elevate Your Brand?",
-    "description": "Whether you need a logo, a complete brand identity, social media content or marketing materials, I'd love to hear about your project.",
+    "eyebrow": "What's next?",
+    "title": "Have\u00a0a\u00a0project\u00a0in\u00a0mind? Let's talk.",
+    "description": "Logo, full brand identity, social media or marketing materials: I'd love to hear about your project.",
     "startProject": "Start Project",
     "visitFiverr": "Visit Fiverr"
   },
@@ -292,8 +292,8 @@
     "ariaLogo": "MFLABZ Studio",
     "ariaNav": "Footer navigation",
     "ariaLegal": "Legal",
-    "studioBy": "{creator} - Studio by {founder}",
-    "tagline": "Graphic Designer specializing in branding, logo design and visual identities for businesses worldwide.",
+    "studioBy": "{creator} · {founder}",
+    "tagline": "Freelance graphic designer based in Paris. Logos, brand identities, print and social media for businesses in France and worldwide.",
     "ratedPrefix": "Rated",
     "ratedFrom": "from",
     "clientReviews": "2500+ Client Reviews",
@@ -523,6 +523,7 @@
             "Website: mflabz.com",
             "Publisher: Manuel Fontenelle, operating as MFLABZ",
             "Activity: Freelance graphic design services",
+            "SIRET (French business ID): 791 052 749 00045",
             "Location: Paris, France",
             "Contact: mflabz3@gmail.com"
           ]

@@ -2,7 +2,7 @@
   "Metadata": {
     "title": "MFLABZ | Graphiste freelance — logos, branding & print",
     "titleTemplate": "%s | MFLABZ",
-    "description": "Design graphique freelance premium par Manuel Fontenelle (MFLABZ) — création de logo, cartes de visite, flyers, brochures, visuels réseaux sociaux, roll-up, panneaux publicitaires et panneaux de jardin.",
+    "description": "Design graphique freelance premium par Manuel Fontenelle (MFLABZ) — création de logo, cartes de visite, flyers, brochures, visuels réseaux sociaux, roll-up, panneaux publicitaires et signalétique extérieure.",
     "ogImageAlt": "Portfolio de design graphique freelance MFLABZ",
     "privacyTitle": "Politique de confidentialité",
     "termsTitle": "Conditions d'utilisation",
@@ -26,7 +26,7 @@
       "dépliant bifold",
       "roll-up",
       "panneau publicitaire",
-      "panneau de jardin",
+      "signalétique extérieure",
       "design print",
       "graphiste Fiverr",
       "graphiste Paris"
@@ -61,8 +61,8 @@
     "ratedPrefix": "Noté",
     "ratedFrom": "sur",
     "clientReviews": "2500+ avis clients",
-    "headingLine1": "Plus de 4000 clients dans le monde",
-    "headingLine2": "me font confiance pour leur image de marque"
+    "headingLine1": "Plus de 4000 projets livrés dans le monde",
+    "headingLine2": "pour des marques qui me font confiance"
   },
   "LogoMarquee": {
     "title": "Logos de clients et partenaires de confiance"
@@ -70,8 +70,8 @@
   "Portfolio": {
     "ariaLabel": "Portfolio de design graphique",
     "ariaTabs": "Catégories de projets du portfolio",
-    "title": "Projets sélectionnés",
-    "description": "Découvrez une sélection de logos, cartes de visite, flyers, brochures, signalétique et projets réseaux sociaux réalisés pour des entreprises du monde entier.",
+    "title": "Mes réalisations",
+    "description": "Logos, cartes de visite, flyers, brochures, signalétique et réseaux sociaux réalisés pour des entreprises du monde entier.",
     "tabs": {
       "Logo": "Logo",
       "Business Cards": "Cartes de visite",
@@ -81,39 +81,39 @@
       "Brochure": "Brochure",
       "Roll Up": "Roll-up",
       "Billboard": "Panneau publicitaire",
-      "Yard Sign": "Panneau de jardin",
+      "Yard Sign": "Panneau extérieur",
       "Social Media": "Réseaux sociaux"
     },
     "genreSuffix": "design"
   },
   "Services": {
-    "title": "Services de design",
-    "description": "Des solutions de design premium conçues pour faire rayonner votre marque et accompagner sa croissance.",
+    "title": "Mes services",
+    "description": "Quatre domaines pour créer, décliner et faire vivre votre identité visuelle, du logo aux réseaux sociaux.",
     "items": {
       "logo-design": {
         "title": "Création de logo",
         "description": "Des logos distinctifs et mémorables qui capturent la personnalité de votre marque et créent une première impression forte.",
-        "badges": ["Minimaliste", "Luxe", "Moderne", "Vintage", "Monogramme", "Wordmark", "Lettermark", "Emblème"]
+        "badges": ["Minimaliste", "Luxe", "Moderne", "Vintage", "Monogramme", "Logotype", "Initiales", "Emblème"]
       },
       "brand-identity": {
         "title": "Identité de marque",
-        "description": "Des systèmes d'identité cohérents autour de votre logo, des chartes graphiques et papeterie jusqu'aux packagings et étiquettes produits.",
-        "badges": ["Charte graphique", "Papeterie", "Palette de couleurs", "Typographie", "Packaging", "Étiquettes produit", "Éléments de marque", "Rebranding"]
+        "description": "Tout ce qui entoure votre logo : charte graphique, papeterie, packaging et étiquettes, pour une marque cohérente sur chaque support.",
+        "badges": ["Charte graphique", "Papeterie", "Palette de couleurs", "Typographie", "Packaging", "Étiquettes produit", "Pictogrammes", "Rebranding"]
       },
       "social-media-design": {
-        "title": "Social & publicité",
+        "title": "Réseaux sociaux & publicité",
         "description": "Des visuels réseaux sociaux percutants, des bannières publicitaires pour Google et Amazon, et du contenu A+ qui présente vos produits avec clarté et impact.",
         "badges": ["Posts", "Stories", "Carrousels", "Google Ads", "Amazon Ads", "Contenu A+", "Instagram", "Facebook"]
       },
       "marketing-materials": {
         "title": "Supports marketing",
-        "description": "Cartes de visite, flyers, brochures, roll-up, panneaux publicitaires et supports outdoor conçus pour présenter clairement votre offre et attirer l'attention.",
-        "badges": ["Cartes de visite", "Flyers", "Brochures", "Roll-up", "Panneaux publicitaires", "Affiches", "Covering véhicule", "Covering auto"]
+        "description": "Cartes de visite, flyers, brochures, roll-up, panneaux publicitaires et signalétique extérieure conçus pour présenter clairement votre offre et attirer l'attention.",
+        "badges": ["Cartes de visite", "Flyers", "Brochures", "Roll-up", "Panneaux publicitaires", "Affiches", "Bâches publicitaires", "Signalétique extérieure", "Covering véhicule"]
       }
     }
   },
   "Testimonials": {
-    "title": "Ce que disent les clients",
+    "title": "Ce que disent mes clients",
     "description": "Des retours authentiques d'entrepreneurs, de startups et d'entreprises établies.",
     "averageRating": "Note moyenne 4,9/5",
     "verifiedReviews": "Avis vérifiés",
@@ -128,52 +128,52 @@
   },
   "WhyChooseMe": {
     "title": "Pourquoi les clients me choisissent",
-    "description": "La confiance de milliers d'entreprises pour un design graphique et un branding professionnels.",
+    "description": "Des milliers d'entreprises me font confiance. Voici pourquoi.",
     "role": "Fondateur & graphiste · MFLABZ",
-    "bio": "Bonjour, je suis Manuel — le designer derrière MFLABZ. J'aide les marques à se démarquer grâce à un design moderne, réfléchi et durable.",
+    "bio": "Bonjour, je suis Manuel, le graphiste derrière MFLABZ. J'aide les marques à se démarquer avec un design moderne, réfléchi et intemporel.",
     "ratingBadge": "4,9/5 · 2500+ avis",
     "ratingAria": "Note moyenne de 4,9 sur 5 à partir de plus de 2500 avis",
     "photoAlt": "{name}, graphiste freelance et fondateur de MFLABZ",
     "reasons": {
       "reviews": {
         "title": "2500+ avis vérifiés",
-        "description": "Une note moyenne de 4,9/5 obtenue sur des milliers de projets clients réalisés."
+        "description": "Une note moyenne de 4,9/5 sur des milliers de projets livrés."
       },
       "turnaround": {
         "title": "Délais rapides",
-        "description": "Une livraison rapide sans compromis sur la qualité, grâce à un processus clair et fiable."
+        "description": "La plupart des projets de logo et de branding sont livrés en quelques jours, sans compromis sur la qualité."
       },
       "custom": {
         "title": "Approche sur mesure",
-        "description": "Chaque projet est conçu sur mesure autour de votre marque, de votre audience et de vos objectifs."
+        "description": "Chaque projet est conçu autour de votre marque, de votre audience et de vos objectifs."
       },
       "collaboration": {
         "title": "Collaboration directe",
-        "description": "Vous échangez directement avec le designer à chaque étape, du premier concept aux fichiers finaux."
+        "description": "Vous échangez directement avec moi à chaque étape, du premier concept aux fichiers finaux."
       },
       "worldwide": {
         "title": "Expérience internationale",
-        "description": "La confiance de startups, d'entrepreneurs et de marques établies à travers le monde."
+        "description": "Des startups, des indépendants et des marques établies du monde entier me font confiance."
       },
       "quality": {
         "title": "Qualité professionnelle",
-        "description": "Un design soigné et cohérent, pensé pour renforcer votre crédibilité et soutenir une croissance réelle."
+        "description": "Un design soigné et cohérent qui renforce votre crédibilité auprès de vos clients."
       }
     }
   },
   "Fiverr": {
     "ariaLabel": "Profil Fiverr MFLABZ",
     "badge": "Disponible sur Fiverr",
-    "subtitle": "Plus de 2500 avis vérifiés et des milliers de projets de design réalisés dans le monde.",
+    "subtitle": "Tous mes avis, mes offres et mes tarifs sont sur Fiverr. Commandez directement, avec le paiement sécurisé de la plateforme.",
     "averageRating": "Note moyenne 4,9/5",
     "ratingAria": "Note moyenne de 4,9 sur 5",
-    "viewProfile": "Voir le profil Fiverr"
+    "viewProfile": "Voir mon profil Fiverr"
   },
   "Process": {
-    "eyebrow": "Processus collaboratif",
+    "eyebrow": "Comment ça se passe",
     "title": "Un processus créatif maîtrisé",
-    "description": "Une approche structurée et collaborative pour garder votre projet clair, focalisé et aligné créativement du début à la fin.",
-    "coverLabel": "Ce que nous couvrons",
+    "description": "Une méthode claire et collaborative pour garder votre projet sur les bons rails, du premier échange aux fichiers finaux.",
+    "coverLabel": "Au programme",
     "deliverablesLabel": "Livrables",
     "steps": [
       {
@@ -191,13 +191,13 @@
       {
         "number": "02",
         "title": "Recherche & design",
-        "description": "À partir du brief, je recherche des directions créatives et conçois des concepts affinés, adaptés à votre marque et à vos objectifs.",
+        "description": "À partir du brief, j'explore plusieurs pistes créatives et conçois des concepts adaptés à votre marque et à vos objectifs.",
         "labelKey": "cover",
         "items": [
           "Recherche créative",
           "Développement de concepts",
-          "Alignement de marque",
-          "Exécution professionnelle"
+          "Cohérence avec votre marque",
+          "Réalisation soignée"
         ]
       },
       {
@@ -208,7 +208,7 @@
         "items": [
           "Retours client",
           "Ajustements graphiques",
-          "Affinage",
+          "Finitions",
           "Validation finale"
         ]
       },
@@ -221,7 +221,7 @@
           "Fichiers sources éditables (AI, EPS, PSD)",
           "Exports haute résolution (PNG, JPG, PDF, SVG)",
           "Fichiers prêts à imprimer",
-          "Assets réseaux sociaux & de marque (si applicable)"
+          "Visuels réseaux sociaux & éléments de marque (selon le projet)"
         ]
       }
     ]
@@ -243,12 +243,12 @@
       {
         "id": "faq-03",
         "question": "Combien de temps dure un projet ?",
-        "answer": "Les délais varient selon l'ampleur du projet. La plupart des projets de logo et de branding sont livrés en quelques jours, tandis que les projets plus larges peuvent nécessiter davantage de temps."
+        "answer": "Les délais varient selon l'ampleur du projet. La plupart des projets de logo et de branding sont livrés en quelques jours, tandis que les projets plus importants peuvent nécessiter davantage de temps."
       },
       {
         "id": "faq-04",
         "question": "Combien coûte un projet ?",
-        "answer": "Le tarif dépend du périmètre et des besoins du projet. Après discussion, je vous fournis un devis clair dès le départ, sans frais cachés."
+        "answer": "Le tarif dépend du périmètre et des besoins du projet. Après un premier échange, je vous envoie un devis clair et détaillé, sans frais cachés. Mes offres Fiverr affichent également des tarifs fixes."
       },
       {
         "id": "faq-05",
@@ -258,7 +258,7 @@
       {
         "id": "faq-06",
         "question": "Qui détient les droits sur le design final ?",
-        "answer": "Vous. Une fois le projet terminé et validé, vous obtenez la pleine propriété et les droits commerciaux sur le design final."
+        "answer": "Vous. Une fois le projet terminé et validé, vous disposez de tous les droits d'utilisation et d'exploitation commerciale sur le design final."
       },
       {
         "id": "faq-07",
@@ -267,8 +267,8 @@
       },
       {
         "id": "faq-08",
-        "question": "Travaillez-vous avec des clients internationaux ?",
-        "answer": "Oui. Je travaille avec des clients du monde entier et ai réalisé avec succès des milliers de projets dans de nombreux secteurs."
+        "question": "Travaillez-vous uniquement à Paris ?",
+        "answer": "Non. Je suis basé à Paris mais je travaille à distance avec des clients partout en France et dans le monde, dans de nombreux secteurs."
       },
       {
         "id": "faq-09",
@@ -278,14 +278,14 @@
       {
         "id": "faq-10",
         "question": "Comment démarrer une collaboration ?",
-        "answer": "Remplissez simplement le formulaire de contact et décrivez votre projet. Je vous répondrai dans les meilleurs délais."
+        "answer": "Remplissez le formulaire de contact et décrivez votre projet, ou commandez directement sur Fiverr. Je vous répondrai dans les meilleurs délais."
       }
     ]
   },
   "FinalCTA": {
-    "eyebrow": "Créons quelque chose de mémorable",
-    "title": "Prêt à faire évoluer votre marque ?",
-    "description": "Que vous ayez besoin d'un logo, d'une identité complète, de contenus pour les réseaux sociaux ou de supports marketing, je serai ravi d'en discuter avec vous.",
+    "eyebrow": "Et maintenant ?",
+    "title": "Un\u00a0projet\u00a0en\u00a0tête\u00a0? Parlons-en.",
+    "description": "Logo, identité complète, réseaux sociaux ou supports marketing : je serai ravi d'échanger avec vous sur votre projet.",
     "startProject": "Démarrer un projet",
     "visitFiverr": "Voir sur Fiverr"
   },
@@ -293,8 +293,8 @@
     "ariaLogo": "MFLABZ Studio",
     "ariaNav": "Navigation du pied de page",
     "ariaLegal": "Mentions légales",
-    "studioBy": "{creator} — Studio par {founder}",
-    "tagline": "Graphiste spécialisé en branding, création de logo et identités visuelles pour des entreprises du monde entier.",
+    "studioBy": "{creator} · {founder}",
+    "tagline": "Graphiste freelance basé à Paris. Logos, identités visuelles, print et réseaux sociaux pour des entreprises en France et dans le monde.",
     "ratedPrefix": "Noté",
     "ratedFrom": "sur",
     "clientReviews": "2500+ avis clients",
@@ -307,7 +307,7 @@
   "Contact": {
     "title": "Parlez-moi de votre projet",
     "description": "Remplissez le formulaire ci-dessous et je vous répondrai dans les meilleurs délais.",
-    "name": "Nom complet *",
+    "name": "Nom et prénom *",
     "email": "Adresse e-mail *",
     "service": "Service souhaité *",
     "message": "Détails du projet *",
@@ -326,7 +326,7 @@
       "other": "Autre"
     },
     "errors": {
-      "nameMin": "Le nom complet doit contenir au moins 2 caractères.",
+      "nameMin": "Le nom et prénom doivent contenir au moins 2 caractères.",
       "emailRequired": "L'adresse e-mail est obligatoire.",
       "emailInvalid": "Saisissez une adresse e-mail valide.",
       "serviceRequired": "Le service est obligatoire.",
@@ -524,6 +524,7 @@
             "Site : mflabz.com",
             "Éditeur : Manuel Fontenelle, exerçant sous le nom MFLABZ",
             "Activité : Prestations de design graphique freelance",
+            "SIRET : 791 052 749 00045",
             "Localisation : Paris, France",
             "Contact : mflabz3@gmail.com"
           ]

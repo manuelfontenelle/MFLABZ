@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
@@ -24,6 +24,37 @@ const sectionReveal: Variants = {
 
 const testimonialsPerSlide = 4;
 const clientCountryFlags = ["US", "CA", "GB", "AU", "DE", "FR", "NL"];
+
+function shuffle<T>(items: T[]) {
+  const result = [...items];
+
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+  }
+
+  return result;
+}
+
+// The server snapshot keeps the source order (stable HTML); the client snapshot shuffles
+// once per page load, after hydration, so the order changes on every visit.
+let clientOrder: TestimonialItem[] | null = null;
+
+function getServerOrder() {
+  return testimonialsData;
+}
+
+function getClientOrder() {
+  if (!clientOrder) {
+    clientOrder = shuffle(testimonialsData);
+  }
+
+  return clientOrder;
+}
+
+function subscribeToNothing() {
+  return () => {};
+}
 
 function getClientInitials(name: string) {
   return name
@@ -95,15 +126,20 @@ function TestimonialCard({
 export function Testimonials() {
   const t = useTranslations("Testimonials");
   const [activeSlide, setActiveSlide] = useState(0);
+  const orderedTestimonials = useSyncExternalStore(
+    subscribeToNothing,
+    getClientOrder,
+    getServerOrder
+  );
   const testimonialSlides = useMemo(() => {
     const slides: TestimonialItem[][] = [];
 
-    for (let index = 0; index < testimonialsData.length; index += testimonialsPerSlide) {
-      slides.push(testimonialsData.slice(index, index + testimonialsPerSlide));
+    for (let index = 0; index < orderedTestimonials.length; index += testimonialsPerSlide) {
+      slides.push(orderedTestimonials.slice(index, index + testimonialsPerSlide));
     }
 
     return slides;
-  }, []);
+  }, [orderedTestimonials]);
   const totalSlides = testimonialSlides.length;
 
   const showPreviousSlide = () => {
@@ -247,7 +283,7 @@ export function Testimonials() {
           >
             <div className="max-w-full overflow-hidden bg-secondary md:hidden">
               <div className="flex max-w-full snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                {testimonialsData.map((testimonial, index) => (
+                {orderedTestimonials.map((testimonial, index) => (
                   <div
                     key={`${testimonial.name}-${testimonial.country}-${index}`}
                     className="min-w-[min(82vw,22rem)] max-w-[82vw] shrink-0 snap-start"

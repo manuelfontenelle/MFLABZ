@@ -2,6 +2,7 @@ export const siteConfig = {
   name: "MFLABZ",
   creator: "MFLABZ",
   founderName: "Manuel Fontenelle",
+  siret: "791 052 749 00045",
   url: "https://www.mflabz.com",
   keywords: [
     "Manuel Fontenelle",

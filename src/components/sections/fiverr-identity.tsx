@@ -15,7 +15,7 @@ export function FiverrIdentity() {
       className="relative left-1/2 flex min-h-[clamp(300px,38vw,500px)] w-screen -translate-x-1/2 items-center overflow-hidden bg-secondary px-container py-16 text-secondary-foreground"
     >
       <div
-        className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-heading text-[clamp(8rem,28vw,24rem)] leading-none font-black tracking-[-0.11em] text-white/[0.045]"
+        className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-heading text-[clamp(8rem,28vw,24rem)] leading-none font-black tracking-normal text-white/[0.045]"
         aria-hidden="true"
       >
         2500+
@@ -33,7 +33,7 @@ export function FiverrIdentity() {
           {t("badge")}
         </div>
 
-        <p className="font-heading text-[clamp(3.28rem,14.8vw,12.4rem)] leading-[0.78] font-black tracking-[-0.11em] text-white uppercase whitespace-nowrap">
+        <p className="font-sans text-[clamp(3rem,13.6vw,11.4rem)] leading-[0.78] font-bold tracking-[-0.02em] text-white uppercase whitespace-nowrap">
           @MFLABZ
         </p>
 

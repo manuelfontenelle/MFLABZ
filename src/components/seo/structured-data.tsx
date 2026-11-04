@@ -45,6 +45,11 @@ export async function StructuredData({ locale }: StructuredDataProps) {
     "@id": organizationId,
     name: siteConfig.creator,
     legalName: siteConfig.creator,
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "SIRET",
+      value: siteConfig.siret.replace(/\s/g, "")
+    },
     url: `${localePath}/`,
     email: siteConfig.links.email,
     description: tMeta("description"),

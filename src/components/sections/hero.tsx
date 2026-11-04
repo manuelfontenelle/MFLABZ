@@ -53,7 +53,13 @@ export function Hero() {
       <Container className="flex flex-1 items-center">
         <div className="w-full">
           <div className="grid gap-6 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-end lg:gap-10 xl:gap-16">
-            <div className="hero-fade min-w-0 space-y-[1.725rem]">
+            <div className="hero-fade min-w-0 space-y-[1.44rem] sm:space-y-[1.8rem]">
+              <p
+                className="font-sans text-[0.94rem] font-semibold uppercase leading-none tracking-[0.12em] text-secondary sm:text-[1.03rem]"
+                itemProp="founder"
+              >
+                {siteConfig.founderName}
+              </p>
               <h1 className="max-w-[828px] font-heading text-[clamp(2.01rem,4.49vw,4.03rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
                 {t("title")}
               </h1>

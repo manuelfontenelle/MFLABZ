@@ -39,7 +39,7 @@ export const testimonialsData: TestimonialItem[] = [
 	},
 	{
 		name: "charliecates",
-		country: "united states",
+		country: "United States",
 		countryFlag: "US",
 		gender: "male",
 		rating: 5,
@@ -83,15 +83,6 @@ export const testimonialsData: TestimonialItem[] = [
 			"Excellent experience. The work was delivered quickly and at a very high level. The designer was patient, attentive, and understood exactly what I needed. Communication was smooth, and the final result exceeded my expectations. Highly recommended.",
 	},
 	{
-		name: "reflectionsbym",
-		country: "Australia",
-		countryFlag: "AU",
-		gender: "female",
-		rating: 5,
-		review:
-			"Manuel was great to work with — responsive, professional, and easy to communicate with throughout the process. He quickly understood the brief and delivered a strong initial concept, and was very open to feedback and revisions. His turnaround time was fast, and the final design was high quality and print-ready. Would definitely recommend Manuel for banner and marketing design work.",
-	},
-	{
 		name: "nena_sainz",
 		country: "France",
 		countryFlag: "FR",
@@ -117,5 +108,86 @@ export const testimonialsData: TestimonialItem[] = [
 		rating: 5,
 		review:
 			"Working with Manuel is a pleasure every single time. He delivered exactly as planned, and everything was perfect on the first try. I’m already looking forward to the next project together. It's smooth, effortless, and worry-free.",
+	},
+	{
+		name: "ruffles6",
+		country: "Canada",
+		countryFlag: "CA",
+		gender: "male",
+		rating: 5,
+		review:
+			"Great experience working with this Manuel. Professional, responsive and easy to communicate with. Work was delivered as expected, and I would happily recommend his services!",
+	},
+	{
+		name: "arron285",
+		country: "United Kingdom",
+		countryFlag: "GB",
+		gender: "male",
+		rating: 5,
+		review:
+			"I have used Manuel a few times now and he always exceeds my expectations and gets the job done in a speedy time and always listens to instructions and creates exactly what I was after with excellent creativity. Will be using his services again!",
+	},
+	{
+		name: "apiconcept",
+		country: "Netherlands",
+		countryFlag: "NL",
+		gender: "male",
+		rating: 5,
+		review:
+			"The packaging for our product has been delivered with speed and eye for detail. The orientation, align and font type gave a professional look to the product. Manuel did check in a few time to test for my expectations for some details. Rather than simply copy-paste, he ensured the overall deliverable is 'complete'. Also Manuel was very flexible to minor revisions (my bad in request). A pleasant collaboration, well done!",
+	},
+	{
+		name: "numelek",
+		country: "France",
+		countryFlag: "FR",
+		gender: "male",
+		rating: 5,
+		review:
+			"Je suis vraiment très content du travail réalisé par Manuel sur mes flyers. En totale conformité avec le cahier des charges fourni avec un résultat propre et soigné. Les quelques petites retouches pour l'impression ont été réalisées très rapidement. Au plaisir de retravailler avec vous à l'avenir. Merci",
+	},
+	{
+		name: "yoann_boand",
+		country: "Switzerland",
+		countryFlag: "CH",
+		gender: "male",
+		rating: 5,
+		review:
+			"Un excellent travail du début à la fin. La communication a été rapide et professionnelle, toutes mes demandes ont été prises en compte et le résultat est exactement ce que j'espérais. Les délais ont été respectés et la qualité du travail est au rendez-vous. Je recommande sans hésiter et je retravaillerai avec plaisir avec cette personne. Merci !",
+	},
+	{
+		name: "chadbrown509",
+		country: "United States",
+		countryFlag: "US",
+		gender: "male",
+		rating: 5,
+		review:
+			"Awesome service provider! Manuel has completed a lot of jobs for me in the past and he’s always amazing. I’ll be returning again and again in the future.",
+	},
+	{
+		name: "dimakhalife",
+		country: "Belgium",
+		countryFlag: "BE",
+		gender: "male",
+		rating: 5,
+		review:
+			"Always my pleasure working with Manuel, he saved us literally before the deadline in 2 days and delivered amazing work. Thank you so much",
+	},
+	{
+		name: "fokalis",
+		country: "France",
+		countryFlag: "FR",
+		gender: "male",
+		rating: 5,
+		review:
+			"Manuel a fait un travail de qualité. Il a été très à l'écoute de mon projet et a fait des propositions très pertinentes. De plus, Manuel est très disponible et a pris le temps de répondre à toutes mes questions",
+	},
+	{
+		name: "wedelekpl",
+		country: "Poland",
+		countryFlag: "PL",
+		gender: "male",
+		rating: 5,
+		review:
+			"Very good cooperation. Great communication and commitment. I can recommend work with Manuel. We are satisfied with the results.",
 	},
 ]
