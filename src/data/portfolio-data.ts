@@ -67,8 +67,7 @@ const portfolioItems: PortfolioItemSeed[] = [
 		id: "luxury-business-card",
 		category: "Business Cards",
 		imageUrl: "/images/portfolio/business-cards/businessCard2.jpg",
-		imageAlt:
-			"Black and orange OHMEGA electrician business card design mockup",
+		imageAlt: "Black and orange OHMEGA electrician business card design mockup",
 	},
 	{
 		id: "brand-business-card",
@@ -197,32 +196,28 @@ const portfolioItems: PortfolioItemSeed[] = [
 	{
 		id: "engage-learning-double-sided-flyer",
 		category: "Double Sided Flyer",
-		imageUrl:
-			"/images/portfolio/double-sided-flyer/double-sided-flyer1.jpg",
+		imageUrl: "/images/portfolio/double-sided-flyer/double-sided-flyer1.jpg",
 		imageAlt:
 			"Engage WhatsApp learning platform double-sided flyer with stats, features and contact details",
 	},
 	{
 		id: "villa-hermosa-double-sided-flyer",
 		category: "Double Sided Flyer",
-		imageUrl:
-			"/images/portfolio/double-sided-flyer/double-sided-flyer2.jpg",
+		imageUrl: "/images/portfolio/double-sided-flyer/double-sided-flyer2.jpg",
 		imageAlt:
 			"Villa Hermosa Spain vacation rental double-sided flyer design in Dutch",
 	},
 	{
 		id: "intersport-winter-double-sided-flyer",
 		category: "Double Sided Flyer",
-		imageUrl:
-			"/images/portfolio/double-sided-flyer/double-sided-flyer3.jpg",
+		imageUrl: "/images/portfolio/double-sided-flyer/double-sided-flyer3.jpg",
 		imageAlt:
 			"Intersport Dent-Blanche and Vuignier Sports winter offer double-sided flyer designs",
 	},
 	{
 		id: "dls-facade-double-sided-flyer",
 		category: "Double Sided Flyer",
-		imageUrl:
-			"/images/portfolio/double-sided-flyer/double-sided-flyer4.jpg",
+		imageUrl: "/images/portfolio/double-sided-flyer/double-sided-flyer4.jpg",
 		imageAlt:
 			"DLS Facade exterior insulation and renovation double-sided flyer design",
 	},
@@ -244,15 +239,13 @@ const portfolioItems: PortfolioItemSeed[] = [
 		id: "steffes-ets-roll-up",
 		category: "Roll Up",
 		imageUrl: "/images/portfolio/roll-up/roll-up3.jpg",
-		imageAlt:
-			"Steffes ETS heater upgrade incentive roll up banner designs",
+		imageAlt: "Steffes ETS heater upgrade incentive roll up banner designs",
 	},
 	{
 		id: "cabral-gold-roll-up",
 		category: "Roll Up",
 		imageUrl: "/images/portfolio/roll-up/roll-up4.jpg",
-		imageAlt:
-			"Cabral Gold Cuiú Cuiú Brazil gold mine roll up banner design",
+		imageAlt: "Cabral Gold Cuiú Cuiú Brazil gold mine roll up banner design",
 	},
 	{
 		id: "city-billboard",
@@ -319,8 +312,7 @@ const portfolioItems: PortfolioItemSeed[] = [
 		id: "hubscans-event-stand",
 		category: "Event Stand",
 		imageUrl: "/images/portfolio/event-stand/event-stand2.jpg",
-		imageAlt:
-			"Hubscans virtual tour platform corner exhibition stand design",
+		imageAlt: "Hubscans virtual tour platform corner exhibition stand design",
 	},
 	{
 		id: "ops-pavilion-event-stand",
@@ -403,8 +395,7 @@ const portfolioItems: PortfolioItemSeed[] = [
 		id: "marc-fontenelle-sculptor-website",
 		category: "Website",
 		imageUrl: "/images/portfolio/website/website2.jpg",
-		imageAlt:
-			"Marc Fontenelle artist and sculptor portfolio website design",
+		imageAlt: "Marc Fontenelle artist and sculptor portfolio website design",
 	},
 	{
 		id: "vinted-replica-website",
