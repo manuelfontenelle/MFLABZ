@@ -102,7 +102,7 @@ export function Process() {
 
                 <div className="space-y-6">
                   <div className="space-y-3">
-                    <h3 className="font-heading text-[clamp(1.55rem,2.8vw,2.25rem)] leading-[1.12] font-bold tracking-[-0.055em] text-foreground">
+                    <h3 className="font-heading text-[clamp(1.55rem,2.8vw,2.25rem)] leading-[1.12] font-semibold tracking-[-0.055em] text-foreground">
                       {step.title}
                     </h3>
                     <p className="max-w-2xl text-[0.98rem] leading-7 text-muted-foreground">
