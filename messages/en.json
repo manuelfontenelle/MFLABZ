@@ -81,12 +81,13 @@
 			"Trifold": "Trifold",
 			"Bifold": "Bifold",
 			"Brochure": "Brochure",
+			"Packaging": "Packaging",
 			"Roll Up": "Roll Up",
 			"Billboard": "Billboard",
 			"Yard Sign": "Yard Sign",
+			"Car Wrap": "Car Wrap",
 			"Event Stand": "Event Stand",
 			"Social Media": "Social Media",
-			"Packaging": "Packaging",
 			"Website": "Website"
 		},
 		"genreSuffix": "design",
@@ -245,7 +246,7 @@
 	},
 	"Process": {
 		"eyebrow": "Collaboration Workflow",
-		"title": "A Thoughtful Creative Process",
+		"title": "A Clear Creative Process",
 		"description": "A structured and collaborative approach designed to keep your project clear, focused and creatively aligned from start to finish.",
 		"coverLabel": "What We Cover",
 		"deliverablesLabel": "Deliverables",

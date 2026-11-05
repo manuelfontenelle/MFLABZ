@@ -25,12 +25,13 @@ const portfolioTabs: PortfolioCategory[] = [
   "Trifold",
   "Bifold",
   "Brochure",
+  "Packaging",
   "Roll Up",
   "Billboard",
   "Yard Sign",
+  "Car Wrap",
   "Event Stand",
   "Social Media",
-  "Packaging",
   "Website"
 ];
 

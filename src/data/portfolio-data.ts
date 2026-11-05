@@ -9,6 +9,7 @@ export type PortfolioCategory =
 	| "Roll Up"
 	| "Billboard"
 	| "Yard Sign"
+	| "Car Wrap"
 	| "Event Stand"
 	| "Social Media"
 	| "Packaging"
@@ -57,29 +58,32 @@ const portfolioItems: PortfolioItemSeed[] = [
 			"Logo design portfolio grid for Snap, Presti Cleaning, Apside, Cessio, French Leashes and Ernestine Castagnou",
 	},
 	{
-		id: "minimal-business-card",
+		id: "enaura-business-card",
 		category: "Business Cards",
 		imageUrl: "/images/portfolio/business-cards/businessCard1.jpg",
 		imageAlt:
-			"Purple MyCookies business card design with cookie icon and QR code",
+			"Enaura heating and air conditioning business card design for Matthieu Gey",
 	},
 	{
-		id: "luxury-business-card",
+		id: "kaps-lab-business-card",
 		category: "Business Cards",
 		imageUrl: "/images/portfolio/business-cards/businessCard2.jpg",
-		imageAlt: "Black and orange OHMEGA electrician business card design mockup",
+		imageAlt:
+			"Kaps Lab black magenta business card design with Instagram and Snapchat QR codes",
 	},
 	{
-		id: "brand-business-card",
+		id: "safti-louis-robine-business-card",
 		category: "Business Cards",
 		imageUrl: "/images/portfolio/business-cards/businessCard3.jpg",
-		imageAlt: "Orange Afrik-Frais food service business card design mockup",
+		imageAlt:
+			"SAFTI Louis Robine real estate advisor business card design with referral offer",
 	},
 	{
-		id: "studio-business-card",
+		id: "sos-phone-business-card",
 		category: "Business Cards",
 		imageUrl: "/images/portfolio/business-cards/businessCard4.jpg",
-		imageAlt: "Red, black and white Justica business card design with QR code",
+		imageAlt:
+			"SOS-Phone.com Nice phone repair business card design with map and contact details",
 	},
 	{
 		id: "fimaris-trifold",
@@ -300,6 +304,34 @@ const portfolioItems: PortfolioItemSeed[] = [
 		imageUrl: "/images/portfolio/yard-sign/yard-sign4.jpg",
 		imageAlt:
 			"DLS Facade exterior insulation yard sign design installed in front of a house",
+	},
+	{
+		id: "fire-business-car-wrap",
+		category: "Car Wrap",
+		imageUrl: "/images/portfolio/car-wrap/car-wrap1.jpg",
+		imageAlt:
+			"Fire Business fire protection services pickup truck wrap design for Houston",
+	},
+	{
+		id: "prairie-patient-transfer-car-wrap",
+		category: "Car Wrap",
+		imageUrl: "/images/portfolio/car-wrap/car-wrap2.jpg",
+		imageAlt:
+			"Prairie Patient Transfer Services medical transport ambulance vehicle wrap design",
+	},
+	{
+		id: "gowatt-bus-wrap",
+		category: "Car Wrap",
+		imageUrl: "/images/portfolio/car-wrap/car-wrap3.jpg",
+		imageAlt:
+			"Gowatt solar solutions rear bus wrap design with photovoltaic offer",
+	},
+	{
+		id: "sgma-welding-car-wrap",
+		category: "Car Wrap",
+		imageUrl: "/images/portfolio/car-wrap/car-wrap4.jpg",
+		imageAlt:
+			"SGMA Welding mobile welding utility van wrap design for Dallas",
 	},
 	{
 		id: "af-tailleur-event-stand",

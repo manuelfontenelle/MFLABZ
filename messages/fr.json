@@ -82,12 +82,13 @@
 			"Trifold": "Trifold",
 			"Bifold": "Bifold",
 			"Brochure": "Brochure",
+			"Packaging": "Packaging",
 			"Roll Up": "Roll-up",
 			"Billboard": "Panneau publicitaire",
 			"Yard Sign": "Panneau extérieur",
+			"Car Wrap": "Covering véhicule",
 			"Event Stand": "Stand d'événement",
 			"Social Media": "Réseaux sociaux",
-			"Packaging": "Packaging",
 			"Website": "Site web"
 		},
 		"genreSuffix": "design",
@@ -246,7 +247,7 @@
 	},
 	"Process": {
 		"eyebrow": "Comment ça se passe",
-		"title": "Un processus créatif maîtrisé",
+		"title": "Un processus créatif clair",
 		"description": "Une méthode claire et collaborative pour garder votre projet sur les bons rails, du premier échange aux fichiers finaux.",
 		"coverLabel": "Au programme",
 		"deliverablesLabel": "Livrables",
