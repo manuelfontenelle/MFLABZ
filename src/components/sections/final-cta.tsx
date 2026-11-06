@@ -13,14 +13,14 @@ export function FinalCTA() {
   return (
     <section id="contact" className="bg-background pt-4 pb-section lg:pt-[4.2rem]">
       <Container size="lg">
-        <div className="overflow-hidden rounded-md border border-border bg-muted/60 px-6 py-16 shadow-sm sm:px-10 sm:py-20 lg:rounded-[0.54rem] lg:px-16">
+        <div className="overflow-hidden rounded-md border border-border bg-muted/60 px-4 py-16 shadow-sm sm:px-10 sm:py-20 lg:rounded-[0.54rem] lg:px-16">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-7 text-center">
             <span className="text-caption font-semibold uppercase text-secondary">
               {t("eyebrow")}
             </span>
-            <h2 className="max-w-2xl font-heading text-heading-2 leading-[1.32] font-bold sm:leading-[1.1]">
-              <span className="sm:whitespace-nowrap">{t("titleLine1")}</span>{" "}
-              <span className="sm:block">{t("titleLine2")}</span>
+            <h2 className="w-full max-w-2xl font-heading text-heading-2 leading-[1.32] font-bold tracking-[-0.06em] sm:leading-[1.1]">
+              <span className="inline-block whitespace-nowrap">{t("titleLine1")}</span>
+              <span className="block">{t("titleLine2")}</span>
             </h2>
             <p className="max-w-2xl text-body-lg text-muted-foreground">
               {t("description")}

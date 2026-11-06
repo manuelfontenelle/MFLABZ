@@ -248,7 +248,7 @@
 	"Process": {
 		"eyebrow": "Comment ça se passe",
 		"title": "Un processus créatif clair",
-		"description": "Une méthode claire et collaborative pour garder votre projet sur les bons rails, du premier échange aux fichiers finaux.",
+		"description": "Une méthode simple et collaborative pour garder votre projet sur les bons rails, du premier échange aux fichiers finaux.",
 		"coverLabel": "Au programme",
 		"deliverablesLabel": "Livrables",
 		"steps": [
@@ -365,7 +365,7 @@
 	},
 	"FinalCTA": {
 		"eyebrow": "Et maintenant ?",
-		"titleLine1": "Un projet en tête ?",
+		"titleLine1": "Un projet en tête\u00A0?",
 		"titleLine2": "Parlons-en.",
 		"description": "Logo, identité complète, réseaux sociaux ou supports marketing : je serai ravi d'échanger avec vous sur votre projet.",
 		"startProject": "Démarrer un projet",
