@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   BriefcaseBusiness,
+  Building2,
   ChevronDown,
   Mail,
   MessageSquareText,
@@ -47,7 +48,8 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
   const schema = useMemo(
     () =>
       createContactFormSchema({
-        nameMin: t("errors.nameMin"),
+        lastNameMin: t("errors.lastNameMin"),
+        firstNameMin: t("errors.firstNameMin"),
         emailRequired: t("errors.emailRequired"),
         emailInvalid: t("errors.emailInvalid"),
         serviceRequired: t("errors.serviceRequired"),
@@ -64,8 +66,10 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
   } = useForm<ContactFormValues, unknown, ContactPayload>({
     resolver: zodResolver(schema),
     defaultValues: {
-      name: "",
+      lastName: "",
+      firstName: "",
       email: "",
+      company: "",
       service: "",
       message: ""
     }
@@ -104,29 +108,66 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
         </DialogHeader>
 
         <form className="grid gap-5" onSubmit={handleSubmit(onSubmit)} noValidate>
-          <div className="grid gap-2">
-            <label
-              htmlFor="contact-name"
-              className="text-body-sm font-semibold text-foreground"
-            >
-              {t("name")}
-            </label>
-            <div className="relative">
-              <UserRound className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted-foreground/70" />
-              <input
-                id="contact-name"
-                autoComplete="name"
-                aria-invalid={Boolean(errors.name)}
-                aria-describedby={errors.name ? "contact-name-error" : undefined}
-                className={fieldClassName(Boolean(errors.name), "pl-11")}
-                {...register("name")}
-              />
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-2">
+              <label
+                htmlFor="contact-last-name"
+                className="text-body-sm font-semibold text-foreground"
+              >
+                {t("lastName")}
+              </label>
+              <div className="relative">
+                <UserRound className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted-foreground/70" />
+                <input
+                  id="contact-last-name"
+                  autoComplete="family-name"
+                  aria-invalid={Boolean(errors.lastName)}
+                  aria-describedby={
+                    errors.lastName ? "contact-last-name-error" : undefined
+                  }
+                  className={fieldClassName(Boolean(errors.lastName), "pl-11")}
+                  {...register("lastName")}
+                />
+              </div>
+              {errors.lastName?.message && (
+                <p
+                  id="contact-last-name-error"
+                  className="text-body-sm text-destructive"
+                >
+                  {errors.lastName.message}
+                </p>
+              )}
             </div>
-            {errors.name?.message && (
-              <p id="contact-name-error" className="text-body-sm text-destructive">
-                {errors.name.message}
-              </p>
-            )}
+
+            <div className="grid gap-2">
+              <label
+                htmlFor="contact-first-name"
+                className="text-body-sm font-semibold text-foreground"
+              >
+                {t("firstName")}
+              </label>
+              <div className="relative">
+                <UserRound className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted-foreground/70" />
+                <input
+                  id="contact-first-name"
+                  autoComplete="given-name"
+                  aria-invalid={Boolean(errors.firstName)}
+                  aria-describedby={
+                    errors.firstName ? "contact-first-name-error" : undefined
+                  }
+                  className={fieldClassName(Boolean(errors.firstName), "pl-11")}
+                  {...register("firstName")}
+                />
+              </div>
+              {errors.firstName?.message && (
+                <p
+                  id="contact-first-name-error"
+                  className="text-body-sm text-destructive"
+                >
+                  {errors.firstName.message}
+                </p>
+              )}
+            </div>
           </div>
 
           <div className="grid gap-2">
@@ -151,6 +192,36 @@ export function ContactDialog({ trigger }: ContactDialogProps) {
             {errors.email?.message && (
               <p id="contact-email-error" className="text-body-sm text-destructive">
                 {errors.email.message}
+              </p>
+            )}
+          </div>
+
+          <div className="grid gap-2">
+            <label
+              htmlFor="contact-company"
+              className="text-body-sm font-semibold text-foreground"
+            >
+              {t("company")}
+            </label>
+            <div className="relative">
+              <Building2 className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted-foreground/70" />
+              <input
+                id="contact-company"
+                autoComplete="organization"
+                aria-invalid={Boolean(errors.company)}
+                aria-describedby={
+                  errors.company ? "contact-company-error" : undefined
+                }
+                className={fieldClassName(Boolean(errors.company), "pl-11")}
+                {...register("company")}
+              />
+            </div>
+            {errors.company?.message && (
+              <p
+                id="contact-company-error"
+                className="text-body-sm text-destructive"
+              >
+                {errors.company.message}
               </p>
             )}
           </div>

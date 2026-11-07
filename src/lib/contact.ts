@@ -4,8 +4,8 @@ export const contactServiceValues = [
   "logo-design",
   "branding",
   "packaging",
-  "social-ad",
-  "print",
+  "social-ads",
+  "marketing",
   "website",
   "other"
 ] as const;
@@ -16,7 +16,8 @@ export type ContactService = (typeof contactServiceValues)[number];
 export const contactServiceOptions = contactServiceValues;
 
 type ContactErrorMessages = {
-  nameMin: string;
+  lastNameMin: string;
+  firstNameMin: string;
   emailRequired: string;
   emailInvalid: string;
   serviceRequired: string;
@@ -25,12 +26,14 @@ type ContactErrorMessages = {
 
 export function createContactFormSchema(messages: ContactErrorMessages) {
   return z.object({
-    name: z.string().trim().min(2, messages.nameMin),
+    lastName: z.string().trim().min(2, messages.lastNameMin),
+    firstName: z.string().trim().min(2, messages.firstNameMin),
     email: z
       .string()
       .trim()
       .min(1, messages.emailRequired)
       .email(messages.emailInvalid),
+    company: z.string().trim(),
     service: z
       .string()
       .min(1, messages.serviceRequired)
@@ -45,7 +48,8 @@ export function createContactFormSchema(messages: ContactErrorMessages) {
 
 /** Server-side schema with English fallbacks (API validation). */
 export const contactFormSchema = createContactFormSchema({
-  nameMin: "Full name must be at least 2 characters.",
+  lastNameMin: "Last name must be at least 2 characters.",
+  firstNameMin: "First name must be at least 2 characters.",
   emailRequired: "Email address is required.",
   emailInvalid: "Enter a valid email address.",
   serviceRequired: "Service is required.",

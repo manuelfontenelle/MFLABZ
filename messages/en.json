@@ -388,8 +388,10 @@
 	"Contact": {
 		"title": "Tell Me About Your Project",
 		"description": "Fill out the form below and I'll get back to you as soon as possible.",
-		"name": "Full Name *",
+		"lastName": "Last Name *",
+		"firstName": "First Name *",
 		"email": "Email Address *",
+		"company": "Your Company",
 		"service": "Service Needed *",
 		"message": "Project Details *",
 		"selectService": "Select a service",
@@ -401,15 +403,16 @@
 		"errorUnable": "Unable to send inquiry.",
 		"services": {
 			"logo-design": "Logo Design",
-			"branding": "Brand Identity",
+			"branding": "Graphic Design & Branding",
 			"packaging": "Packaging & Labels",
-			"social-ad": "Social & Ad Creative",
-			"print": "Print Design",
+			"social-ads": "Social Media & Advertising",
+			"marketing": "Marketing Materials",
 			"website": "Website",
 			"other": "Other"
 		},
 		"errors": {
-			"nameMin": "Full name must be at least 2 characters.",
+			"lastNameMin": "Last name must be at least 2 characters.",
+			"firstNameMin": "First name must be at least 2 characters.",
 			"emailRequired": "Email address is required.",
 			"emailInvalid": "Enter a valid email address.",
 			"serviceRequired": "Service is required.",
@@ -441,7 +444,7 @@
 						"We collect personal information only when you choose to contact us through the website contact form. This may include:"
 					],
 					"list": [
-						"Your full name",
+						"Your first and last name",
 						"Your email address",
 						"The service you are interested in",
 						"Project details and any other information you include in your message"

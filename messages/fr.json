@@ -389,8 +389,10 @@
 	"Contact": {
 		"title": "Parlez-moi de votre projet",
 		"description": "Remplissez le formulaire ci-dessous et je vous répondrai dans les meilleurs délais.",
-		"name": "Nom et prénom *",
+		"lastName": "Nom *",
+		"firstName": "Prénom *",
 		"email": "Adresse e-mail *",
+		"company": "Votre entreprise",
 		"service": "Service souhaité *",
 		"message": "Détails du projet *",
 		"selectService": "Sélectionner un service",
@@ -402,15 +404,16 @@
 		"errorUnable": "Impossible d'envoyer la demande.",
 		"services": {
 			"logo-design": "Création de logo",
-			"branding": "Identité de marque",
+			"branding": "Création graphique et Branding",
 			"packaging": "Packaging & étiquettes",
-			"social-ad": "Réseaux sociaux & publicité",
-			"print": "Supports print",
+			"social-ads": "Réseaux sociaux & publicité",
+			"marketing": "Supports marketing",
 			"website": "Site web",
 			"other": "Autre"
 		},
 		"errors": {
-			"nameMin": "Le nom et prénom doivent contenir au moins 2 caractères.",
+			"lastNameMin": "Le nom doit contenir au moins 2 caractères.",
+			"firstNameMin": "Le prénom doit contenir au moins 2 caractères.",
 			"emailRequired": "L'adresse e-mail est obligatoire.",
 			"emailInvalid": "Saisissez une adresse e-mail valide.",
 			"serviceRequired": "Le service est obligatoire.",
@@ -442,7 +445,7 @@
 						"Nous collectons des informations personnelles uniquement lorsque vous choisissez de nous contacter via le formulaire du site. Celles-ci peuvent inclure :"
 					],
 					"list": [
-						"Votre nom complet",
+						"Votre nom et votre prénom",
 						"Votre adresse e-mail",
 						"Le service qui vous intéresse",
 						"Les détails de votre projet et toute autre information figurant dans votre message"

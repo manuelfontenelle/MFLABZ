@@ -4,10 +4,10 @@ import type { ContactPayload, ContactService } from "@/lib/contact";
 
 const serviceLabels: Record<ContactService, string> = {
   "logo-design": "Logo Design",
-  branding: "Branding",
+  branding: "Graphic Design & Branding",
   packaging: "Packaging & Labels",
-  "social-ad": "Social & Ad Creative",
-  print: "Print Design",
+  "social-ads": "Social Media & Advertising",
+  marketing: "Marketing Materials",
   website: "Website",
   other: "Other"
 };
@@ -32,7 +32,7 @@ export async function sendContactInquiry(
     from: fromEmail,
     to: contactEmail,
     replyTo: payload.email,
-    subject: `New project inquiry from ${payload.name}`,
+    subject: `New project inquiry from ${fullName(payload)}`,
     html: renderContactInquiryEmail(payload),
     text: renderContactInquiryText(payload)
   });
@@ -44,9 +44,14 @@ function serviceLabel(service: ContactService) {
   return serviceLabels[service];
 }
 
+function fullName(payload: ContactPayload) {
+  return `${payload.firstName} ${payload.lastName}`;
+}
+
 function renderContactInquiryEmail(payload: ContactPayload) {
   const service = serviceLabel(payload.service);
-  const preview = `${payload.name} is interested in ${service}.`;
+  const name = fullName(payload);
+  const preview = `${name} is interested in ${service}.`;
 
   return `<!doctype html>
 <html lang="en">
@@ -71,8 +76,10 @@ function renderContactInquiryEmail(payload: ContactPayload) {
             </tr>
             <tr>
               <td style="padding:28px 32px;">
-                ${renderDetailRow("Full Name", payload.name)}
+                ${renderDetailRow("First Name", payload.firstName)}
+                ${renderDetailRow("Last Name", payload.lastName)}
                 ${renderDetailRow("Email Address", payload.email)}
+                ${renderDetailRow("Company", payload.company || "—")}
                 ${renderDetailRow("Service Needed", service)}
                 <div style="margin-top:24px;">
                   <p style="margin:0 0 8px;color:#636873;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;">Project Details</p>
@@ -82,7 +89,7 @@ function renderContactInquiryEmail(payload: ContactPayload) {
             </tr>
             <tr>
               <td style="padding:20px 32px 32px;">
-                <a href="mailto:${escapeHtml(payload.email)}" style="display:inline-block;border-radius:999px;background:#111111;color:#ffffff;font-size:14px;font-weight:700;text-decoration:none;padding:13px 22px;">Reply to ${escapeHtml(payload.name)}</a>
+                <a href="mailto:${escapeHtml(payload.email)}" style="display:inline-block;border-radius:999px;background:#111111;color:#ffffff;font-size:14px;font-weight:700;text-decoration:none;padding:13px 22px;">Reply to ${escapeHtml(name)}</a>
               </td>
             </tr>
           </table>
@@ -104,8 +111,10 @@ function renderContactInquiryText(payload: ContactPayload) {
   return [
     "New project inquiry",
     "",
-    `Full Name: ${payload.name}`,
+    `First Name: ${payload.firstName}`,
+    `Last Name: ${payload.lastName}`,
     `Email Address: ${payload.email}`,
+    `Company: ${payload.company || "—"}`,
     `Service Needed: ${serviceLabel(payload.service)}`,
     "",
     "Project Details:",
