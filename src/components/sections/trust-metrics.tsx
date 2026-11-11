@@ -29,7 +29,7 @@ export async function TrustMetrics() {
           </span>
         </div>
 
-        <h2 className="max-w-[1035px] font-heading text-[clamp(1.65rem,3.3vw,2.8rem)] leading-[1.5] font-bold tracking-[-0.065em] text-balance text-foreground sm:leading-[1.24]">
+        <h2 className="max-w-[1035px] font-heading text-[clamp(1.65rem,3.3vw,2.8rem)] leading-[1.5] font-semibold tracking-[-0.065em] text-balance text-foreground sm:leading-[1.24]">
           {t("headingLine1")}
           <br className="hidden sm:block" /> {t("headingLine2")}
         </h2>

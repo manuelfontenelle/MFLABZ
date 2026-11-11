@@ -1,6 +1,6 @@
 export const designTokens = {
   colors: {
-    primary: "#111111",
+    primary: "#24222F",
     secondary: "#2150DC",
     accent: "#73FF05",
     background: "#FFFFFF",

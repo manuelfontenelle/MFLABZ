@@ -67,7 +67,8 @@
 		"headingLine2": "pour des marques qui me font confiance"
 	},
 	"LogoMarquee": {
-		"title": "Logos de clients et partenaires de confiance"
+		"title": "Logos de clients et partenaires de confiance",
+		"yourLogo": "Votre logo"
 	},
 	"Portfolio": {
 		"ariaLabel": "Portfolio de design graphique",
@@ -195,6 +196,8 @@
 		"title": "Ce que disent mes clients",
 		"description": "Des retours authentiques d'entrepreneurs, de startups et d'entreprises établies.",
 		"averageRating": "Note moyenne 4,9/5",
+		"score": "4,9",
+		"scoreCount": "2500+ avis",
 		"verifiedReviews": "Avis vérifiés",
 		"projectsDelivered": "Projets livrés",
 		"industriesServed": "Secteurs couverts",

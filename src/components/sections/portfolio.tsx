@@ -266,7 +266,7 @@ export function Portfolio() {
                 type="button"
                 variant="premium"
                 size="lg"
-                className="group w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
+                className="group w-full cursor-pointer bg-foreground text-background shadow-none hover:bg-foreground/90 hover:shadow-none sm:w-auto"
               >
                 {t("startProject")}
                 <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />

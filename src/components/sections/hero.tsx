@@ -60,13 +60,14 @@ export function Hero() {
               >
                 {siteConfig.founderName}
               </p>
-              <h1 className="max-w-[828px] font-heading text-[clamp(2.01rem,4.49vw,4.03rem)] leading-[1.34] font-bold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
+              <h1 className="max-w-[828px] font-heading text-[clamp(2.01rem,4.49vw,4.03rem)] leading-[1.34] font-semibold tracking-[-0.075em] text-balance text-foreground [text-box:trim-both_cap_alphabetic] sm:leading-[1.19]">
                 {t("title")}
               </h1>
             </div>
 
             <div className="hero-fade hero-fade-delay w-full min-w-0 max-w-[28rem] space-y-[1.4rem] lg:justify-self-end">
-              <p className="inline-flex w-fit max-w-full rounded-button border border-border/70 px-2.5 py-1.5 text-[0.62rem] leading-[1.25] font-semibold tracking-[0.08em] text-muted-foreground uppercase sm:text-[0.68rem]">
+              <p className="inline-flex w-fit max-w-full items-center gap-2.5 text-[0.62rem] leading-[1.25] font-semibold tracking-[0.08em] text-foreground uppercase sm:text-[0.68rem]">
+                <span className="h-px w-5 shrink-0 bg-[#2150dc] sm:w-6" aria-hidden="true" />
                 {t("locationBadge")}
               </p>
               <p className="text-[clamp(0.8rem,1.1vw,0.97rem)] leading-[1.6] font-medium text-foreground">
@@ -79,7 +80,7 @@ export function Hero() {
                       type="button"
                       variant="premium"
                       size="lg"
-                      className="group w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
+                      className="group w-full cursor-pointer bg-foreground text-background shadow-none hover:bg-foreground/90 hover:shadow-none sm:w-auto"
                     >
                       {t("startProject")}
                       <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />

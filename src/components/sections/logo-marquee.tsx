@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Plus } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/ui";
@@ -48,6 +49,34 @@ function PlaceholderLogo({ name, wordmark }: { name: string; wordmark: string })
   );
 }
 
+function LogoCard({ logo }: { logo: (typeof clientLogos)[number] }) {
+  return (
+    <div className="flex h-16 min-w-36 items-center justify-center rounded-md border border-border/60 bg-muted/35 px-7 text-center font-heading text-sm font-semibold tracking-[-0.03em] whitespace-nowrap text-foreground/45 sm:h-[4.5rem] sm:min-w-44 sm:px-9 sm:text-base lg:min-w-52 lg:rounded-[0.54rem]">
+      {logo.logoSrc ? (
+        // eslint-disable-next-line @next/next/no-img-element -- native img avoids Next optimizer URL swaps that flicker on mobile marquee
+        <img
+          src={logo.logoSrc}
+          alt={logo.logoAlt ?? `${logo.name} logo`}
+          width={160}
+          height={48}
+          decoding="async"
+          draggable={false}
+          className="max-h-9 w-auto max-w-32 object-contain opacity-90 transition-opacity duration-300 [backface-visibility:hidden] [transform:translateZ(0)] hover:opacity-100 sm:max-h-10 sm:max-w-36"
+        />
+      ) : (
+        <PlaceholderLogo name={logo.name} wordmark={logo.wordmark} />
+      )}
+    </div>
+  );
+}
+function YourLogoCard({ label }: { label: string }) {
+  return (
+    <div className="flex h-16 min-w-36 items-center justify-center gap-1.5 rounded-md border border-dashed !border-[#2150dc] bg-[#2150dc]/10 px-7 text-center font-heading text-sm font-semibold tracking-[-0.03em] whitespace-nowrap text-[#2150dc] sm:h-[4.5rem] sm:min-w-44 sm:px-9 sm:text-base lg:min-w-52 lg:rounded-[0.54rem]">
+      <Plus className="size-4 shrink-0" strokeWidth={2.25} aria-hidden="true" />
+      {label}
+    </div>
+  );
+}
 function preloadLogoImages(urls: string[]) {
   return Promise.all(
     urls.map(
@@ -84,7 +113,7 @@ export function LogoMarquee() {
   }, []);
 
   return (
-    <section className="overflow-hidden bg-background py-1.5 sm:py-2 lg:py-2">
+    <section className="overflow-hidden bg-background py-1.5 sm:py-2">
       <Container size="full" className="px-0">
         <h2 className="sr-only">{t("title")}</h2>
 
@@ -109,27 +138,22 @@ export function LogoMarquee() {
                 className="flex shrink-0 items-center gap-6 pr-6 sm:gap-8 sm:pr-8 lg:gap-10 lg:pr-10"
                 aria-hidden={group === 1}
               >
-                {clientLogos.map((logo) => (
-                  <div
-                    key={`${logo.name}-${group}`}
-                    className="flex h-16 min-w-36 items-center justify-center rounded-md border border-border/60 bg-muted/35 px-7 text-center font-heading text-sm font-semibold tracking-[-0.03em] whitespace-nowrap text-foreground/45 sm:h-[4.5rem] sm:min-w-44 sm:px-9 sm:text-base lg:min-w-52 lg:rounded-[0.54rem]"
-                  >
-                    {logo.logoSrc ? (
-                      // eslint-disable-next-line @next/next/no-img-element -- native img avoids Next optimizer URL swaps that flicker on mobile marquee
-                      <img
-                        src={logo.logoSrc}
-                        alt={logo.logoAlt ?? `${logo.name} logo`}
-                        width={160}
-                        height={48}
-                        decoding="async"
-                        draggable={false}
-                        className="max-h-9 w-auto max-w-32 object-contain opacity-90 transition-opacity duration-300 [backface-visibility:hidden] [transform:translateZ(0)] hover:opacity-100 sm:max-h-10 sm:max-w-36"
+                {clientLogos.flatMap((logo, index) => {
+                  const cards = [
+                    <LogoCard key={`${logo.name}-${group}`} logo={logo} />
+                  ];
+
+                  if ((index + 1) % 4 === 0) {
+                    cards.push(
+                      <YourLogoCard
+                        key={`your-logo-${index}-${group}`}
+                        label={t("yourLogo")}
                       />
-                    ) : (
-                      <PlaceholderLogo name={logo.name} wordmark={logo.wordmark} />
-                    )}
-                  </div>
-                ))}
+                    );
+                  }
+
+                  return cards;
+                })}
               </div>
             ))}
           </div>

@@ -51,7 +51,7 @@ export function FAQ() {
             transition={{ duration: 0.58, ease: "easeOut" }}
           >
             <div className="max-w-xl space-y-6 lg:max-w-md">
-              <h2 className="font-heading text-heading-2 leading-[1.32] font-bold tracking-[-0.06em] text-foreground sm:leading-[1.1]">
+              <h2 className="font-heading text-heading-2 leading-[1.32] font-semibold tracking-[-0.06em] text-foreground sm:leading-[1.1]">
                 {t("title")}
               </h2>
 

@@ -18,7 +18,7 @@ export function FinalCTA() {
             <span className="text-caption font-semibold uppercase text-secondary">
               {t("eyebrow")}
             </span>
-            <h2 className="w-full max-w-2xl font-heading text-heading-2 leading-[1.32] font-bold tracking-[-0.06em] sm:leading-[1.1]">
+            <h2 className="w-full max-w-2xl font-heading text-heading-2 leading-[1.32] font-semibold tracking-[-0.06em] sm:leading-[1.1]">
               <span className="inline-block whitespace-nowrap">{t("titleLine1")}</span>
               <span className="block">{t("titleLine2")}</span>
             </h2>
@@ -32,7 +32,7 @@ export function FinalCTA() {
                     type="button"
                     variant="premium"
                     size="lg"
-                    className="group w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
+                    className="group w-full cursor-pointer bg-foreground text-background shadow-none hover:bg-foreground/90 hover:shadow-none sm:w-auto"
                   >
                     {t("startProject")}
                     <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
