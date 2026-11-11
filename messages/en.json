@@ -94,7 +94,10 @@
 		"scrollTabsLeft": "Scroll categories left",
 		"scrollTabsRight": "Scroll categories right",
 		"comingSoonTitle": "Projects coming soon",
-		"comingSoonDescription": "This category is being updated. Get in touch to see examples of recent projects."
+		"comingSoonDescription": "This category is being updated. Get in touch to see examples of recent projects.",
+		"viewLarger": "View larger: {name}",
+		"closePreview": "Close preview",
+		"startProject": "Start Project"
 	},
 	"Services": {
 		"title": "What I Do",

@@ -79,10 +79,10 @@ export function Hero() {
                       type="button"
                       variant="premium"
                       size="lg"
-                      className="w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
+                      className="group w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
                     >
                       {t("startProject")}
-                      <ChevronRight className="ml-0 size-4" />
+                      <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
                     </Button>
                   }
                 />
@@ -90,7 +90,7 @@ export function Hero() {
                   asChild
                   variant="ghost"
                   size="lg"
-                  className="w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#0a8043] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#0a8043] sm:w-auto"
+                  className="group w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#0a8043] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#0a8043] sm:w-auto"
                 >
                   <a
                     href={siteConfig.links.fiverr}
@@ -98,7 +98,7 @@ export function Hero() {
                     rel="noreferrer"
                   >
                     {t("visitFiverr")}
-                    <ChevronRight className="ml-0 size-4" />
+                    <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
                   </a>
                 </Button>
               </div>
@@ -107,29 +107,33 @@ export function Hero() {
         </div>
       </Container>
 
-      <div className="relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
+      <div className="hero-gallery relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
         <div
-          className={`flex w-max [animation:logo-marquee_22s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_40s_linear_infinite] ${
+          className={`hero-gallery-track flex w-max [animation:logo-marquee_12s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_20s_linear_infinite] ${
             isMarqueeReady ? "" : "[animation-play-state:paused]"
           }`}
         >
           {repeatedGalleryImages.map((image, index) => (
-            <div
+            <figure
               key={`${image.id}-${index}`}
-              className="relative h-[38vh] min-h-[280px] w-[79vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
+              aria-hidden={index >= heroGalleryData.length}
+              className="hero-gallery-slide relative h-[38vh] min-h-[280px] w-[79vw] max-h-[562px] shrink-0 overflow-hidden bg-muted sm:h-[47vh] sm:min-h-[328px] sm:w-[42vw] lg:h-[56vh] lg:w-[25.2vw] xl:w-[21.6vw]"
             >
               {/* eslint-disable-next-line @next/next/no-img-element -- native img avoids Next optimizer URL swaps that flicker on mobile marquee */}
               <img
                 src={image.imageUrl}
-                alt={image.imageAlt}
+                alt={index >= heroGalleryData.length ? "" : image.imageAlt}
                 decoding="async"
                 draggable={false}
-                className="pointer-events-none size-full select-none object-cover [backface-visibility:hidden] [transform:translateZ(0)]"
+                className="pointer-events-none size-full select-none object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] [backface-visibility:hidden] motion-reduce:transition-none"
                 onError={(event) => {
                   event.currentTarget.src = image.fallbackImageUrl;
                 }}
               />
-            </div>
+              <figcaption className="pointer-events-none absolute bottom-2.5 left-2.5 translate-y-1 rounded-full bg-[rgba(11,11,15,0.42)] px-2.5 py-[5px] text-[11.5px] leading-none font-medium text-white opacity-0 backdrop-blur-[10px] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none sm:bottom-3 sm:left-3">
+                {image.name}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>

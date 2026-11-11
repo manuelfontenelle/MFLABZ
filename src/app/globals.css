@@ -196,6 +196,21 @@
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .hero-gallery:hover .hero-gallery-track {
+    animation-play-state: paused;
+  }
+
+  .hero-gallery-slide:hover img {
+    transform: scale(1.04);
+  }
+
+  .hero-gallery-slide:hover figcaption {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @keyframes portfolio-reveal {
   from {
     opacity: 0.72;

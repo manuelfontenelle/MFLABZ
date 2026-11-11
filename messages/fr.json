@@ -95,7 +95,10 @@
 		"scrollTabsLeft": "Faire défiler les catégories vers la gauche",
 		"scrollTabsRight": "Faire défiler les catégories vers la droite",
 		"comingSoonTitle": "Réalisations bientôt en ligne",
-		"comingSoonDescription": "Cette catégorie est en cours de mise à jour. Contactez-moi pour découvrir des exemples de projets récents."
+		"comingSoonDescription": "Cette catégorie est en cours de mise à jour. Contactez-moi pour découvrir des exemples de projets récents.",
+		"viewLarger": "Agrandir : {name}",
+		"closePreview": "Fermer l'aperçu",
+		"startProject": "Démarrer un projet"
 	},
 	"Services": {
 		"title": "Mes services",

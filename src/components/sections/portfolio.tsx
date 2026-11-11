@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { portfolioData } from "@/data/portfolio-data";
 import type { PortfolioCategory } from "@/data/portfolio-data";
 import {
+  Button,
   Container,
   SectionHeader,
   Tabs,
@@ -15,7 +16,9 @@ import {
   TabsTrigger
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { ContactDialog } from "./contact-dialog";
 import { PortfolioImage } from "./portfolio-image";
+import { PortfolioLightbox } from "./portfolio-lightbox";
 
 const portfolioTabs: PortfolioCategory[] = [
   "Logo",
@@ -46,6 +49,8 @@ export function Portfolio() {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const activeProject = portfolioData.find((project) => project.id === activeId);
 
   useEffect(() => {
     const scroller = scrollerRef.current;
@@ -215,18 +220,30 @@ export function Portfolio() {
                 )}
                 <div className="grid gap-5 sm:grid-cols-2">
                   {projects.map((project) => (
-                    // Static hover zone so the lifted card never slides out from under the cursor.
-                    <div key={project.id} className="group">
+                    <button
+                      key={project.id}
+                      type="button"
+                      className="group w-full cursor-zoom-in text-left focus-visible:outline-none"
+                      aria-label={t("viewLarger", { name: project.imageAlt })}
+                      aria-haspopup="dialog"
+                      onClick={() => setActiveId(project.id)}
+                    >
                       <figure
                         itemScope
                         itemType="https://schema.org/CreativeWork"
-                        className="overflow-hidden rounded-md border border-border/70 bg-background p-0 shadow-xs [backface-visibility:hidden] transition-[translate] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [translate:0_0] group-hover:[translate:0_-4px] lg:rounded-[0.54rem]"
+                        className="relative overflow-hidden rounded-md border border-border/70 bg-background p-0 shadow-xs [backface-visibility:hidden] transition-[translate] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [translate:0_0] group-hover:[translate:0_-4px] group-focus-visible:ring-ring/40 group-focus-visible:ring-[3px] lg:rounded-[0.54rem]"
                       >
                         <PortfolioImage
                           src={project.imageUrl}
                           fallbackSrc={project.fallbackImageUrl}
                           alt={project.imageAlt}
                         />
+                        <span
+                          aria-hidden="true"
+                          className="absolute top-3.5 right-3.5 inline-flex size-[38px] scale-[0.85] items-center justify-center rounded-full bg-white/75 text-foreground opacity-0 backdrop-blur-[10px] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-100 group-hover:opacity-100 group-focus-visible:scale-100 group-focus-visible:opacity-100"
+                        >
+                          <Maximize2 className="size-4" strokeWidth={1.8} />
+                        </span>
                         <meta
                           itemProp="genre"
                           content={`${project.category} ${t("genreSuffix")}`}
@@ -235,14 +252,41 @@ export function Portfolio() {
                           {project.imageAlt}
                         </figcaption>
                       </figure>
-                    </div>
+                    </button>
                   ))}
                 </div>
               </TabsContent>
             );
           })}
         </Tabs>
+        <div className="flex justify-center">
+          <ContactDialog
+            trigger={
+              <Button
+                type="button"
+                variant="premium"
+                size="lg"
+                className="group w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
+              >
+                {t("startProject")}
+                <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
+              </Button>
+            }
+          />
+        </div>
       </Container>
+      <PortfolioLightbox
+        open={Boolean(activeProject)}
+        onOpenChange={(open) => {
+          if (!open) {
+            setActiveId(null);
+          }
+        }}
+        src={activeProject?.imageUrl ?? ""}
+        fallbackSrc={activeProject?.fallbackImageUrl ?? ""}
+        alt={activeProject?.imageAlt ?? ""}
+        closeLabel={t("closePreview")}
+      />
     </section>
   );
 }

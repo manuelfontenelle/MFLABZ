@@ -32,10 +32,10 @@ export function FinalCTA() {
                     type="button"
                     variant="premium"
                     size="lg"
-                    className="w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
+                    className="group w-full cursor-pointer bg-secondary text-secondary-foreground shadow-none hover:bg-secondary/95 hover:shadow-none sm:w-auto"
                   >
                     {t("startProject")}
-                    <ChevronRight className="ml-0 size-4" />
+                    <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
                   </Button>
                 }
               />
@@ -44,7 +44,7 @@ export function FinalCTA() {
                 asChild
                 variant="ghost"
                 size="lg"
-                className="w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#0a8043] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#0a8043] sm:w-auto"
+                className="group w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#0a8043] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#0a8043] sm:w-auto"
               >
                 <a
                   href={siteConfig.links.fiverr}
@@ -52,7 +52,7 @@ export function FinalCTA() {
                   rel="noreferrer"
                 >
                   {t("visitFiverr")}
-                  <ChevronRight className="ml-0 size-4" />
+                  <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
                 </a>
               </Button>
             </div>
