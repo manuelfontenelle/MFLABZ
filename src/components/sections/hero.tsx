@@ -109,7 +109,7 @@ export function Hero() {
 
       <div className="hero-gallery relative left-1/2 mt-12 w-[112vw] -translate-x-1/2 overflow-hidden sm:mt-14 lg:mt-16">
         <div
-          className={`hero-gallery-track flex w-max [animation:logo-marquee_12s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_20s_linear_infinite] ${
+          className={`hero-gallery-track flex w-max [animation:logo-marquee_22s_linear_infinite] [backface-visibility:hidden] motion-reduce:animate-none sm:[animation:logo-marquee_20s_linear_infinite] ${
             isMarqueeReady ? "" : "[animation-play-state:paused]"
           }`}
         >
