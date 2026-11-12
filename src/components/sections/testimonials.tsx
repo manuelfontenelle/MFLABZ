@@ -139,7 +139,7 @@ export function Testimonials() {
             </span>
           </p>
 
-          <p className="mt-3 inline-flex items-center gap-2 text-sm text-muted-foreground">
+          <p className="mt-3 flex flex-col items-center gap-2 text-sm text-muted-foreground sm:flex-row">
             <span className="flex items-center gap-1.5" aria-hidden="true">
               {clientCountryFlags.map((countryCode) => (
                 <span
