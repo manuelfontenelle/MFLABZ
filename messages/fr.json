@@ -7,8 +7,8 @@
 		"privacyTitle": "Politique de confidentialité",
 		"termsTitle": "Conditions d'utilisation",
 		"legalTitle": "Mentions légales",
-		"reviewsTitle": "Écrits après la livraison",
-		"reviewsDescription": "Avis laissés à Manuel Fontenelle une fois les fichiers livrés, avec le nom du client, son pays et la date.",
+		"reviewsTitle": "Avis clients",
+		"reviewsDescription": "Écrits par des clients qui m’ont vraiment engagé, chacun avec son nom, son pays et la date.",
 		"keywords": [
 			"Manuel Fontenelle",
 			"Manuel Fontenelle graphiste",
@@ -213,8 +213,8 @@
 		"viewAllReviews": "Voir 900+ avis de plus"
 	},
 	"Reviews": {
-		"title": "Écrits après la livraison.",
-		"description": "D’un court merci au récit complet du travail, chacun avec le nom du client, son pays et la date.",
+		"title": "Avis clients",
+		"description": "Écrits par des clients qui m’ont vraiment engagé. Chacun garde son nom, son pays et la date. Lisez-les, puis jugez d’après le travail.",
 		"stats": {
 			"ratingValue": "4,9",
 			"ratingLabel": "Note moyenne",

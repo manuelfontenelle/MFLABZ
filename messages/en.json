@@ -7,8 +7,8 @@
 		"privacyTitle": "Privacy Policy",
 		"termsTitle": "Terms of Service",
 		"legalTitle": "Legal Notice",
-		"reviewsTitle": "Written after the delivery",
-		"reviewsDescription": "Notes left for Manuel Fontenelle once the files were delivered, with the client's name, country and date.",
+		"reviewsTitle": "Client reviews",
+		"reviewsDescription": "Written by clients who actually hired me, each one with their name, country and date.",
 		"keywords": [
 			"Manuel Fontenelle",
 			"Manuel Fontenelle graphic designer",
@@ -212,8 +212,8 @@
 		"viewAllReviews": "See 900+ more reviews"
 	},
 	"Reviews": {
-		"title": "Written after the delivery.",
-		"description": "From a short thank-you to a full account of the job, each one with the client's name, country and date.",
+		"title": "Client reviews",
+		"description": "Written by clients who actually hired me. Each one keeps their name, country and date. Read them, and decide from the work.",
 		"stats": {
 			"ratingValue": "4.9",
 			"ratingLabel": "Average rating",
