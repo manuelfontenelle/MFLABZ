@@ -144,6 +144,12 @@ export function Footer() {
                     {tNav(link.labelKey)}
                   </Link>
                 ))}
+                <Link
+                  href="/reviews"
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {tNav("reviews")}
+                </Link>
               </div>
             </nav>
 

@@ -7,6 +7,8 @@
 		"privacyTitle": "Politique de confidentialité",
 		"termsTitle": "Conditions d'utilisation",
 		"legalTitle": "Mentions légales",
+		"reviewsTitle": "Écrits après la livraison",
+		"reviewsDescription": "Avis laissés à Manuel Fontenelle une fois les fichiers livrés, avec le nom du client, son pays et la date.",
 		"keywords": [
 			"Manuel Fontenelle",
 			"Manuel Fontenelle graphiste",
@@ -44,7 +46,8 @@
 		"portfolio": "Portfolio",
 		"services": "Services",
 		"process": "Processus",
-		"faq": "FAQ"
+		"faq": "FAQ",
+		"reviews": "Avis"
 	},
 	"Language": {
 		"label": "Langue",
@@ -206,7 +209,29 @@
 		"starRating": "Note de {rating} étoiles",
 		"showSlide": "Afficher le diaporama témoignages {index}",
 		"previous": "Témoignages précédents",
-		"next": "Témoignages suivants"
+		"next": "Témoignages suivants",
+		"viewAllReviews": "Voir 900+ avis de plus"
+	},
+	"Reviews": {
+		"title": "Écrits après la livraison.",
+		"description": "D’un court merci au récit complet du travail, chacun avec le nom du client, son pays et la date.",
+		"stats": {
+			"ratingValue": "4,9",
+			"ratingLabel": "Note moyenne",
+			"reviewsValue": "2500+",
+			"reviewsLabel": "Avis clients",
+			"projectsValue": "4000+",
+			"projectsLabel": "Projets livrés",
+			"countriesValue": "50+",
+			"countriesLabel": "Pays"
+		},
+		"wallTitle": "Avis depuis 2024",
+		"count": "{count} avis",
+		"pageStatus": "Page {page} sur {total}",
+		"previous": "Précédent",
+		"next": "Suivant",
+		"pagination": "Pages d’avis",
+		"starRating": "Note de {rating} étoiles"
 	},
 	"WhyChooseMe": {
 		"title": "Pourquoi les clients me choisissent",

@@ -31,6 +31,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }));
 
+  const reviewEntries = routing.locales.map((locale) => ({
+    url: localizedUrl(locale, "/reviews"),
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+    alternates: {
+      languages: languageAlternates("/reviews")
+    }
+  }));
+
   const legalEntries = routing.locales.flatMap((locale) =>
     legalPages.map((path) => ({
       url: localizedUrl(locale, path),
@@ -43,5 +53,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...homeEntries, ...legalEntries];
+  return [...homeEntries, ...reviewEntries, ...legalEntries];
 }

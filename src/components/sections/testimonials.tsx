@@ -9,12 +9,52 @@ import { Button, Container, SectionHeader } from "@/components/ui";
 import { siteConfig } from "@/config/site";
 import { testimonialsData } from "@/data/testimonials-data";
 import type { TestimonialItem } from "@/data/testimonials-data";
-import { cn } from "@/lib/utils";
+import { Link } from "@/i18n/navigation";
 
 import { ContactDialog } from "./contact-dialog";
+import { TestimonialCard } from "./testimonial-card";
 
 const clientCountryFlags = ["US", "CA", "GB", "AU", "DE", "FR", "NL"];
-const avatarColors = ["#2150dc", "#ec3f91", "#f07a24", "#6d5efc", "#0f9f8f", "#e23b4a", "#3d7aed"];
+
+// Homepage wall: detailed 5-star reviews only. Short lines and repeat clients stay in the data.
+const showcaseReviews: Array<[string, string]> = [
+  ["arron285", "I have used Manuel a few times now"],
+  ["apiconcept", "The packaging for our product"],
+  ["numelek", "travail réalisé par Manuel sur mes flyers"],
+  ["yoann_boand", "Un excellent travail du début à la fin"],
+  ["pedrodemesquita", "Brief parfaitement compris et respecté"],
+  ["majiin_sixk", "Le bifold correspond parfaitement"],
+  ["waykenfr", "futures cartes de visite"],
+  ["bsi_25jahre", "It was a real pleasure working with Manuel"],
+  ["naikagabriel", "identité visuelle élégante"],
+  ["vaness_immo35", "Première fois que je fais appel à un graphiste"],
+  ["ema_alsh", "Great experience overall"],
+  ["reflectionsbym", "Manuel was great to work with"],
+  ["madetoform", "banner for my upcoming trade show"],
+  ["charliecates", "beautiful trifold for my business"],
+  ["austinaves", "the third project"],
+  ["ayoubrother", "absolument ravi de mon nouveau logo"],
+  ["hypnokacee", "designed my brochures"],
+  ["amberatdigital", "Communication went very smoothly"],
+  ["yann_prou", "création de trois logos"],
+  ["spherity_comms", "roll-up banner design"],
+  ["jrm_lr", "logo conçu par Manuel"],
+  ["mango_studio_be", "flyer for my yoga studio"],
+  ["fredsharp", "chemise A4"],
+  ["jaymegamache", "unique and impactful design"],
+  ["kawasemist", "logo with a short turnaround"],
+  ["emmanuelbenna", "Les cartes sont impeccables"],
+  ["seyaarette", "deux logos créés"],
+  ["petitmagnolia", "notre logo très rapidement"],
+  ["kylecassady", "First time using Fiverr"],
+  ["christophe_ta", "stratégie de marque"]
+];
+
+const showcaseTestimonials = testimonialsData.filter((testimonial) =>
+  showcaseReviews.some(
+    ([name, excerpt]) => testimonial.name === name && testimonial.review.includes(excerpt)
+  )
+);
 
 function shuffle<T>(items: T[]) {
   const result = [...items];
@@ -32,12 +72,12 @@ function shuffle<T>(items: T[]) {
 let clientOrder: TestimonialItem[] | null = null;
 
 function getServerOrder() {
-  return testimonialsData;
+  return showcaseTestimonials;
 }
 
 function getClientOrder() {
   if (!clientOrder) {
-    clientOrder = shuffle(testimonialsData);
+    clientOrder = shuffle(showcaseTestimonials);
   }
 
   return clientOrder;
@@ -47,103 +87,9 @@ function subscribeToNothing() {
   return () => {};
 }
 
-function getClientInitials(name: string) {
-  const parts = name
-    .split(/[\s_]+/)
-    .map((part) => part.replace(/[^\p{L}\p{N}]/gu, ""))
-    .filter(Boolean);
-
-  if (parts.length >= 2) {
-    return `${parts[0].charAt(0)}${parts[1].charAt(0)}`.toUpperCase();
-  }
-
-  return (parts[0] ?? name).replace(/[^\p{L}\p{N}]/gu, "").slice(0, 2).toUpperCase();
-}
-
-function avatarColor(name: string) {
-  let hash = 0;
-
-  for (const char of name) {
-    hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
-  }
-
-  return avatarColors[hash % avatarColors.length];
-}
-
-function TestimonialCard({
-  testimonial,
-  ratingLabel,
-  featured
-}: {
-  testimonial: TestimonialItem;
-  ratingLabel: string;
-  featured: boolean;
-}) {
-  return (
-    <article
-      className={cn(
-        "break-inside-avoid rounded-md p-5 lg:rounded-[0.54rem] lg:p-[1.35rem]",
-        featured
-          ? "bg-secondary text-white shadow-[0_30px_60px_-30px_rgba(33,80,220,0.55)]"
-          : "bg-white text-foreground shadow-[0_0_0_1px_var(--color-stone)]"
-      )}
-    >
-      <div className="flex items-center justify-between gap-3">
-        <span
-          className={cn("flex items-center gap-0.5", featured ? "text-white" : "text-foreground")}
-          role="img"
-          aria-label={ratingLabel}
-        >
-          {Array.from({ length: Math.min(5, Math.round(testimonial.rating)) }).map((_, index) => (
-            <Star key={index} className="size-3.5 fill-current" strokeWidth={0} />
-          ))}
-        </span>
-      </div>
-
-      <p
-        className={cn(
-          "mt-3 text-[0.94rem] leading-[1.55] font-normal",
-          featured ? "text-white/80" : "text-[#51515a]"
-        )}
-      >
-        {testimonial.review.trim()}
-      </p>
-
-      <div className="mt-4 flex items-center gap-2.5">
-        <span
-          className="flex size-8 shrink-0 items-center justify-center rounded-full text-[0.72rem] font-medium text-white"
-          style={{ backgroundColor: avatarColor(testimonial.name) }}
-          aria-hidden="true"
-        >
-          {getClientInitials(testimonial.name)}
-        </span>
-        <span className="min-w-0">
-          <span
-            className={cn(
-              "block truncate text-sm leading-tight font-medium tracking-[-0.02em]",
-              featured ? "text-white" : "text-foreground"
-            )}
-          >
-            {testimonial.name}
-          </span>
-          <span
-            className={cn(
-              "mt-0.5 block text-[0.72rem] leading-tight",
-              featured ? "text-white/75" : "text-[#8a8a94]"
-            )}
-          >
-            {testimonial.country}
-          </span>
-        </span>
-      </div>
-    </article>
-  );
-}
-
 export function Testimonials() {
   const t = useTranslations("Testimonials");
   const tHero = useTranslations("Hero");
-  const tTrust = useTranslations("Trust");
   const orderedTestimonials = useSyncExternalStore(
     subscribeToNothing,
     getClientOrder,
@@ -162,16 +108,22 @@ export function Testimonials() {
             description={t("description")}
           />
 
-          <div className="mt-7 inline-flex items-center gap-2.5 text-[16px] font-medium text-foreground">
+          <div
+            className="mt-6 inline-flex items-center gap-2 rounded-button border border-border/70 bg-background px-3 py-1.5 text-[0.8rem] font-semibold text-foreground shadow-xs"
+            role="img"
+            aria-label={t("averageRating")}
+          >
             <span className="flex items-center gap-0.5 text-secondary" aria-hidden="true">
               {Array.from({ length: 5 }).map((_, index) => (
-                <Star key={index} className="size-[17.67px] fill-current sm:size-[19.67px]" />
+                <Star key={index} className="size-[0.85rem] fill-current" />
               ))}
             </span>
             <span>
-              <span className="font-semibold">{tTrust("ratedPrefix")} </span>
-              <span className="font-semibold text-secondary">4.9/5</span> {tTrust("ratedFrom")}{" "}
-              <span className="font-semibold">{tTrust("clientReviews")}</span>
+              {t("score")}/5
+              <span className="mx-1.5 font-medium text-foreground/25" aria-hidden="true">
+                ·
+              </span>
+              <span className="font-medium text-muted-foreground">{t("scoreCount")}</span>
             </span>
           </div>
 
@@ -185,31 +137,29 @@ export function Testimonials() {
             <span>
               <span className="font-semibold text-foreground">25+</span> {t("industriesServed")}
             </span>
-            <span className="text-foreground/25" aria-hidden="true">
-              ·
+          </p>
+
+          <p className="mt-3 inline-flex items-center gap-2 text-sm text-muted-foreground">
+            <span className="flex items-center gap-1.5" aria-hidden="true">
+              {clientCountryFlags.map((countryCode) => (
+                <span
+                  key={countryCode}
+                  className="inline-flex h-[0.7rem] w-[1.225rem] items-center justify-center overflow-hidden"
+                >
+                  <ReactCountryFlag
+                    countryCode={countryCode}
+                    svg
+                    className="block"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover"
+                    }}
+                  />
+                </span>
+              ))}
             </span>
-            <span className="inline-flex items-center gap-2">
-              <span className="flex items-center gap-1.5" aria-hidden="true">
-                {clientCountryFlags.map((countryCode) => (
-                  <span
-                    key={countryCode}
-                    className="inline-flex h-[0.7rem] w-[1.225rem] items-center justify-center overflow-hidden"
-                  >
-                    <ReactCountryFlag
-                      countryCode={countryCode}
-                      svg
-                      className="block"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover"
-                      }}
-                    />
-                  </span>
-                ))}
-              </span>
-              {t("clientsFromCountries")}
-            </span>
+            {t("clientsFromCountries")}
           </p>
         </div>
 
@@ -241,7 +191,9 @@ export function Testimonials() {
           ))}
         </div>
 
-        <div className="mx-auto mt-8 flex w-full flex-col items-center justify-center gap-3 sm:mt-10 sm:w-auto sm:flex-row">
+        <div className="mt-8 grid items-center gap-4 sm:mt-10 sm:grid-cols-[1fr_auto_1fr]">
+          <div className="hidden sm:block" aria-hidden="true" />
+          <div className="order-2 flex w-full flex-col items-center justify-center gap-3 sm:order-none sm:w-auto sm:flex-row">
             <ContactDialog
               trigger={
                 <Button
@@ -266,6 +218,14 @@ export function Testimonials() {
                 <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
               </a>
             </Button>
+          </div>
+          <Link
+            href="/reviews"
+            className="group order-1 inline-flex items-center justify-self-center text-base font-semibold text-foreground sm:order-none sm:justify-self-end"
+          >
+            {t("viewAllReviews")}
+            <ChevronRight className="ml-1 size-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
         </div>
       </Container>
     </section>

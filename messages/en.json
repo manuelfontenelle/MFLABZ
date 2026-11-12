@@ -7,6 +7,8 @@
 		"privacyTitle": "Privacy Policy",
 		"termsTitle": "Terms of Service",
 		"legalTitle": "Legal Notice",
+		"reviewsTitle": "Written after the delivery",
+		"reviewsDescription": "Notes left for Manuel Fontenelle once the files were delivered, with the client's name, country and date.",
 		"keywords": [
 			"Manuel Fontenelle",
 			"Manuel Fontenelle graphic designer",
@@ -43,7 +45,8 @@
 		"portfolio": "Portfolio",
 		"services": "Services",
 		"process": "Process",
-		"faq": "FAQ"
+		"faq": "FAQ",
+		"reviews": "Reviews"
 	},
 	"Language": {
 		"label": "Language",
@@ -205,7 +208,29 @@
 		"starRating": "{rating} star rating",
 		"showSlide": "Show testimonial slide {index}",
 		"previous": "Show previous testimonials",
-		"next": "Show next testimonials"
+		"next": "Show next testimonials",
+		"viewAllReviews": "See 900+ more reviews"
+	},
+	"Reviews": {
+		"title": "Written after the delivery.",
+		"description": "From a short thank-you to a full account of the job, each one with the client's name, country and date.",
+		"stats": {
+			"ratingValue": "4.9",
+			"ratingLabel": "Average rating",
+			"reviewsValue": "2500+",
+			"reviewsLabel": "Client reviews",
+			"projectsValue": "4000+",
+			"projectsLabel": "Projects delivered",
+			"countriesValue": "50+",
+			"countriesLabel": "Countries"
+		},
+		"wallTitle": "Reviews since 2024",
+		"count": "{count} reviews",
+		"pageStatus": "Page {page} of {total}",
+		"previous": "Previous",
+		"next": "Next",
+		"pagination": "Review pages",
+		"starRating": "{rating} star rating"
 	},
 	"WhyChooseMe": {
 		"title": "Why Clients Choose Me",
