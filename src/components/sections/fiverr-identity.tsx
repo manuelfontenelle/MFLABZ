@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { ChevronRight, Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+import { Button } from "@/components/ui";
 import { siteConfig } from "@/config/site";
 
 export function FiverrIdentity() {
@@ -58,20 +59,17 @@ export function FiverrIdentity() {
           </div>
         </div>
 
-        <a
-          href={siteConfig.links.fiverr}
-          target="_blank"
-          rel="noreferrer"
-          className="group inline-flex items-center justify-center gap-3 rounded-button border border-white bg-white px-5 py-2.5 text-sm font-semibold tracking-[-0.01em] text-secondary transition-transform duration-300 hover:-translate-y-0.5"
+        <Button
+          asChild
+          variant="ghost"
+          size="lg"
+          className="group cursor-pointer border border-solid !border-white bg-white text-[#0a8043] hover:!border-white hover:bg-white hover:text-[#0a8043]"
         >
-          <span>{t("viewProfile")}</span>
-          <span
-            className="text-secondary transition-transform duration-300 ease-out group-hover:translate-x-1"
-            aria-hidden="true"
-          >
-            →
-          </span>
-        </a>
+          <a href={siteConfig.links.fiverr} target="_blank" rel="noreferrer">
+            {t("viewProfile")}
+            <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
+          </a>
+        </Button>
       </motion.div>
     </section>
   );
