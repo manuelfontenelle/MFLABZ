@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronRight, Star } from "lucide-react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui";
@@ -15,8 +16,15 @@ export function FiverrIdentity() {
       aria-label={t("ariaLabel")}
       className="relative left-1/2 flex min-h-[clamp(300px,38vw,500px)] w-screen -translate-x-1/2 items-center overflow-hidden bg-secondary px-container py-16 text-secondary-foreground"
     >
+      <Image
+        src="/images/blue_background4.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-cover"
+      />
       <div
-        className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-heading text-[clamp(8rem,28vw,24rem)] leading-none font-black tracking-normal text-white/[0.045]"
+        className="pointer-events-none absolute inset-x-0 top-1/2 z-[1] -translate-y-1/2 text-center font-heading text-[clamp(8rem,28vw,24rem)] leading-none font-black tracking-normal text-white/[0.045]"
         aria-hidden="true"
       >
         2500+
@@ -42,28 +50,26 @@ export function FiverrIdentity() {
           {t("subtitle")}
         </p>
 
-        <div className="inline-flex max-w-full rounded-button border border-white/18 bg-white/[0.08] px-4 py-2.5 text-center shadow-xs sm:px-5">
-          <div
-            className="flex items-center gap-2 text-white"
-            role="img"
-            aria-label={t("ratingAria")}
-          >
-            <span className="flex items-center gap-0.5" aria-hidden="true">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <Star key={index} className="size-3 fill-current sm:size-3.5" />
-              ))}
-            </span>
-            <span className="text-[0.7rem] font-semibold tracking-[-0.01em] sm:text-xs">
-              {t("averageRating")}
-            </span>
-          </div>
+        <div
+          className="flex items-center gap-2 text-white"
+          role="img"
+          aria-label={t("ratingAria")}
+        >
+          <span className="flex items-center gap-0.5" aria-hidden="true">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <Star key={index} className="size-3 fill-current sm:size-3.5" />
+            ))}
+          </span>
+          <span className="text-[0.7rem] font-semibold tracking-[-0.01em] sm:text-xs">
+            {t("averageRating")}
+          </span>
         </div>
 
         <Button
           asChild
           variant="ghost"
           size="lg"
-          className="group cursor-pointer border border-solid !border-white bg-white text-[#0a8043] hover:!border-white hover:bg-white hover:text-[#0a8043]"
+          className="group cursor-pointer border border-solid !border-white bg-transparent text-white shadow-none hover:!border-white hover:bg-white/10 hover:text-white"
         >
           <a href={siteConfig.links.fiverr} target="_blank" rel="noreferrer">
             {t("viewProfile")}

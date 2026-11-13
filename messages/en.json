@@ -8,7 +8,7 @@
 		"termsTitle": "Terms of Service",
 		"legalTitle": "Legal Notice",
 		"reviewsTitle": "Client reviews",
-		"reviewsDescription": "Written by clients who actually hired me, each one with their name, country and date.",
+		"reviewsDescription": "Reviews from clients in France and abroad, left after a logo, identity, print or website project.",
 		"keywords": [
 			"Manuel Fontenelle",
 			"Manuel Fontenelle graphic designer",
@@ -46,7 +46,8 @@
 		"services": "Services",
 		"process": "Process",
 		"faq": "FAQ",
-		"reviews": "Reviews"
+		"reviews": "Reviews",
+		"about": "About"
 	},
 	"Language": {
 		"label": "Language",
@@ -64,7 +65,7 @@
 	"Trust": {
 		"ratedPrefix": "Rated",
 		"ratedFrom": "from",
-		"clientReviews": "2500+ Client Reviews",
+		"clientReviews": "2500+ reviews",
 		"headingLine1": "4000+ Projects Delivered Worldwide",
 		"headingLine2": "for Brands That Trust Me"
 	},
@@ -209,11 +210,11 @@
 		"showSlide": "Show testimonial slide {index}",
 		"previous": "Show previous testimonials",
 		"next": "Show next testimonials",
-		"viewAllReviews": "See 900+ more reviews"
+		"viewAllReviews": "See more reviews"
 	},
 	"Reviews": {
 		"title": "Client reviews",
-		"description": "Written by clients who actually hired me. Each one keeps their name, country and date. Read them, and decide from the work.",
+		"description": "Businesses in France and abroad describe the project we worked on together, once the files were delivered.",
 		"stats": {
 			"ratingValue": "4.9",
 			"ratingLabel": "Average rating",
@@ -271,8 +272,8 @@
 		"ariaLabel": "MFLABZ Fiverr profile",
 		"badge": "Available on Fiverr",
 		"subtitle": "All my reviews, gigs and pricing are on Fiverr. Order directly, with the platform's secure payment.",
-		"averageRating": "4.9/5 Average Rating",
-		"ratingAria": "4.9 out of 5 average rating",
+		"averageRating": "4.9 from 2500+ reviews",
+		"ratingAria": "4.9 from 2500+ reviews",
 		"viewProfile": "View My Fiverr Profile"
 	},
 	"Process": {
@@ -401,6 +402,11 @@
 		"startProject": "Start Project",
 		"visitFiverr": "Visit Fiverr"
 	},
+	"KeywordBand": {
+		"label": "Expertise",
+		"summary": "Logo, branding, packaging, print, social media, signage and websites.",
+		"words": ["Logo", "Branding", "Packaging", "Print", "Social media", "Signage", "Websites"]
+	},
 	"Footer": {
 		"ariaLogo": "MFLABZ Studio",
 		"ariaNav": "Footer navigation",
@@ -409,7 +415,7 @@
 		"tagline": "Studio of {founder}, freelance graphic designer in Paris. Logos, brand identities, print, packaging and websites for businesses in France and worldwide.",
 		"ratedPrefix": "Rated",
 		"ratedFrom": "from",
-		"clientReviews": "2500+ Client Reviews",
+		"clientReviews": "2500+ reviews",
 		"navigation": "Navigation",
 		"privacy": "Privacy Policy",
 		"terms": "Terms of Service",

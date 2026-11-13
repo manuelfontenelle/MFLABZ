@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --color-ink: #24222f;
+  --color-ink: #1c1a25;
   --color-blue: #2150dc;
   --color-lime: #73ff05;
   --color-white: #ffffff;

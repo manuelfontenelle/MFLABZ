@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 import type { TestimonialItem } from "@/data/testimonials-data";
 import { cn, keepExclamationWithWord } from "@/lib/utils";
@@ -44,12 +45,22 @@ export function TestimonialCard({
   return (
     <article
       className={cn(
-        "break-inside-avoid rounded-md p-5 lg:rounded-[0.54rem] lg:p-[1.35rem]",
+        "relative overflow-hidden break-inside-avoid rounded-md p-5 lg:rounded-[0.54rem] lg:p-[1.35rem]",
         featured
           ? "bg-secondary text-white shadow-[0_30px_60px_-30px_rgba(33,80,220,0.55)]"
           : "bg-white text-foreground shadow-[0_0_0_1px_var(--color-stone)]"
       )}
     >
+      {featured ? (
+        <Image
+          src="/images/blue_background4.jpg"
+          alt=""
+          fill
+          sizes="(min-width: 1024px) 24rem, 90vw"
+          className="pointer-events-none object-cover"
+        />
+      ) : null}
+      <div className="relative z-10">
       <div className="flex items-center justify-between gap-3">
         <span
           className={cn("flex items-center gap-1", featured ? "text-white" : "text-foreground")}
@@ -120,6 +131,7 @@ export function TestimonialCard({
             {testimonial.country}
           </span>
         </span>
+      </div>
       </div>
     </article>
   );

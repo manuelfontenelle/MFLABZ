@@ -8,7 +8,7 @@
 		"termsTitle": "Conditions d'utilisation",
 		"legalTitle": "Mentions légales",
 		"reviewsTitle": "Avis clients",
-		"reviewsDescription": "Écrits par des clients qui m’ont vraiment engagé, chacun avec son nom, son pays et la date.",
+		"reviewsDescription": "Avis de clients en France et à l’étranger, laissés après un projet de logo, d’identité, de print ou de site.",
 		"keywords": [
 			"Manuel Fontenelle",
 			"Manuel Fontenelle graphiste",
@@ -47,7 +47,8 @@
 		"services": "Services",
 		"process": "Processus",
 		"faq": "FAQ",
-		"reviews": "Avis"
+		"reviews": "Avis",
+		"about": "À propos"
 	},
 	"Language": {
 		"label": "Langue",
@@ -210,11 +211,11 @@
 		"showSlide": "Afficher le diaporama témoignages {index}",
 		"previous": "Témoignages précédents",
 		"next": "Témoignages suivants",
-		"viewAllReviews": "Voir 900+ avis de plus"
+		"viewAllReviews": "Voir plus d'avis"
 	},
 	"Reviews": {
 		"title": "Avis clients",
-		"description": "Écrits par des clients qui m’ont vraiment engagé. Chacun garde son nom, son pays et la date. Lisez-les, puis jugez d’après le travail.",
+		"description": "Des entreprises en France et à l’étranger racontent ici le projet mené ensemble, une fois les fichiers livrés.",
 		"stats": {
 			"ratingValue": "4,9",
 			"ratingLabel": "Note moyenne",
@@ -272,8 +273,8 @@
 		"ariaLabel": "Profil Fiverr MFLABZ",
 		"badge": "Disponible sur Fiverr",
 		"subtitle": "Tous mes avis, mes offres et mes tarifs sont sur Fiverr. Commandez directement, avec le paiement sécurisé de la plateforme.",
-		"averageRating": "Note moyenne 4,9/5",
-		"ratingAria": "Note moyenne de 4,9 sur 5",
+		"averageRating": "4.9 sur 2500+ avis clients",
+		"ratingAria": "4.9 sur 2500+ avis clients",
 		"viewProfile": "Voir mon profil Fiverr"
 	},
 	"Process": {
@@ -401,6 +402,11 @@
 		"description": "Logo, identité complète, réseaux sociaux ou supports marketing : je serai ravi d'échanger avec vous sur votre projet.",
 		"startProject": "Démarrer un projet",
 		"visitFiverr": "Voir sur Fiverr"
+	},
+	"KeywordBand": {
+		"label": "Expertises",
+		"summary": "Logo, branding, packaging, print, réseaux sociaux, signalétique et sites web.",
+		"words": ["Logo", "Branding", "Packaging", "Print", "Réseaux sociaux", "Signalétique", "Sites web"]
 	},
 	"Footer": {
 		"ariaLogo": "MFLABZ Studio",

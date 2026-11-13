@@ -75,7 +75,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-muted/45 pt-[3.2rem] pb-16 sm:pt-16 lg:pt-[4.8rem]">
+    <footer className="border-t border-white/10 bg-surface-dark pt-[3.2rem] pb-16 text-surface-dark-foreground sm:pt-16 lg:pt-[4.8rem]">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[1.45fr_0.8fr_0.8fr] lg:gap-14">
           <div className="flex flex-col">
@@ -89,23 +89,23 @@ export function Footer() {
                 alt=""
                 width={88}
                 height={48}
-                className="h-[2.7rem] w-auto"
+                className="h-[2.7rem] w-auto brightness-0 invert"
               />
             </Link>
-            <p className="mb-2 text-sm font-medium text-foreground">
+            <p className="mb-2 text-sm font-medium text-surface-dark-foreground">
               {t("studioBy", {
                 creator: siteConfig.creator,
                 founder: siteConfig.founderName
               })}
             </p>
-            <p className="mb-[1.0625rem] max-w-sm text-body-sm leading-6 text-muted-foreground">
+            <p className="mb-[1.0625rem] max-w-sm text-body-sm leading-6 text-white/70">
               {t("tagline", { founder: siteConfig.founderName })}
             </p>
 
             <div className="space-y-4">
-              <div className="inline-flex max-w-full flex-nowrap items-center gap-1.5 whitespace-nowrap rounded-button border border-border px-2.5 py-[0.3375rem] text-[10.5px] font-medium text-foreground shadow-xs sm:w-fit sm:gap-[0.45rem] sm:px-[0.85rem] sm:text-[11.7px]">
+              <div className="inline-flex max-w-full flex-nowrap items-center gap-1.5 whitespace-nowrap rounded-button border border-white/20 px-2.5 py-[0.3375rem] text-[10.5px] font-medium text-surface-dark-foreground sm:w-fit sm:gap-[0.45rem] sm:px-[0.85rem] sm:text-[11.7px]">
                 <span
-                  className="flex items-center gap-0.5 text-secondary"
+                  className="flex items-center gap-0.5 text-surface-dark-foreground"
                   aria-hidden="true"
                 >
                   {Array.from({ length: 5 }).map((_, index) => (
@@ -115,9 +115,9 @@ export function Footer() {
                     />
                   ))}
                 </span>
-                <span className="text-[10.5px] text-foreground sm:text-[12.1px]">
+                <span className="text-[10.5px] text-surface-dark-foreground sm:text-[12.1px]">
                   <span className="font-semibold">{t("ratedPrefix")} </span>
-                  <span className="font-semibold text-secondary">4.9/5</span>
+                  <span className="font-semibold">4.9/5</span>
                   {" "}
                   {t("ratedFrom")}{" "}
                   <span className="font-semibold">{t("clientReviews")}</span>
@@ -128,7 +128,7 @@ export function Footer() {
 
           <div className="grid grid-cols-2 gap-8 lg:contents">
             <nav className="space-y-4" aria-label={t("ariaNav")}>
-              <p className="text-[1.05rem] font-semibold text-foreground">
+              <p className="text-[1.05rem] font-semibold text-surface-dark-foreground">
                 {t("navigation")}
               </p>
               <div className="flex flex-col items-start gap-3">
@@ -139,17 +139,11 @@ export function Footer() {
                     onClick={(event) =>
                       handleSectionNavClick(event, link.id, pathname)
                     }
-                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm font-medium text-white/70 transition-colors hover:text-surface-dark-foreground"
                   >
                     {tNav(link.labelKey)}
                   </Link>
                 ))}
-                <Link
-                  href="/reviews"
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {tNav("reviews")}
-                </Link>
               </div>
             </nav>
 
@@ -161,7 +155,7 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-white/70 transition-colors hover:text-surface-dark-foreground"
                   >
                     <span
                       className="inline-flex size-5 items-center justify-center text-current"
@@ -177,7 +171,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <nav
             className="flex flex-wrap items-center gap-x-4 gap-y-2"
             aria-label={t("ariaLegal")}
@@ -186,13 +180,13 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-xs font-medium text-white/60 transition-colors hover:text-surface-dark-foreground"
               >
                 {t(link.labelKey)}
               </Link>
             ))}
           </nav>
-          <p className="text-xs font-medium text-muted-foreground sm:text-right">
+          <p className="text-xs font-medium text-white/60 sm:text-right">
             {t("rights", { year: currentYear, brand: "MFlabz" })}
           </p>
         </div>

@@ -3,6 +3,8 @@ import type { MouseEvent } from "react";
 export const sectionNavItems = [
   { id: "portfolio", labelKey: "portfolio" },
   { id: "services", labelKey: "services" },
+  { id: "testimonials", labelKey: "reviews" },
+  { id: "why-choose-me", labelKey: "about" },
   { id: "process", labelKey: "process" },
   { id: "faq", labelKey: "faq" }
 ] as const;

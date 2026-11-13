@@ -4,6 +4,7 @@ import {
   FinalCTA,
   Footer,
   Hero,
+  KeywordBand,
   LogoMarquee,
   Navbar,
   Portfolio,
@@ -41,6 +42,7 @@ export default async function Home({ params }: HomePageProps) {
         <FiverrIdentity />
         <Process />
         <FAQ />
+        <KeywordBand />
         <FinalCTA />
       </main>
       <Footer />

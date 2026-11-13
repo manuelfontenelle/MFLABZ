@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 import { Container } from "@/components/ui";
@@ -75,8 +76,15 @@ function FeaturedReview({
   ratingLabel: string;
 }) {
   return (
-    <blockquote className="mx-auto flex max-w-5xl flex-col gap-6 overflow-hidden rounded-md bg-secondary px-6 py-8 text-white shadow-[0_30px_60px_-30px_rgba(33,80,220,0.55)] sm:px-8 lg:flex-row lg:items-center lg:gap-10 lg:rounded-[0.54rem] lg:px-10 lg:py-10">
-      <div className="min-w-0 flex-1">
+    <blockquote className="relative mx-auto flex max-w-5xl flex-col gap-6 overflow-hidden rounded-md bg-secondary px-6 py-8 text-white shadow-[0_30px_60px_-30px_rgba(33,80,220,0.55)] sm:px-8 lg:flex-row lg:items-center lg:gap-10 lg:rounded-[0.54rem] lg:px-10 lg:py-10">
+      <Image
+        src="/images/blue_background4.jpg"
+        alt=""
+        fill
+        sizes="(min-width: 1024px) 64rem, 100vw"
+        className="pointer-events-none object-cover"
+      />
+      <div className="relative z-10 min-w-0 flex-1">
         <span className="flex items-center gap-0.5" role="img" aria-label={ratingLabel}>
           {Array.from({ length: 5 }).map((_, index) => (
             <Star key={index} className="size-4 fill-current" strokeWidth={0} />
@@ -86,7 +94,7 @@ function FeaturedReview({
           “{keepExclamationWithWord(testimonial.review.trim())}”
         </p>
       </div>
-      <footer className="flex shrink-0 items-center gap-3 lg:w-40 lg:flex-col lg:gap-3 lg:text-center">
+      <footer className="relative z-10 flex shrink-0 items-center gap-3 lg:w-40 lg:flex-col lg:gap-3 lg:text-center">
         <span
           className="flex size-14 items-center justify-center rounded-full bg-white text-base font-medium text-foreground lg:size-20 lg:text-xl"
           aria-hidden="true"

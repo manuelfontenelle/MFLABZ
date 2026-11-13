@@ -6,12 +6,10 @@ import { useTranslations } from "next-intl";
 import ReactCountryFlag from "react-country-flag";
 
 import { Button, Container, SectionHeader } from "@/components/ui";
-import { siteConfig } from "@/config/site";
 import { testimonialsData } from "@/data/testimonials-data";
 import type { TestimonialItem } from "@/data/testimonials-data";
 import { Link } from "@/i18n/navigation";
 
-import { ContactDialog } from "./contact-dialog";
 import { TestimonialCard } from "./testimonial-card";
 
 const clientCountryFlags = ["US", "CA", "GB", "AU", "DE", "FR", "NL"];
@@ -89,7 +87,6 @@ function subscribeToNothing() {
 
 export function Testimonials() {
   const t = useTranslations("Testimonials");
-  const tHero = useTranslations("Hero");
   const orderedTestimonials = useSyncExternalStore(
     subscribeToNothing,
     getClientOrder,
@@ -191,41 +188,18 @@ export function Testimonials() {
           ))}
         </div>
 
-        <div className="mt-8 grid items-center gap-4 sm:mt-10 sm:grid-cols-[1fr_auto_1fr]">
-          <div className="hidden sm:block" aria-hidden="true" />
-          <div className="order-2 flex w-full flex-col items-center justify-center gap-3 sm:order-none sm:w-auto sm:flex-row">
-            <ContactDialog
-              trigger={
-                <Button
-                  type="button"
-                  variant="premium"
-                  size="lg"
-                  className="group w-full cursor-pointer bg-foreground text-background shadow-none hover:bg-foreground/90 hover:shadow-none sm:w-auto"
-                >
-                  {tHero("startProject")}
-                  <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
-                </Button>
-              }
-            />
-            <Button
-              asChild
-              variant="ghost"
-              size="lg"
-              className="group w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#0a8043] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#0a8043] sm:w-auto"
-            >
-              <a href={siteConfig.links.fiverr} target="_blank" rel="noreferrer">
-                {tHero("visitFiverr")}
-                <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
-              </a>
-            </Button>
-          </div>
-          <Link
-            href="/reviews"
-            className="group order-1 inline-flex items-center justify-self-center text-base font-semibold text-foreground sm:order-none sm:justify-self-end"
+        <div className="mt-8 flex justify-center sm:mt-10">
+          <Button
+            asChild
+            variant="premium"
+            size="lg"
+            className="group w-full cursor-pointer bg-foreground text-background shadow-none hover:bg-foreground/90 hover:shadow-none sm:w-auto"
           >
-            {t("viewAllReviews")}
-            <ChevronRight className="ml-1 size-5 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+            <Link href="/reviews">
+              {t("viewAllReviews")}
+              <ChevronRight className="ml-0 size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
+            </Link>
+          </Button>
         </div>
       </Container>
     </section>

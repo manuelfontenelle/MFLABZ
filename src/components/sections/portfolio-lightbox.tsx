@@ -33,7 +33,7 @@ export function PortfolioLightbox({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogPortal>
-        <DialogOverlay className="z-[140] bg-[rgba(10,10,12,0.86)] backdrop-blur-[10px]" />
+        <DialogOverlay className="z-[140]" />
         <DialogPrimitive.Content
           data-slot="portfolio-lightbox"
           aria-describedby={undefined}

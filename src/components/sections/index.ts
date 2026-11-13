@@ -3,6 +3,7 @@ export * from "./fiverr-identity";
 export * from "./final-cta";
 export * from "./footer";
 export * from "./hero";
+export * from "./keyword-band";
 export * from "./logo-marquee";
 export * from "./navbar";
 export * from "./portfolio";
