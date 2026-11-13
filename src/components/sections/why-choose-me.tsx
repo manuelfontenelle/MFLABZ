@@ -85,8 +85,12 @@ export function WhyChooseMe() {
                   alt={t("photoAlt", { name: siteConfig.founderName })}
                   fill
                   sizes="(min-width: 1024px) 360px, 100vw"
-                  className="object-cover object-top"
+                  className="z-0 object-cover object-top"
                   loading="lazy"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 z-10 bg-[url('/images/grain.png')] bg-cover bg-center opacity-50 mix-blend-overlay"
                 />
               </div>
               <div className="space-y-4 p-6 sm:p-7">

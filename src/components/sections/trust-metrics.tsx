@@ -7,9 +7,9 @@ import { Container } from "@/components/ui";
 import { TrustRatingLink } from "./trust-rating-link";
 
 const happyClients = [
-  "/images/clients/client-avatar-1.jpg",
-  "/images/clients/client-avatar-2.jpg",
   "/images/clients/client-avatar-3.jpg",
+  "/images/clients/client-avatar-2.jpg",
+  "/images/clients/client-avatar-1.jpg",
   "/images/clients/client-avatar-4.jpg",
   "/images/clients/client-avatar-5.jpg"
 ];

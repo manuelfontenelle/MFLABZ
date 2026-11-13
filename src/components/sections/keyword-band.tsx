@@ -3,10 +3,14 @@ import { getTranslations } from "next-intl/server";
 
 function Separator() {
   return (
-    <span
-      className="mx-[0.28em] h-[0.92em] w-0.5 shrink-0 bg-current"
-      aria-hidden="true"
-    />
+    <span className="mx-[0.22em] inline-flex shrink-0 items-center" aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element -- decorative SVG separator in marquee */}
+      <img
+        src="/images/deco1.svg"
+        alt=""
+        className="h-[0.72em] w-[0.72em] rotate-45"
+      />
+    </span>
   );
 }
 
