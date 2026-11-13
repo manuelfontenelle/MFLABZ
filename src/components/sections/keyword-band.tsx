@@ -31,7 +31,7 @@ export async function KeywordBand() {
         {[0, 1].map((group) => (
           <div key={group} className="flex shrink-0 items-center">
             {words.map((word) => (
-              <span key={`${group}-${word}`} className="inline-flex items-center font-heading text-[clamp(1.05rem,3vw,3.15rem)] leading-none font-semibold tracking-[-0.06em] whitespace-nowrap">
+              <span key={`${group}-${word}`} className="inline-flex items-center font-heading text-[clamp(1.7rem,3vw,3.15rem)] leading-none font-semibold tracking-[-0.06em] whitespace-nowrap">
                 <span className="px-[0.12em]">{word}</span>
                 <Separator />
               </span>
