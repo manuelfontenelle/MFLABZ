@@ -37,21 +37,21 @@ export function PortfolioLightbox({
         <DialogPrimitive.Content
           data-slot="portfolio-lightbox"
           aria-describedby={undefined}
-          className="fixed inset-0 z-[150] flex cursor-zoom-out items-center justify-center overflow-hidden p-4 outline-none sm:p-8"
+          className="fixed inset-0 z-[150] flex cursor-zoom-out items-center justify-center overflow-hidden py-4 outline-none sm:py-8"
           onClick={() => onOpenChange(false)}
         >
-          <div className="flex w-full min-w-0 max-w-[min(1600px,calc(100vw-2rem))] flex-col items-center sm:max-w-[min(1600px,calc(100vw-4rem))]">
+          <div className="flex max-h-[88vh] max-w-full min-w-0 items-center justify-center">
             <DialogTitle className="sr-only">{alt}</DialogTitle>
             <Image
               src={imageSrc}
               alt={alt}
-              width={1600}
-              height={1000}
+              width={1920}
+              height={1152}
               quality={92}
-              sizes="(min-width: 1600px) 1600px, 100vw"
+              sizes="100vw"
               draggable={false}
-              className="h-auto max-h-[88vh] w-full rounded-md object-contain shadow-[0_40px_100px_rgba(0,0,0,0.5)] lg:rounded-[0.54rem]"
-              style={{ width: "100%", height: "auto" }}
+              className="h-auto max-h-[88vh] w-auto max-w-full rounded-md object-contain shadow-[0_40px_100px_rgba(0,0,0,0.5)] lg:rounded-[0.54rem]"
+              style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "88vh" }}
               onError={() => {
                 if (imageSrc !== fallbackSrc) {
                   setImageSrc(fallbackSrc);
