@@ -29,13 +29,13 @@ export async function KeywordBand() {
       />
       <p className="sr-only">{t("summary")}</p>
       <div
-        className="relative z-10 flex w-max animate-[logo-marquee_26s_linear_infinite] py-[clamp(0.7rem,1.3vw,1.35rem)] [backface-visibility:hidden] motion-reduce:animate-none"
+        className="relative z-10 flex w-max animate-[logo-marquee_26s_linear_infinite] py-[clamp(0.85rem,1.3vw,1.35rem)] [backface-visibility:hidden] motion-reduce:animate-none"
         aria-hidden="true"
       >
         {[0, 1].map((group) => (
           <div key={group} className="flex shrink-0 items-center">
             {words.map((word) => (
-              <span key={`${group}-${word}`} className="inline-flex items-center font-heading text-[clamp(1.7rem,3vw,3.15rem)] leading-none font-semibold tracking-[-0.06em] whitespace-nowrap">
+              <span key={`${group}-${word}`} className="inline-flex items-center font-heading text-[clamp(2.15rem,3vw,3.15rem)] leading-none font-semibold tracking-[-0.06em] whitespace-nowrap">
                 <span className="px-[0.12em]">{word}</span>
                 <Separator />
               </span>
