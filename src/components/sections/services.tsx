@@ -39,18 +39,18 @@ const sectionReveal: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.05
     }
   }
 };
 
 const cardReveal: Variants = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.55,
+      duration: 0.35,
       ease: "easeOut"
     }
   }
@@ -63,10 +63,10 @@ export function Services() {
     <section id="services" className="bg-background pt-[2.56rem] pb-section-lg">
       <Container className="space-y-14">
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
-          transition={{ duration: 0.55, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.15, margin: "80px 0px" }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
         >
           <SectionHeader
             align="center"
@@ -81,7 +81,7 @@ export function Services() {
           variants={sectionReveal}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.18 }}
+          viewport={{ once: true, amount: 0.05, margin: "120px 0px" }}
         >
           {servicesData.map((service) => {
             const Icon = serviceIcons[service.id];
