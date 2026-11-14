@@ -43,7 +43,7 @@ export function FinalCTA() {
               asChild
               variant="ghost"
               size="lg"
-              className="group w-full cursor-pointer border border-solid !border-[#1bc16f] bg-transparent text-[#0a8043] hover:!border-[#1bc16f] hover:bg-[#1bc16f]/5 hover:text-[#0a8043] sm:w-auto"
+              className="group w-full cursor-pointer border border-solid !border-[#1DBF73] bg-transparent text-[#1DBF73] hover:!border-[#1DBF73] hover:bg-[#1DBF73]/5 hover:text-[#1DBF73] sm:w-auto"
             >
               <a href={siteConfig.links.fiverr} target="_blank" rel="noreferrer">
                 {t("visitFiverr")}

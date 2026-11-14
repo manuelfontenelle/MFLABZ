@@ -71,7 +71,7 @@ function LogoCard({ logo }: { logo: (typeof clientLogos)[number] }) {
 }
 function YourLogoCard({ label }: { label: string }) {
   return (
-    <div className="flex h-16 min-w-36 items-center justify-center gap-1.5 rounded-md border border-dashed !border-[#2150dc] bg-[#2150dc]/10 px-7 text-center font-heading text-sm font-semibold tracking-[-0.03em] whitespace-nowrap text-[#2150dc] sm:h-[4.5rem] sm:min-w-44 sm:px-9 sm:text-base lg:min-w-52 lg:rounded-[0.54rem]">
+    <div className="flex h-16 min-w-36 items-center justify-center gap-1.5 rounded-md border border-dashed border-[#73ff05]/40 bg-[#73ff05]/10 px-7 text-center font-heading text-sm font-semibold tracking-[-0.03em] whitespace-nowrap text-[#3f8a00] sm:h-[4.5rem] sm:min-w-44 sm:px-9 sm:text-base lg:min-w-52 lg:rounded-[0.54rem]">
       <Plus className="size-4 shrink-0" strokeWidth={2.25} aria-hidden="true" />
       {label}
     </div>

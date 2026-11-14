@@ -40,7 +40,7 @@ export function PortfolioLightbox({
           className="fixed inset-0 z-[150] flex cursor-zoom-out items-center justify-center overflow-hidden p-4 outline-none sm:p-8"
           onClick={() => onOpenChange(false)}
         >
-          <div className="flex w-full min-w-0 max-w-[min(1400px,calc(100vw-2rem))] flex-col items-center sm:max-w-[min(1400px,calc(100vw-4rem))]">
+          <div className="flex w-full min-w-0 max-w-[min(1600px,calc(100vw-2rem))] flex-col items-center sm:max-w-[min(1600px,calc(100vw-4rem))]">
             <DialogTitle className="sr-only">{alt}</DialogTitle>
             <Image
               src={imageSrc}
@@ -48,10 +48,10 @@ export function PortfolioLightbox({
               width={1600}
               height={1000}
               quality={92}
-              sizes="(min-width: 1400px) 1400px, 100vw"
+              sizes="(min-width: 1600px) 1600px, 100vw"
               draggable={false}
-              className="h-auto max-h-[84vh] w-auto max-w-full rounded-md object-contain shadow-[0_40px_100px_rgba(0,0,0,0.5)] lg:rounded-[0.54rem]"
-              style={{ width: "auto", height: "auto", maxWidth: "100%" }}
+              className="h-auto max-h-[88vh] w-full rounded-md object-contain shadow-[0_40px_100px_rgba(0,0,0,0.5)] lg:rounded-[0.54rem]"
+              style={{ width: "100%", height: "auto" }}
               onError={() => {
                 if (imageSrc !== fallbackSrc) {
                   setImageSrc(fallbackSrc);
