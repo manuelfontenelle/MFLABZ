@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
@@ -24,11 +24,8 @@ export function PortfolioLightbox({
   alt,
   closeLabel
 }: PortfolioLightboxProps) {
-  const [imageSrc, setImageSrc] = useState(src);
-
-  useEffect(() => {
-    setImageSrc(src);
-  }, [src]);
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
+  const imageSrc = failedSrc === src ? fallbackSrc : src;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -42,22 +39,24 @@ export function PortfolioLightbox({
         >
           <div className="flex max-h-[88vh] max-w-full min-w-0 items-center justify-center">
             <DialogTitle className="sr-only">{alt}</DialogTitle>
-            <Image
-              src={imageSrc}
-              alt={alt}
-              width={1920}
-              height={1152}
-              quality={92}
-              sizes="100vw"
-              draggable={false}
-              className="h-auto max-h-[88vh] w-auto max-w-full rounded-md object-contain shadow-[0_40px_100px_rgba(0,0,0,0.5)] lg:rounded-[0.54rem]"
-              style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "88vh" }}
-              onError={() => {
-                if (imageSrc !== fallbackSrc) {
-                  setImageSrc(fallbackSrc);
-                }
-              }}
-            />
+            {imageSrc ? (
+              <Image
+                src={imageSrc}
+                alt={alt}
+                width={1920}
+                height={1152}
+                quality={90}
+                sizes="100vw"
+                draggable={false}
+                className="h-auto max-h-[88vh] w-auto max-w-full rounded-md object-contain shadow-[0_40px_100px_rgba(0,0,0,0.5)] lg:rounded-[0.54rem]"
+                style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "88vh" }}
+                onError={() => {
+                  if (src !== fallbackSrc) {
+                    setFailedSrc(src);
+                  }
+                }}
+              />
+            ) : null}
           </div>
           <DialogPrimitive.Close
             className="absolute top-5 right-5 inline-flex size-10 cursor-pointer items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-md transition-colors hover:bg-white/25 focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:outline-none"

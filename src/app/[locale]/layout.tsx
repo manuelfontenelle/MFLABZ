@@ -14,12 +14,13 @@ import { localeLanguageAlternates } from "@/i18n/seo";
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"]
+  display: "swap"
 });
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin"]
+  subsets: ["latin"],
+  display: "swap"
 });
 
 type LocaleLayoutProps = Readonly<{
