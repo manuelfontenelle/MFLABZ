@@ -103,6 +103,8 @@
 		"comingSoonDescription": "Cette catégorie est en cours de mise à jour. Contactez-moi pour découvrir des exemples de projets récents.",
 		"viewLarger": "Agrandir : {name}",
 		"closePreview": "Fermer l'aperçu",
+		"previousProject": "Projet précédent",
+		"nextProject": "Projet suivant",
 		"startProject": "Démarrer un projet"
 	},
 	"Services": {
@@ -406,7 +408,7 @@
 	"KeywordBand": {
 		"label": "Expertises",
 		"summary": "Logo, branding, packaging, print, réseaux sociaux, signalétique et sites web.",
-		"words": ["Logo", "Branding", "Packaging", "Print", "Réseaux sociaux", "Signalétique", "Sites web"]
+		"words": ["Logo", "Branding", "Packaging", "Print", "Réseaux sociaux", "Signalétique", "Site web"]
 	},
 	"Footer": {
 		"ariaLogo": "MFLABZ Studio",

@@ -85,11 +85,11 @@ export function Footer() {
               aria-label={t("ariaLogo")}
             >
               <Image
-                src="/images/mflabz-logo.svg"
+                src="/images/mflabz-logo2.svg"
                 alt=""
                 width={88}
                 height={48}
-                className="h-[2.7rem] w-auto brightness-0 invert"
+                className="h-[2.7rem] w-auto"
               />
             </Link>
             <p className="mb-2 text-sm font-medium text-surface-dark-foreground">

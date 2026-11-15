@@ -102,6 +102,8 @@
 		"comingSoonDescription": "This category is being updated. Get in touch to see examples of recent projects.",
 		"viewLarger": "View larger: {name}",
 		"closePreview": "Close preview",
+		"previousProject": "Previous project",
+		"nextProject": "Next project",
 		"startProject": "Start Project"
 	},
 	"Services": {
@@ -405,7 +407,7 @@
 	"KeywordBand": {
 		"label": "Expertise",
 		"summary": "Logo, branding, packaging, print, social media, signage and websites.",
-		"words": ["Logo", "Branding", "Packaging", "Print", "Social media", "Signage", "Websites"]
+		"words": ["Logo", "Branding", "Packaging", "Print", "Social media", "Signage", "Website"]
 	},
 	"Footer": {
 		"ariaLogo": "MFLABZ Studio",

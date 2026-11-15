@@ -51,6 +51,14 @@ export function Portfolio() {
   const [canScrollRight, setCanScrollRight] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
   const activeProject = portfolioData.find((project) => project.id === activeId);
+  const categoryProjects = activeProject
+    ? portfolioData
+        .filter((project) => project.category === activeProject.category)
+        .slice(0, 4)
+    : [];
+  const activeIndex = categoryProjects.findIndex(
+    (project) => project.id === activeId
+  );
 
   useEffect(() => {
     const scroller = scrollerRef.current;
@@ -286,6 +294,20 @@ export function Portfolio() {
         fallbackSrc={activeProject?.fallbackImageUrl ?? ""}
         alt={activeProject?.imageAlt ?? ""}
         closeLabel={t("closePreview")}
+        previousLabel={t("previousProject")}
+        nextLabel={t("nextProject")}
+        canGoPrevious={activeIndex > 0}
+        canGoNext={activeIndex >= 0 && activeIndex < categoryProjects.length - 1}
+        onPrevious={() => {
+          if (activeIndex > 0) {
+            setActiveId(categoryProjects[activeIndex - 1].id);
+          }
+        }}
+        onNext={() => {
+          if (activeIndex >= 0 && activeIndex < categoryProjects.length - 1) {
+            setActiveId(categoryProjects[activeIndex + 1].id);
+          }
+        }}
       />
     </section>
   );
