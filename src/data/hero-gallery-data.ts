@@ -45,6 +45,20 @@ const heroGalleryItems: HeroGalleryItemSeed[] = [
 		imageUrl: "/images/hero/hero6.jpg",
 		imageAlt: "S and S Transport logo mounted on an industrial building facade",
 	},
+	{
+		id: "ubelicious-packaging",
+		name: "Ubelicious",
+		imageUrl: "/images/hero/ubelicious.jpg",
+		imageAlt:
+			"Ubelicious ube powder stand-up pouch packaging mockup on a purple background",
+	},
+	{
+		id: "alliance-pro-uniform",
+		name: "Alliance Pro",
+		imageUrl: "/images/hero/alliance-pro.jpg",
+		imageAlt:
+			"Alliance Pro Nettoyage 31 branded cleaning uniform and logo on a white work coat",
+	},
 ]
 
 export const heroGalleryData: HeroGalleryItem[] = heroGalleryItems.map(
